@@ -1,0 +1,2683 @@
+% Quantitative Methods Study Guide for CFA Level I
+% Mathematical and statistical foundations for financial analysis
+% Covers rates of return, time value of money, probability theory, and statistical concepts
+% Critical foundation for all other CFA topics including portfolio management and derivatives
+% Reference: CFA Institute 2024 Curriculum Volume 1
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{graphicx} % make sure to include in preamble
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{tabularx}
+
+
+\geometry{margin=1in}
+
+\title{Quant}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{1 RATES AND RETURNS}
+
+\subsection*{1.1 Interest Rates and Return Measurement}
+
+\begin{itemize}
+    \item \textbf{Interpretation of Interest Rates}
+    \begin{itemize}
+        \item \textbf{As required rates of return}:  
+        The equilibrium interest rate represents the return investors require to lend funds for a given risk profile.
+        \item \textbf{As discount rates}:  
+        Used to calculate present values of future cash flows. Example: If the borrowing rate is $10\%$, discount future payments at $10\%$ to get their present value.
+        \item \textbf{As opportunity cost of consumption}:  
+        Choosing current consumption over saving forfeits the interest income that could have been earned. Example: If the market rate is $5\%$, that $5\%$ is the cost of consuming today.
+    \end{itemize}
+    
+    \item \textbf{Real Risk-Free Rate of Interest}
+    \begin{itemize}
+        \item Theoretical rate on a single-period loan with:
+        \begin{itemize}
+            \item Zero inflation expectation.
+            \item Zero probability of default.
+        \end{itemize}
+        \item Reflects \emph{time preference} — the degree to which current consumption is preferred over future consumption.
+    \end{itemize}
+
+    \item \textbf{Nominal vs Real Risk-Free Rate}
+    \begin{itemize}
+        \item Real rate of return: Increase in purchasing power, adjusted for inflation.
+        \item Nominal risk-free rate: Observed rate (e.g., on T-bills), includes inflation premium.
+        \item Relation:
+        \[
+        (1 + \text{nominal}) = (1 + \text{real})(1 + \text{expected inflation})
+        \]
+        Approximation:
+        \[
+        \text{nominal} \approx \text{real} + \text{expected inflation}
+        \]
+    \end{itemize}
+
+    \item \textbf{Risk Premium Components}
+    \begin{itemize}
+        \item \textbf{Default risk premium}: Compensation for risk of missed payments.
+        \item \textbf{Liquidity risk premium}: Compensation for difficulty of selling quickly at fair value.
+        \item \textbf{Maturity risk premium}: Compensation for greater price volatility of longer-maturity bonds.
+        \item Total required rate of return:
+        \[
+        \text{Nominal risk-free rate} + \text{Default RP} + \text{Liquidity RP} + \text{Maturity RP}
+        \]
+    \end{itemize}
+
+    \item \textbf{Return Measurement}
+    \begin{itemize}
+        \item \textbf{Holding Period Return (HPR)}:
+        \[
+        \text{HPR} = \frac{\text{Ending Value} + \text{Income}}{\text{Beginning Value}} - 1
+        \]
+        Example: Price from €20 to €22, dividend €1:
+        \[
+        \text{HPR} = \frac{22 + 1}{20} - 1 = 15\%
+        \]
+        \item Multi-period HPR: Multiply $(1 + \text{HPR}_t)$ across all periods, then subtract 1.
+    \end{itemize}
+
+    \item \textbf{Average Return Measures}
+    \begin{itemize}
+        \item \textbf{Arithmetic mean}:
+        \[
+        \bar{R}_{\text{arith}} = \frac{\sum_{t=1}^n R_t}{n}
+        \]
+        \begin{itemize}
+            \item Unbiased estimator of the population mean.
+            \item Includes all observations, including outliers.
+        \end{itemize}
+        
+        \item \textbf{Geometric mean}:
+        \[
+        \bar{R}_{\text{geo}} = \left( \prod_{t=1}^n (1 + R_t) \right)^{1/n} - 1
+        \]
+        \begin{itemize}
+            \item Compound growth rate over multiple periods.
+            \item Always $\leq$ arithmetic mean, with the difference increasing with return variability.
+        \end{itemize}
+        \item Example: Returns = $-9.34\%$, $23.45\%$, $8.92\%$  
+        Step: Multiply $(1 + R_t)$, take cube root, subtract 1.
+        
+        \item \textbf{Harmonic mean}:
+        \[
+        \bar{X}_{\text{harm}} = \frac{n}{\sum_{i=1}^n \frac{1}{X_i}}
+        \]
+        \begin{itemize}
+            \item Common in average share cost when equal amounts invested periodically.
+            \item Example: Prices = \$8, \$9, \$10, with \$1{,}000 invested monthly:
+            \[
+            \bar{X}_{\text{harm}} \approx 8.93
+            \]
+            \item Relation:  
+            \[
+            \text{Arithmetic mean} \times \text{Harmonic mean} = (\text{Geometric mean})^2
+            \]
+            \item For non-equal values: Harmonic $<$ Geometric $<$ Arithmetic.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Dealing with Outliers}
+    \begin{itemize}
+        \item \textbf{Trimmed mean}: Remove a certain percentage of extreme values.
+        \item \textbf{Winsorized mean}: Replace extreme values with the nearest remaining value.
+    \end{itemize}
+
+    \item \textbf{Appropriate Uses}
+    \begin{itemize}
+        \item Arithmetic mean: Use for single-period return estimates, includes outliers.
+        \item Geometric mean: Use for multi-period compounding.
+        \item Harmonic mean: Use for average share cost with fixed periodic investments.
+        \item Trimmed/Winsorized mean: Use to reduce effect of outliers.
+    \end{itemize}
+
+    \item \textbf{Module Quiz 1.1 — Key Answers}
+    \begin{enumerate}
+        \item C — Required rate of return or opportunity cost of consumption.
+        \item C — Real risk-free rate.
+        \item A — Harmonic mean of $3,4,5$ is $3.74$.
+        \item C — Geometric mean for average stock return over multiple years.
+    \end{enumerate}
+\end{itemize}
+
+\subsection*{1.2 Time-Weighted and Money-Weighted Returns}
+
+\begin{itemize}
+    \item \textbf{Definitions and Concepts}
+    \begin{itemize}
+        \item \textbf{Money-Weighted Rate of Return (MWRR)}:
+        \begin{itemize}
+            \item Equivalent to the \textbf{Internal Rate of Return (IRR)} for a portfolio.
+            \item IRR: The interest rate at which the present value (PV) of all cash inflows equals the PV of all cash outflows, i.e., NPV = 0.
+            \item Takes into account:
+            \begin{itemize}
+                \item \emph{Inflows}: Beginning portfolio value and all subsequent deposits.
+                \item \emph{Outflows}: Withdrawals and ending value.
+            \end{itemize}
+            \item Cash flows into the portfolio and out of the portfolio must be entered with opposite signs for IRR calculation.
+        \end{itemize}
+        
+        \item \textbf{Time-Weighted Rate of Return (TWRR)}:
+        \begin{itemize}
+            \item Measures \textbf{compound growth} — the rate at which \$1 grows over a specified performance horizon.
+            \item Removes the effect of cash flow timing; isolates investment performance.
+            \item Preferred in investment management since portfolio managers usually do not control deposit/withdrawal timing.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Example: MWRR Calculation}
+    \begin{itemize}
+        \item $t=0$: Buy 1 share at \$100.
+        \item $t=1$: Dividend = \$2, buy 1 more share at \$120.
+        \item $t=2$: Sell both shares at \$130 each, dividend = \$2/share.
+        \item Net cash flows:
+        \[
+        CF_0 = +100,\quad CF_1 = +118, \quad CF_2 = -264
+        \]
+        \item Solve IRR $\Rightarrow$ MWRR = $13.86\%$.
+    \end{itemize}
+
+    \item \textbf{Steps for Time-Weighted Rate of Return}
+    \begin{enumerate}
+        \item \textbf{Step 1:} Value the portfolio immediately before each significant addition or withdrawal to define \emph{subperiods}.
+        \item \textbf{Step 2:} Compute the \emph{holding period return (HPR)} for each subperiod:
+        \[
+        \text{HPR}_i = \frac{\text{Ending Value}_i - \text{Beginning Value}_i + \text{Income}_i}{\text{Beginning Value}_i}
+        \]
+        \item \textbf{Step 3:} Compound subperiod returns:
+        \[
+        \text{Total Return} = \prod_{i=1}^n (1 + \text{HPR}_i) - 1
+        \]
+        \item \textbf{Step 4:} If total period $> 1$ year, compute the \textbf{geometric mean} to annualize:
+        \[
+        \text{Annual TWRR} = \left[ \prod_{i=1}^n (1 + \text{HPR}_i) \right]^{1/T} - 1
+        \]
+    \end{enumerate}
+
+    \item \textbf{Example: TWRR Calculation}
+    \begin{itemize}
+        \item Same investment as MWRR example.
+        \item $t=0 \to t=1$: HPR$_1$ = $22\%$.
+        \item $t=1 \to t=2$: HPR$_2$ = $10\%$.
+        \item TWRR:
+        \[
+        \text{TWRR} = \sqrt{(1.22)(1.10)} - 1 = 15.84\%
+        \]
+        \item Difference from MWRR due to greater weighting of Year 2 returns in MWRR.
+    \end{itemize}
+
+    \item \textbf{Key Differences Between MWRR and TWRR}
+    \begin{itemize}
+        \item \textbf{MWRR}:
+        \begin{itemize}
+            \item Sensitive to \textbf{timing and magnitude} of cash flows.
+            \item If more money is invested before poor performance, MWRR $<$ TWRR.
+            \item If more money is invested before strong performance, MWRR $>$ TWRR.
+            \item Appropriate when manager controls cash flow timing.
+        \end{itemize}
+        \item \textbf{TWRR}:
+        \begin{itemize}
+            \item Eliminates distortion from cash flow timing.
+            \item Best measure of investment selection skill when the manager does \emph{not} control cash flows.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Module Quiz 1.2 — Key Answers}
+    \begin{enumerate}
+        \item B — MWRR $\approx 23.0\%$.
+        \item C — TWRR $\approx 26.8\%$.
+    \end{enumerate}
+\end{itemize}
+
+\subsection*{1.3 Common Measures of Return}
+
+\begin{itemize}
+    \item \textbf{Annualized Return Measures}
+    \begin{itemize}
+        \item Returns are typically expressed on an \textbf{annualized} basis, regardless of the actual holding period.
+        \item Formula for annualizing HPR over $n$ days:
+        \[
+        \text{Annualized Return} = (1 + \text{HPR})^{\frac{365}{n}} - 1
+        \]
+        \item \textbf{Example (Shorter than 1 year)}:  
+        Deposit \$100 $\to$ \$100.75 after 90 days.  
+        Annualized Return:
+        \[
+        (1 + 0.0075)^{\frac{365}{90}} - 1
+        \]
+        \item \textbf{Example (Longer than 1 year)}:  
+        Buy a 500-day bill for \$970, maturity \$1,000:  
+        \[
+        (1 + 0.03093)^{\frac{365}{500}} - 1
+        \]
+    \end{itemize}
+
+    \item \textbf{Effect of Compounding Frequency}
+    \begin{itemize}
+        \item More frequent compounding $\Rightarrow$ higher effective rate, higher future value (FV), and lower present value (PV).
+        \item Present value with compounding:
+        \[
+        PV = \frac{FV}{\left(1 + \frac{r}{m}\right)^{mN}}
+        \]
+        where:
+        \begin{itemize}
+            \item $r$ = quoted annual interest rate.
+            \item $N$ = number of years.
+            \item $m$ = compounding periods/year.
+        \end{itemize}
+        \item Example: PV of \$1,000, $r = 6\%$:
+        \begin{itemize}
+            \item Semiannual ($m=2$): $PV = \frac{1,000}{(1.03)^2}$
+            \item Quarterly ($m=4$): $PV = \frac{1,000}{(1.015)^4}$
+            \item Monthly ($m=12$): $PV = \frac{1,000}{(1.005)^ {12}}$
+            \item Daily ($m=365$): $PV = \frac{1,000}{(1 + 0.06/365)^{365}}$
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Continuous Compounding}
+    \begin{itemize}
+        \item Limit as compounding frequency $\to$ infinity.
+        \item Continuously compounded return from HPR:
+        \[
+        R_c = \ln(1 + \text{HPR}) = \ln\left(\frac{\text{End Value}}{\text{Start Value}}\right)
+        \]
+        \item \textbf{Example}: Buy at \$100, sell at \$120:
+        \[
+        R_c = \ln\left(\frac{120}{100}\right) = 0.18232 = 18.232\%
+        \]
+        \item \textbf{Additivity property}:
+        \[
+        R_{c,0\to 2} = R_{c,0\to 1} + R_{c,1\to 2}
+        \]
+    \end{itemize}
+
+    \item \textbf{Major Return Measures and Uses}
+    \begin{itemize}
+        \item \textbf{Gross return}: Total return before deducting management/administration fees; trading commissions are deducted in both gross and net returns.
+        \item \textbf{Net return}: Return after deducting all management and administration fees.
+        \item \textbf{Pretax nominal return}: Before taxes; may differ depending on how dividends, interest, and capital gains are taxed.
+        \item \textbf{After-tax nominal return}: Net of tax liabilities.
+        \item \textbf{Real return}:
+        \begin{itemize}
+            \item Adjusts nominal return for inflation.
+            \item Approximation:
+            \[
+            \text{Real} \approx \text{Nominal} - \text{Inflation}
+            \]
+            \item Exact:
+            \[
+            \text{Real} = \frac{1 + \text{Nominal}}{1 + \text{Inflation}} - 1
+            \]
+            \item Example: Nominal 7\%, Inflation 2\% $\Rightarrow$ Real $\approx 4.9\%$.
+        \end{itemize}
+        \item \textbf{Leveraged return}:
+        \begin{itemize}
+            \item Uses borrowed funds to magnify returns.
+            \item Unleveraged return (money amount):
+            \[
+            r \times V_0
+            \]
+            \item Leveraged return (money amount):
+            \[
+            r \times (V_0 + V_B) - r_B \times V_B
+            \]
+            \item Leveraged rate of return:
+            \[
+            R_{\text{leveraged}} = \frac{r(V_0 + V_B) - r_B V_B}{V_0}
+            \]
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Appropriate Uses}
+    \begin{itemize}
+        \item \textbf{Annualized return}: Compare investments over different periods.
+        \item \textbf{Continuous compounding}: Used in advanced finance/math modeling; additive across periods.
+        \item \textbf{Gross/Net return}: Evaluate portfolio performance pre- or post-fee.
+        \item \textbf{Real return}: Assess purchasing power changes.
+        \item \textbf{Leveraged return}: Analyze impact of debt on investment outcomes.
+    \end{itemize}
+
+    \item \textbf{Module Quiz 1.3 — Key Answers}
+    \begin{enumerate}
+        \item B — Annualized return $\approx -8.5\%$.
+        \item A — Continuously compounded return $\approx 13.64\%$.
+        \item B — The 5\% increase before fees = \textbf{gross return}.
+    \end{enumerate}
+\end{itemize}
+
+\section*{Key Concepts — Modul 1}
+
+\begin{itemize}
+    \item \textbf{LOS 1.a: Interpretation of Interest Rates}
+    \begin{itemize}
+        \item An \textbf{interest rate} can be interpreted as:
+        \begin{itemize}
+            \item The \emph{required rate of return} in equilibrium for a specific investment.
+            \item The \emph{discount rate} for calculating the present value of future cash flows.
+            \item The \emph{opportunity cost} of consuming now rather than saving and investing.
+        \end{itemize}
+        \item \textbf{Real risk-free rate}:
+        \begin{itemize}
+            \item Reflects \emph{time preference} for present goods over future goods.
+        \end{itemize}
+        \item Relationship:
+        \[
+        \text{Nominal risk-free rate} \approx \text{Real risk-free rate} + \text{Expected inflation}
+        \]
+        \item \textbf{Risk premiums} increase required return:
+        \begin{itemize}
+            \item \emph{Default risk premium}.
+            \item \emph{Liquidity premium}.
+            \item \emph{Maturity premium}.
+        \end{itemize}
+        \item Nominal interest rate components:
+        \[
+        \text{Nominal Rate} = \text{Real Risk-Free Rate} + \text{Expected Inflation} + \text{Default RP} + \text{Liquidity RP} + \text{Maturity RP}
+        \]
+    \end{itemize}
+
+    \item \textbf{LOS 1.b: Return Measurement}
+    \begin{itemize}
+        \item \textbf{Holding Period Return (HPR)}: Return over a specific period.
+        \item \textbf{Arithmetic mean return}:
+        \begin{itemize}
+            \item Simple average of periodic returns.
+            \item Includes all observations, including outliers.
+        \end{itemize}
+        \item \textbf{Geometric mean return}:
+        \begin{itemize}
+            \item Compound annual growth rate over multiple periods.
+            \item Used for compounding returns.
+        \end{itemize}
+        \item \textbf{Harmonic mean}:
+        \begin{itemize}
+            \item Used to calculate the average price paid when equal amounts are invested periodically.
+        \end{itemize}
+        \item \textbf{Trimmed mean} / \textbf{Winsorized mean}:
+        \begin{itemize}
+            \item Reduce the influence of outliers.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{LOS 1.c: Money-Weighted vs. Time-Weighted Returns}
+    \begin{itemize}
+        \item \textbf{Money-weighted rate of return (MWRR)}:
+        \begin{itemize}
+            \item IRR of the portfolio.
+            \item Discount rate that equates PV of cash inflows to PV of cash outflows.
+        \end{itemize}
+        \item \textbf{Time-weighted rate of return (TWRR)}:
+        \begin{itemize}
+            \item Measures compound growth over a specified horizon.
+            \item Removes the effect of cash flow timing.
+        \end{itemize}
+        \item Comparison:
+        \begin{itemize}
+            \item If funds are added before poor performance $\Rightarrow$ MWRR $<$ TWRR.
+            \item If funds are added before strong performance $\Rightarrow$ MWRR $>$ TWRR.
+            \item TWRR is preferred for assessing \emph{manager skill} when they don’t control cash flows.
+            \item MWRR is appropriate if the manager controls cash flows.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{LOS 1.d: Annualized and Continuously Compounded Returns}
+    \begin{itemize}
+        \item Returns are often stated on an annualized basis.
+        \item Continuously compounded return from HPR:
+        \[
+        R_c = \ln(1 + \text{HPR})
+        \]
+    \end{itemize}
+
+    \item \textbf{LOS 1.e: Major Return Measures}
+    \begin{itemize}
+        \item \textbf{Gross return}:
+        \begin{itemize}
+            \item Total return after deducting commissions/trading costs but \emph{before} management and administration fees.
+        \end{itemize}
+        \item \textbf{Net return}:
+        \begin{itemize}
+            \item Return after deducting management and administration fees.
+        \end{itemize}
+        \item \textbf{Pretax nominal return}:
+        \begin{itemize}
+            \item Before taxes; ignores inflation.
+        \end{itemize}
+        \item \textbf{After-tax nominal return}:
+        \begin{itemize}
+            \item After taxes; ignores inflation.
+        \end{itemize}
+        \item \textbf{Real return}:
+        \begin{itemize}
+            \item Adjusts nominal return for inflation.
+            \item Approximation: $\text{Nominal} - \text{Inflation}$.
+        \end{itemize}
+        \item \textbf{Leveraged return}:
+        \begin{itemize}
+            \item Gain/loss as a percentage of investor’s cash investment.
+            \item Common in derivatives and real estate.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\section*{2 THE TIME VALUE OF MONEY IN FINANCE}
+
+\subsection*{2.1 Discounted Cash Flow Valuation}
+
+\begin{itemize}
+    \item \textbf{Present Value and Future Value Relationship}
+    \begin{itemize}
+        \item Discrete compounding:
+        \[
+        PV = \frac{FV}{(1 + r)^t}
+        \]
+        where:
+        \begin{itemize}
+            \item $r$ = interest rate per compounding period.
+            \item $t$ = number of compounding periods.
+        \end{itemize}
+        \item Continuous compounding:
+        \[
+        PV = FV \cdot e^{-rt}
+        \]
+    \end{itemize}
+
+    \item \textbf{Fixed-Income Securities}
+    \begin{itemize}
+        \item \emph{Zero-coupon bond}:
+        \begin{itemize}
+            \item Price = PV of face value:
+            \[
+            P = \frac{\text{Face Value}}{(1 + r)^t}
+            \]
+            \item Interest earned = Face Value $-$ Purchase Price.
+            \item Example: FV = \$1{,}000, $t=15$, $r=4\%$ (annual):
+            \[
+            P = \frac{1000}{(1.04)^{15}} = 555.26
+            \]
+            \item Negative yields $\Rightarrow$ Price $>$ Face Value.
+        \end{itemize}
+        
+        \item \emph{Coupon bond}:
+        \begin{itemize}
+            \item Coupon payment = Coupon Rate $\times$ Par Value.
+            \item Price = PV of coupon payments + PV of face value.
+            \item Example: 10-year, 10\% coupon (\$100/year), Par = \$1{,}000, YTM = 8\%:
+            \[
+            P = \sum_{t=1}^{10} \frac{100}{(1.08)^t} + \frac{1000}{(1.08)^{10}} = 1{,}134.20
+            \]
+        \end{itemize}
+        
+        \item \emph{Perpetual bond (perpetuity)}:
+        \[
+        PV = \frac{\text{Payment}}{\text{Discount Rate}}
+        \]
+        
+        \item \emph{Amortizing bond / Loan payment} (annuity formula):
+        \[
+        PMT = \frac{r \cdot PV}{1 - (1 + r)^{-t}}
+        \]
+        \item Example: Loan \$2{,}000, $t=13$, $r=6\%$ (annual), FV=0:
+        \[
+        PMT = 225.92
+        \]
+    \end{itemize}
+
+    \item \textbf{Equity Securities}
+    \begin{itemize}
+        \item \emph{Preferred stock}:
+        \begin{itemize}
+            \item Pays fixed dividend $D_p$ forever.
+            \item Value:
+            \[
+            P = \frac{D_p}{k_p}
+            \]
+            \item Example: Par = \$100, Dividend = \$5, $k_p = 8\%$:
+            \[
+            P = \frac{5}{0.08} = 62.50
+            \]
+        \end{itemize}
+        
+        \item \emph{Common stock}:
+        \begin{itemize}
+            \item Residual claim on assets.
+            \item Dividend Discount Models (DDMs):
+            \begin{enumerate}
+                \item \textbf{Constant dividend} (perpetuity):
+                \[
+                P_0 = \frac{D}{k_e}
+                \]
+                \item \textbf{Constant growth} (Gordon Growth Model):
+                \[
+                P_0 = \frac{D_1}{k_e - g_c}
+                \]
+                where $k_e > g_c$.
+                \item \textbf{Multistage growth}:
+                \begin{itemize}
+                    \item Step 1: Forecast dividends during high-growth phase individually.
+                    \item Step 2: Apply constant growth model to first dividend in constant-growth phase to get terminal value:
+                    \[
+                    P_{n-1} = \frac{D_n}{k_e - g_c}
+                    \]
+                    \item Step 3: Discount all cash flows and terminal value to present.
+                \end{itemize}
+            \end{enumerate}
+        \end{itemize}
+        
+        \item \textbf{Example: Gordon Growth Model}:
+        \begin{itemize}
+            \item $D_1 = 1.62$, $g_c = 8\%$, $k_e = 12\%$:
+            \[
+            P_0 = \frac{1.62}{0.12 - 0.08} = 40.50
+            \]
+        \end{itemize}
+        
+        \item \textbf{Example: Multistage Growth}:
+        \begin{itemize}
+            \item $D_0 = 1.00$, High growth $g_h = 15\%$ for 2 years, then $g_c = 5\%$ forever, $k_e = 11\%$.
+            \item $D_1 = 1.15$, $D_2 = 1.15 \times 1.15 = 1.3225$.
+            \item Terminal value at $t=1$:
+            \[
+            P_1 = \frac{D_2}{0.11 - 0.05} = \frac{1.3225}{0.06} = 22.0417
+            \]
+            \item Present value:
+            \[
+            P_0 = \frac{1.15}{1.11} + \frac{22.0417}{1.11} = \dots
+            \]
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Module Quiz 2.1 — Key Answers}
+    \begin{enumerate}
+        \item A — $P = \frac{9}{0.11} = 81.82$.
+        \item A — Required yield $>$ coupon rate $\Rightarrow$ Price $<$ Par Value.
+    \end{enumerate}
+\end{itemize}
+
+\subsection*{2.2 Implied Returns and Cash Flow Additivity}
+
+\begin{itemize}
+    \item \textbf{LOS 2.b: Implied Returns for Fixed-Income and Equity}
+    \begin{itemize}
+        \item Rearrange PV–FV–rate relationships to solve for the \textbf{required rate of return} given the price and expected cash flows.
+        \item \textbf{Pure discount bond}:
+        \[
+        r = \left( \frac{FV}{PV} \right)^{1/t} - 1
+        \]
+        \item \textbf{Coupon bond}:
+        \begin{itemize}
+            \item Yield to maturity (YTM) is solved by equating price to PV of coupons and face value.
+            \item Relationship: Price $\uparrow$ $\Rightarrow$ Yield $\downarrow$ and vice versa.
+        \end{itemize}
+        
+        \item \textbf{Equity: Constant Growth Dividend Discount Model (DDM)}
+        \begin{itemize}
+            \item Value:
+            \[
+            P_0 = \frac{D_1}{k_e - g_c}
+            \]
+            \item Required return:
+            \[
+            k_e = \frac{D_1}{P_0} + g_c
+            \]
+            \item Implied growth:
+            \[
+            g_c = k_e - \frac{D_1}{P_0}
+            \]
+            \item Dividend yield = $D_1 / P_0$.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{LOS 2.c: Cash Flow Additivity Principle}
+    \begin{itemize}
+        \item PV of a stream of cash flows = sum of PVs of each cash flow.
+        \item Can split or combine streams without changing total PV.
+        \item Basis for \textbf{no-arbitrage principle} (“law of one price”): identical cash flows $\Rightarrow$ identical prices.
+        \item \textbf{Example:}  
+        Payments: 100, 100, 400, 100 at 10\%.
+        \begin{itemize}
+            \item Series 1: 4-year annuity of 100 $\Rightarrow$ PV = 316.99.
+            \item Series 2: 3-year zero-coupon of 300 $\Rightarrow$ PV = 225.39.
+            \item Total PV = 542.38, equal to PV of original stream.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Applications of No-Arbitrage}
+    \begin{itemize}
+        \item \textbf{Forward interest rates}:
+        \begin{itemize}
+            \item Spot rate notation: $S_n$ = $n$-year rate today.
+            \item Forward rate notation: $myny$ = $n$-year loan starting $m$ years from now.
+            \item Relation:
+            \[
+            (1 + S_3)^3 = (1 + S_1)(1 + 1y1y)(1 + 2y1y)
+            \]
+            \item Example: $S_2 = 8\%$, $S_1 = 4\%$:
+            \[
+            (1.08)^2 = (1.04)(1 + 1y1y) \Rightarrow 1y1y = 12.154\%
+            \]
+        \end{itemize}
+        
+        \item \textbf{Forward currency exchange rates}:
+        \begin{itemize}
+            \item Price currency / Base currency quotation.
+            \item No-arbitrage formula:
+            \[
+            F_{A/B} = S_{A/B} \cdot \frac{(1 + r_A)}{(1 + r_B)}
+            \]
+            \item Example: Spot = 4.5671 ABE/DUB, $r_{ABE} = 5\%$, $r_{DUB} = 3\%$:
+            \[
+            F = 4.5671 \cdot \frac{1.05}{1.03} = 4.6558
+            \]
+            \item Forward premium $\approx r_A - r_B$.
+        \end{itemize}
+        
+        \item \textbf{Option pricing (binomial model)}:
+        \begin{itemize}
+            \item One-period binomial tree: asset price can go up ($S_u$) or down ($S_d$).
+            \item Hedge ratio:
+            \[
+            h = \frac{C_u - C_d}{S_u - S_d}
+            \]
+            where $C_u$ = option payoff if up, $C_d$ = payoff if down.
+            \item Portfolio replicates option payoff in both states $\Rightarrow$ price via risk-free discounting.
+            \item Example:
+            \begin{itemize}
+                \item $S_0 = 50$, $S_u = 60$, $S_d = 42$, $X = 55$ (call option).
+                \item Payoffs: $C_u = 5$, $C_d = 0$.
+                \item Hedge ratio:
+                \[
+                h = \frac{5 - 0}{60 - 42} = 0.278
+                \]
+                \item Portfolio value in 1 period: 11.68 in both states.
+                \item Risk-free rate = 3\%:
+                \[
+                V_0 = \frac{11.68}{1.03} = 11.34
+                \]
+                \item Option value:
+                \[
+                c_0 = hS_0 - V_0 = 0.278 \cdot 50 - 11.34 = 2.56
+                \]
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Module Quiz 2.2 — Key Answers}
+    \begin{enumerate}
+        \item C — Required return = dividend yield + growth rate.
+        \item B — Annual return $\approx 13\%$.
+    \end{enumerate}
+\end{itemize}
+
+\section*{Key Concepts — Module 2}
+
+\begin{itemize}
+    \item \textbf{LOS 2.a: Valuation of Fixed-Income and Equity Securities}
+    \begin{itemize}
+        \item The \textbf{value} of a fixed-income instrument or equity security =
+        \textbf{PV of future cash flows} discounted at the investor’s required rate of return.
+        \item General formula (discrete compounding):
+        \[
+        PV = \sum_{t=1}^n \frac{CF_t}{(1 + r)^t}
+        \]
+        \item \textbf{Perpetual bond / Preferred stock}:
+        \[
+        PV = \frac{\text{Payment}}{r}
+        \]
+        where $r$ = required rate of return.
+        \item \textbf{Common stock with constant growth rate of dividends} (Gordon Growth Model):
+        \[
+        P_0 = \frac{D_1}{k_e - g_c}
+        \]
+        where:
+        \begin{itemize}
+            \item $D_1$ = dividend expected next period.
+            \item $k_e$ = required return on equity.
+            \item $g_c$ = constant dividend growth rate.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{LOS 2.b: Implied Returns and Growth Rates}
+    \begin{itemize}
+        \item Rearrange PV formulas to calculate:
+        \begin{itemize}
+            \item \textbf{Required rate of return} given price and expected cash flows.
+            \item \textbf{Implied growth rate} given price, expected dividend, and required return.
+        \end{itemize}
+        \item Price–return relationship is \textbf{inverse}:
+        \begin{itemize}
+            \item Price $\uparrow \Rightarrow$ Required return $\downarrow$.
+            \item Price $\downarrow \Rightarrow$ Required return $\uparrow$.
+        \end{itemize}
+        \item For constant dividend growth stock:
+        \[
+        k_e = \frac{D_1}{P_0} + g_c \quad \text{(Dividend Yield + Growth Rate)}
+        \]
+        \[
+        g_c = k_e - \frac{D_1}{P_0} \quad \text{(Required Return - Dividend Yield)}
+        \]
+    \end{itemize}
+
+    \item \textbf{LOS 2.c: Cash Flow Additivity Principle}
+    \begin{itemize}
+        \item PV of a stream of cash flows = sum of PVs of each individual cash flow:
+        \[
+        PV_{\text{total}} = \sum_{t=1}^n PV(CF_t)
+        \]
+        \item The series can be split into components, and the sum of the PVs of the components =
+        PV of the original stream.
+        \item Basis for \textbf{no-arbitrage condition}:
+        \begin{itemize}
+            \item If two sets of future cash flows are identical $\Rightarrow$ They must have the same PV.
+            \item If prices differ, arbitrage opportunities exist (buy cheaper, sell more expensive until prices converge).
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\section*{3 STATISTICAL MEASURES OF ASSET RETURNS}
+
+\subsection*{3.1 Central Tendency and Dispersion}
+
+\begin{itemize}
+    \item \textbf{LOS 3.a: Measures of Central Tendency and Location}
+    \begin{itemize}
+        \item \textbf{Purpose:} Identify the center (average) of a dataset to represent the typical or expected value.
+        
+        \item \textbf{Arithmetic Mean:}
+        \[
+        \bar{X} = \frac{\sum_{i=1}^n X_i}{n}
+        \]
+        Example: Returns [30\%, 15\%, 25\%, 21\%, 23\%]:
+        \[
+        \bar{X} = \frac{30 + 15 + 25 + 21 + 23}{5} = 22\%
+        \]
+        
+        \item \textbf{Median:}
+        \begin{itemize}
+            \item Odd $n$: middle value after sorting.
+            \item Even $n$: mean of two middle values.
+        \end{itemize}
+        Example (odd $n$): [30\%, 25\%, 23\%, 21\%, 15\%] $\Rightarrow$ Median = $23\%$.  
+        Example (even $n$): [30\%, 28\%, 25\%, 23\%, 21\%, 15\%] $\Rightarrow$ Median = $\frac{25 + 23}{2} = 24\%$.
+        
+        \item \textbf{Mode:}
+        \begin{itemize}
+            \item Most frequent observation.
+            \item Possible to have 0, 1, 2, or more modes (unimodal, bimodal, trimodal).
+        \end{itemize}
+        Example: [30\%, 28\%, 25\%, 23\%, 28\%, 15\%, 5\%] $\Rightarrow$ Mode = $28\%$.
+        
+        \item \textbf{Dealing with Outliers:}
+        \begin{itemize}
+            \item \textbf{Trimmed mean}: Remove a fixed \% of extreme values from each end.
+            \item \textbf{Winsorized mean}: Replace extremes with nearest remaining values.
+        \end{itemize}
+        
+        \item \textbf{Measures of Location (Quantiles):}
+        \begin{itemize}
+            \item Quartiles: 4 equal parts.
+            \item Quintiles: 5 equal parts.
+            \item Deciles: 10 equal parts.
+            \item Percentiles: 100 equal parts.
+            \item \emph{Interquartile range}:
+            \[
+            IQR = Q_3 - Q_1
+            \]
+            Example: $Q_3 = 15$, $Q_1 = 5$ $\Rightarrow$ $IQR = 10$.
+        \end{itemize}
+        
+        \item \textbf{Box and Whisker Plot:}
+        \begin{itemize}
+            \item Box = Interquartile range (IQR).
+            \item Whiskers = Full range.
+            \item Detects skewness and outliers visually.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{LOS 3.b: Measures of Dispersion}
+    \begin{itemize}
+        \item \textbf{Range:}
+        \[
+        \text{Range} = \max(X) - \min(X)
+        \]
+        Example: [30\%, 12\%, 25\%, 20\%, 23\%] $\Rightarrow$ Range = $30 - 12 = 18\%$.
+        
+        \item \textbf{Mean Absolute Deviation (MAD):}
+        \[
+        \text{MAD} = \frac{\sum_{i=1}^n |X_i - \bar{X}|}{n}
+        \]
+        Example: Returns [30\%, 12\%, 25\%, 20\%, 23\%], $\bar{X} = 22\%$:
+        \[
+        \text{MAD} = \frac{|30-22| + |12-22| + |25-22| + |20-22| + |23-22|}{5} = \frac{8 + 10 + 3 + 2 + 1}{5} = 4.8\%
+        \]
+        
+        \item \textbf{Sample Variance:}
+        \[
+        s^2 = \frac{\sum_{i=1}^n (X_i - \bar{X})^2}{n - 1}
+        \]
+        Example: Same data, $\bar{X} = 22$:
+        \[
+        s^2 = \frac{(8^2 + (-10)^2 + 3^2 + (-2)^2 + 1^2)}{4} = \frac{64 + 100 + 9 + 4 + 1}{4} = \frac{178}{4} = 44.5
+        \]
+        Units = $(\%)^2$.
+        
+        \item \textbf{Sample Standard Deviation:}
+        \[
+        s = \sqrt{s^2}
+        \]
+        Example: $s = \sqrt{44.5} \approx 6.67\%$.
+        
+        \item \textbf{Coefficient of Variation (CV):}
+        \[
+        CV = \frac{s}{\bar{X}}
+        \]
+        Example: T-bills: $\frac{0.36}{0.25} = 1.44$, S\&P 500: $\frac{7.30}{1.09} = 6.70$.
+        
+        \item \textbf{Target Downside Deviation (TDD):}
+        \[
+        TDD = \sqrt{\frac{\sum_{i=1}^n \min(0, X_i - B)^2}{n - 1}}
+        \]
+        Example: Target $B = 22\%$, returns [30, 12, 25, 20, 23]:
+        \begin{itemize}
+            \item Deviations from target: [8, -10, 3, -2, 1].
+            \item Only negatives: [-10, -2] $\Rightarrow$ squares: [100, 4].
+            \item $TDD = \sqrt{\frac{100 + 4}{4}} = \sqrt{26} \approx 5.10\%$.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Module Quiz 3.1 — Key Answers}
+    \begin{enumerate}
+        \item B — Both trimmed mean and winsorized mean use denominator $n$.
+        \item A — Sample standard deviation = 9.8\%.
+        \item B — Target downside deviation = 12.10\%.
+    \end{enumerate}
+\end{itemize}
+
+\subsection*{3.2 Skewness, Kurtosis, and Correlation}
+
+\begin{itemize}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item \textbf{LOS 3.c: Interpret and evaluate measures of skewness and kurtosis}
+
+    \begin{itemize}
+        \item \textbf{Symmetry in Distributions:}
+        \begin{itemize}
+            \item A distribution is \emph{symmetrical} if it is identical on both sides of its mean.
+            \item Symmetry $\Rightarrow$ losses and gains of equal magnitude occur with the same frequency.
+            \item Example: Mean return = 0\%, frequency of losses in $[-6\%, -4\%]$ equals frequency of gains in $[+4\%, +6\%]$.
+        \end{itemize}
+        
+        \item \textbf{Skewness:}
+        \begin{itemize}
+            \item \emph{Definition:} Degree to which a distribution is not symmetrical.
+            \item Caused by \emph{outliers} (observations far from the mean).
+            \item \emph{Positive skew} (right skew): Long right tail, outliers $>$ mean.
+            \item \emph{Negative skew} (left skew): Long left tail, outliers $<$ mean.
+            \item \textbf{Effect on Mean, Median, Mode:}
+            \begin{itemize}
+                \item Symmetrical: $\text{Mean} = \text{Median} = \text{Mode}$.
+                \item Positive skew: $\text{Mode} < \text{Median} < \text{Mean}$ (mean pulled right).
+                \item Negative skew: $\text{Mean} < \text{Median} < \text{Mode}$ (mean pulled left).
+            \end{itemize}
+            \item \textbf{Example (Positive Skew):}  
+            100 homes, 99 priced at \$100{,}000, 1 at \$1{,}000{,}000:  
+            Median = Mode = \$100{,}000, Mean = \$109{,}000.
+        \end{itemize}
+
+        \item \textbf{Sample Skewness (large $n$):}
+        \[
+        \text{Sample Skewness} = \frac{\frac{1}{n} \sum_{i=1}^n (X_i - \bar{X})^3}{s^3}
+        \]
+        where $s$ = sample standard deviation.
+        \begin{itemize}
+            \item Denominator always $> 0$.
+            \item Sign of skewness determined by numerator:
+            \begin{itemize}
+                \item $>0$: Positive skew (right tail longer).
+                \item $<0$: Negative skew (left tail longer).
+            \end{itemize}
+            \item $|\text{Skewness}| > 0.5$ $\Rightarrow$ significant skew.
+        \end{itemize}
+
+        \item \textbf{Kurtosis:}
+        \begin{itemize}
+            \item Measures \emph{peakedness} and tail thickness.
+            \item \emph{Mesokurtic}: Same kurtosis as normal distribution ($=3$).
+            \item \emph{Leptokurtic}: More peaked, fatter tails (higher risk of extreme outcomes).
+            \item \emph{Platykurtic}: Flatter, thinner tails.
+            \item \textbf{Excess kurtosis}:
+            \[
+            \text{Excess Kurtosis} = \text{Kurtosis} - 3
+            \]
+            \begin{itemize}
+                \item Normal distribution: $0$.
+                \item Leptokurtic: $> 0$.
+                \item Platykurtic: $< 0$.
+            \end{itemize}
+        \end{itemize}
+
+        \item \textbf{Risk Management Note:}
+        \begin{itemize}
+            \item Security returns often exhibit skewness \emph{and} excess kurtosis.
+            \item Greater excess kurtosis $\&$ negative skew $\Rightarrow$ higher risk of extreme negative returns.
+            \item Risk managers focus on tail behaviour, not just mean and standard deviation.
+        \end{itemize}
+
+        \item \textbf{Sample Kurtosis (large $n$):}
+        \[
+        \text{Sample Kurtosis} = \frac{\frac{1}{n} \sum_{i=1}^n (X_i - \bar{X})^4}{s^4}
+        \]
+    \end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item \textbf{LOS 3.d: Interpret correlation between two variables}
+
+    \begin{itemize}
+        \item \textbf{Scatter Plots:}
+        \begin{itemize}
+            \item Plot one variable on $x$-axis, the other on $y$-axis.
+            \item Useful for detecting both linear and nonlinear relationships.
+            \item Can reveal patterns even if correlation coefficient is near zero.
+        \end{itemize}
+
+        \item \textbf{Covariance:}
+        \[
+        \text{Cov}(X,Y) = \frac{\sum_{i=1}^n (X_i - \bar{X})(Y_i - \bar{Y})}{n-1}
+        \]
+        \begin{itemize}
+            \item Positive: Variables move in same direction.
+            \item Negative: Variables move in opposite directions.
+            \item Units: Product of units of $X$ and $Y$.
+            \item Hard to interpret magnitude directly $\Rightarrow$ use correlation.
+        \end{itemize}
+
+        \item \textbf{Correlation Coefficient:}
+        \[
+        \rho_{XY} = \frac{\text{Cov}(X,Y)}{s_X s_Y}
+        \]
+        \begin{itemize}
+            \item Ranges: $-1 \leq \rho \leq +1$.
+            \item $\rho = 1$: Perfect positive linear relationship.
+            \item $\rho = -1$: Perfect negative linear relationship.
+            \item $\rho = 0$: No linear relationship.
+        \end{itemize}
+
+        \item \textbf{Example (Correlation):}
+        \begin{itemize}
+            \item Given:
+            \[
+            \text{Var}(A) = 0.0028, \quad \text{Var}(B) = 0.0124, \quad \text{Cov}(A,B) = 0.0058
+            \]
+            \item Step 1: Standard deviations:
+            \[
+            s_A = \sqrt{0.0028} \approx 0.0529, \quad s_B = \sqrt{0.0124} \approx 0.1114
+            \]
+            \item Step 2: Correlation:
+            \[
+            \rho_{AB} = \frac{0.0058}{0.0529 \times 0.1114} \approx 0.981
+            \]
+            Interpretation: Very strong positive linear relationship.
+        \end{itemize}
+
+        \item \textbf{Important Notes:}
+        \begin{itemize}
+            \item Correlation $\neq$ causation.
+            \item Outliers can distort correlation.
+            \item Spurious correlation: High correlation due to association with a third variable or time trends.
+            \item Example: U.S. spending on science vs. suicides by hanging (1999–2009), correlation $= 0.9987$ — clearly unrelated causally.
+        \end{itemize}
+    \end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item \textbf{Module Quiz 3.2 — Key Answers:}
+    \begin{enumerate}
+        \item A — Mean $>$ Median $\Rightarrow$ Positively skewed.
+        \item B — Greater % of small deviations and large deviations $\Rightarrow$ Positive excess kurtosis.
+        \item B — $\rho = +0.25$: When one variable is above its mean, the other tends to be above its mean too (weak positive association).
+    \end{enumerate}
+\end{itemize}
+
+\section*{Key Concepts — Modul 3}
+
+\begin{itemize}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item \textbf{LOS 3.a: Measures of Central Tendency}
+    \begin{itemize}
+        \item \textbf{Arithmetic Mean} (average):
+        \[
+        \bar{X} = \frac{\sum_{i=1}^n X_i}{n}
+        \]
+        \begin{itemize}
+            \item For a sample: \(\bar{X}_{\text{sample}}\) is the arithmetic mean of sample values.
+            \item Example: Returns = \(\{5\%, 7\%, 8\%\}\), Mean = \(\frac{0.05+0.07+0.08}{3} \approx 0.0667\) or \(6.67\%\).
+        \end{itemize}
+
+        \item \textbf{Median}:
+        \begin{itemize}
+            \item The middle value when data are sorted from largest to smallest.
+            \item Example: \(\{3, 5, 8, 12, 20\}\) → Median = \(8\).
+        \end{itemize}
+
+        \item \textbf{Mode}:
+        \begin{itemize}
+            \item Value that occurs most frequently in the dataset.
+            \item For continuous data, the \emph{modal interval} is used.
+            \item Example: \(\{2, 4, 4, 5, 6\}\) → Mode = \(4\).
+        \end{itemize}
+
+        \item \textbf{Trimmed Mean}:
+        \begin{itemize}
+            \item Omits outliers before calculating the mean.
+            \item Example: Returns = \(\{5\%, 6\%, 100\%\}\), trimmed mean (removing 100\%) = Mean of \(\{5\%, 6\%\} = 5.5\%\).
+        \end{itemize}
+
+        \item \textbf{Winsorized Mean}:
+        \begin{itemize}
+            \item Replaces outliers with specified values before computing mean.
+            \item Example: Replace \(100\%\) return with \(10\%\) in above dataset before averaging.
+        \end{itemize}
+
+        \item \textbf{Quantiles}:
+        \begin{itemize}
+            \item General term for a value below which lies a stated proportion of the data.
+            \item Examples:
+            \begin{itemize}
+                \item Quartile: 4 equal parts.
+                \item Quintile: 5 equal parts.
+                \item Decile: 10 equal parts.
+                \item Percentile: 100 equal parts.
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item \textbf{LOS 3.b: Measures of Dispersion}
+    \begin{itemize}
+        \item \textbf{Range}:
+        \[
+        \text{Range} = X_{\text{max}} - X_{\text{min}}
+        \]
+        Example: Prices = \(\{20, 25, 18, 30\}\) → Range = \(30 - 18 = 12\).
+
+        \item \textbf{Mean Absolute Deviation (MAD)}:
+        \[
+        \text{MAD} = \frac{\sum_{i=1}^n |X_i - \bar{X}|}{n}
+        \]
+        Example: Data = \(\{2, 4, 6\}\), Mean = \(4\), MAD = \(\frac{|2-4|+|4-4|+|6-4|}{3} = \frac{2+0+2}{3} \approx 1.33\).
+
+        \item \textbf{Variance}:
+        \[
+        s^2 = \frac{\sum_{i=1}^n (X_i - \bar{X})^2}{n}
+        \]
+        \item \textbf{Standard Deviation (SD)}:
+        \[
+        s = \sqrt{s^2}
+        \]
+        Often used as a quantitative measure of risk (volatility).
+
+        \item \textbf{Coefficient of Variation (CV)}:
+        \[
+        \text{CV} = \frac{s}{\bar{X}}
+        \]
+        Lower CV → more return per unit of risk.
+
+        \item \textbf{Target Downside Deviation (Semideviation)}:
+        \[
+        \text{Semideviation} = \sqrt{\frac{\sum_{i=1}^n \min(X_i - B, 0)^2}{n}}
+        \]
+        where \(B\) = target return (often 0 or risk-free rate).
+    \end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item \textbf{LOS 3.c: Skewness and Kurtosis}
+    \begin{itemize}
+        \item \textbf{Skewness}:
+        \begin{itemize}
+            \item Positive skew (right tail longer): \(\text{Mean} > \text{Median} > \text{Mode}\).
+            \item Negative skew (left tail longer): \(\text{Mean} < \text{Median} < \text{Mode}\).
+            \item Example: Housing prices with one very expensive property → positive skew.
+        \end{itemize}
+
+        \item \textbf{Kurtosis}:
+        \begin{itemize}
+            \item Measures peakedness and probability of extreme outcomes.
+            \item Excess kurtosis:  
+            \[
+            \text{Excess Kurtosis} = \text{Kurtosis} - 3
+            \]
+            \item Positive excess kurtosis (\(>0\)): Leptokurtic — fat tails, more peaked.
+            \item Negative excess kurtosis (\(<0\)): Platykurtic — thin tails, less peaked.
+        \end{itemize}
+    \end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item \textbf{LOS 3.d: Correlation}
+    \begin{itemize}
+        \item \textbf{Definition:} Standardized measure of linear association between two random variables:
+        \[
+        \rho_{XY} = \frac{\text{Cov}(X,Y)}{s_X s_Y}
+        \]
+        \item Range: \(-1 \leq \rho \leq 1\).
+        \begin{itemize}
+            \item \(+1\): Perfect positive correlation.
+            \item \(-1\): Perfect negative correlation.
+            \item \(0\): No linear relationship.
+        \end{itemize}
+        \item Scatter plots can reveal nonlinear patterns missed by correlation.
+        \item \textbf{Important:} Correlation does \emph{not} imply causation.
+        \item \textbf{Spurious correlation:} Apparent correlation due to chance or common relationship with a third variable.
+        \item \textbf{Example:} U.S. spending on science vs. suicides by hanging (1999–2009), correlation $= 0.9987$, clearly not causal.
+    \end{itemize}
+\end{itemize}
+
+\section*{4 PROBABILITY TREES AND CONDITIONAL EXPECTATIONS}
+
+\subsection*{4.1: Probability Models, Expected Values, and Bayes' Formula}
+
+\begin{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{LOS 4.a: Expected Values, Variances, and Standard Deviations}
+
+\begin{itemize}
+    \item \textbf{Expected Value} of a discrete random variable \(X\) with outcomes \(x_1, x_2, \dots, x_n\) and probabilities \(P(x_i)\):
+    \[
+    E[X] = \sum_{i=1}^n P(x_i) \cdot x_i
+    \]
+    It represents the probability-weighted average of all possible outcomes.
+    
+    \item \textbf{Example: Expected EPS}
+    \[
+    E[\text{EPS}] = 0.10(1.80) + 0.20(1.60) + 0.40(1.20) + 0.30(1.00) = 1.28
+    \]
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c}
+            \hline
+            EPS & Probability \\
+            \hline
+            1.80 & 0.10 \\
+            1.60 & 0.20 \\
+            1.20 & 0.40 \\
+            1.00 & 0.30 \\
+            \hline
+        \end{tabular}
+        \caption{EPS Probability Distribution for Ron's Stores}
+    \end{table}
+    
+    \item \textbf{Variance and Standard Deviation} (from a probability model):
+    \[
+    \text{Var}(X) = \sum_{i=1}^n P(x_i) \cdot (x_i - E[X])^2
+    \]
+    \[
+    \text{SD}(X) = \sqrt{\text{Var}(X)}
+    \]
+    
+    \item \textbf{Example: Stock A returns}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c c c c}
+            \hline
+            Scenario & Probability & Return & \(R - E[R]\) & \((R - E[R])^2\) & \(P \cdot (R - E[R])^2\) \\
+            \hline
+            Good     & 0.30 & 0.20 & 0.07 & 0.0049 & 0.00147 \\
+            Normal   & 0.50 & 0.12 & -0.01 & 0.0001 & 0.00005 \\
+            Poor     & 0.20 & 0.05 & -0.08 & 0.0064 & 0.00128 \\
+            \hline
+            \multicolumn{5}{r}{\textbf{Variance}} & 0.00280 \\
+            \multicolumn{5}{r}{\textbf{SD}} & 5.29\% \\
+            \hline
+        \end{tabular}
+        \caption{Expected Return, Variance, and SD for Stock A}
+    \end{table}
+    Expected return:
+    \[
+    E[R_A] = (0.30)(0.20) + (0.50)(0.12) + (0.20)(0.05) = 0.13 \ (\text{or } 13\%)
+    \]
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{LOS 4.b: Probability Trees and Conditional Expectations}
+
+\begin{itemize}
+    \item \textbf{Probability Tree:} A graphical representation of possible outcomes, their probabilities, and resulting payoffs.
+    \item Probabilities at each branch multiply to give the joint probability of a final outcome.
+    \item Conditional expectations are computed by conditioning on a known event.
+    
+    \item \textbf{Example: Expected EPS from probability tree}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c c}
+            \hline
+            Economy & Company Result & Joint Probability & EPS \\
+            \hline
+            Good & Good & 0.18 & 1.80 \\
+            Good & Poor & 0.42 & 1.70 \\
+            Poor & Good & 0.24 & 1.30 \\
+            Poor & Poor & 0.16 & 1.00 \\
+            \hline
+        \end{tabular}
+        \caption{EPS Outcomes from Probability Tree}
+    \end{table}
+    Expected EPS:
+    \[
+    E[\text{EPS}] = (0.18)(1.80) + (0.42)(1.70) + (0.24)(1.30) + (0.16)(1.00) = 1.51
+    \]
+    
+    \item \textbf{Investment Application:} If a tariff is imposed, the conditional expected return for a domestic steel stock may increase relative to the no-tariff scenario.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{LOS 4.c: Bayes' Formula for Updating Probabilities}
+
+\begin{itemize}
+    \item \textbf{Bayes' Formula:}
+    \[
+    P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B|A) \cdot P(A) + P(B|A^c) \cdot P(A^c)}
+    \]
+    where:
+    \begin{itemize}
+        \item \(P(A)\) = prior probability of event \(A\)  
+        \item \(P(B|A)\) = probability of \(B\) given \(A\)  
+        \item \(P(A|B)\) = updated (posterior) probability after observing \(B\)  
+    \end{itemize}
+    
+    \item \textbf{Example: Economic Outperformance and Stock Gains}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c c}
+            \hline
+            Economy & Prob(Economy) & Prob(Gain|Economy) & Joint Probability \\
+            \hline
+            Outperform & 0.60 & 0.70 & 0.42 \\
+            Underperform & 0.40 & 0.20 & 0.08 \\
+            Outperform & 0.60 & 0.30 (Loss) & 0.18 \\
+            Underperform & 0.40 & 0.80 (Loss) & 0.32 \\
+            \hline
+        \end{tabular}
+        \caption{Joint Probabilities for Economic Performance and Stock Gains}
+    \end{table}
+    
+    Total probability of gains:
+    \[
+    P(\text{Gain}) = 0.42 + 0.08 = 0.50
+    \]
+    Updated probability of outperforming economy given gains:
+    \[
+    P(\text{Outperform}|\text{Gain}) = \frac{0.42}{0.50} = 0.84 \ (\text{or } 84\%)
+    \]
+    Interpretation: Observing stock gains increases the likelihood we assign to economic outperformance.
+\end{itemize}
+
+\end{itemize}
+
+\section*{Key Concepts — Module 4}
+
+\begin{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{LOS 4.a: Expected Value, Variance, and Standard Deviation}
+\begin{itemize}
+    \item \textbf{Expected Value} of a discrete random variable \(X\) with outcomes \(x_1, x_2, \dots, x_n\) and probabilities \(P(x_i)\):
+    \[
+    E[X] = \sum_{i=1}^{n} P(x_i) \cdot x_i
+    \]
+    Interpretation: The probability-weighted average of all possible outcomes.
+    
+    \item \textbf{Variance} (probability model):
+    \[
+    \text{Var}(X) = \sum_{i=1}^n P(x_i) \cdot \left( x_i - E[X] \right)^2
+    \]
+    
+    \item \textbf{Standard Deviation}:
+    \[
+    \sigma_X = \sqrt{\text{Var}(X)}
+    \]
+    
+    \item \textbf{Example: Expected EPS and Risk}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c}
+            \hline
+            EPS & Probability \\
+            \hline
+            1.80 & 0.10 \\
+            1.60 & 0.20 \\
+            1.20 & 0.40 \\
+            1.00 & 0.30 \\
+            \hline
+        \end{tabular}
+        \caption{EPS Probability Distribution}
+    \end{table}
+    \[
+    E[\text{EPS}] = 0.10(1.80) + 0.20(1.60) + 0.40(1.20) + 0.30(1.00) = 1.28
+    \]
+    \[
+    \text{Var}(\text{EPS}) = \sum P_i (x_i - 1.28)^2, \quad \sigma_{\text{EPS}} = \sqrt{\text{Var}}
+    \]
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{LOS 4.b: Probability Trees and Conditional Expectations}
+\begin{itemize}
+    \item \textbf{Probability Tree:} Graphical tool showing:
+    \begin{itemize}
+        \item Probabilities of initial events
+        \item Conditional probabilities of subsequent events
+        \item Joint probabilities (product of branch probabilities)
+    \end{itemize}
+    
+    \item \textbf{Conditional Expected Value:}  
+    The expected value of a variable given the outcome of another event:
+    \[
+    E[X \mid A] = \sum_{i} P(x_i \mid A) \cdot x_i
+    \]
+    This updates forecasts when new information arrives.
+    
+    \item \textbf{Example: EPS from Probability Tree}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c c}
+            \hline
+            Economy & Company Result & Joint Probability & EPS \\
+            \hline
+            Good & Good & 0.18 & 1.80 \\
+            Good & Poor & 0.42 & 1.70 \\
+            Poor & Good & 0.24 & 1.30 \\
+            Poor & Poor & 0.16 & 1.00 \\
+            \hline
+        \end{tabular}
+        \caption{EPS Outcomes from Probability Tree}
+    \end{table}
+    \[
+    E[\text{EPS}] = (0.18)(1.80) + (0.42)(1.70) + (0.24)(1.30) + (0.16)(1.00) = 1.51
+    \]
+    \item \textbf{Investment Application:} If a new policy (e.g., tariff) occurs, recalculate expected returns using only the relevant conditional probabilities.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \textbf{LOS 4.c: Bayes' Formula for Updating Probabilities}
+\begin{itemize}
+    \item \textbf{Formula:}
+    \[
+    P(A|O) = \frac{P(O|A) \cdot P(A)}{P(O|A) \cdot P(A) + P(O|A^c) \cdot P(A^c)}
+    \]
+    where:
+    \begin{itemize}
+        \item \(P(A)\) = prior probability of event \(A\)
+        \item \(P(O|A)\) = probability of observing \(O\) given \(A\)
+        \item \(P(A|O)\) = updated (posterior) probability after observing \(O\)
+    \end{itemize}
+    
+    \item \textbf{Example: Economic Outperformance and Stock Gains}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c c}
+            \hline
+            Economy & \(P(\text{Economy})\) & \(P(\text{Gain} \mid \text{Economy})\) & Joint Probability \\
+            \hline
+            Outperform & 0.60 & 0.70 & 0.42 \\
+            Underperform & 0.40 & 0.20 & 0.08 \\
+            \hline
+        \end{tabular}
+        \caption{Joint Probabilities for Economic State and Stock Gains}
+    \end{table}
+    \[
+    P(\text{Gain}) = 0.42 + 0.08 = 0.50
+    \]
+    \[
+    P(\text{Outperform} \mid \text{Gain}) = \frac{0.42}{0.50} = 0.84 \ (\text{or } 84\%)
+    \]
+    \item \textbf{Interpretation:} Observing stock gains significantly increases the probability estimate for an outperforming economy.
+\end{itemize}
+
+\end{itemize}
+
+\section*{5 PORTFOLIO MATHEMATICS}
+
+\subsection*{5.1: Probability Models for Portfolio Return and Risk}
+
+\subsubsection*{LOS 5.a: Expected Value, Variance, Standard Deviation, Covariances, and Correlations of Portfolio Returns}
+
+\begin{itemize}
+    \item \textbf{Expected Portfolio Return:}
+    \[
+    E(R_p) = \sum_{i=1}^n w_i \cdot E(R_i)
+    \]
+    where:
+    \begin{itemize}
+        \item \(w_i\) = weight of asset \(i\) in the portfolio
+        \item \(E(R_i)\) = expected return of asset \(i\)
+    \end{itemize}
+    
+    \item \textbf{Portfolio Weights:}
+    \[
+    w_i = \frac{\text{Market value invested in asset } i}{\text{Total market value of portfolio}}
+    \]
+    
+    \item \textbf{Covariance:}  
+    Measures how two assets move together:
+    \[
+    \text{Cov}(R_i, R_j) = E\left[ (R_i - E(R_i))(R_j - E(R_j)) \right]
+    \]
+    Properties:
+    \begin{itemize}
+        \item Covariance of a variable with itself = variance: \(\text{Cov}(R_A,R_A) = \text{Var}(R_A)\)
+        \item Positive covariance → assets move in the same direction
+        \item Negative covariance → assets move in opposite directions
+    \end{itemize}
+    
+    \item \textbf{Sample Covariance:}
+    \[
+    \text{Cov}(R_i,R_j) = \frac{\sum_{k=1}^n (R_{i,k} - \bar{R}_i)(R_{j,k} - \bar{R}_j)}{n-1}
+    \]
+    
+    \item \textbf{Portfolio Variance (Two Assets):}
+    \[
+    \sigma_p^2 = w_A^2 \sigma_A^2 + w_B^2 \sigma_B^2 + 2 w_A w_B \cdot \text{Cov}(R_A, R_B)
+    \]
+    Alternative using correlation:
+    \[
+    \sigma_p^2 = w_A^2 \sigma_A^2 + w_B^2 \sigma_B^2 + 2 w_A w_B \rho_{A,B} \sigma_A \sigma_B
+    \]
+    
+    \item \textbf{Portfolio Variance (Three Assets):}
+    \[
+    \sigma_p^2 = \sum_{i=1}^3 \sum_{j=1}^3 w_i w_j \cdot \text{Cov}(R_i, R_j)
+    \]
+    
+    \item \textbf{Example: Three-Asset Portfolio}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l c c c}
+            \hline
+            Asset & Weight (\%) & Var (\%$^2$) & Covariances (\%$^2$) \\
+            \hline
+            Domestic Stocks & 60 & 2.25 & Cov(S,B)=0.18, Cov(S,IE)=0.15 \\
+            Domestic Bonds & 30 & 0.64 & Cov(B,IE)=0.12 \\
+            Intl Equities & 10 & 3.24 &  \\
+            \hline
+        \end{tabular}
+        \caption{Covariance Matrix Data Example}
+    \end{table}
+    \[
+    \sigma_p^2 = \sum_{i=1}^3 \sum_{j=1}^3 w_i w_j \cdot \text{Cov}(R_i, R_j)
+    \]
+    A lower covariance between assets leads to lower portfolio variance.
+\end{itemize}
+
+\subsubsection*{LOS 5.b: Covariance and Correlation from a Joint Probability Function}
+
+\begin{itemize}
+    \item Given joint probabilities, we can calculate:
+    \[
+    E(R_A) = \sum_{s} P(s) \cdot R_A(s), \quad E(R_B) = \sum_{s} P(s) \cdot R_B(s)
+    \]
+    \[
+    \text{Cov}(R_A, R_B) = \sum_{s} P(s) \cdot \left[ R_A(s) - E(R_A) \right] \left[ R_B(s) - E(R_B) \right]
+    \]
+    
+    \item \textbf{Example: Covariance from Economic States}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l c c c}
+            \hline
+            State & Probability & \(R_A\) & \(R_B\) \\
+            \hline
+            Boom & 0.30 & 0.20 & 0.30 \\
+            Normal & 0.50 & 0.12 & 0.10 \\
+            Slow & 0.20 & 0.05 & 0.00 \\
+            \hline
+        \end{tabular}
+        \caption{Joint Probability Model}
+    \end{table}
+    Expected returns:
+    \[
+    E(R_A) = 0.13, \quad E(R_B) = 0.14
+    \]
+    Covariance:
+    \[
+    \text{Cov} = 0.30(0.07 \cdot 0.16) + 0.50(-0.01 \cdot -0.04) + 0.20(-0.08 \cdot -0.14)
+    \]
+    \[
+    \text{Cov} = 0.00336 + 0.00020 + 0.00224 = 0.005784
+    \]
+\end{itemize}
+
+\subsubsection*{LOS 5.c: Shortfall Risk and Roy’s Safety-First Criterion}
+
+\begin{itemize}
+    \item \textbf{Shortfall Risk:} Probability that \( R_p < R_L \) over a period.
+    \item \textbf{Roy’s Safety-First Ratio:}
+    \[
+    SFR = \frac{E(R_p) - R_L}{\sigma_p}
+    \]
+    For normally distributed returns, the portfolio with the highest \(SFR\) has the lowest probability of shortfall.
+    
+    \item \textbf{Example: Safety-First Decision}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l c c}
+            \hline
+            Portfolio & \(E(R_p)\) & \(\sigma_p\) \\
+            \hline
+            A & 12\% & 18\% \\
+            B & 10\% & 12\% \\
+            \hline
+        \end{tabular}
+        \caption{Portfolios for Shortfall Analysis}
+    \end{table}
+    For \(R_L = 0\%\):
+    \[
+    SFR_A = \frac{0.12 - 0}{0.18} = 0.667, \quad SFR_B = \frac{0.10 - 0}{0.12} = 0.833
+    \]
+    Portfolio B has higher SFR → lower probability of negative returns.
+    
+    \item \textbf{Example: Endowment Fund Decision}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l c c c}
+            \hline
+            Portfolio & \(E(R_p)\) & \(\sigma_p\) & SFR (\(R_L=3\%\)) \\
+            \hline
+            A & 9\% & 12\% & \((0.09 - 0.03)/0.12 = 0.50\) \\
+            B & 8\% & 10\% & \((0.08 - 0.03)/0.10 = 0.50\) \\
+            C & 7\% & 8\% & \((0.07 - 0.03)/0.08 = 0.50\) \\
+            \hline
+        \end{tabular}
+        \caption{Safety-First Ratios for Endowment Portfolios}
+    \end{table}
+    Higher \(SFR\) → better choice for minimizing shortfall risk.
+\end{itemize}
+
+\section*{6 SIMULATION METHODS}
+
+\subsection*{6.1: Lognormal Distributions and Simulation Techniques}
+
+\subsubsection*{LOS 6.a: Relationship Between Normal and Lognormal Distributions}
+
+\begin{itemize}
+    \item A \textbf{lognormal distribution} is generated by the function \( e^x \), where \( x \) is normally distributed.
+    \item If \( Y \) is lognormally distributed, then \( \ln(Y) \) is normally distributed.
+    \item \textbf{Key Property:} Lognormal variables are strictly positive (\( P(Y < 0) = 0 \)).
+    \item Asset prices are modeled as lognormal because:
+    \[
+        P_T = P_0 e^{r_{0,T}}
+    \]
+    where:
+    \begin{itemize}
+        \item \( P_T \) = asset price at time \( T \)
+        \item \( P_0 \) = asset price today
+        \item \( r_{0,T} \) = continuously compounded return from 0 to \( T \)
+    \end{itemize}
+    \item If returns \( r_{0,T} \) are normally distributed, then prices \( P_T \) are lognormally distributed.
+    \item \textbf{Assumptions:}
+    \begin{itemize}
+        \item Returns are \textbf{i.i.d.} (independently and identically distributed).
+        \item Stationarity: mean and variance of returns do not change over time.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{LOS 6.b: Monte Carlo Simulation}
+
+\begin{itemize}
+    \item \textbf{Definition:} Repeated generation of random values for one or more risk factors to simulate possible asset values.
+    \item \textbf{Procedure:}
+    \begin{enumerate}
+        \item Define the probability distribution(s) and parameters (mean, variance, skewness) of each risk factor.
+        \item Generate random values for each risk factor.
+        \item Value the security for each generated set of inputs.
+        \item Repeat the process many times (\( \geq 1,000 \) simulations).
+        \item Analyze the simulated distribution of asset values.
+    \end{enumerate}
+    \item \textbf{Applications:}
+    \begin{itemize}
+        \item Valuation of complex securities (e.g., path-dependent options).
+        \item Estimating profits/losses from a trading strategy.
+        \item Calculating \textbf{Value at Risk (VaR)}.
+        \item Modeling pension fund assets and liabilities.
+        \item Valuing portfolios with nonnormal return distributions.
+    \end{itemize}
+    \item \textbf{Advantages:}
+    \begin{itemize}
+        \item Can test scenarios not present in historical data.
+    \end{itemize}
+    \item \textbf{Limitations:}
+    \begin{itemize}
+        \item Results depend on assumptions of input distributions.
+        \item Statistical method — does not yield closed-form solutions.
+        \item Complexity of implementation.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Example: Monte Carlo Simulation for Option Valuation}
+\begin{enumerate}
+    \item Assume the stock price follows \( S_T = S_0 e^{(\mu - 0.5\sigma^2)T + \sigma \epsilon \sqrt{T}} \), where \( \epsilon \sim N(0,1) \).
+    \item Generate random stock prices for many paths.
+    \item Apply option payoff formula for each simulated price.
+    \item Average the payoffs and discount to present value.
+\end{enumerate}
+
+\subsubsection*{LOS 6.c: Bootstrap Resampling}
+
+\begin{itemize}
+    \item \textbf{Definition:} Statistical technique for generating simulated datasets by repeatedly sampling (with replacement) from observed historical data.
+    \item \textbf{Procedure:}
+    \begin{enumerate}
+        \item Start with observed historical returns (\( n \) data points).
+        \item Draw a sample of size \( n \) \textbf{with replacement}.
+        \item Compute statistics (mean, variance, etc.).
+        \item Repeat many times to build a distribution of statistics.
+    \end{enumerate}
+    \item \textbf{Advantages:}
+    \begin{itemize}
+        \item Preserves statistical properties of observed data.
+        \item Useful when the true population distribution is unknown.
+    \end{itemize}
+    \item \textbf{Limitations:}
+    \begin{itemize}
+        \item Inputs are limited to the range of actual historical outcomes.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Comparison: Monte Carlo vs. Bootstrap}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Aspect} & \textbf{Monte Carlo} & \textbf{Bootstrap Resampling} \\ \hline
+Data Source & Theoretical probability distributions & Historical observed data \\ \hline
+Flexibility & Can simulate unseen scenarios & Limited to observed outcomes \\ \hline
+Complexity & Requires model specification & Computational but simpler \\ \hline
+Use Case & Pricing models, risk management & Estimating sampling variability \\ \hline
+\end{tabular}
+\end{table}
+
+\section*{7 ESTIMATION AND INFERENCE}
+
+\subsection*{7.1: Sampling Techniques and the Central Limit Theorem}
+
+\subsubsection*{LOS 7.a: Sampling Methods and Implications for Sampling Error}
+
+\paragraph{Probability Sampling:}
+\begin{itemize}
+    \item \textbf{Simple Random Sampling:} Each member of the population has an equal chance of selection.
+    \begin{itemize}
+        \item Example: Selecting 5 bonds out of 50 by numbering each and randomly drawing.
+        \item Tools: Random number generator or random number table.
+        \item \textbf{Systematic Sampling:} Select every $n$-th member from a population (approximate random sampling).
+    \end{itemize}
+
+    \item \textbf{Stratified Random Sampling:} Population divided into homogeneous subgroups (strata), and random samples are taken from each.
+    \begin{itemize}
+        \item Useful for \textbf{bond indexing}: Stratify by duration, maturity, coupon rate.
+        \item Ensures proportional representation from each stratum.
+        \item Example: Municipal bond index of $1,000$ bonds. A cell with $50$ bonds (2--4 years maturity, coupon < 5\%) $\Rightarrow$ select $(50/1,000) \times 100 = 5$ bonds.
+    \end{itemize}
+
+    \item \textbf{Cluster Sampling:} Population divided into heterogeneous subgroups (clusters), each assumed to represent the overall population.
+    \begin{itemize}
+        \item \textbf{One-stage:} Select clusters, include all items in them.
+        \item \textbf{Two-stage:} Select clusters, then random sample from within each cluster.
+        \item Higher sampling error than simple random sampling if clusters are not truly representative.
+        \item Example: Sampling counties to estimate state average income.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Nonprobability Sampling:}
+\begin{itemize}
+    \item \textbf{Convenience Sampling:} Select based on ease of access (greater sampling error).
+    \item \textbf{Judgmental Sampling:} Researcher selects based on expertise/judgment.
+    \begin{itemize}
+        \item Example: Auditing firms most likely to violate accounting standards.
+        \item Risk: Researcher bias may distort representativeness.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Key Point:} Ensure population distribution is constant over sampling period — avoid combining data from periods with structural changes.
+
+\subsubsection*{Comparison of Sampling Methods}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Method} & \textbf{Advantages} & \textbf{Disadvantages} \\ \hline
+Simple Random & Easy to understand, unbiased & May not represent subgroups proportionally \\ \hline
+Stratified Random & Ensures representation from each subgroup & More complex; needs classification \\ \hline
+Cluster & Lower cost, quicker & Greater sampling error if clusters not representative \\ \hline
+Convenience & Very easy, low cost & High sampling error, low representativeness \\ \hline
+Judgmental & Can focus on relevant data & Risk of bias, higher error if judgment is poor \\ \hline
+\end{tabular}
+\end{table}
+
+\subsubsection*{LOS 7.b: Central Limit Theorem (CLT)}
+
+\paragraph{Statement:}
+For simple random samples of size $n$ from a population with mean $\mu$ and finite variance $\sigma^2$, the sampling distribution of the sample mean:
+\begin{itemize}
+    \item Approaches normal distribution as $n \to \infty$ (typically $n \geq 30$ is sufficient).
+    \item Mean of sampling distribution = $\mu$.
+    \item Variance of sampling distribution = $\sigma^2 / n$.
+\end{itemize}
+
+\paragraph{Standard Error of Sample Mean:}
+\begin{itemize}
+    \item If $\sigma$ known:
+    \[
+    SE_{\bar{x}} = \frac{\sigma}{\sqrt{n}}
+    \]
+    \item If $\sigma$ unknown:
+    \[
+    SE_{\bar{x}} = \frac{s}{\sqrt{n}}
+    \]
+    where $s$ = sample standard deviation.
+\end{itemize}
+
+\paragraph{Example 1: $n=30$}
+\[
+SE_{\bar{x}} = \frac{0.20}{\sqrt{30}} \approx 0.036 \ \ (3.6\%)
+\]
+Interpretation: Mean = 2\%, standard error = 3.6\%.
+
+\paragraph{Example 2: $n=200$}
+\[
+SE_{\bar{x}} = \frac{0.20}{\sqrt{200}} \approx 0.014 \ \ (1.4\%)
+\]
+Observation: Increasing sample size reduces standard error $\Rightarrow$ more precise mean estimate.
+
+\subsubsection*{LOS 7.c: Resampling Methods (Bootstrap, Jackknife)}
+
+\paragraph{Jackknife:}
+\begin{itemize}
+    \item Remove one observation at a time, compute sample mean for each subsample.
+    \item Standard deviation of these means $\Rightarrow$ estimate of standard error.
+    \item Useful for small datasets, computationally simple.
+    \item Removes bias from some estimators.
+\end{itemize}
+
+\paragraph{Bootstrap:}
+\begin{itemize}
+    \item Draw repeated samples of size $n$ \textbf{with replacement} from the dataset.
+    \item Compute statistic (mean, median, etc.) for each sample.
+    \item Standard deviation of these statistics $\Rightarrow$ estimate of standard error.
+    \item Can estimate distribution of complex statistics and build confidence intervals.
+\end{itemize}
+
+\paragraph{Comparison of Jackknife vs Bootstrap}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Aspect} & \textbf{Jackknife} & \textbf{Bootstrap} \\ \hline
+Computation & Simple, low cost & More computationally intensive \\ \hline
+Data Use & Omits one observation at a time & Resamples with replacement \\ \hline
+Best For & Small datasets, bias correction & Estimating sampling distribution, complex statistics \\ \hline
+\end{tabular}
+\end{table}
+
+\section*{8 HYPOTHESIS TESTING}
+
+\subsection*{8.1: Hypothesis Testing Basics}
+
+\subsubsection*{LOS 8.a: Hypothesis Testing Concepts and Components}
+
+\paragraph{Definition:}
+\begin{itemize}
+    \item \textbf{Hypothesis:} Statement about the value of a population parameter (e.g., $\mu$) developed for testing a theory or belief.
+    \item Example: $\mu$ = mean daily return on stock options. Hypothesis: mean daily return $> 0$.
+    \item Hypotheses are tested using sample statistics and probability theory to decide whether to reject or fail to reject the statement.
+\end{itemize}
+
+\paragraph{Steps in Hypothesis Testing (Figure 8.1):}
+\begin{enumerate}
+    \item State the \textbf{null hypothesis} ($H_0$) and the \textbf{alternative hypothesis} ($H_a$).
+    \item Identify the appropriate test statistic and its distribution.
+    \item Select the significance level $\alpha$.
+    \item State the decision rule (critical value approach or p-value approach).
+    \item Collect sample data and compute the test statistic.
+    \item Make a decision: reject $H_0$ or fail to reject $H_0$.
+\end{enumerate}
+
+\paragraph{Null vs. Alternative Hypothesis:}
+\begin{itemize}
+    \item \textbf{Null Hypothesis} ($H_0$): Hypothesis to be tested; includes the ``equal to'' condition.
+    \[
+    H_0: \mu = \mu_0
+    \]
+    \item \textbf{Alternative Hypothesis} ($H_a$): Conclusion if $H_0$ is rejected; mutually exclusive and exhaustive with $H_0$.
+    \[
+    H_a: \mu \neq \mu_0
+    \]
+\end{itemize}
+
+\paragraph{Two-Tailed Z-Test Example ($\alpha = 0.05$):}
+\begin{itemize}
+    \item Critical z-values: $\pm 1.96$ (since $\alpha/2 = 0.025$ per tail).
+    \item \textbf{Decision Rule:} Reject $H_0$ if $z < -1.96$ or $z > 1.96$.
+    \item If $|z| \leq 1.96$, fail to reject $H_0$.
+\end{itemize}
+
+\paragraph{Test Statistic Formula:}
+\[
+\text{Test Statistic} = \frac{\text{Sample Statistic} - \text{Hypothesized Value}}{\text{Standard Error of the Statistic}}
+\]
+Standard error for sample mean:
+\[
+SE_{\bar{x}} =
+\begin{cases}
+\frac{\sigma}{\sqrt{n}}, & \text{if population $\sigma$ known} \\
+\frac{s}{\sqrt{n}}, & \text{if $\sigma$ unknown}
+\end{cases}
+\]
+
+\subsubsection*{Type I and Type II Errors}
+
+\paragraph{Definitions:}
+\begin{itemize}
+    \item \textbf{Type I Error:} Reject $H_0$ when it is true. Probability = $\alpha$.
+    \item \textbf{Type II Error:} Fail to reject $H_0$ when it is false. Probability = $\beta$.
+    \item \textbf{Power of a Test:} $1 - \beta$ = probability of correctly rejecting a false $H_0$.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+ & \textbf{$H_0$ True} & \textbf{$H_0$ False} \\ \hline
+Reject $H_0$ & Type I Error (Prob = $\alpha$) & Correct Decision (Power = $1 - \beta$) \\ \hline
+Fail to Reject $H_0$ & Correct Decision (Prob = $1 - \alpha$) & Type II Error (Prob = $\beta$) \\ \hline
+\end{tabular}
+\end{table}
+
+\paragraph{Relationships:}
+\begin{itemize}
+    \item Lowering $\alpha$ reduces Type I error but increases $\beta$ (reduces power).
+    \item Increasing sample size reduces $\beta$ and increases power.
+    \item Trade-off between $\alpha$ and $\beta$ for a given $n$.
+\end{itemize}
+
+\paragraph{Example:}
+\begin{itemize}
+    \item Given: $\alpha = 0.05$, $\beta = 0.60$.
+    \item Power $= 1 - \beta = 0.40$.
+    \item Interpretation: 5\% probability of rejecting a true $H_0$, 40\% probability of rejecting $H_0$ when false.
+\end{itemize}
+
+\subsubsection*{One-Tailed vs. Two-Tailed Tests}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Test Type} & \textbf{Alternative Hypothesis} & \textbf{Critical Region} \\ \hline
+One-Tailed (Right) & $H_a: \mu > \mu_0$ & Upper tail beyond $z_{1-\alpha}$ \\ \hline
+One-Tailed (Left) & $H_a: \mu < \mu_0$ & Lower tail below $-z_{1-\alpha}$ \\ \hline
+Two-Tailed & $H_a: \mu \neq \mu_0$ & Both tails beyond $\pm z_{\alpha/2}$ \\ \hline
+\end{tabular}
+\end{table}
+
+\subsubsection*{p-Value Approach}
+\begin{itemize}
+    \item \textbf{p-value:} Smallest $\alpha$ at which $H_0$ can be rejected.
+    \item Decision rule:
+    \[
+    \text{If } p\text{-value} \leq \alpha, \ \text{reject } H_0; \quad \text{else fail to reject}.
+    \]
+\end{itemize}
+
+\subsubsection*{Module Quiz 8.1 Examples}
+
+\paragraph{Q1:} $\beta = 0.60$, $\alpha = 0.05$.
+\[
+\text{Power} = 1 - \beta = 0.40
+\]
+Correct statement: 5\% chance of rejecting a true $H_0$, 40\% chance of rejecting when false.
+
+\paragraph{Q2:} $\alpha = 0.05$, $\beta = 0.15$.
+\[
+\text{Power} = 1 - 0.15 = 0.85
+\]
+Answer: 0.850.
+
+\subsection*{8.2 Types of Hypothesis Tests}
+
+\begin{itemize}
+    \item \textbf{Overview:} Hypothesis tests differ based on:
+    \begin{itemize}
+        \item Parameter being tested (mean, variance, difference in means, difference in variances)
+        \item Sample type (independent vs dependent)
+        \item Underlying distributional assumptions (parametric vs nonparametric)
+    \end{itemize}
+
+    %----------------------------------------------------
+    \item \textbf{Tests for Population Mean}
+    \begin{itemize}
+        \item Use \textbf{t-test} if $\sigma$ unknown and sample small; \textbf{z-test} if $\sigma$ known or $n$ large.
+        \item \textbf{Example:} $n=250$, $\bar{x}=0.1\%$, $s=0.25\%$, $H_0: \mu = 0$, $\alpha = 0.05$
+        \begin{align*}
+            SE &= \frac{0.25\%}{\sqrt{250}} = 0.0158\% \\
+            z &= \frac{0.1\% - 0}{0.0158\%} \approx 6.33
+        \end{align*}
+        Decision: $|z| > 1.96 \Rightarrow$ reject $H_0$.
+    \end{itemize}
+
+    %----------------------------------------------------
+    \item \textbf{Difference Between Means (Independent Samples)}
+    \begin{itemize}
+        \item Applicable if samples are independent, populations normally distributed.
+        \item If variances are equal but unknown, use pooled variance:
+        \[
+        t = \frac{\bar{x}_1 - \bar{x}_2}{s_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}
+        \]
+        where
+        \[
+        s_p^2 = \frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}
+        \]
+        \item \textbf{Example:} Horizontal mergers: $\bar{x}_1=1.0\%$, $s_1=1.0\%$, $n_1=61$; Vertical mergers: $\bar{x}_2=2.5\%$, $s_2=2.0\%$, $n_2=61$.
+        \[
+        t=-5.474, \ df=120, \ t_{crit} = \pm 1.980
+        \]
+        Decision: $t < -1.980 \Rightarrow$ reject $H_0$.
+    \end{itemize}
+
+    %----------------------------------------------------
+    \item \textbf{Paired Comparisons Test (Dependent Samples)}
+    \begin{itemize}
+        \item Used when same units measured twice or observations are paired.
+        \item $t$-statistic:
+        \[
+        t = \frac{\bar{d} - \mu_{d0}}{s_d / \sqrt{n}}, \quad df = n-1
+        \]
+        \item \textbf{Example:} Change in betas before vs after deregulation: $t=10.26$, $n=39$, $t_{crit} = \pm 2.024$ $\Rightarrow$ reject $H_0$.
+    \end{itemize}
+
+    %----------------------------------------------------
+    \item \textbf{Test for a Single Population Variance}
+    \begin{itemize}
+        \item Use \textbf{Chi-square test}:
+        \[
+        \chi^2 = \frac{(n-1)s^2}{\sigma_0^2}, \quad df = n-1
+        \]
+        \item \textbf{Example:} $\sigma_0=4\%$, $s=3.8\%$, $n=24$, $\chi^2=20.76$, $CV_{lower}=11.689$, $CV_{upper}=38.076$.
+        Decision: statistic inside bounds $\Rightarrow$ fail to reject $H_0$.
+    \end{itemize}
+
+    %----------------------------------------------------
+    \item \textbf{Equality of Two Population Variances}
+    \begin{itemize}
+        \item Use \textbf{F-test}:
+        \[
+        F = \frac{s_1^2}{s_2^2}, \quad df_1 = n_1-1, \ df_2 = n_2-1
+        \]
+        \item Convention: put larger variance in numerator so only upper-tail CV is needed.
+        \item \textbf{Example:} Textile industry $s=4.30$, Paper industry $s=3.80$, $F=1.2805$, $CV_{upper}=1.94$ $\Rightarrow$ fail to reject $H_0$.
+    \end{itemize}
+
+    %----------------------------------------------------
+    \item \textbf{Parametric vs Nonparametric Tests}
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|}
+        \hline
+        & \textbf{Parametric} & \textbf{Nonparametric} \\
+        \hline
+        Assumptions & Strong (e.g., normality) & Few / none \\
+        Parameters tested & Mean, variance, etc. & Median, rank, randomness \\
+        Example tests & $t$-test, $z$-test, F-test & Runs test, sign test \\
+        Use cases & Interval/ratio data, CLT holds & Ordinal data, non-normal small samples \\
+        \hline
+    \end{tabular}
+    \end{table}
+\end{itemize}
+
+%----------------------------------------------------
+\textbf{Key Decision Guidelines:}
+\begin{itemize}
+    \item Independent samples $\Rightarrow$ Difference in means $t$-test.
+    \item Dependent samples $\Rightarrow$ Paired comparisons $t$-test.
+    \item Single variance $\Rightarrow$ Chi-square test.
+    \item Variance equality $\Rightarrow$ F-test.
+    \item If assumptions fail or data ordinal $\Rightarrow$ Nonparametric test.
+\end{itemize}
+
+\section*{9 PARAMETRIC AND NON-PARAMETRIC TESTS OF INDEPENDENCE}
+
+\subsection*{9.1: Tests for Independence}
+
+\begin{itemize}
+    \item \textbf{LOS 9.a: Parametric and Nonparametric Tests of $\rho = 0$}
+    \begin{itemize}
+        \item \textbf{Goal:} Test whether the \textbf{population correlation coefficient} $\rho$ is equal to zero (no linear relationship).
+        \item \textbf{Parametric test: Pearson correlation coefficient}
+        \begin{itemize}
+            \item Applicable when both variables are \textbf{normally distributed}.
+            \item \textbf{Test statistic:}
+            \[
+                t = \frac{r\sqrt{n-2}}{\sqrt{1 - r^2}}
+            \]
+            where:
+            \begin{itemize}
+                \item $r$: sample correlation coefficient
+                \item $n$: sample size
+            \end{itemize}
+            \item Degrees of freedom: $df = n - 2$
+            \item \textbf{Decision rule:} Reject $H_0: \rho = 0$ if $|t| > t_{\alpha/2, \, df}$
+        \end{itemize}
+
+        \item \textbf{Example (Parametric):}
+        \begin{itemize}
+            \item $r = 0.35$, $n = 42$
+            \[
+                t = \frac{0.35\sqrt{42 - 2}}{\sqrt{1 - (0.35)^2}} = 2.363
+            \]
+            \item Critical value ($df=40$, $\alpha=0.05$ two-tailed) = $2.021$
+            \item Since $2.363 > 2.021$, reject $H_0$: correlation is significantly different from zero.
+        \end{itemize}
+
+        \item \textbf{Nonparametric test: Spearman rank correlation}
+        \begin{itemize}
+            \item Used when data are ordinal (ranks) or assumptions of normality are violated.
+            \item Ranks are assigned to values; ties share average rank.
+            \item \textbf{Formula (integer ranks, no ties):}
+            \[
+                r_S = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}
+            \]
+            where $d_i$ = difference in ranks for observation $i$.
+            \item Test statistic (for $n > 30$):
+            \[
+                t = \frac{r_S\sqrt{n-2}}{\sqrt{1 - r_S^2}}
+            \]
+            with $df = n - 2$.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{LOS 9.b: Tests of Independence via Contingency Tables}
+    \begin{itemize}
+        \item \textbf{Purpose:} Test whether two categorical variables are independent.
+        \item Data are summarized in a \textbf{contingency table} (cross-tab).
+        \item \textbf{Hypotheses:}
+        \[
+            H_0: \text{Variables are independent} \quad\quad H_a: \text{Variables are dependent}
+        \]
+        \item \textbf{Test statistic: Chi-square ($\chi^2$) test:}
+        \[
+            \chi^2 = \sum_{i=1}^{r} \sum_{j=1}^{c} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}
+        \]
+        where:
+        \begin{itemize}
+            \item $O_{ij}$ = observed frequency in cell $(i,j)$
+            \item $E_{ij}$ = expected frequency in cell $(i,j)$ under independence:
+            \[
+                E_{ij} = \frac{(\text{row total}_i)(\text{column total}_j)}{\text{grand total}}
+            \]
+            \item $r$ = number of rows, $c$ = number of columns
+            \item Degrees of freedom: $(r-1)(c-1)$
+        \end{itemize}
+
+        \item \textbf{Example (Independence Test):}
+        \begin{table}[H]
+        \centering
+        \caption{Observed Frequencies: Earnings Growth vs Dividend Yield}
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+         & Low DY & Med DY & High DY & Row Total \\
+        \hline
+        Low EG & 28 & 14 & 7 & 49 \\
+        Med EG & 20 & 10 & 10 & 40 \\
+        High EG & 12 & 25 & 24 & 61 \\
+        \hline
+        Col Total & 60 & 49 & 41 & 150 \\
+        \hline
+        \end{tabular}
+        \end{table}
+
+        \item \textbf{Expected Frequencies Example:}
+        \[
+            E_{1,1} = \frac{(49)(60)}{150} = 19.6, \quad E_{3,2} = \frac{(61)(49)}{150} = 19.9
+        \]
+        \item Sum over all cells:
+        \[
+            \chi^2_{\text{calc}} = 27.43
+        \]
+        \item $df = (3-1)(3-1) = 4$, $\chi^2_{0.05,4} = 9.488$
+        \item Decision: Since $27.43 > 9.488$, reject $H_0$: Earnings growth and dividend yield are dependent.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Summary Table}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Test} & \textbf{When Used} & \textbf{Test Statistic} & \textbf{DF} \\
+\hline
+Pearson $t$-test & $\rho = 0$, normal vars & $t = \frac{r\sqrt{n-2}}{\sqrt{1-r^2}}$ & $n-2$ \\
+Spearman rank & Ranks or non-normal vars & Same $t$ formula with $r_S$ & $n-2$ \\
+Chi-square & Categorical var independence & $\sum \frac{(O-E)^2}{E}$ & $(r-1)(c-1)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{10 SIMPLE LINEAR REGRESSION}
+
+\subsection*{10.1: Linear Regression Basics}
+
+\begin{itemize}
+    \item \textbf{LOS 10.a: Simple Linear Regression Model}
+    \begin{itemize}
+        \item \textbf{Purpose:} Explain variation in a \textbf{dependent variable} $Y$ in terms of variation in a single \textbf{independent variable} $X$.
+        \item \textbf{Terminology:}
+        \begin{itemize}
+            \item Dependent variable: explained variable, endogenous variable, predicted variable.
+            \item Independent variable: explanatory variable, exogenous variable, predicting variable.
+        \end{itemize}
+
+        \item \textbf{Example: Dependent vs. Independent Variables}
+        \begin{itemize}
+            \item Predict stock returns with GDP growth: \\
+                  $Y$ (dependent) = stock returns, $X$ (independent) = GDP growth.
+        \end{itemize}
+
+        \item \textbf{Model Form:}
+        \[
+            Y_i = b_0 + b_1 X_i + \varepsilon_i
+        \]
+        where:
+        \begin{itemize}
+            \item $b_0$: intercept (value of $Y$ when $X=0$)
+            \item $b_1$: slope (change in $Y$ for a 1-unit change in $X$)
+            \item $\varepsilon_i$: error term (unexplained variation)
+        \end{itemize}
+
+        \item \textbf{Estimation Method: Ordinary Least Squares (OLS)}
+        \begin{itemize}
+            \item Finds $b_0, b_1$ that minimize:
+            \[
+                SSE = \sum_{i=1}^n (Y_i - \hat{Y}_i)^2
+            \]
+            \item $\hat{Y}_i = b_0 + b_1 X_i$ are the \textbf{fitted values}.
+        \end{itemize}
+
+        \item \textbf{Formulas:}
+        \[
+            b_1 = \frac{\sum_{i=1}^n (X_i - \bar{X})(Y_i - \bar{Y})}{\sum_{i=1}^n (X_i - \bar{X})^2}
+        \]
+        \[
+            b_0 = \bar{Y} - b_1 \bar{X}
+        \]
+        \item \textbf{Interpretation:}
+        \begin{itemize}
+            \item $b_1 > 0$: positive relationship between $X$ and $Y$.
+            \item $b_1 < 0$: negative relationship.
+            \item $b_0$: predicted $Y$ when $X=0$.
+        \end{itemize}
+
+        \item \textbf{Example (ABC vs. S\&P 500 Excess Returns):}
+        \begin{itemize}
+            \item Estimated regression: $\hat{Y} = -0.023 + 0.64 X$
+            \item If $X=-0.078$, predicted $Y = -0.023 + 0.64(-0.078) = -0.073$ ($-7.3\%$).
+            \item Residual for May 20X4 = Actual $Y$ $-$ Predicted $Y$ = $0.011 - (-0.073) = 0.084$ ($8.4\%$).
+        \end{itemize}
+
+        \item \textbf{Special Case: Beta in CAPM}
+        \begin{itemize}
+            \item In a regression of excess security returns on market returns:
+            \[
+                b_1 = \beta = \text{systematic risk of the security}
+            \]
+            \item $\beta < 1$: less risky than market, $\beta > 1$: more risky.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{LOS 10.b: Assumptions of the Simple Linear Regression Model}
+    \begin{enumerate}
+        \item \textbf{Linearity:} Relationship between $X$ and $Y$ is linear.
+        \item \textbf{Homoskedasticity:} Variance of residuals is constant across all $X$ values.
+        \item \textbf{Independence:} Residuals are uncorrelated across observations.
+        \item \textbf{Normality:} Residuals are normally distributed.
+    \end{enumerate}
+
+    \item \textbf{Diagnostics via Residual Plots:}
+    \begin{itemize}
+        \item \textbf{Linearity Violation:} Residuals follow a pattern (positive $\to$ negative $\to$ positive).
+        \item \textbf{Heteroskedasticity:} Residual variance increases with $X$ (funnel shape) or over time.
+        \item \textbf{Autocorrelation:} Residuals show systematic patterns over time (seasonality).
+        \item \textbf{Non-normality:} Outliers or skewed residual distribution.
+    \end{itemize}
+
+    \item \textbf{Example Residual Patterns:}
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Assumption} & \textbf{Violation Pattern in Residual Plot} & \textbf{Implication} \\
+    \hline
+    Linearity & Curved pattern & Model form incorrect \\
+    Homoskedasticity & Funnel shape & Std. errors unreliable \\
+    Independence & Periodic pattern over time & Autocorrelation present \\
+    Normality & Heavy tails / skew & Invalid $t$-tests for small $n$ \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+    \item \textbf{Example: Heteroskedasticity Over Time}
+    \begin{itemize}
+        \item Plot residuals vs. time index.
+        \item Increasing spread over time $\Rightarrow$ volatility clustering.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Key Formulas}
+\[
+    b_1 = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2}, \quad
+    b_0 = \bar{Y} - b_1 \bar{X}
+\]
+\[
+    SSE = \sum (Y_i - \hat{Y}_i)^2
+\]
+\[
+    \hat{Y}_i = b_0 + b_1 X_i
+\]
+
+\subsubsection*{Summary Table}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Term} & \textbf{Meaning} \\
+\hline
+$b_0$ & Intercept: predicted $Y$ when $X=0$ \\
+$b_1$ & Slope: change in $Y$ per unit change in $X$ \\
+$\varepsilon$ & Error term: unexplained variation in $Y$ \\
+SSE & Sum of squared errors \\
+OLS & Estimation method: minimizes SSE \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection*{10.2: Analysis of Variance (ANOVA) and Goodness of Fit}
+
+\begin{itemize}
+    \item \textbf{Purpose of ANOVA:}  
+    Statistical procedure for analyzing the total variability of the dependent variable into explained and unexplained components.
+
+    \item \textbf{Key Definitions:}
+    \begin{itemize}
+        \item \textbf{Total Sum of Squares (SST):}
+        \[
+        SST = \sum_{i=1}^{n} (Y_i - \bar{Y})^2
+        \]
+        Measures total variation in the dependent variable.
+
+        \item \textbf{Sum of Squares Regression (SSR):}
+        \[
+        SSR = \sum_{i=1}^{n} (\hat{Y}_i - \bar{Y})^2
+        \]
+        Variation explained by the independent variable.
+
+        \item \textbf{Sum of Squared Errors (SSE):}
+        \[
+        SSE = \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2
+        \]
+        Unexplained variation (residuals).
+
+        \item \textbf{Mean Square Regression (MSR):}
+        \[
+        MSR = \frac{SSR}{k}
+        \]
+        For simple regression $k=1 \Rightarrow MSR = SSR$.
+
+        \item \textbf{Mean Squared Error (MSE):}
+        \[
+        MSE = \frac{SSE}{n-k-1}
+        \]
+        For simple regression: $MSE = \frac{SSE}{n-2}$.
+    \end{itemize}
+
+    \item \textbf{Relationship:}
+    \[
+    SST = SSR + SSE
+    \]
+    Total variation = explained variation + unexplained variation.
+
+    \item \textbf{ANOVA Table (Simple Regression):}
+    \begin{center}
+    \begin{tabular}{lccc}
+    \hline
+    \textbf{Source} & \textbf{df} & \textbf{Sum of Squares} & \textbf{Mean Squares} \\
+    \hline
+    Regression (explained) & $1$ & $SSR$ & $MSR = \frac{SSR}{1}$ \\
+    Error (unexplained) & $n-2$ & $SSE$ & $MSE = \frac{SSE}{n-2}$ \\
+    Total & $n-1$ & $SST$ & -- \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    \item \textbf{Standard Error of Estimate (SEE):}
+    \[
+    SEE = \sqrt{MSE}
+    \]
+    Smaller SEE $\Rightarrow$ better model fit.
+
+    \item \textbf{Coefficient of Determination ($R^2$):}
+    \[
+    R^2 = \frac{SSR}{SST}
+    \]
+    Proportion of total variation explained by the independent variable.  
+    For simple regression: $R^2 = r^2$ where $r$ is correlation.
+
+    \item \textbf{Example (Given Data):}
+    \[
+    SSR = 0.0076, \quad SST = 0.0482, \quad MSE = 0.0012
+    \]
+    \[
+    R^2 = \frac{0.0076}{0.0482} = 0.158 \; (15.8\%)
+    \]
+    \[
+    SEE = \sqrt{0.0012} = 0.035
+    \]
+
+    \item \textbf{F-Statistic:}
+    \[
+    F = \frac{MSR}{MSE} = \frac{SSR/k}{SSE/(n-k-1)}
+    \]
+    For $k=1$, $n=36$:  
+    \[
+    F = \frac{0.0076}{0.0012} = 6.33
+    \]
+    Compare with critical $F_c$ at $\alpha = 5\%$: $F_c \approx 4.1$  
+    Since $F > F_c$, reject $H_0$ (slope is significant).
+
+    \item \textbf{Hypothesis Test for Regression Coefficient:}
+    \begin{itemize}
+        \item Null Hypothesis: $H_0: b_1 = 0$
+        \item Alternative: $H_a: b_1 \neq 0$
+        \item Test Statistic:
+        \[
+        t = \frac{\hat{b}_1 - b_1}{s_{\hat{b}_1}}
+        \]
+        \item Example:
+        \[
+        \hat{b}_1 = 0.64, \quad s_{\hat{b}_1} = 0.26
+        \]
+        \[
+        t = \frac{0.64 - 0}{0.26} = 2.46
+        \]
+        Critical $t_{0.025, 34} = \pm 2.03 \Rightarrow t > t_c$, reject $H_0$.
+    \end{itemize}
+
+    \item \textbf{Key Takeaways:}
+    \begin{itemize}
+        \item $SST$ splits into $SSR$ (explained) + $SSE$ (unexplained).
+        \item $R^2$ measures model explanatory power.
+        \item $SEE$ is the standard deviation of residuals.
+        \item $F$-test checks if regression as a whole is significant.
+        \item $t$-test checks significance of individual coefficients.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{10.3: Predicted Values and Functional Forms of Regression}
+
+\textbf{LOS 10.e: Calculate and interpret the predicted value for the dependent variable, and a prediction interval for it}
+
+\begin{itemize}
+    \item \textbf{Predicted values} are obtained from the regression equation using estimated coefficients and a given forecast of the independent variable.
+    \item For a simple linear regression:
+    \[
+        \hat{Y} = \hat{b}_0 + \hat{b}_1 X_p
+    \]
+    where:
+    \begin{itemize}
+        \item $\hat{Y}$ = predicted value of the dependent variable
+        \item $X_p$ = forecasted value of the independent variable
+    \end{itemize}
+
+    \item \textbf{Example: Predicting the dependent variable}
+    \begin{align*}
+        \text{ABC Excess Returns} &= -2.3\% + 0.64 \times (\text{S\&P 500 Excess Returns}) \\
+        \text{Given:} \quad X_p &= 10\% \\
+        \hat{Y} &= -2.3\% + 0.64 \times 10\% = 4.1\%
+    \end{align*}
+    Interpretation: If S\&P 500 excess returns are forecast at 10\%, ABC's excess returns are predicted to be 4.1\%.
+
+    \item \textbf{Confidence Interval for Predicted Value:}
+    \[
+        \hat{Y} \pm (t_c \times s_f)
+    \]
+    where:
+    \begin{itemize}
+        \item $t_c$ = two-tailed critical t-value (df = $n - 2$)
+        \item $s_f$ = standard error of the forecast
+    \end{itemize}
+
+    \item \textbf{Variance of forecast:}
+    \[
+        s_f^2 = \text{SEE}^2 \left[ 1 + \frac{1}{n} + \frac{(X - \bar{X})^2}{(n-1)s_X^2} \right]
+    \]
+    where:
+    \begin{itemize}
+        \item SEE$^2$ = variance of residuals
+        \item $s_X^2$ = variance of the independent variable
+        \item $X$ = forecast value of independent variable
+    \end{itemize}
+
+    \item \textbf{Example: Prediction Interval}
+    \begin{align*}
+        \hat{Y} &= 4.1\%, \quad s_f = 3.67, \quad t_c(5\%, df=34) = 2.03 \\
+        \text{95\% CI} &= 4.1\% \pm (2.03 \times 3.67\%) \\
+        &= 4.1\% \pm 7.5\% \\
+        &\Rightarrow [-3.4\%, 11.6\%]
+    \end{align*}
+    Interpretation: We are 95\% confident ABC excess returns will be between $-3.4\%$ and $11.6\%$ when S\&P 500 excess returns are forecast at $10\%$.
+\end{itemize}
+
+
+\textbf{LOS 10.f: Functional Forms of Simple Linear Regression}
+
+\begin{itemize}
+    \item Assumption: Relationship between $X$ and $Y$ is linear.
+    \item If violated (e.g., exponential growth), transformations can linearize the relationship.
+    \item Common transformations:
+    \begin{enumerate}
+        \item \textbf{Log-lin model:}
+        \[
+            \ln Y_i = b_0 + b_1 X_i + \varepsilon_i
+        \]
+        Interpretation: $b_1$ = relative change in $Y$ for an absolute change in $X$.
+        \item \textbf{Lin-log model:}
+        \[
+            Y_i = b_0 + b_1 \ln(X_i) + \varepsilon_i
+        \]
+        Interpretation: $b_1$ = absolute change in $Y$ for a relative change in $X$.
+        \item \textbf{Log-log model:}
+        \[
+            \ln Y_i = b_0 + b_1 \ln(X_i) + \varepsilon_i
+        \]
+        Interpretation: $b_1$ = relative change in $Y$ for a relative change in $X$.
+    \end{enumerate}
+
+    \item \textbf{Example Table: Functional Forms and Interpretations}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|l|p{6cm}|}
+        \hline
+        \textbf{Model} & \textbf{Equation} & \textbf{Interpretation of $b_1$} \\
+        \hline
+        Log-Lin & $\ln Y = b_0 + b_1 X$ & \% change in $Y$ per unit change in $X$ \\
+        Lin-Log & $Y = b_0 + b_1 \ln X$ & Unit change in $Y$ per \% change in $X$ \\
+        Log-Log & $\ln Y = b_0 + b_1 \ln X$ & \% change in $Y$ per \% change in $X$ \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    \item Selection of model depends on:
+    \begin{itemize}
+        \item Nature of data
+        \item Goodness-of-fit metrics ($R^2$, SEE, $F$-statistic)
+    \end{itemize}
+\end{itemize}
+
+\section*{11 INTRODUCTION TO BIG DATA TECHNIQUES}
+\subsection*{11.1: Introduction to Fintech}
+
+\textbf{LOS 11.a: Aspects of Fintech in Gathering and Analyzing Financial Data}
+
+\begin{itemize}
+    \item \textbf{Fintech} = Developments in technology applied to the financial services industry.
+    \item Companies developing such technologies are called \textit{fintech companies}.
+    \item Primary areas of fintech development:
+    \begin{enumerate}
+        \item Increased functionality to handle large, diverse datasets.
+        \item Use of AI techniques for analyzing very large datasets.
+    \end{enumerate}
+\end{itemize}
+
+\textbf{LOS 11.b: Big Data, Artificial Intelligence, and Machine Learning}
+
+\begin{itemize}
+    \item \textbf{Big Data} = All potentially useful information generated in the economy.
+    \item \textbf{Sources of Big Data:}
+    \begin{enumerate}
+        \item \textbf{Traditional:} Financial markets, company reports, government statistics.
+        \item \textbf{Alternative:}
+        \begin{itemize}
+            \item \textbf{Individuals:} Social media posts, online reviews, emails, website visits.
+            \item \textbf{Businesses:} Bank records, retail scanner data (\textit{corporate exhaust}).
+            \item \textbf{Sensors / IoT:} Smartphones, smart buildings, RFID chips.
+        \end{itemize}
+    \end{enumerate}
+
+    \item \textbf{Characteristics of Big Data (3 V's):}
+    \begin{enumerate}
+        \item \textbf{Volume:} Measured in TB, PB, etc., growing exponentially.
+        \item \textbf{Velocity:} Speed of data communication.
+            \begin{itemize}
+                \item Low latency = real-time data (e.g., stock price feeds).
+                \item High latency = delayed data updates.
+            \end{itemize}
+        \item \textbf{Variety:} Degree of structure in data.
+            \begin{itemize}
+                \item Structured: Databases, spreadsheets.
+                \item Semi-structured: Photos, web code.
+                \item Unstructured: Video, audio.
+            \end{itemize}
+    \end{enumerate}
+
+    \item \textbf{Data Science:} Methods to process and visualize data.
+    \begin{enumerate}
+        \item \textbf{Processing:}
+            \begin{itemize}
+                \item Capture → collect/transform data.
+                \item Curation → adjust for bad/missing data.
+                \item Storage → archive/access.
+                \item Search → retrieve information.
+                \item Transfer → move data to needed location.
+            \end{itemize}
+        \item \textbf{Visualization:}
+            \begin{itemize}
+                \item Structured: charts, graphs.
+                \item Unstructured: word clouds, mind maps.
+            \end{itemize}
+    \end{enumerate}
+
+    \item \textbf{Challenges:} Ensuring data quality, avoiding sampling bias, processing unstructured data.
+
+    \item \textbf{Artificial Intelligence (AI):} Systems programmed to simulate human cognition.
+    \begin{itemize}
+        \item Example: Neural networks process data like the human brain.
+    \end{itemize}
+
+    \item \textbf{Machine Learning (ML):} Algorithms that learn from input data without explicit programming assumptions.
+    \begin{enumerate}
+        \item Uses training, validation, and test datasets.
+        \item \textbf{Types:}
+            \begin{itemize}
+                \item Supervised → input/output labeled, model learns mapping.
+                \item Unsupervised → no labels, model learns structure.
+                \item Deep Learning → multiple neural network layers; can be supervised or unsupervised.
+            \end{itemize}
+        \item \textbf{Applications:} Image/speech recognition, fraud detection.
+        \item \textbf{Risks:}
+            \begin{itemize}
+                \item Overfitting → too complex, captures noise as signal.
+                \item Underfitting → too simple, misses true patterns.
+                \item Black box problem → hard to explain outputs.
+            \end{itemize}
+    \end{enumerate}
+\end{itemize}
+
+
+\textbf{LOS 11.c: Applications of Big Data and Data Science to Investment Management}
+
+\begin{itemize}
+    \item \textbf{Text Analytics:} Analysis of unstructured text/voice data.
+    \begin{itemize}
+        \item Example: Detect sentiment from earnings call transcripts.
+        \item Use: Automating regulatory filing analysis.
+    \end{itemize}
+
+    \item \textbf{Natural Language Processing (NLP):} AI interpreting human language.
+    \begin{itemize}
+        \item Examples: Speech recognition, translation.
+        \item Use: Check regulatory compliance in emails; detect subtle sentiment shifts in analyst reports.
+    \end{itemize}
+
+    \item \textbf{Risk Governance:} Monitor exposures, perform stress testing.
+    \begin{itemize}
+        \item Use: Real-time risk monitoring via ML models.
+    \end{itemize}
+
+    \item \textbf{Algorithmic Trading:} Automated trading based on rules.
+    \begin{itemize}
+        \item Uses: Optimal order execution, high-frequency trading, intraday arbitrage.
+    \end{itemize}
+\end{itemize}
+
+
+\textbf{Summary Table: Key Concepts in Fintech}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{3cm}|p{4cm}|p{6cm}|}
+    \hline
+    \textbf{Concept} & \textbf{Definition} & \textbf{Finance Example} \\
+    \hline
+    Fintech & Tech applied to financial services & Robo-advisors, mobile banking apps \\
+    Big Data & Large, complex datasets from multiple sources & Combining stock market feeds with social media sentiment \\
+    AI & Simulating human cognition & Fraud detection via neural networks \\
+    Machine Learning & Algorithm learns from data & Predicting stock prices from historical patterns \\
+    NLP & AI interpreting human language & Automating sentiment analysis of analyst reports \\
+    Algorithmic Trading & Automated trade execution based on rules & Splitting large orders to minimize price impact \\
+    \hline
+    \end{tabular}
+\end{table}
+
+
+\textbf{Example: Applying Fintech to Equity Trading}
+\begin{itemize}
+    \item Step 1: Use Big Data to aggregate market prices, order book data, and Twitter sentiment.
+    \item Step 2: Apply NLP to interpret sentiment from news headlines.
+    \item Step 3: Feed sentiment and market variables into ML model.
+    \item Step 4: Generate buy/sell signals for algorithmic execution.
+\end{itemize}
+
+
+\textbf{Module Quiz 11.1 (Answers):}
+\begin{enumerate}
+    \item \textbf{A} — Application of technology to the financial services industry.
+    \item \textbf{A} — Machine learning is most relevant for analyzing Big Data.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,2589 @@
+% Financial Analysis - Alternative Version
+% Duplicate copy of financial analysis notes for backup and reference
+% Contains same content as main financial analysis document but stored separately
+% Used for cross-referencing and ensuring data integrity during study sessions
+% CFA Level I Financial Statement Analysis Module
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{graphicx} % make sure to include in preamble
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{tabularx}
+
+
+\geometry{margin=1in}
+
+\title{Financial Analysis}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{1.02 Financial Statement Analysis Framework}
+
+\begin{itemize}
+    \item \textbf{Learning Outcome:} The candidate should be able to describe the steps in the financial statement analysis framework.
+    
+    \item \textbf{Context:}
+    \begin{itemize}
+        \item Analysts work in diverse roles within investment management, including:
+        \begin{itemize}
+            \item \textit{Equity analysts}: Evaluate potential equity investments to determine attractiveness and appropriate purchase price.
+            \item \textit{Credit analysts}: Assess creditworthiness for debt investments and credit ratings.
+            \item Other tasks include subsidiary performance evaluation, private equity analysis, and identifying overvalued stocks for short positions.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Financial Statement Analysis Framework:}
+    
+    \renewcommand{\arraystretch}{0.8} % reduce row height
+\begin{table}[H]
+    \centering
+    \small % or \footnotesize for even smaller
+    \begin{tabular}{|p{3.5cm}|p{6.5cm}|p{5.5cm}|}
+    \hline
+    \textbf{Phase} & \textbf{Sources of Information} & \textbf{Output} \\ \hline
+    
+    \textbf{Articulate the purpose and context of the analysis} & 
+    \begin{itemize}\setlength\itemsep{0pt}\setlength\parskip{0pt}
+        \item Nature of analyst's function (equity/debt investment, credit rating)
+        \item Communication with client or supervisor on needs and concerns
+        \item Institutional guidelines for work product
+    \end{itemize} & 
+    \begin{itemize}\setlength\itemsep{0pt}\setlength\parskip{0pt}
+        \item Statement of analysis purpose or objective
+        \item List of specific questions to be answered
+        \item Nature and content of report
+        \item Timetable and resources for completion
+    \end{itemize} \\ \hline
+    
+    \textbf{Collect data} & 
+    \begin{itemize}\setlength\itemsep{0pt}\setlength\parskip{0pt}
+        \item Financial statements and other financial data
+        \item Questionnaires and industry/economic data
+        \item Discussions with issuer, management, suppliers, customers, competitors, experts
+        \item Company site visits (e.g., production facilities, retail stores)
+    \end{itemize} & 
+    \begin{itemize}\setlength\itemsep{0pt}\setlength\parskip{0pt}
+        \item Financial statements and quantitative data in usable form (e.g., spreadsheets)
+        \item Completed questionnaires, if applicable
+    \end{itemize} \\ \hline
+    
+    \textbf{Process data} & Data collected in previous phase & 
+    \begin{itemize}\setlength\itemsep{0pt}\setlength\parskip{0pt}
+        \item Adjusted financial statements
+        \item Common-size statements
+        \item Ratios and graphs
+    \end{itemize} \\ \hline
+    
+    \textbf{Analyze/interpret the data} & Input and processed data & 
+    \begin{itemize}\setlength\itemsep{0pt}\setlength\parskip{0pt}
+        \item Analytical results
+        \item Forecasts
+        \item Valuations
+    \end{itemize} \\ \hline
+    
+    \textbf{Develop and communicate conclusions and recommendations} & Analytical results and previous reports & 
+    \begin{itemize}\setlength\itemsep{0pt}\setlength\parskip{0pt}
+        \item Analytical report answering initial questions
+        \item Recommendations on investment or credit decisions
+    \end{itemize} \\ \hline
+    
+    \textbf{Follow-up} & Periodic repetition of previous steps & 
+    \begin{itemize}\setlength\itemsep{0pt}\setlength\parskip{0pt}
+        \item Comparison of actual vs expected results
+        \item Revised forecasts
+        \item Updated reports and recommendations
+    \end{itemize} \\ \hline
+    \end{tabular}
+    \caption{Financial Statement Analysis Framework}
+\end{table}
+\renewcommand{\arraystretch}{1.0} % reset if needed later
+    
+    \item \textbf{Detailed phase description:}
+    \begin{itemize}
+        \item \textit{Purpose and context}: Define the role and objectives clearly to tailor analysis.
+        \item \textit{Data collection}: Gather comprehensive quantitative and qualitative data from diverse sources.
+        \item \textit{Data processing}: Normalize and transform raw data into analyzable formats like ratios and common-size statements.
+        \item \textit{Analysis}: Perform detailed interpretation, forecasting, and valuation.
+        \item \textit{Communication}: Deliver clear conclusions, answering the predefined questions and making actionable recommendations.
+        \item \textit{Follow-up}: Monitor outcomes and update analysis to reflect changes or new information.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Articulate the Purpose and Context of the Analysis}
+
+\begin{itemize}
+    \item \textbf{Importance of Understanding Purpose:}
+    \begin{itemize}
+        \item Essential to understand the purpose before starting financial statement analysis.
+        \item Many techniques and large amounts of data make a clear purpose critical.
+    \end{itemize}
+
+    \item \textbf{Well-Defined Analytical Tasks:}
+    \begin{itemize}
+        \item Some tasks have predefined purposes guided by institutional norms.
+        \item Examples include:
+        \begin{itemize}
+            \item Periodic credit reviews of investment-grade debt portfolios.
+            \item Equity analysts’ quarterly company reports.
+        \end{itemize}
+        \item Formats, procedures, and data sources may also be given in these cases.
+    \end{itemize}
+    
+    \item \textbf{Less-Defined Analytical Tasks:}
+    \begin{itemize}
+        \item Analyst must decide on approach, tools, data sources, report format, and priorities.
+        \item Important to focus on relevant data and avoid unnecessary calculations.
+        \item Key questions to consider:
+        \begin{itemize}
+            \item What question would the analysis answer if all calculations were instantly available?
+            \item What decision would that answer support?
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Defining the Context:}
+    \begin{itemize}
+        \item Identify the intended audience of the analysis.
+        \item Determine the deliverable, e.g., a final report with conclusions and recommendations.
+        \item Establish the time frame and deadlines.
+        \item Understand resources and constraints affecting analysis completion.
+        \item Context may also be predefined by institutional standards.
+    \end{itemize}
+    
+    \item \textbf{Compiling Specific Questions:}
+    \begin{itemize}
+        \item After clarifying purpose and context, compile specific analytical questions.
+        \item Example: Comparing historical performance of three companies in the same industry might include:
+        \begin{itemize}
+            \item What is the relative growth rate of each company?
+            \item How does their profitability compare?
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Collect Data}
+
+\begin{itemize}
+    \item \textbf{Purpose of Data Collection:}
+    \begin{itemize}
+        \item Obtain necessary information to answer the specific analytical questions defined earlier.
+        \item Understand the target company’s:
+        \begin{itemize}
+            \item Business model
+            \item Financial performance
+            \item Financial position (including trends over time and relative to peers)
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Scope of Data Needed:}
+    \begin{itemize}
+        \item In some cases, financial statement data alone may suffice:
+        \begin{itemize}
+            \item Example: Screening many companies for minimum historical profitability or sales growth.
+        \end{itemize}
+        \item For more detailed questions (e.g., why one company outperforms competitors), additional qualitative and quantitative data are required.
+    \end{itemize}
+    
+    \item \textbf{Consideration of External Environment:}
+    \begin{itemize}
+        \item Information on the economy and industry is necessary to understand the company’s operating environment.
+        \item Analysts often use a \textit{top-down approach}:
+        \begin{enumerate}
+            \item Understand issuer’s macroeconomic environment (e.g., economic growth prospects, inflation)
+            \item Analyze industry prospects based on macroeconomic outlook
+            \item Assess company prospects given industry and macroeconomic contexts
+        \end{enumerate}
+    \end{itemize}
+    
+    \item \textbf{Forecasting and Analysis:}
+    \begin{itemize}
+        \item Past company data serve as a basis for statistical forecasting of future performance (e.g., earnings growth).
+        \item Understanding economic and industry conditions improves forecast accuracy and insight.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Process Data}
+
+\begin{itemize}
+    \item \textbf{Purpose of Data Processing:}
+    \begin{itemize}
+        \item Apply appropriate analytical tools to the collected financial and other data.
+        \item Transform raw data into formats and metrics useful for analysis and comparison.
+    \end{itemize}
+    
+    \item \textbf{Common Analytical Techniques:}
+    \begin{itemize}
+        \item Computing financial ratios and growth rates.
+        \item Preparing common-size financial statements to express line items as percentages of a base (e.g., sales).
+        \item Creating charts and graphical representations.
+        \item Performing statistical analyses such as regressions or Monte Carlo simulations.
+        \item Making forecasts and performing valuations.
+        \item Conducting sensitivity analyses.
+        \item Combining multiple tools as appropriate to the task.
+    \end{itemize}
+    
+    \item \textbf{Comprehensive Financial Analysis Includes:}
+    \begin{itemize}
+        \item Reading and evaluating financial results for each company.
+        \item Understanding factors affecting comparability between companies, such as:
+        \begin{itemize}
+            \item Differences in business models.
+            \item Operating decisions (e.g., leasing vs purchasing fixed assets).
+            \item Accounting policies (e.g., revenue recognition timing).
+            \item Different tax jurisdictions.
+        \end{itemize}
+        \item Making necessary adjustments to financial statements or using alternative measures to facilitate comparisons.
+        \item Recognizing that commonly used databases may not include analyst adjustments.
+        \item Preparing or collecting:
+        \begin{itemize}
+            \item Common-size financial statement data reflecting percentages or changes.
+            \item Financial ratios evaluating profitability, liquidity, leverage, efficiency, and valuation.
+        \end{itemize}
+        \item Using these processed data to compare a company’s performance relative to its past or peers.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Analyze/Interpret the Data}
+
+\begin{itemize}
+    \item \textbf{Purpose of Analysis:}
+    \begin{itemize}
+        \item Interpret processed data outputs to answer specific analytical questions.
+        \item Numerical results alone are rarely sufficient without interpretation.
+    \end{itemize}
+    
+    \item \textbf{Role of the Analyst:}
+    \begin{itemize}
+        \item Use data interpretation to support conclusions or recommendations.
+        \item Link analytical findings to the overall purpose of the analysis.
+    \end{itemize}
+    
+    \item \textbf{Examples of Analysis Outcomes:}
+    \begin{itemize}
+        \item \textit{Equity analysis} may include:
+        \begin{itemize}
+            \item Forecasts of earnings and free cash flow.
+            \item Range of fair value estimates.
+            \item Resulting buy, hold, or sell recommendations.
+        \end{itemize}
+        \item \textit{Credit analysis} may include:
+        \begin{itemize}
+            \item Forecasts of free cash flow, interest coverage, and leverage ratios.
+            \item Support for investment decisions based on creditworthiness.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Develop and Communicate Conclusions and Recommendations}
+
+\begin{itemize}
+    \item \textbf{Purpose of Communication:}
+    \begin{itemize}
+        \item Present conclusions or recommendations clearly in an appropriate format.
+        \item Format varies by task, institution, and audience.
+    \end{itemize}
+    
+    \item \textbf{Typical Components of an Equity Analyst’s Report:}
+    \begin{itemize}
+        \item Summary and investment conclusion.
+        \item Industry overview and competitive analysis.
+        \item Financial statement model, possibly including multiple scenarios.
+        \item Valuation.
+        \item Investment risks.
+    \end{itemize}
+    
+    \item \textbf{Regulatory and Professional Standards:}
+    \begin{itemize}
+        \item Reports may be subject to requirements from regulatory agencies or professional bodies.
+        \item The CFA Institute Standards of Practice Handbook provides key guidelines.
+    \end{itemize}
+    
+    \item \textbf{CFA Institute Standards Highlights:}
+    \begin{itemize}
+        \item \textit{Standard V(B)} requires:
+        \begin{itemize}
+            \item Communication of factors instrumental to the investment recommendation.
+            \item Clear distinction between opinions and facts.
+            \item Presentation of basic characteristics of the analyzed security to enable reader evaluation.
+            \item Disclosure of limitations of the analysis and risks inherent to the investment.
+            \item Inclusion of all important elements relevant to the analysis and conclusions for informed decision making.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Follow-Up}
+
+\begin{itemize}
+    \item \textbf{Ongoing Nature of Analysis:}
+    \begin{itemize}
+        \item The analysis process continues beyond the initial report.
+        \item Periodic reviews are essential, especially when:
+        \begin{itemize}
+            \item An equity investment has been made.
+            \item A credit rating has been assigned.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Purpose of Follow-Up:}
+    \begin{itemize}
+        \item Revise forecasts and recommendations based on new information.
+        \item Adjust investment or credit decisions as circumstances evolve.
+    \end{itemize}
+    
+    \item \textbf{Follow-Up for Rejected Investments:}
+    \begin{itemize}
+        \item Even if an investment is rejected initially, further analysis may be required if:
+        \begin{itemize}
+            \item Security prices change significantly.
+            \item Business or market conditions evolve.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Repetition of the Process:}
+    \begin{itemize}
+        \item Follow-up may involve repeating all previous phases of the financial statement analysis framework.
+        \item This ensures updated insights and relevant recommendations over time.
+    \end{itemize}
+\end{itemize}
+
+\section*{1.03 Scope of Financial Statement Analysis}
+
+\begin{itemize}
+    \item \textbf{Role of Financial Statement Analysis:}
+    \begin{itemize}
+        \item Use financial reports plus other information to evaluate past, current, and potential performance and financial position.
+        \item Supports investment, credit, and economic decisions.
+        \item Managers also use nonpublic data beyond financial statements for decisions.
+    \end{itemize}
+
+    \item \textbf{Typical Economic Decisions:}
+    \begin{itemize}
+        \item Evaluate equity investments for portfolio inclusion.
+        \item Value securities for investment recommendations.
+        \item Assess creditworthiness to extend loans and set terms.
+        \item Assign debt ratings to companies or bond issues.
+        \item Make venture capital or private equity investment decisions.
+        \item Evaluate merger or acquisition candidates.
+    \end{itemize}
+
+    \item \textbf{Themes in Financial Analysis:}
+    \begin{itemize}
+        \item Examine past and current performance and financial position.
+        \item Form expectations about future performance and position.
+        \item Consider risk factors affecting future outcomes.
+        \item Assess profitability and ability to generate positive cash flows.
+    \end{itemize}
+
+    \item \textbf{Earnings Announcements and Analyst Expectations (Exhibit 2):}
+    \begin{itemize}
+        \item Earnings announcements provide corporate results relative to analyst expectations.
+        \item Analysts use earnings to value companies (e.g., P/E ratios, discounted cash flow models).
+    \end{itemize}
+
+    \begin{table}[H]
+        \centering
+        \small
+        \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \textbf{Panel A: Sea Limited Earnings Release (Excerpt)} & \textbf{Panel B: News Article Summary (Excerpt)} \\ \hline
+        \begin{itemize}\setlength\itemsep{0pt}
+            \item Total GAAP revenue: US\$2.9 billion, up 29.0\% YoY
+            \item Gross profit: US\$1.1 billion, up 17.1\% YoY
+            \item Net loss: US\$(931.2) million vs. US\$(433.7) million prior year
+            \item Adjusted EBITDA: US\$(506.3) million vs. US\$(24.1) million prior year
+            \item E-commerce revenue: US\$1.7 billion, up 51.4\% YoY
+            \item Strategic shift: Suspended e-commerce revenue guidance due to macro uncertainty
+        \end{itemize}
+        &
+        \begin{itemize}\setlength\itemsep{0pt}
+            \item Revenue missed estimates, earnings beat expectations
+            \item Stock dropped 14.3\% on announcement day
+            \item Macro volatility cited as reason for suspending guidance
+            \item Focus on efficiency, self-sufficiency emphasized by CEO
+            \item Gaming unit "Garena" accounts for 31\% of revenue
+        \end{itemize}
+        \\ \hline
+        \end{tabular}
+        \caption{Sea Limited Earnings Announcement and News Media Comparison}
+    \end{table}
+
+    \item \textbf{Credit Analysis and Financial Position (Exhibit 3):}
+    \begin{itemize}
+        \item Financial position is critical for credit analysis.
+        \item Example: T-Mobile’s upgrade to full investment grade based on strong operational and financial performance.
+        \item Ratings reflect subscriber growth, cash flow, debt leverage, network investments, and market position.
+    \end{itemize}
+
+    \begin{table}[h!]
+        \centering
+        \small
+        \begin{tabular}{|p{7cm}|p{7cm}|}
+        \hline
+        \textbf{Panel A: T-Mobile Credit Rating Announcement (Excerpt)} & \textbf{Panel B: Moody’s Credit Rating Upgrade (Excerpt)} \\ \hline
+        \begin{itemize}\setlength\itemsep{0pt}
+            \item First-ever full investment grade rating (BBB- with positive outlook by S\&P)
+            \item Previous ratings: Baa3 (Moody’s), BBB- (Fitch)
+            \item Rating upgrade due to operational and financial performance, subscriber growth, and free cash flow
+            \item Unlocks full access to investment grade debt markets
+        \end{itemize}
+        &
+        \begin{itemize}\setlength\itemsep{0pt}
+            \item Moody’s upgraded senior unsecured debt rating to Baa3 from Ba2
+            \item Affirmed ratings on senior secured notes and revolving credit facility
+            \item Stable outlook reflecting subscriber growth, EBITDA margin expansion, and debt leverage improvements
+            \item Credit profile supported by network investments and prudent financial policy
+        \end{itemize}
+        \\ \hline
+        \end{tabular}
+        \caption{T-Mobile Credit Rating Upgrade Announcement and Moody’s Rating Action}
+    \end{table}
+
+    \item \textbf{Sources Used in Financial Analysis:}
+    \begin{itemize}
+        \item Financial statements, notes, and supplementary schedules.
+        \item Other relevant external and internal information sources.
+    \end{itemize}
+\end{itemize}
+
+\section*{1.04 Regulated Sources of Information}
+
+\begin{itemize}
+    \item \textbf{Purpose of Regulation:}
+    \begin{itemize}
+        \item Ensure publicly traded companies prepare financial reports following specified accounting standards.
+        \item Regulatory filings promote transparency, comparability, and reliability of financial information.
+    \end{itemize}
+
+    \item \textbf{Examples of Regulatory Requirements:}
+    \begin{itemize}
+        \item Swiss-based companies listed on the Swiss Exchange main board must use either:
+        \begin{itemize}
+            \item IFRS (International Financial Reporting Standards), or
+            \item US GAAP (Generally Accepted Accounting Principles) if multinational.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Global Regulatory Landscape:}
+    \begin{itemize}
+        \item Different jurisdictions have varied securities regulations and corporate reporting standards.
+        \item Regulators overseeing over 95\% of the world’s financial markets are members of the International Organization of Securities Commissions (IOSCO).
+        \item IOSCO members share objectives and principles, creating global uniformity in financial reporting standards.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{International Organization of Securities Commissions (IOSCO)}
+
+\begin{itemize}
+    \item \textbf{Role and Composition:}
+    \begin{itemize}
+        \item IOSCO is not a regulatory authority but regulates a significant portion of global financial capital markets.
+        \item Established in 1983, it consists of:
+        \begin{itemize}
+            \item Ordinary members: Securities commissions or similar governmental regulatory authorities with primary responsibility in their jurisdictions.
+            \item Associate members.
+            \item Affiliate members.
+        \end{itemize}
+        \item Members regulate over 95\% of the world’s financial capital markets across more than 115 jurisdictions.
+        \item Emerging market securities regulators constitute 75\% of ordinary membership.
+    \end{itemize}
+
+    \item \textbf{Objectives and Principles of Securities Regulation:}
+    \begin{itemize}
+        \item IOSCO maintains a comprehensive set of Objectives and Principles of Securities Regulation, updated as needed.
+        \item These principles serve as an international benchmark.
+        \item Three core objectives:
+        \begin{itemize}
+            \item Protect investors.
+            \item Ensure markets are fair, efficient, and transparent.
+            \item Reduce systemic risk.
+        \end{itemize}
+        \item Principles are grouped into 10 categories, including regulators, enforcement, auditing, and issuers.
+    \end{itemize}
+
+    \item \textbf{Key Principles for Issuers Related to Financial Reporting:}
+    \begin{itemize}
+        \item Full, accurate, and timely disclosure of financial results, risks, and other material information.
+        \item Use of high-quality, internationally acceptable accounting standards for financial statement preparation.
+    \end{itemize}
+
+    \item \textbf{Globalization and Harmonization of Standards:}
+    \begin{itemize}
+        \item Historically, regulations and financial reporting standards developed within individual countries reflecting local norms.
+        \item Global financial markets have increased the need for comparable international financial reporting standards.
+        \item Laws and regulations remain jurisdiction-specific, necessitating cooperation among regulators.
+    \end{itemize}
+
+    \item \textbf{Role of Self-Regulatory Organizations (SROs):}
+    \begin{itemize}
+        \item SROs exercise direct oversight within their competence.
+        \item SROs should be subject to oversight by the relevant regulator.
+        \item SROs must observe fairness and confidentiality.
+    \end{itemize}
+
+    \item \textbf{Importance of Uniform Regulation and Enforcement:}
+    \begin{itemize}
+        \item Uniform regulation and enforcement are critical for consistent application of international financial standards (e.g., Basel Committee standards, IFRS).
+        \item IOSCO facilitates uniform regulation and cross-border cooperation.
+        \item It aids in combating violations of securities and derivatives laws internationally.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{US Securities and Exchange Commission (SEC)}
+
+\begin{itemize}
+    \item \textbf{Role and Jurisdiction:}
+    \begin{itemize}
+        \item Primary regulatory authority for securities and capital markets in the United States.
+        \item Ordinary member of IOSCO.
+        \item Regulates any company issuing securities in US capital markets (e.g., NYSE, NASDAQ).
+        \item Established after the 1929 stock market crash leading to the Great Depression.
+    \end{itemize}
+
+    \item \textbf{Key Statutes Enforced by the SEC:}
+    \begin{itemize}
+        \item \textbf{Securities Act of 1933:}
+        \begin{itemize}
+            \item Requires investors to receive significant financial and other information when securities are sold.
+            \item Prohibits misrepresentations.
+            \item Requires registration of all public securities issuances.
+        \end{itemize}
+        \item \textbf{Securities Exchange Act of 1934:}
+        \begin{itemize}
+            \item Created the SEC.
+            \item Gave SEC authority over all securities industry aspects.
+            \item Mandates periodic reporting by publicly traded companies.
+        \end{itemize}
+        \item \textbf{Sarbanes–Oxley Act of 2002:}
+        \begin{itemize}
+            \item Established the Public Company Accounting Oversight Board (PCAOB) to oversee auditors.
+            \item Addresses auditor independence by restricting certain non-audit services.
+            \item Requires executive management to certify fairness of financial reports.
+            \item Mandates management reports on effectiveness of internal controls, confirmed by external auditors.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Compliance and Reporting:}
+    \begin{itemize}
+        \item Companies comply mainly by filing standardized SEC forms.
+        \item Over 50 different SEC forms exist; key ones relevant for analysts include:
+    \end{itemize}
+    
+    \item \textbf{Common SEC Filings:}
+    \begin{itemize}
+        \item \textbf{Securities Offerings Registration Statement:}
+        \begin{itemize}
+            \item Required for new securities offerings under the 1933 Act.
+            \item Includes disclosures about securities, relation to issuer’s other securities, annual filing info, audited financials, and risk factors.
+            \item Interim unaudited financial statements if filed 3+ months after fiscal year end.
+        \end{itemize}
+        \item \textbf{Forms 10-K, 20-F, 40-F:}
+        \begin{itemize}
+            \item Annual comprehensive reports; Form 10-K for US registrants, 40-F for some Canadian, 20-F for other non-US.
+            \item Includes business overview, risk factors, audited financials, MD\&A, and auditor reports.
+        \end{itemize}
+        \item \textbf{Annual Report:}
+        \begin{itemize}
+            \item Not SEC required but commonly prepared for shareholders.
+            \item Often a polished marketing document with CEO letter, financial data, R\&D, and goals.
+            \item Overlaps with Form 10-K but less legalistic.
+        \end{itemize}
+        \item \textbf{Proxy Statement/Form DEF-14A:}
+        \begin{itemize}
+            \item Distributed before shareholder meetings.
+            \item Contains voting proposals, ownership info, director bios, executive compensation.
+        \end{itemize}
+        \item \textbf{Forms 10-Q and 6-K:}
+        \begin{itemize}
+            \item Quarterly (10-Q for US) or semiannual (6-K for non-US) interim reports.
+            \item Include unaudited financials, MD\&A, and disclose material non-recurring events.
+        \end{itemize}
+        \item \textbf{Form 8-K (6-K for non-US):}
+        \begin{itemize}
+            \item Current reports for major corporate events like acquisitions, management changes, governance, and Regulation FD disclosures.
+        \end{itemize}
+        \item \textbf{Forms 3, 4, 5, and 144:}
+        \begin{itemize}
+            \item Reporting of beneficial ownership by insiders and large holders.
+            \item Form 3: initial ownership statement; Form 4: changes in ownership; Form 5: annual report; Form 144: notice of proposed sales of restricted securities.
+        \end{itemize}
+        \item \textbf{Form 11-K:}
+        \begin{itemize}
+            \item Annual report on employee stock purchase, savings, and similar plans.
+            \item Important for companies with significant employee benefit plans.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{International Context:}
+    \begin{itemize}
+        \item Other jurisdictions have similar legislation regulating securities and capital markets.
+        \item Regulatory authorities enforce rules consistent with IOSCO objectives.
+        \item Regulators adopt or establish accounting standards and reporting requirements.
+        \item IOSCO members cooperate internationally to develop, implement, and enforce consistent regulation standards.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Capital Markets Regulation in Europe}
+
+\begin{itemize}
+    \item \textbf{Regulatory Structure:}
+    \begin{itemize}
+        \item Capital markets regulation is primarily managed by individual EU member states within their jurisdictions.
+        \item Some regulations are adopted at the European Union (EU) level to promote harmonization.
+    \end{itemize}
+
+    \item \textbf{IFRS Adoption in the EU:}
+    \begin{itemize}
+        \item Since 2005, consolidated accounts of EU-listed companies must use International Financial Reporting Standards (IFRS).
+        \item The endorsement process balances member states’ autonomy with the need for cooperation and convergence.
+        \item Process overview:
+        \begin{itemize}
+            \item The International Accounting Standards Board (IASB) issues new IFRS standards.
+            \item The European Financial Reporting Advisory Group (EFRAG) advises the European Commission on the standards.
+            \item The Standards Advice Review Group provides an opinion on EFRAG’s advice.
+            \item The European Commission prepares a draft endorsement regulation based on this input.
+            \item The Accounting Regulatory Committee votes on the draft.
+            \item If favorable, the proposal is sent to the European Parliament and Council of the European Union for approval.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{European Securities Regulatory Bodies:}
+    \begin{itemize}
+        \item \textbf{European Securities Committee (ESC):}
+        \begin{itemize}
+            \item Composed of high-level representatives from member states.
+            \item Advises the European Commission on securities policy.
+        \end{itemize}
+        \item \textbf{European Securities and Markets Authority (ESMA):}
+        \begin{itemize}
+            \item EU cross-border supervisor coordinating EU market supervision.
+            \item Regulation enforcement remains with individual member states.
+            \item Requirements for share registration and periodic financial reporting vary by country.
+            \item ESMA is one of three European supervisory authorities, alongside those for banking and insurance sectors.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Financial Notes and Supplementary Schedules}
+
+\begin{itemize}
+    \item \textbf{Importance of Notes:}
+    \begin{itemize}
+        \item Notes (or footnotes) accompany financial statements and often contain a large portion of disclosures in regulatory filings.
+        \item They provide essential information for understanding the financial statements.
+        \item Example: Sea Ltd.’s 2021 financial statements include over 60 pages of notes.
+    \end{itemize}
+
+    \item \textbf{Contents of Notes:}
+    \begin{itemize}
+        \item Basis of preparation:
+        \begin{itemize}
+            \item Fiscal year period.
+            \item Accounting standards used (e.g., US GAAP, IFRS).
+            \item Currency denomination and rounding conventions.
+            \item Consolidation basis (e.g., combining subsidiary financials after eliminating intercompany transactions).
+        \end{itemize}
+        \item Accounting policies, methods, and estimates:
+        \begin{itemize}
+            \item Flexibility allowed in choosing among alternative accounting policies.
+            \item Estimates required for recording and measuring transactions and financial statement items.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Flexibility and Challenges:}
+    \begin{itemize}
+        \item Companies select policies and estimates that fairly reflect their unique economic environment.
+        \item Flexibility can reduce comparability across companies.
+        \item Example: Different depreciation methods for similar equipment can hinder performance comparisons.
+        \item Analysts must understand these choices to adjust for meaningful comparison.
+    \end{itemize}
+
+    \item \textbf{Scope of Note Disclosures:}
+    \begin{itemize}
+        \item Explanatory details for nearly every balance sheet and income statement line item.
+        \item Additional disclosures often include:
+        \begin{itemize}
+            \item Segment reporting.
+            \item Business acquisitions and disposals.
+            \item Contractual obligations (on- and off-balance sheet debt).
+            \item Financial instruments and related risks.
+            \item Legal proceedings.
+            \item Related-party transactions.
+            \item Subsequent events after balance sheet date.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Analyst’s Use of Disclosures:}
+    \begin{itemize}
+        \item Familiarity with company and competitor disclosures improves judgment.
+        \item Helps determine the relative importance and usefulness of different notes.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Business and Geographic Segment Reporting}
+
+\begin{itemize}
+    \item \textbf{Operating Segments:}
+    \begin{itemize}
+        \item Defined as components that:
+        \begin{itemize}
+            \item Engage in activities generating revenue and expenses (including start-ups).
+            \item Are regularly reviewed by senior management.
+            \item Have discrete financial information available.
+        \end{itemize}
+        \item Segments meeting quantitative criteria (10\% or more of combined revenue, assets, or profit/loss) must be reported separately.
+        \item If combined external revenue of reportable segments is less than 75\% of total revenue, additional segments must be identified until threshold is met.
+        \item Small segments may be combined if they share similar business or geographic factors.
+        \item Non-reportable segments are grouped as "all other segments."
+    \end{itemize}
+
+    \item \textbf{Disclosure Requirements for Reportable Segments:}
+    \begin{itemize}
+        \item Factors used to identify reportable segments.
+        \item Types of products and services sold by each segment.
+        \item For each segment, disclose:
+        \begin{itemize}
+            \item Revenue (external and inter-segment).
+            \item Profit or loss.
+            \item Assets and liabilities (if reviewed by chief decision maker).
+            \item Interest revenue and expense.
+            \item Cost of property, plant, and equipment (PPE) and intangible assets acquired.
+            \item Depreciation and amortization expense.
+            \item Other non-cash expenses.
+            \item Income tax expense or income.
+            \item Share of net profit/loss from equity-accounted investments.
+        \end{itemize}
+        \item Reconciliation of segment data to consolidated financial statements for revenue, profit/loss, assets, and liabilities.
+    \end{itemize}
+
+    \item \textbf{Usefulness of Segment Reporting:}
+    \begin{itemize}
+        \item Helps analysts understand company activities and sources of revenue.
+        \item Provides insight into profitability and risks by business and geography.
+    \end{itemize}
+
+    \item \textbf{Exhibit 4: Sea Ltd. Segment Reporting (Excerpt)}
+
+\begin{table}[H]
+\centering
+\scriptsize % smaller font size than footnotesize
+\setlength{\tabcolsep}{4pt} % reduce horizontal padding
+\renewcommand{\arraystretch}{0.8} % reduce vertical padding
+\begin{tabular}{|l|r|r|r|r|r|r|}
+\hline
+& \thead{Digital \\ Entertainment} 
+& \thead{E-Commerce} 
+& \thead{Digital \\ Financial \\ Services} 
+& \thead{Other \\ Services} 
+& \thead{Unallocated \\ Expenses} 
+& \thead{Consolidated} \\
+\hline
+Revenue & 4,320,013 & 5,122,959 & 469,774 & 42,444 & 0 & 9,955,190 \\
+Operating income (loss) & 2,500,081 & (2,766,566) & (640,422) & (177,633) & (498,520) & (1,583,060) \\
+Non-operating loss, net & & & & & & (132,124) \\
+Income tax expense & & & & & & (332,865) \\
+Share of results of equity investees & & & & & & 5,019 \\
+Net loss & & & & & & (2,043,030) \\
+\hline
+\end{tabular}
+\caption{\scriptsize Segment Results for Year Ended 31 December 2021 (000s of USD) - Sea Ltd.}
+\renewcommand{\arraystretch}{1.0} % reset to default
+\end{table}
+
+    \item \textbf{Geographic Revenue Breakdown (000s of USD):}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|l|r|r|r|}
+    \hline
+    \textbf{Region} & \textbf{2019} & \textbf{2020} & \textbf{2021} \\ \hline
+    Southeast Asia & 1,378,141 & 2,791,894 & 6,316,782 \\
+    Latin America & 282,618 & 790,308 & 1,850,861 \\
+    Rest of Asia & 489,291 & 655,007 & 1,394,342 \\
+    Rest of the World & 25,328 & 138,455 & 393,205 \\ \hline
+    \textbf{Consolidated Revenue} & 2,175,378 & 4,375,664 & 9,955,190 \\ \hline
+    \end{tabular}
+    \caption{Revenue by Geography for Years Ended 31 December (000s USD) - Sea Ltd.}
+    \end{table}
+
+    \item \textbf{Key Analytical Insights:}
+    \begin{itemize}
+        \item E-commerce segment generated over 50\% of total revenue in 2021 but incurred a large operating loss.
+        \item Digital entertainment segment accounted for most remaining revenue and was the only profitable segment.
+        \item Southeast Asia and Latin America are the company’s most important geographic markets.
+        \item Analysts focus on profitable and large-revenue segments for forecasting and valuation.
+    \end{itemize}
+
+    \item \textbf{Management Judgment and Segment Changes:}
+    \begin{itemize}
+        \item Segment identification involves significant management judgment.
+        \item Companies may change segment definitions and related disclosures over time.
+    \end{itemize}
+
+    \item \textbf{Single Customer Reliance Disclosure:}
+    \begin{itemize}
+        \item Companies must disclose if any single customer accounts for 10\% or more of total revenues.
+        \item Identity of the customer is not disclosed.
+        \item Such information helps analysts assess concentration risk.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Management Commentary or Management’s Discussion and Analysis (MD\&A)}
+
+\begin{itemize}
+    \item \textbf{Overview:}
+    \begin{itemize}
+        \item MD\&A is a section in regulatory filings (e.g., Form 10-K, 10-Q) where management discusses business nature, past results, and outlook.
+        \item Known by various names: management reporting, management commentary, operating and financial review, MD\&A.
+        \item Often one of the most useful parts of annual reports besides financial statements.
+        \item Generally, information in management commentary is unaudited except for financial statement excerpts.
+        \item In Germany, management reporting is audited and has been required since 1931.
+    \end{itemize}
+
+    \item \textbf{IASB IFRS Practice Statement on Management Commentary:}
+    \begin{itemize}
+        \item Provides a framework for preparation and presentation of decision-useful management commentary.
+        \item Framework offers guidance, not mandatory standards.
+        \item Identifies five key content elements:
+    \end{itemize}
+
+    \begin{table}[h!]
+    \centering
+    \footnotesize
+    \begin{tabular}{|c|p{11cm}|}
+    \hline
+    \textbf{Element No.} & \textbf{Content Element} \\ \hline
+    1 & Nature of the business \\ \hline
+    2 & Management’s objectives and strategies \\ \hline
+    3 & Significant resources, risks, and relationships \\ \hline
+    4 & Results of operations \\ \hline
+    5 & Critical performance measures \\ \hline
+    \end{tabular}
+    \caption{Five Content Elements of Decision-Useful Management Commentary (IASB Framework)}
+    \end{table}
+
+    \item \textbf{SEC Requirements in the United States:}
+    \begin{itemize}
+        \item SEC mandates an MD\&A section specifying content requirements.
+        \item Management must highlight favorable/unfavorable trends, significant events, and uncertainties affecting liquidity, capital resources, and results.
+        \item Must discuss inflation, changing prices, material events that may cause future results to deviate materially.
+        \item Disclosures on off-balance-sheet obligations and contractual commitments (e.g., purchase obligations) are required.
+        \item Critical accounting policies involving subjective judgments and significant impact on results must be discussed.
+    \end{itemize}
+
+    \item \textbf{Usefulness for Analysts:}
+    \begin{itemize}
+        \item MD\&A provides a good starting point for understanding financial statements.
+        \item Forward-looking disclosures (capital expenditures, expansions, divestitures) help project future performance.
+        \item Commentary is one input among others for an objective and independent company assessment.
+    \end{itemize}
+
+    \item \textbf{Example: Sea Ltd. 2021 Annual Report (Form 20-F):}
+    \begin{itemize}
+        \item Contains sections like “Information on the Company” and “Operating and Financial Review and Prospects.”
+        \item Discusses company history, business model, strategies, key performance indicators, risk factors, relevant laws and regulations.
+        \item Includes recent financial performance and position, cash flows, working capital, capital expenditures, and key accounting policies.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Auditor's Reports}
+
+\begin{itemize}
+    \item \textbf{Purpose of Audit Reports:}
+    \begin{itemize}
+        \item Financial statements in annual reports generally require an audit by an independent accounting firm.
+        \item Auditor issues a written opinion on whether the financial statements fairly present the company’s financial position, performance, and cash flows.
+        \item Audits may be mandated by law, contract, or regulation.
+    \end{itemize}
+
+    \item \textbf{Auditing Standards:}
+    \begin{itemize}
+        \item International Standards on Auditing (ISAs) developed by IAASB guide audits in many countries.
+        \item The U.S. uses PCAOB standards, established after Sarbanes–Oxley Act (2002).
+        \item Objectives include obtaining reasonable assurance that statements are free of material misstatement (due to fraud or error).
+        \item Audits use sampling and are based on estimates and assumptions; hence, absolute assurance is not possible.
+    \end{itemize}
+
+    \item \textbf{Types of Audit Opinions:}
+    \begin{table}[h!]
+    \centering
+    \footnotesize
+    \begin{tabular}{|l|p{9cm}|}
+    \hline
+    \textbf{Opinion Type} & \textbf{Description} \\ \hline
+    Unqualified (Unmodified / Clean) & Financial statements present a “true and fair view” or are “fairly presented” in all material respects according to applicable standards. This is the desired opinion. \\ \hline
+    Qualified & Exceptions or scope limitations exist, described in detail; the opinion is modified but overall statements are fairly presented except for noted issues. \\ \hline
+    Adverse & Financial statements materially depart from accounting standards and are not fairly presented. \\ \hline
+    Disclaimer & Auditor cannot express an opinion, often due to scope limitations or insufficient evidence. \\ \hline
+    \end{tabular}
+    \caption{Types of Audit Opinions}
+    \end{table}
+
+    \item \textbf{Key Audit Matters (KAM) and Critical Audit Matters (CAM):}
+    \begin{itemize}
+        \item Included in audit reports of listed companies to highlight areas of greatest audit focus.
+        \item KAM (international) and CAM (U.S.) concern areas with higher risk of misstatement, significant management judgment, or complex transactions.
+        \item Communication of KAM/CAM does not change overall audit opinion.
+        \item Not necessarily the most important factors for analysts/investors but provide insight into audit challenges.
+    \end{itemize}
+
+    \subsubsection*{Excerpts from Sea Ltd.’s 2021 Independent Audit Report}
+
+\begin{itemize}
+    \item \textbf{Opinion on the Financial Statements:}
+    \begin{itemize}
+        \item Audited consolidated balance sheets as of December 31, 2021 and 2020, and related statements of operations, comprehensive loss, cash flows, and shareholders' equity for the three years ended December 31, 2021.
+        \item Opinion: Financial statements fairly present the financial position and results in conformity with U.S. GAAP.
+        \item Also audited internal control over financial reporting as of December 31, 2021; expressed unqualified opinion.
+    \end{itemize}
+
+    \item \textbf{Basis for Opinion:}
+    \begin{itemize}
+        \item Management is responsible for the financial statements; auditors express opinion based on their audits.
+        \item Audits conducted according to PCAOB standards to obtain reasonable assurance that statements are free from material misstatement (fraud or error).
+        \item Procedures included risk assessment, tests of evidence, evaluation of accounting principles and estimates, and overall presentation.
+    \end{itemize}
+
+    \item \textbf{Critical Audit Matters (CAM):}
+    \begin{itemize}
+        \item Matters communicated to audit committee that relate to material accounts or disclosures and involved challenging, subjective, or complex judgments.
+        \item Communication of CAMs does not modify the auditor’s overall opinion.
+    \end{itemize}
+
+    \item \textbf{CAM 1: Recognition of Digital Entertainment (DE) Revenue}
+    \begin{itemize}
+        \item DE revenue recognized over a performance obligation period based on estimated average lifespan of paying users.
+        \item Judgments required in estimating inactive rate and user behavior.
+        \item Auditors tested design and operating effectiveness of internal controls over revenue recognition.
+        \item Procedures included testing completeness and accuracy of user/game data and recalculating deferred revenue.
+    \end{itemize}
+
+    \item \textbf{CAM 2: Measurement of Long-lived Assets in E-commerce (EC) Segment}
+    \begin{itemize}
+        \item EC segment's long-lived assets accounted for 75.7\% of total; included property, equipment, lease assets, intangibles.
+        \item Assets evaluated for impairment based on forecasted undiscounted cash flows.
+        \item Auditing was judgmental due to large carrying amounts and sensitivity to assumptions (e.g., revenue, sales expenses).
+        \item Auditors tested controls over management’s assumptions and assessed reasonableness of forecasts against business strategies and trends.
+        \item Performed sensitivity analyses to evaluate effects of assumption changes on recoverable value.
+    \end{itemize}
+
+    \item \textbf{Additional Information:}
+    \begin{itemize}
+        \item Ernst \& Young LLP has served as Sea Ltd.’s auditor since 2010.
+        \item Audit report dated April 22, 2022, Singapore.
+    \end{itemize}
+\end{itemize}
+
+    \item \textbf{Internal Control Reporting (U.S.):}
+    \begin{itemize}
+        \item Sarbanes–Oxley Act requires auditors to report on effectiveness of internal control over financial reporting.
+        \item Management responsible for establishing and maintaining effective internal controls.
+        \item Requires management to provide evidence supporting the evaluation.
+    \end{itemize}
+
+    \item \textbf{Analyst Considerations:}
+    \begin{itemize}
+        \item Audit reports provide reasonable, but not absolute, assurance.
+        \item Analysts should apply healthy skepticism when reviewing audited financial statements and related reports.
+    \end{itemize}
+\end{itemize}
+
+\section*{1.05 Comparison of IFRS with Alternative Financial Reporting Systems}
+
+\begin{itemize}
+    \item \textbf{Overview:}
+    \begin{itemize}
+        \item Adoption of IFRS by most countries outside the U.S. has advanced global accounting convergence.
+        \item Significant differences remain, particularly between IFRS and U.S. GAAP, used by many listed companies worldwide.
+        \item IASB and FASB collaborate to coordinate changes and reduce differences.
+        \item Convergence of conceptual frameworks was paused in the late 2000s, but new standards have mostly converged (e.g., revenue recognition, leasing, credit losses).
+        \item Maintaining convergence on new standards is a continuing priority.
+    \end{itemize}
+
+    \item \textbf{Key Differences Between IFRS and U.S. GAAP (Exhibit 6):}
+    
+    \begin{table}[H]
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{6pt}
+    \begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Basis for Comparison} & \textbf{U.S. GAAP} & \textbf{IFRS} \\
+    \hline
+    Developed by & Financial Accounting Standards Board (FASB) & International Accounting Standards Board (IASB) \\
+    \hline
+    Based on & Rules & Principles \\
+    \hline
+    Interest paid & Cash Flows from Operating Activities & Cash Flows from Financing Activities or Cash Flows from Operating Activities \\
+    \hline
+    Inventory valuation & First in, First out (FIFO); Last in, First out (LIFO); Weighted Average Method & FIFO and Weighted Average Method \\
+    \hline
+    Development cost & Treated as an expense & Capitalized only if certain conditions are satisfied \\
+    \hline
+    Reversal of inventory write-down & Prohibited & Permissible if specified conditions are met \\
+    \hline
+    \end{tabular}
+    \caption{Selected Major Differences between IFRS and U.S. GAAP}
+    \end{table}
+
+    \item \textbf{Implications for Financial Analysis:}
+    \begin{itemize}
+        \item Reconciliation disclosures between IFRS and U.S. GAAP are not required.
+        \item Analysts comparing companies using different standards must be aware of non-converged areas.
+        \item Often, insufficient information is available to make precise adjustments for comparability.
+        \item Analysts should exercise caution when interpreting comparative financial metrics under different standards.
+        \item Monitoring developments in financial reporting standards is essential for accurate performance comparison and valuation.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Monitoring Developments in Financial Reporting Standards}
+
+\begin{itemize}
+    \item \textbf{Importance for Analysts:}
+    \begin{itemize}
+        \item Analysts must monitor ongoing developments in financial reporting and assess their impact on security analysis and valuation.
+        \item Analysts do not need to be accountants but should understand changes from a user’s perspective.
+        \item Focus is on how developments affect financial reports and the resulting analysis.
+    \end{itemize}
+
+    \item \textbf{Key Monitoring Activities:}
+    \begin{itemize}
+        \item Tracking new financial products or transactions that may influence reporting.
+        \item Following actions and publications of standard setters (e.g., IASB, FASB).
+        \item Engaging with user groups and organizations such as the CFA Institute that represent financial statement users.
+        \item Reviewing company disclosures about critical accounting policies and estimates.
+    \end{itemize}
+
+    \item \textbf{Sources for Monitoring Developments:}
+    \begin{table}[H]
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{8pt}
+    \begin{tabular}{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Source} & \textbf{Description} \\ \hline
+    New Financial Products/Transactions & Emerging types of transactions or instruments that can affect financial statement recognition and measurement. \\ \hline
+    Standard Setters (IASB, FASB) & Updates, proposals, and issued accounting standards and interpretations impacting financial reporting. \\ \hline
+    User Groups (e.g., CFA Institute) & Organizations representing analysts and investors that monitor and comment on financial reporting developments from a user perspective. \\ \hline
+    Company Disclosures & Management’s communication of critical accounting policies, estimates, and changes impacting financial reports. \\ \hline
+    \end{tabular}
+    \caption{Key Sources for Monitoring Financial Reporting Developments}
+    \end{table}
+\end{itemize}
+
+\subsection*{New Products or Types of Transactions}
+
+\begin{itemize}
+    \item \textbf{Nature of New Products and Transactions:}
+    \begin{itemize}
+        \item New products or transactions often contain unique or unusual elements lacking explicit guidance in financial reporting standards.
+        \item They typically arise from:
+        \begin{itemize}
+            \item Emerging economic events or industries (e.g., fintech).
+            \item Newly developed financial instruments or structures (e.g., cryptocurrencies, digital assets).
+        \end{itemize}
+        \item Financial instruments may be designed to enhance business operations or mitigate risks.
+        \item Some instruments or structured transactions may be created primarily for financial report “window dressing.”
+    \end{itemize}
+
+    \item \textbf{Analyst Monitoring Strategies:}
+    \begin{itemize}
+        \item Review company financial reports for disclosures about new products or transactions.
+        \item Monitor business journals and capital markets to identify emerging products or transactions.
+        \item Observe industry trends as competitors often adopt similar products or transactions.
+    \end{itemize}
+
+    \item \textbf{Analyst Due Diligence:}
+    \begin{itemize}
+        \item Understand the business purpose behind new products or transactions.
+        \item Seek additional information from company management as needed.
+        \item Management should explain:
+        \begin{itemize}
+            \item Economic purpose.
+            \item Financial reporting treatment.
+            \item Significant estimates and judgments in reporting.
+            \item Future cash flow implications.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Summary Table for Analyst Considerations:}
+
+    \begin{table}[h!]
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{6pt}
+    \begin{tabular}{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Aspect} & \textbf{Details} \\ \hline
+    Source Identification & Company financial reports, business journals, capital markets, and industry trends \\ \hline
+    Business Purpose & Understand economic rationale behind the product or transaction \\ \hline
+    Financial Reporting & Identify applicable accounting treatment, including any lack of explicit guidance \\ \hline
+    Management Communication & Obtain management’s explanation of estimates, judgments, and future cash flow effects \\ \hline
+    Risk Awareness & Be alert to transactions designed for window dressing or aggressive accounting \\ \hline
+    \end{tabular}
+    \caption{Key Analyst Considerations for New Products and Transactions}
+    \end{table}
+\end{itemize}
+
+\subsection*{Evolving Standards and the Role of CFA Institute}
+
+\begin{itemize}
+    \item \textbf{Importance of Monitoring Standards:}
+    \begin{itemize}
+        \item Regulatory and standard-setting actions often lag behind new product and transaction development.
+        \item Monitoring changes in financial reporting standards is critical as these changes can affect company financial reports and valuations.
+        \item Example: Requirement to expense employee stock option grants increased transparency and affected security valuation.
+        \item More explicit identification in financial statements can influence market valuation as management focuses more on reported items versus notes disclosures.
+    \end{itemize}
+
+    \item \textbf{Standard-Setting Bodies and Analyst Involvement:}
+    \begin{itemize}
+        \item IASB and FASB provide information on new standards and proposals via their websites.
+        \item Exposure drafts allow users, including analysts, to provide feedback through comment letters and position papers.
+        \item Engagement with the analyst community helps shape effective and relevant accounting standards.
+    \end{itemize}
+
+    \item \textbf{Role of CFA Institute:}
+    \begin{itemize}
+        \item CFA Institute actively supports financial reporting improvements through liaison committees and advocacy.
+        \item Volunteer members participate in recommending standards and drafting comment letters to IASB and FASB.
+        \item CFA Institute’s comment letters and position papers are publicly available at \texttt{www.cfainstitute.org/advocacy}.
+    \end{itemize}
+
+    \item \textbf{CFA Institute’s 2007 Position Paper Highlights:}
+    \begin{itemize}
+        \item Emphasizes the critical role of financial statements in sound investment decision making and market health.
+        \item Calls for timeliness, transparency, comparability, and consistency in reporting.
+        \item Advocates for decision relevance over strict reliability to better reflect economic reality.
+        \item Highlights importance of:
+        \begin{itemize}
+            \item Fair value measurement of assets and liabilities.
+            \item Neutrality in financial reporting.
+            \item Providing detailed cash flow information via the direct cash flow statement format.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Summary and Analyst Actions:}
+    \begin{itemize}
+        \item Analysts should stay current on financial reporting developments to improve investment decisions.
+        \item Analysts can contribute by providing feedback to standard-setting bodies, ensuring user perspectives influence standards.
+    \end{itemize}
+
+    \item \textbf{Summary Table: Key Roles and Actions}
+
+    \begin{table}[H]
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{6pt}
+    \begin{tabular}{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Entity / Activity} & \textbf{Role / Description} \\ \hline
+    IASB and FASB & Issue new standards and exposure drafts; seek user feedback \\ \hline
+    CFA Institute & Provides liaison committees; drafts comment letters and position papers; advocates for improved financial reporting \\ \hline
+    Analysts & Monitor changes; assess impact on financial reports and valuations; contribute feedback on proposals \\ \hline
+    Market Impact Example & Expensing of employee stock options enhanced transparency and affected valuations \\ \hline
+    2007 CFA Position Paper & Advocates for transparency, relevance, fair value, neutrality, and direct cash flow reporting to enhance investment decision-making \\ \hline
+    \end{tabular}
+    \caption{Key Roles in Evolving Financial Reporting Standards}
+    \end{table}
+\end{itemize}
+
+\section*{1.06 Other Sources of Information}
+
+\begin{itemize}
+    \item \textbf{Overview:}
+    \begin{itemize}
+        \item Besides regulated issuer filings (annual, interim reports, proxy statements), analysts use multiple other information sources.
+        \item These sources are grouped by origin: issuer sources, public third-party, proprietary third-party, and proprietary primary research.
+    \end{itemize}
+
+    \item \textbf{Issuer Sources (beyond regulatory filings):}
+    \begin{itemize}
+        \item \textbf{Earnings Calls:} Webcast or teleconference presentations and Q\&A sessions by management discussing financial results, expectations, revisions, corporate actions. Platforms like Bloomberg transcribe these.
+        \item \textbf{Presentations and Events:} Investor days and ad hoc events with in-depth management presentations on business or segments. Analysts must be mindful of management bias.
+        \item \textbf{Press Releases:} Announcements on events, product changes, management changes, M\&A, restructuring, distributed on company websites and news sources.
+        \item \textbf{Direct Contact:} Speaking with management, investor relations, or other company personnel.
+        \item \textbf{Company Websites and Properties:} Visiting or using products firsthand to gain insight, when possible.
+    \end{itemize}
+
+    \item \textbf{Public Third-Party Sources:}
+    \begin{itemize}
+        \item Free industry whitepapers and analyst reports from consultancies via internet searches.
+        \item Economic and industry indicators from governments and organizations (e.g., retail sales, price indexes).
+        \item General and industry-specific news outlets.
+        \item Social media for gauging customer sentiment.
+    \end{itemize}
+
+    \item \textbf{Proprietary Third-Party Sources:}
+    \begin{itemize}
+        \item Analyst reports and communications (sell-side, credit rating agencies).
+        \item Data platforms such as Bloomberg, Wind, FactSet.
+        \item Consultancy reports and data, often industry-specific (e.g., Rystad for energy, iQvia for biopharma, Gartner for IT).
+    \end{itemize}
+
+    \item \textbf{Proprietary Primary Research:}
+    \begin{itemize}
+        \item Surveys, conversations, product comparisons, and other direct studies commissioned or conducted by the analyst.
+    \end{itemize}
+
+    \item \textbf{Importance of External Information:}
+    \begin{itemize}
+        \item Economic, industry, and peer company information contextualizes financial performance and aids future assessment.
+        \item External sources are often crucial for effective analysis.
+        \item Examples:
+        \begin{itemize}
+            \item Consumer analysts seek firsthand product experience.
+            \item Analysts in regulated industries study relevant laws and regulations.
+            \item Analysts in technical industries gain expertise or consult specialists.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Summary Table: Information Sources by Origin}
+
+    \begin{table}[H]
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{6pt}
+    \begin{tabular}{|p{4.5cm}|p{8.5cm}|}
+    \hline
+    \textbf{Source Category} & \textbf{Examples and Description} \\ \hline
+    Issuer Sources & Earnings calls, investor presentations and events, press releases, direct communication with management, company websites and properties \\ \hline
+    Public Third-Party Sources & Free whitepapers and analyst reports, government economic and industry data, news outlets, social media sentiment \\ \hline
+    Proprietary Third-Party Sources & Sell-side analyst reports, credit rating agency reports, data platforms (Bloomberg, FactSet, Wind), specialized consultancy reports \\ \hline
+    Proprietary Primary Research & Surveys, interviews, product testing and comparisons commissioned or conducted by analysts \\ \hline
+    \end{tabular}
+    \caption{Analyst Information Sources by Origin}
+    \end{table}
+
+\end{itemize}
+
+\section*{2.02 Revenue Recognition}
+
+\subsection*{General Principles of Revenue Recognition}
+
+\begin{itemize}
+    \item \textbf{Accrual Accounting Principle:}
+    \begin{itemize}
+        \item Revenue is recognized when it is \textit{earned}, not necessarily when cash is received.
+        \item Reflects revenue on the income statement when risk and rewards of ownership transfer to the buyer.
+        \item Commonly coincides with delivery of goods or services.
+    \end{itemize}
+
+    \item \textbf{Revenue Recognition Scenarios:}
+    \begin{itemize}
+        \item \textbf{Credit Sales:} 
+        \begin{itemize}
+            \item Revenue recognized upon delivery.
+            \item Corresponding asset (e.g., trade receivable) recorded until cash is collected.
+        \end{itemize}
+        \item \textbf{Cash Received in Advance:}
+        \begin{itemize}
+            \item Cash receipt recorded as a liability: unearned or deferred revenue.
+            \item Revenue recognized over time as the product or service is delivered.
+            \item Example: Subscription payments for cloud-based software delivered over a year.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Summary Table: Revenue Recognition Scenarios}
+
+    \begin{table}[H]
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{8pt}
+    \begin{tabular}{|p{5cm}|p{6cm}|p{6cm}|}
+    \hline
+    \textbf{Scenario} & \textbf{When Revenue is Recognized} & \textbf{Accounting Treatment} \\
+    \hline
+    Sale on Credit & When goods/services are delivered and risk/reward transfer & Record revenue and accounts receivable; cash collected later reduces receivables \\ \hline
+    Cash Received in Advance & Over the period goods/services are delivered & Record cash received as deferred revenue (liability); recognize revenue progressively \\ \hline
+    \end{tabular}
+    \caption{Key Revenue Recognition Scenarios}
+    \end{table}
+
+\end{itemize}
+
+\subsection*{Accounting Standards for Revenue Recognition}
+
+\begin{itemize}
+    \item \textbf{Converged Standards Overview:}
+    \begin{itemize}
+        \item IASB and FASB issued converged revenue recognition standards in May 2014 with nearly identical content.
+        \item Aim: Provide a principles-based approach applicable across diverse revenue-generating activities.
+        \item Core principle: Recognize revenue to depict transfer of promised goods or services reflecting the consideration expected.
+    \end{itemize}
+
+    \item \textbf{Five-Step Revenue Recognition Model:}
+    \begin{enumerate}
+        \item Identify the contract(s) with a customer.
+        \item Identify separate or distinct performance obligations in the contract.
+        \item Determine the transaction price.
+        \item Allocate the transaction price to the performance obligations.
+        \item Recognize revenue when (or as) performance obligations are satisfied.
+    \end{enumerate}
+
+    \item \textbf{Contract and Performance Obligations:}
+    \begin{itemize}
+        \item Contract: Agreement with commercial substance, specifying obligations, rights, and payment terms.
+        \item Collectability must be probable: \textit{More likely than not} (IFRS) vs. \textit{Likely to occur} (US GAAP).
+        \item Performance obligations: Promises to transfer distinct goods or services that can be separately identified and benefited from.
+    \end{itemize}
+
+    \item \textbf{Transaction Price and Allocation:}
+    \begin{itemize}
+        \item Transaction price: Seller’s estimate of consideration to be received.
+        \item Allocated to performance obligations based on relative standalone selling prices.
+        \item Revenue recognized only when it is highly probable it will not be reversed.
+        \item If reversal probable, recognize minimal revenue and record refund liability and right to returned goods asset.
+    \end{itemize}
+
+    \item \textbf{Control Transfer Indicators:}
+    \begin{itemize}
+        \item Revenue recognized when control transfers to customer, assessed by factors such as:
+        \begin{itemize}
+            \item Present right to payment.
+            \item Legal title transfer.
+            \item Physical possession.
+            \item Significant risks and rewards of ownership.
+            \item Customer acceptance.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Complex Contracts:}
+    \begin{itemize}
+        \item Contracts with multiple performance obligations, over time recognition, or varying terms require judgment.
+        \item Guidance from the five-step model generalizes across diverse contract types.
+    \end{itemize}
+
+    \item \textbf{Balance Sheet Presentation:}
+    \begin{itemize}
+        \item Recognize revenue and accounts receivable if no payment contingency.
+        \item If payment conditional on future performance, record contract asset until obligations met.
+        \item Consideration received in advance recorded as contract liability.
+    \end{itemize}
+
+    \item \textbf{Examples of Application:}
+
+    \begin{itemize}
+        \item \textbf{Principal vs. Agent (MegaDigital):}
+        \begin{itemize}
+            \item Principal: Controls product before transfer; revenue recorded at total consideration.
+            \item Agent: Arranges transfer of third-party product; revenue recorded as fee or commission.
+            \item Impact on analysis: Principal sales show higher revenue but lower margins; agent sales show lower revenue but higher margins.
+        \end{itemize}
+
+        \begin{table}[H]
+        \centering
+        \footnotesize
+        \setlength{\tabcolsep}{5pt}
+        \begin{tabular}{|l|r|r|}
+        \hline
+        & \textbf{Principal} & \textbf{Agent} \\ \hline
+        Sales & 100 & 30 \\
+        Cost of Sales & 70 & 0 \\
+        Gross Profit & 30 & 30 \\
+        SG\&A & 10 & 10 \\
+        Net Profit & 20 & 20 \\
+        Gross Margin (\%) & 30 & 100 \\
+        Net Margin (\%) & 20 & 67 \\
+        \hline
+        \end{tabular}
+        \caption{MegaDigital Margin Comparison Principal vs. Agent}
+        \end{table}
+
+        \item \textbf{Franchising/Licensing (Mahjong Pizza):}
+        \begin{itemize}
+            \item Revenue disaggregated into company-owned store sales, franchise royalties/fees, and supply chain revenues.
+            \item Royalties recognized as a percentage of franchisee sales; upfront fees amortized over contract term.
+            \item Supply chain revenues recognized upon delivery or shipment.
+        \end{itemize}
+
+        \item \textbf{Software as a Service or License (CReaM Software and Services):}
+        \begin{itemize}
+            \item Licenses sold with revenue recognized upfront or over license term depending on ongoing activities.
+            \item Support and updates revenue recognized ratably over contract term.
+            \item Cloud subscription revenue recognized over contract term, typically non-cancellable and non-refundable.
+        \end{itemize}
+
+        \item \textbf{Long-Term Contracts (Armored Vehicles Inc. - AVI):}
+        \begin{itemize}
+            \item Performance obligations satisfied over time when customer simultaneously receives benefits or controls asset being created.
+            \item Revenue recognized over contract term using output (e.g., units produced) or input (e.g., costs incurred) methods.
+            \item Example: USD10M contract with estimated USD7M cost and USD3M profit recognized proportionally as work progresses.
+        \end{itemize}
+
+        \begin{table}[H]
+        \centering
+        \footnotesize
+        \begin{tabular}{|l|r|r|r|}
+        \hline
+        & \textbf{Year 1} & \textbf{Year 2} & \textbf{Total} \\ \hline
+        Costs incurred (USD) & 4,200,000 & 3,300,000 & 7,500,000 \\
+        Percentage of costs & 60\% & 40\% & 100\% \\
+        Revenue recognized (USD) & 6,000,000 & 4,000,000 & 10,000,000 \\
+        Profit recognized (USD) & 1,800,000 & 700,000 & 2,500,000 \\
+        \hline
+        \end{tabular}
+        \caption{AVI Revenue and Profit Recognition Example}
+        \end{table}
+
+        \item \textbf{Bill and Hold Arrangements (AVI):}
+        \begin{itemize}
+            \item Revenue recognized when control transfers even if physical delivery is delayed.
+            \item Conditions include substantive reason for arrangement, separately identified product, readiness for delivery, and no ability to redirect product.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Disclosure Requirements:}
+    \begin{itemize}
+        \item Extensive disclosures required regarding the nature, amount, timing, and uncertainty of revenue and cash flows.
+        \item Revenues must be disaggregated by product type, geography, customer type, sales channel, contract pricing, duration, or timing.
+        \item Disclose balances of contract assets/liabilities, remaining performance obligations, transaction prices, and significant judgments.
+        \item Typically found in financial statement notes titled “Revenue” or similar.
+    \end{itemize}
+\end{itemize}
+
+\section*{2.03 Expense Recognition}
+
+\begin{itemize}
+    \item \textbf{General Principles:}
+    \begin{itemize}
+        \item Expense recognition aligns with the \textit{matching principle}: expenses are recognized in the same period as the revenues they help generate.
+        \item Expenses should be recognized when incurred, not necessarily when paid.
+        \item Simple example: Inventory purchased and sold within the same period—cost of inventory recognized as \textit{cost of goods sold} in that period.
+        \item Operating and administrative expenses are recognized in the period they are incurred regardless of cash payment timing.
+    \end{itemize}
+
+    \item \textbf{Complexity in Practice:}
+    \begin{itemize}
+        \item Expense recognition timing can be complex due to varying business activities and accounting policies.
+        \item Distinction between \textit{capitalized costs} (assets) and \textit{expenses} (income statement) is important.
+        \item Capitalized costs are recorded as assets and amortized or depreciated over time; expenses are recognized immediately.
+    \end{itemize}
+
+    \item \textbf{Capitalization vs. Expense:}
+    \begin{itemize}
+        \item Costs that provide future economic benefits are generally capitalized.
+        \item Costs that benefit only the current period are expensed immediately.
+        \item Capitalized costs appear on the balance sheet as assets, then systematically expensed over useful life.
+    \end{itemize}
+
+    \item \textbf{Summary Table: Capitalized vs. Expensed Costs}
+
+    \begin{table}[H]
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{10pt}
+    \begin{tabular}{|p{6cm}|p{6cm}|}
+    \hline
+    \textbf{Capitalized Costs (Assets)} & \textbf{Expensed Costs (Income Statement)} \\
+    \hline
+    Purchase of property, plant, and equipment & Routine maintenance and repairs \\
+    Development costs meeting specific criteria & General administrative expenses \\
+    Software development costs meeting criteria & Selling expenses \\
+    Prepaid expenses (e.g., insurance) & Utilities expense \\
+    Costs with future economic benefit beyond current period & Costs without future economic benefit \\
+    \hline
+    \end{tabular}
+    \caption{Examples of Capitalized vs. Expensed Costs}
+    \end{table}
+
+    \item \textbf{Implications for Financial Analysis:}
+    \begin{itemize}
+        \item Differences in capitalization policies can impact profitability and asset base.
+        \item Analysts must understand company-specific policies to adjust comparability across firms.
+        \item Timing differences in expense recognition affect earnings volatility and trend analysis.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{General Principles of Expense Recognition}
+
+\begin{itemize}
+    \item \textbf{Expense Recognition Overview:}
+    \begin{itemize}
+        \item Expenses are recognized in the period when economic benefits are consumed or lost.
+        \item Three common expense recognition models:
+        \begin{itemize}
+            \item Matching principle
+            \item Expensing as incurred
+            \item Capitalization with subsequent depreciation or amortization
+        \end{itemize}
+        \item Matching principle aligns expenses with associated revenues recognized in the same period.
+        \item IFRS refers to “matching concept” or process resulting in matching costs with revenues rather than a strict “matching principle.”
+    \end{itemize}
+
+    \item \textbf{Matching Principle Applied to Inventory (Example 2):}
+    \begin{itemize}
+        \item Kahn Distribution Limited (KDL) purchases and sells inventory items over 20X1.
+        \item Inventory Purchases during 20X1:
+        \begin{itemize}
+            \item Q1: 2,000 units @ USD 40/unit
+            \item Q2: 1,500 units @ USD 41/unit
+            \item Q3: 2,200 units @ USD 43/unit
+            \item Q4: 1,900 units @ USD 45/unit
+        \end{itemize}
+        \item Total units purchased: 7,600 units at total cost USD 321,600.
+        \item Units sold: 5,600 units at USD 50/unit.
+        \item Ending inventory: 2,000 units (1,900 from Q4, 100 from Q3).
+        \item Objective: Determine revenue and expense for 20X1 based on specific identification of sold and remaining inventory.
+    \end{itemize}
+
+    \begin{table}[h!]
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{8pt}
+    \begin{tabular}{|l|r|r|}
+    \hline
+    \textbf{Inventory Period} & \textbf{Units Sold} & \textbf{Cost per Unit (USD)} \\
+    \hline
+    Q1 & 2,000 & 40 \\
+    Q2 & 1,500 & 41 \\
+    Q3 & 2,100 (2,200 - 100) & 43 \\
+    Q4 & 0 & 45 \\
+    \hline
+    \textbf{Total Units Sold} & \textbf{5,600} & \\
+    \hline
+    \end{tabular}
+    \caption{Specific Identification of Inventory Sold in 20X1}
+    \end{table}
+
+    \item \textbf{Revenue and Expense Calculation:}
+    \begin{itemize}
+        \item Revenue from sales = 5,600 units $\times$ USD 50 = USD 280,000.
+        \item Cost of goods sold (COGS) = 
+        \[
+        (2,000 \times 40) + (1,500 \times 41) + (2,100 \times 43) = 80,000 + 61,500 + 90,300 = 231,800
+        \]
+        \item Ending inventory cost =
+        \[
+        (100 \times 43) + (1,900 \times 45) = 4,300 + 85,500 = 89,800
+        \]
+    \end{itemize}
+
+    \item \textbf{Period Costs (Expensed as Incurred):}
+    \begin{itemize}
+        \item Costs less directly matched with revenue are expensed when incurred.
+        \item Examples: administrative, managerial, IT, research and development, and maintenance costs.
+        \item Payroll expenses generally expensed immediately unless capitalized as product costs.
+        \item Sales commissions capitalized and expensed systematically or with sales.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Capitalization versus Expensing}
+
+\begin{itemize}
+    \item \textbf{Overview:}
+    \begin{itemize}
+        \item Certain expenditures are capitalized as assets on the balance sheet and shown as investing cash outflows.
+        \item Capitalized assets are depreciated or amortized over their useful life, except for non-depreciable assets (e.g., land) or indefinite-life intangibles.
+        \item Depreciation and amortization are non-cash expenses that reduce net income but do not affect cash flow directly.
+        \item This approach aligns with the matching principle by spreading expenses over the asset’s useful life.
+    \end{itemize}
+
+    \item \textbf{Example 3: Financial Impact of Capitalizing versus Expensing}
+
+   \begin{table}[H]
+\centering
+\scriptsize % smaller font size
+\setlength{\tabcolsep}{3pt} % reduce horizontal padding
+\renewcommand{\arraystretch}{0.8} % reduce row height
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+& \multicolumn{3}{c|}{\textbf{CAP Inc. (Capitalize EUR900)}} & \multicolumn{3}{c|}{\textbf{NOW Inc. (Expense EUR900 Immediately)}} \\
+\textbf{Year} & 1 & 2 & 3 & 1 & 2 & 3 \\
+\hline
+Revenue & 1,500 & 1,500 & 1,500 & 1,500 & 1,500 & 1,500 \\
+Cash Expenses & 500 & 500 & 500 & 1,400 & 500 & 500 \\
+Depreciation & 300 & 300 & 300 & 0 & 0 & 0 \\
+Income before Tax & 700 & 700 & 700 & 100 & 1,000 & 1,000 \\
+Tax at 30\% & 210 & 210 & 210 & 30 & 300 & 300 \\
+Net Income & 490 & 490 & 490 & 70 & 700 & 700 \\
+Cash from Operations & 790 & 790 & 790 & 70 & 700 & 700 \\
+Cash Used in Investing & (900) & 0 & 0 & 0 & 0 & 0 \\
+Total Change in Cash & (110) & 790 & 790 & 70 & 700 & 700 \\
+\hline
+\end{tabular}
+\caption{Exhibit 1: Capitalizing versus Expensing}
+\end{table}
+\renewcommand{\arraystretch}{1.0} % reset row height
+
+\begin{table}[H]
+\centering
+\scriptsize % smaller font size
+\setlength{\tabcolsep}{3pt} % reduce horizontal padding
+\renewcommand{\arraystretch}{0.8} % reduce row height
+\begin{tabular}{|l|cccc|cccc|}
+\hline
+& \multicolumn{4}{c|}{\textbf{CAP Inc.}} & \multicolumn{4}{c|}{\textbf{NOW Inc.}} \\
+\textbf{Item} & Time 0 & End Yr 1 & End Yr 2 & End Yr 3 & Time 0 & End Yr 1 & End Yr 2 & End Yr 3 \\
+\hline
+Cash & 1,000 & 890 & 1,680 & 2,470 & 1,000 & 1,070 & 1,770 & 2,470 \\
+PP\&E (net) & — & 600 & 300 & — & — & — & — & — \\
+Total Assets & 1,000 & 1,490 & 1,980 & 2,470 & 1,000 & 1,070 & 1,770 & 2,470 \\
+Retained Earnings & 0 & 490 & 980 & 1,470 & 0 & 70 & 770 & 1,470 \\
+Common Stock & 1,000 & 1,000 & 1,000 & 1,000 & 1,000 & 1,000 & 1,000 & 1,000 \\
+Total Shareholders’ Equity & 1,000 & 1,490 & 1,980 & 2,470 & 1,000 & 1,070 & 1,770 & 2,470 \\
+\hline
+\end{tabular}
+\caption{Balance Sheet Summary for CAP Inc. vs NOW Inc.}
+\end{table}
+\renewcommand{\arraystretch}{1.0} % reset row height
+
+
+    \item \textbf{Key Insights from Example 3:}
+    \begin{itemize}
+        \item Total net income over three years is identical whether capitalized or expensed.
+        \item Capitalizing results in higher profitability in early years, lower in later years.
+        \item Expensing immediately results in lower early profits but higher later profits.
+        \item Shareholders' equity is higher initially under capitalization due to higher retained earnings.
+    \end{itemize}
+
+    \item \textbf{Example 4: Impact of Ongoing Capital Expenditures}
+    \begin{itemize}
+        \item A company purchases a GBP300 computer with a 3-year life, depreciating GBP100 per year.
+        \item Capitalizing leads to GBP200 higher pre-tax profit in Year 1 compared to expensing immediately.
+        \item Capitalizing increases reported cash from operations compared to expensing.
+        \item Analysts should watch for capitalization used to manipulate operating cash flow or earnings targets.
+    \end{itemize}
+
+    \item \textbf{Implications for Financial Analysis:}
+    \begin{itemize}
+        \item Capitalization enhances current profitability and operating cash flow if capital expenditures exceed depreciation.
+        \item Expensing reduces current profits but improves future profitability trends.
+        \item Tax treatments can influence the cash flow impact of expensing versus capitalizing.
+        \item Analysts must consider capitalization policies when comparing firms, especially across industries.
+        \item Identifying significant discretionary capitalization is challenging but critical for analysis.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Capitalization of Interest Costs}
+
+\begin{itemize}
+  \item Companies generally capitalize interest costs incurred to acquire or construct assets requiring a long period to prepare for use.
+  \item Capitalized interest appears on the balance sheet as part of the asset (long-lived asset or inventory) and is expensed over time through depreciation or cost of sales.
+  \item Expensed interest is recognized immediately on the income statement.
+  \item Capitalized interest affects cash flow presentation: 
+    \begin{itemize}
+      \item Capitalized interest is part of investing cash outflows.
+      \item Expensed interest reduces operating cash flow under US GAAP; under IFRS it may reduce operating or financing cash flows.
+    \end{itemize}
+  \item For accurate solvency analysis, interest coverage ratios should include both capitalized and expensed interest to reflect the total interest cost.
+  \item Depreciation of capitalized interest should be adjusted in income to avoid double counting in interest expense.
+  \item Credit rating agencies, e.g., Standard \& Poor’s, include capitalized interest in coverage ratio calculations (EBIT divided by gross interest before capitalized interest deductions).
+  \item Financial covenants in lending agreements often specify interest coverage ratio definitions, making consistent treatment of capitalized interest critical for covenant compliance.
+\end{itemize}
+
+\paragraph*{Example: Melco Resorts \& Entertainment Limited (2017)}  
+Disclosed data (in thousands USD):  
+
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{|l|r|r|r|}
+\hline
+ & \textbf{2017} & \textbf{2016} & \textbf{2015} \\
+\hline
+EBIT (income + interest net of capitalized interest) & 544,865 & 298,663 & 58,553 \\
+Interest expense (income statement) & 229,582 & 223,567 & 118,330 \\
+Capitalized interest (footnote) & 37,483 & 29,033 & 134,838 \\
+Amortization of deferred financing costs & 26,182 & 48,345 & 38,511 \\
+Net cash provided by operating activities & 1,162,500 & 1,158,128 & 522,026 \\
+Net cash from (used) in investing activities & (410,226) & 280,604 & (469,656) \\
+Net cash from (used) in financing activities & (1,046,041) & (1,339,717) & (29,688) \\
+\hline
+\end{tabular}
+\caption{Melco Resorts \& Entertainment Limited Selected Financial Data (USD thousands)}
+\end{table}
+
+\begin{itemize}
+  \item \textbf{Interest Coverage Ratio:} Should include both capitalized and expensed interest to reflect total interest cost.
+  \item \textbf{Operating Cash Flow Change:} Between 2016 and 2017, operating cash flow increased slightly; capitalized interest reduces operating cash flow but increases investing cash outflow.
+  \item \textbf{Analyst Considerations:}  
+    \begin{itemize}
+      \item Examine impact of capitalized interest on reported cash flows.
+      \item Adjust interest coverage ratios by adding capitalized interest to interest expense.
+      \item Review financial covenants definitions regarding interest coverage.
+    \end{itemize}
+\end{itemize}
+
+\textbf{Summary:} Capitalized interest shifts costs between income statement and balance sheet and affects cash flow classification. Analysts must carefully adjust coverage ratios and cash flow analysis to reflect true economic cost of interest and solvency position.
+
+\subsection*{Capitalization of Internal Development Costs}
+
+\begin{itemize}
+    \item Accounting standards require capitalization of software development costs after technological feasibility is established.
+    \item Judgment is involved in determining feasibility timing, causing variability in capitalization practices across companies.
+    \item Example: Microsoft capitalizes software costs only shortly before manufacturing, effectively expensing most R\&D costs.
+    \item Expensing development costs results in:
+    \begin{itemize}
+        \item Lower net income in the current period.
+        \item Lower net operating cash flows but higher investing cash flows (due to capitalized costs).
+    \end{itemize}
+    \item Analysts can adjust financial statements of companies that capitalize development costs to make them comparable to companies that expense all development costs by:
+    \begin{enumerate}
+        \item Adding software development costs as an expense and excluding amortization of prior capitalized costs on the income statement.
+        \item Excluding capitalized software assets from the balance sheet (reducing assets and equity).
+        \item Adjusting the statement of cash flows to decrease operating cash flows and investing cash used by the current period development costs.
+    \end{enumerate}
+    \item These adjustments affect ratios involving income, long-lived assets, and operating cash flows (e.g., return on equity).
+\end{itemize}
+
+\paragraph*{Example 6: JHH Software (hypothetical company)}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{|l|r|r|r|}
+\hline
+ & \textbf{2018} & \textbf{2017} & \textbf{2016} \\
+\hline
+\multicolumn{4}{|c|}{\textbf{Consolidated Statement of Earnings (USD thousands)}} \\
+Total revenue & 91,424 & 91,134 & 96,293 \\
+Total operating expenses & 78,107 & 78,908 & 85,624 \\
+Operating income & 13,317 & 12,226 & 10,669 \\
+Provision for income taxes & 3,825 & 4,232 & 3,172 \\
+Net income & 9,492 & 7,994 & 7,479 \\
+Earnings per share (EPS) & 1.40 & 0.82 & 0.68 \\
+\hline
+\multicolumn{4}{|c|}{\textbf{Statement of Cash Flows (USD thousands)}} \\
+Net cash provided by operating activities & 15,007 & 14,874 & 15,266 \\
+Net cash used in investing activities* & (11,549) & (4,423) & (5,346) \\
+Net cash used in financing activities & (8,003) & (7,936) & (7,157) \\
+Net change in cash and cash equivalents & (4,545) & 2,515 & 2,763 \\
+\hline
+\multicolumn{4}{|l|}{*Includes software development expenses and capital expenditures:} \\
+Software development expenses & (6,000) & (4,000) & (2,000) \\
+Capital expenditures & (2,000) & (1,600) & (1,200) \\
+\hline
+\multicolumn{4}{|c|}{\textbf{Additional Information}} \\
+Market value of outstanding debt & 0 & 0 & 0 \\
+Amortization of capitalized software development expenses & (2,000) & (667) & 0 \\
+Depreciation expense & (2,200) & (1,440) & (1,320) \\
+Market price per share & 42 & 26 & 17 \\
+Shares outstanding (thousands) & 6,780 & 9,765 & 10,999 \\
+\hline
+\end{tabular}
+\caption{JHH Software Financial Summary (USD thousands, except per share)}
+\end{table}
+
+\begin{itemize}
+    \item Analysts should compute key ratios (e.g., P/E, Price/Operating Cash Flow, EV/EBITDA) based on reported data and assess impacts if capitalization policy were replaced by full expensing.
+    \item Expensing development costs typically lowers current income but improves income trends if development spending grows.
+    \item If development spending declines below amortization, expensing would increase income relative to capitalization.
+    \item Summary:  
+    \begin{itemize}
+        \item Earlier expensing reduces current profits but enhances profit trends.
+        \item Capitalization boosts current profits but results in lower future profits.
+        \item Understanding capitalization policies is crucial for comparing company financial performance and valuation metrics.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Implications for Financial Analysts: Expense Recognition}
+
+\begin{itemize}
+    \item Expense recognition policies vary in conservatism:  
+    \begin{itemize}
+        \item Policies recognizing expenses later (delayed recognition) are considered less conservative.
+        \item Policies recognizing expenses sooner are more conservative.
+    \end{itemize}
+    
+    \item Many expense items require significant estimates that can materially affect net income.
+    
+    \item Analysts must understand changes and differences in estimates, including:  
+    \begin{itemize}
+        \item Uncollectible accounts as a percentage of sales.
+        \item Warranty expenses as a percentage of sales.
+        \item Estimated useful lives of assets.
+    \end{itemize}
+    
+    \item Year-to-year changes in these estimates should be analyzed to determine if they:  
+    \begin{itemize}
+        \item Reflect genuine changes in business operations (e.g., fewer warranty claims due to improved product quality).
+        \item Appear unrelated to business operations and potentially indicate earnings management or manipulation.
+    \end{itemize}
+    
+    \item Cross-company differences in estimates require scrutiny:  
+    \begin{itemize}
+        \item Are differences consistent with operational factors?  
+        \begin{itemize}
+            \item Different customer creditworthiness or credit policies explaining uncollectible accounts.
+            \item Newer equipment affecting estimated useful lives.
+        \end{itemize}
+        \item Or inconsistent differences might suggest manipulation.
+    \end{itemize}
+    
+    \item Relevant information on accounting policies and estimates can be found in:  
+    \begin{itemize}
+        \item Notes to financial statements.
+        \item Management discussion and analysis (MD\&A) sections of annual reports.
+    \end{itemize}
+    
+    \item Monetary quantification of differences in expense recognition and estimates facilitates:  
+    \begin{itemize}
+        \item More meaningful comparisons across companies or against historical performance.
+        \item Adjusting reported expenses onto a comparable basis.
+    \end{itemize}
+    
+    \item When monetary adjustments are not feasible, analysts can:  
+    \begin{itemize}
+        \item Qualitatively characterize the conservatism of policies and estimates.
+        \item Assess potential impacts on reported expenses and financial ratios.
+    \end{itemize}
+\end{itemize}
+
+\section*{2.04 Non-Recurring Items}
+
+\subsection*{Unusual or Infrequent Items}
+
+\begin{itemize}
+    \item Financial statements report past earnings but analysts must assess which income and expense items will likely continue in the future.
+    \item Separating recurring from non-recurring items helps evaluate future earnings reliability.
+    \item \textbf{Discontinued operations} must be reported separately from continuing operations under both IFRS and US GAAP.
+    \item Other items reported separately may include:  
+    \begin{itemize}
+        \item Unusual items.
+        \item Infrequent items.
+        \item Effects due to changes in accounting policies.
+        \item Non-operating income.
+    \end{itemize}
+    \item IFRS requires separate disclosure of material or relevant income/expense items for understanding performance.
+    \item US GAAP requires unusual/infrequent material items (post-Dec 15, 2015) to be presented separately but as part of continuing operations.
+    \item Examples include:  
+    \begin{itemize}
+        \item Restructuring charges (e.g., plant closures, employee termination costs).
+        \item Gains or losses on sales of assets or business parts (considered ordinary business activities).
+    \end{itemize}
+    \item Highlighting unusual or infrequent nature aids analysts in judging likelihood of reoccurrence.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Groupe Danone Consolidated Income Statement} & \textbf{2016 (EUR Millions)} & \textbf{2017 (EUR Millions)} \\
+\hline
+Sales & 21,944 & 24,677 \\
+Cost of goods sold & (10,744) & (12,459) \\
+Selling expense & (5,562) & (5,890) \\
+General and administrative expense & (2,004) & (2,225) \\
+Research and development expense & (333) & (342) \\
+Other income (expense) & (278) & (219) \\
+Recurring operating income & 3,022 & 3,543 \\
+Other operating income (expense) & (99) & 192 \\
+Operating income & 2,923 & 3,734 \\
+Interest income on cash equivalents and short-term investments & 130 & 151 \\
+Interest expense & (276) & (414) \\
+Cost of net debt & (146) & (263) \\
+Other financial income & 67 & 137 \\
+Other financial expense & (214) & (312) \\
+Income before tax & 2,630 & 3,296 \\
+Income tax expense & (804) & (842) \\
+Net income from fully consolidated companies & 1,826 & 2,454 \\
+Share of profit of associates & 1 & 109 \\
+Net income & 1,827 & 2,563 \\
+Net income – Group share & 1,720 & 2,453 \\
+Net income – Non-controlling interests & 107 & 110 \\
+\hline
+\end{tabular}
+\caption{Excerpt from Groupe Danone Income Statement (2016-2017)}
+\end{table}
+
+\begin{itemize}
+    \item Danone separately discloses “Other operating income (expense)” as items \textit{not} included in recurring operating income.
+    \item According to Danone’s footnotes (Exhibit 9), “Other operating income (expense)” includes:  
+    \begin{itemize}
+        \item Capital gains and losses on disposals of fully consolidated companies.
+        \item Impairment charges on goodwill.
+        \item Costs related to strategic restructuring and major external growth transactions.
+        \item Costs related to major crises and litigation.
+        \item Acquisition costs related to business combinations.
+        \item Revaluation profit or loss following loss of control.
+        \item Changes in earn-outs post-acquisition.
+    \end{itemize}
+    \item In 2017, Danone’s net “Other operating income” (€192 million) included:  
+    \begin{itemize}
+        \item Capital gain on disposal of Stonyfield: €628 million.
+        \item Compensation from Singapore arbitration court (Fonterra case): €105 million.
+        \item Territorial risks in ALMA region: (€148 million).
+        \item Integration costs of WhiteWave acquisition: (€118 million).
+        \item Impairment of intangible assets: (€115 million).
+    \end{itemize}
+    \item Analysts should evaluate whether such exceptional items are likely to recur and assess potential impacts on future earnings.
+    \item It is generally unwise to simply ignore all unusual items; some may have ongoing implications.
+\end{itemize}
+
+\subsection*{Discontinued Operations}
+
+\begin{itemize}
+    \item \textbf{Definition:}  
+    When a company disposes of, or plans to dispose of, a component of its operations with no further involvement, the results are reported separately as \textit{discontinued operations} under both IFRS and US GAAP.
+    
+    \item \textbf{Criteria for Reporting:}  
+    The discontinued component must be separable both physically and operationally from the continuing business.
+    
+    \item \textbf{Income Statement Presentation:}  
+    \begin{itemize}
+        \item Results from discontinued operations are presented \textit{net of tax} at the bottom of the income statement.
+        \item Per-share effects of discontinued operations are also reported separately.
+        \item Remaining income statement items represent continuing operations.
+    \end{itemize}
+    
+    \item \textbf{Balance Sheet Presentation:}  
+    Assets and liabilities related to discontinued operations are aggregated and classified as \textit{held for sale}.
+    
+    \item \textbf{Analytical Implications:}  
+    \begin{itemize}
+        \item Separation facilitates clear evaluation of continuing versus discontinued operations.
+        \item Since discontinued operations no longer contribute to earnings or cash flow after disposal, analysts typically exclude them when forecasting future financial performance beyond the disposal date.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Changes in Accounting Policy}
+
+\begin{itemize}
+    \item \textbf{Nature of Changes:}
+    \begin{itemize}
+        \item Standard setters sometimes require companies to change accounting policies.
+        \item Changes can be adopted either \textit{prospectively} (going forward) or \textit{retrospectively} (restating prior periods).
+        \item Management may also change accounting policies voluntarily to better reflect company performance.
+    \end{itemize}
+    
+    \item \textbf{Retrospective Application:}
+    \begin{itemize}
+        \item Financial statements for all periods presented are restated as if the new policy had always been used.
+        \item Notes disclose the nature and justification of the change.
+        \item Ensures comparability across periods within the report.
+    \end{itemize}
+
+    \item \textbf{Example - Microsoft (New Revenue Recognition Standard):}
+    \begin{itemize}
+        \item Adopted new standard early on 1 July 2017 using the \textit{full retrospective method}.
+        \item Restated 2016 and 2017 income statements as if the new standard had been applied.
+        \item Revenue recognition for Windows 10 changed from ratable over device life to mostly at billing and delivery.
+        \item Multi-year commercial software subscriptions recognized at contract execution instead of ratably.
+    \end{itemize}
+    
+   \begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|l|rrr|}
+\hline
+\textbf{} & \textbf{As Previously Reported} & \textbf{New Revenue Standard Adjustment} & \textbf{As Restated} \\
+\hline
+\textbf{Income Statements} & & & \\
+Year Ended 30 June 2017 & & & \\
+Revenue & 89,950 & 6,621 & 96,571 \\
+Provision for income taxes & 1,945 & 2,467 & 4,412 \\
+Net income & 21,204 & 4,285 & 25,489 \\
+Diluted earnings per share & 2.71 & 0.54 & 3.25 \\
+\hline
+Year Ended 30 June 2016 & & & \\
+Revenue & 85,320 & 5,834 & 91,154 \\
+Provision for income taxes & 2,953 & 2,147 & 5,100 \\
+Net income & 16,798 & 3,741 & 20,539 \\
+Diluted earnings per share & 2.10 & 0.46 & 2.56 \\
+\hline
+\end{tabular}
+\caption{Impact of New Revenue Recognition Standard on Microsoft's Financials}
+\end{table}
+
+    \item \textbf{Modified Retrospective Approach:}
+    \begin{itemize}
+        \item Allows companies to avoid restating prior periods.
+        \item Companies adjust opening retained earnings for cumulative impact at adoption date.
+    \end{itemize}
+    
+    \item \textbf{Changes in Accounting Estimates:}
+    \begin{itemize}
+        \item Handled \textit{prospectively}, affecting only current and future periods.
+        \item No restatement or income statement adjustment for prior periods.
+        \item Must be disclosed in notes if significant.
+        \item \textit{Example:} Catalent Inc. changed pension cost calculation using spot rates instead of weighted-average discount rates (Exhibit 11).
+    \end{itemize}
+    
+    \item \textbf{Correction of Errors:}
+    \begin{itemize}
+        \item Prior period errors require \textit{restatement} of all affected financial statements.
+        \item Disclosures required to explain the nature and effect of the error.
+        \item Such disclosures may indicate weaknesses in accounting systems or controls.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Changes in Scope and Exchange Rates}
+
+\begin{itemize}
+  \item \textbf{Changes in Scope:}
+  \begin{itemize}
+    \item Occur when a company acquires a controlling interest in another entity.
+    \item The acquirer consolidates the target’s financial statements from the acquisition closing date.
+    \item Such acquisitions can materially affect the comparability of financial results and position relative to prior periods.
+    \item The size of the acquisition relative to the acquirer influences the magnitude of the impact.
+  \end{itemize}
+
+  \item \textbf{Changes in Exchange Rates:}
+  \begin{itemize}
+    \item Affect multinational companies’ income statements.
+    \item A strengthening of the company’s functional currency against the reporting currency tends to increase reported revenues.
+    \item Conversely, a weakening of the functional currency against the reporting currency tends to decrease reported revenues.
+  \end{itemize}
+
+  \item \textbf{Disclosure Practices:}
+  \begin{itemize}
+    \item Accounting standards do not mandate disclosure of the effects of scope or exchange rate changes on financial statements or specific line items.
+    \item However, many issuers voluntarily disclose summary information, such as revenue and EPS growth rates adjusted to exclude the effects of scope and exchange rate fluctuations.
+    \item Such disclosures are typically found in management commentary or other sections outside the formal financial statements.
+  \end{itemize}
+
+  \item \textbf{Further Details:}
+  \begin{itemize}
+    \item The financial statement implications of changes in scope and exchange rates will be discussed in greater detail in later curriculum modules.
+  \end{itemize}
+\end{itemize}
+
+\section*{2.05 Earnings per Share}
+
+\subsection*{Learning Outcome}
+\begin{itemize}
+  \item Describe how earnings per share (EPS) is calculated.
+  \item Calculate and interpret basic and diluted EPS for companies with simple and complex capital structures, including those with antidilutive securities.
+\end{itemize}
+
+\subsection*{Overview}
+\begin{itemize}
+  \item EPS is a key income statement metric important to equity investors.
+  \item IFRS and US GAAP require EPS presentation on the income statement for:
+  \begin{itemize}
+    \item Net profit or loss (net income).
+    \item Profit or loss from continuing operations.
+  \end{itemize}
+  \item The calculation differs for companies with simple versus complex capital structures.
+\end{itemize}
+
+\subsection*{Simple versus Complex Capital Structure}
+\begin{itemize}
+  \item \textbf{Capital structure} consists of equity and debt.
+  \item \textbf{Ordinary shares} (IFRS) or \textbf{common stock} (US GAAP) represent equity subordinate to all others and are the true owners.
+  \item A \textbf{simple capital structure} has no potentially convertible financial instruments.
+  \item A \textbf{complex capital structure} includes potentially dilutive financial instruments, e.g.:
+  \begin{itemize}
+    \item Convertible bonds.
+    \item Convertible preferred stock.
+    \item Employee stock options.
+    \item Warrants (equity call options issued by the company).
+  \end{itemize}
+  \item Dilutive instruments can decrease EPS upon conversion or exercise.
+\end{itemize}
+
+\subsection*{Basic and Diluted EPS}
+\begin{itemize}
+  \item \textbf{Basic EPS} is calculated using:
+  \begin{itemize}
+    \item Reported earnings available to common shareholders.
+    \item Weighted average number of shares outstanding.
+  \end{itemize}
+  \item \textbf{Diluted EPS} estimates EPS assuming all dilutive instruments are converted into common stock.
+  \item Both EPS metrics are required to be reported, including from continuing operations.
+\end{itemize}
+
+\subsection*{Example: AB InBev Earnings per Share}
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lccc}
+\hline
+\textbf{Earnings per Share (USD)} & \textbf{2017} & \textbf{2016} & \textbf{2015} \\
+\hline
+Basic EPS & 4.06 & 0.72 & 5.05 \\
+Diluted EPS & 3.98 & 0.71 & 4.96 \\
+Basic EPS from continuing operations & 4.04 & 0.69 & 5.05 \\
+Diluted EPS from continuing operations & 3.96 & 0.68 & 4.96 \\
+\hline
+\end{tabular}
+\caption{AB InBev Earnings per Share (USD), 12 Months Ended 31 December}
+\end{table}
+
+\begin{itemize}
+  \item AB InBev’s basic EPS (“before dilution”) was USD 4.06 in 2017; diluted EPS (“after dilution”) was USD 3.98.
+  \item EPS from continuing operations is also shown separately.
+  \item EPS was significantly higher in 2017 than in 2016 across all measures.
+  \item Analysts seek to understand the underlying causes of EPS changes, including capital structure impacts.
+\end{itemize}
+
+\subsection*{Basic Earnings per Share (EPS)}
+
+\begin{itemize}
+  \item \textbf{Definition:} Basic EPS is the amount of income available to common shareholders divided by the weighted average number of common shares outstanding during the period.
+  
+  \item \textbf{Income available to common shareholders:} Net income minus preferred dividends (if any).
+  
+  \item \textbf{Basic EPS formula:}
+  \[
+  \text{Basic EPS} = \frac{\text{Net Income} - \text{Preferred Dividends}}{\text{Weighted Average Number of Common Shares Outstanding}}
+  \]
+
+  \item \textbf{Weighted average shares example:}  
+  If a company begins the year with 2,000,000 shares and repurchases 100,000 shares on July 1, the weighted average shares is:  
+  \[
+  2,000,000 \times \frac{1}{2} + 1,900,000 \times \frac{1}{2} = 1,950,000
+  \]
+  
+  \item \textbf{Stock dividends and splits:}  
+  Adjust the weighted average shares retroactively to the beginning of the period to reflect changes such as stock dividends or stock splits.
+
+\end{itemize}
+
+\subsubsection*{Example 8: Basic EPS Calculation (1)}
+\begin{itemize}
+  \item Shopalot Company, year ended 31 December 2018:
+  \begin{itemize}
+    \item Net income = USD 1,950,000
+    \item Common shares outstanding = 1,500,000
+    \item No preferred stock, no convertible instruments
+  \end{itemize}
+  \item \textbf{Basic EPS:}
+  \[
+  \frac{1,950,000}{1,500,000} = 1.30 \text{ USD per share}
+  \]
+\end{itemize}
+
+\subsubsection*{Example 9: Basic EPS Calculation (2)}
+\begin{itemize}
+  \item Angler Products, year ended 31 December 2018:
+  \begin{itemize}
+    \item Net income = USD 2,500,000
+    \item Preferred dividends = USD 200,000
+    \item Common shares outstanding schedule (Exhibit \ref{tab:angler_shares}):
+  \end{itemize}
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lc}
+\hline
+\textbf{Date} & \textbf{Shares Outstanding} \\
+\hline
+1 January 2018 & 1,000,000 \\
+1 April 2018 (issued) & 200,000 \\
+1 October 2018 (repurchased) & (100,000) \\
+31 December 2018 & 1,100,000 \\
+\hline
+\end{tabular}
+\caption{Angler Products Common Stock Shares}
+\label{tab:angler_shares}
+\end{table}
+
+\begin{itemize}
+  \item \textbf{Calculate weighted average shares:}
+  \[
+  1,000,000 \times \frac{3}{12} + 1,200,000 \times \frac{6}{12} + 1,100,000 \times \frac{3}{12} = 1,125,000
+  \]
+  \item \textbf{Calculate Basic EPS:}
+  \[
+  \frac{2,500,000 - 200,000}{1,125,000} = 2.00 \text{ USD per share}
+  \]
+\end{itemize}
+
+\subsubsection*{Example 10: Basic EPS Calculation (3) — Stock Split Adjustment}
+\begin{itemize}
+  \item Same facts as Example 9 except:
+  \begin{itemize}
+    \item 2-for-1 stock split effective 1 December 2018.
+    \item Shares outstanding double retroactively for the full year.
+  \end{itemize}
+  \item \textbf{Adjusted weighted average shares:}
+  \[
+  1,125,000 \times 2 = 2,250,000
+  \]
+  \item \textbf{Calculate Basic EPS after stock split:}
+  \[
+  \frac{2,500,000 - 200,000}{2,250,000} = 1.02 \text{ USD per share}
+  \]
+\end{itemize}
+
+\subsection*{Diluted EPS: The If-Converted Method}
+
+\begin{itemize}
+  \item \textbf{Definition:}  
+  Diluted Earnings per Share (EPS) reflects the potential dilution of earnings per share that would occur if all potentially dilutive financial instruments were converted into common stock. It is always \textit{less than or equal to} basic EPS.
+
+  \item \textbf{Simple vs. Complex Capital Structure:}  
+  \begin{itemize}
+    \item \textbf{Simple capital structure:} No potentially dilutive instruments, so  
+    \[
+    \text{Basic EPS} = \text{Diluted EPS}
+    \]
+    \item \textbf{Complex capital structure:} Includes instruments like convertible preferred stock, convertible debt, and employee stock options which can dilute EPS.
+  \end{itemize}
+  
+  \item \textbf{Purpose:}  
+  To provide shareholders and potential investors with the “worst-case” earnings per share scenario by considering all convertible securities as if converted to common stock.
+
+  \item \textbf{Potentially Dilutive Instruments and Their Effects:}
+  \begin{enumerate}
+    \item \textbf{Convertible Preferred Stock:}  
+    Preferred shares that can be converted into common shares; the dilution effect is considered by adding back preferred dividends to net income and increasing the denominator by the number of shares issuable on conversion.
+    
+    \item \textbf{Convertible Debt:}  
+    Bonds or other debt instruments convertible into common stock; dilution is accounted for by adding back interest expense (net of tax) to net income and increasing shares outstanding by shares issuable on conversion.
+    
+    \item \textbf{Employee Stock Options and Warrants:}  
+    Potential dilution considered by the treasury stock method, which assumes proceeds from exercise are used to buy back shares at the average market price.
+  \end{enumerate}
+
+  \item \textbf{Not All Instruments Are Dilutive:}  
+  Some convertible securities might be antidilutive if their conversion increases EPS. Such instruments are excluded from the diluted EPS calculation to avoid overestimating dilution.
+
+\end{itemize}
+
+\subsection*{Diluted EPS When a Company Has Convertible Preferred Stock Outstanding}
+
+\begin{itemize}
+  \item \textbf{If-Converted Method Overview:}
+  \begin{itemize}
+    \item Diluted EPS is calculated assuming all convertible preferred shares were converted into common stock at the beginning of the period.
+    \item This method considers two effects of conversion:
+    \begin{enumerate}
+      \item Convertible preferred shares are no longer outstanding, increasing the weighted average number of common shares.
+      \item Preferred dividends are not paid, increasing net income available to common shareholders.
+    \end{enumerate}
+  \end{itemize}
+
+  \item \textbf{Diluted EPS Formula (If-Converted Method for Convertible Preferred Stock):}
+  \[
+    \text{Diluted EPS} = \frac{\text{Net Income} + \text{Preferred Dividends}}{\text{Weighted Average Common Shares} + \text{Shares Issuable on Conversion}}
+  \]
+
+  \item \textbf{Example 11: Calculation for Bright-Warm Utility Company}
+  \begin{itemize}
+    \item Net income = USD 1,750,000
+    \item Weighted average common shares outstanding = 500,000
+    \item Convertible preferred shares outstanding = 20,000
+    \item Dividend per preferred share = USD 10
+    \item Conversion ratio = 1 preferred share converts into 5 common shares
+  \end{itemize}
+
+  \item \textbf{Step 1: Calculate Basic EPS}
+  {\small
+\[
+\text{Basic EPS} = \frac{\text{Net Income} - \text{Preferred Dividends}}{\text{Weighted Average Common Shares}} = \frac{1,750,000 - (20,000 \times 10)}{500,000} = \frac{1,550,000}{500,000} = 3.10
+\]
+}
+
+  \item \textbf{Step 2: Calculate Diluted EPS}
+  \begin{itemize}
+    \item Add back preferred dividends to net income:
+    \[
+      1,750,000 + (20,000 \times 10) = 1,950,000
+    \]
+    \item Add shares issuable on conversion:
+    \[
+      500,000 + (20,000 \times 5) = 600,000
+    \]
+    \item Diluted EPS:
+    \[
+      \frac{1,950,000}{600,000} = 3.25
+    \]
+  \end{itemize}
+
+  \item \textbf{Interpretation:}  
+  Diluted EPS is higher than basic EPS because the effect of removing preferred dividends and increasing shares outstanding is net positive in this case.
+
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Item} & \textbf{Amount (USD)} \\
+\hline
+Net income & 1,750,000 \\
+Preferred dividends (20,000 shares × 10) & 200,000 \\
+Net income available to common (basic EPS numerator) & 1,550,000 \\
+Weighted average common shares (basic EPS denominator) & 500,000 \\
+Basic EPS & 3.10 \\
+Shares issuable on conversion (20,000 × 5) & 100,000 \\
+Adjusted net income (add back preferred dividends) & 1,950,000 \\
+Adjusted weighted average shares (basic + conversion) & 600,000 \\
+Diluted EPS & 3.25 \\
+\hline
+\end{tabular}
+\caption{Bright-Warm Utility Company: Basic and Diluted EPS Calculation Using If-Converted Method}
+\end{table}
+
+\subsection*{Diluted EPS: The Treasury Stock Method}
+
+\begin{itemize}
+  \item \textbf{Concept:}
+  \begin{itemize}
+    \item Used when stock options, warrants, or similar instruments are outstanding.
+    \item Assumes all such instruments are exercised at their exercise price.
+    \item Proceeds from exercise are used to repurchase shares at the average market price during the period.
+    \item Incremental shares added to diluted EPS denominator = Shares issued $-$ Shares repurchased.
+    \item No change to net income (numerator) when calculating diluted EPS.
+  \end{itemize}
+
+  \item \textbf{Calculation steps:}
+  \begin{enumerate}
+    \item Calculate shares issued on exercise of options/warrants.
+    \item Compute proceeds from exercise $=$ Shares issued $\times$ Exercise price.
+    \item Calculate shares repurchased $=$ Proceeds from exercise $\div$ Average market price.
+    \item Determine incremental shares $=$ Shares issued $-$ Shares repurchased.
+    \item Add incremental shares (time-weighted if issued during the period) to weighted average shares outstanding.
+    \item Compute diluted EPS $=$ Net Income $\div$ (Weighted average shares $+$ incremental shares).
+  \end{enumerate}
+
+  \item \textbf{Formula:}
+{\small
+\[
+\text{Diluted EPS} = \tfrac{
+\text{Net Income}
+}{
+\text{Weighted Avg. Shares Outstanding} + (\text{Shares Issued} - \text{Shares Repurchased}) \times \text{Proportion of Year Outstanding}
+}
+\]
+}
+
+  \item \textbf{Example 13 (US GAAP Treasury Stock Method):}
+  \begin{itemize}
+    \item Net Income = USD 2,300,000
+    \item Weighted average shares outstanding = 800,000
+    \item Options outstanding = 30,000 shares
+    \item Exercise price = USD 35
+    \item Average market price = USD 55
+  \end{itemize}
+
+  \begin{align*}
+    \text{Shares issued} &= 30,000 \\
+    \text{Proceeds from exercise} &= 30,000 \times 35 = 1,050,000 \\
+    \text{Shares repurchased} &= \frac{1,050,000}{55} \approx 19,091 \\
+    \text{Incremental shares} &= 30,000 - 19,091 = 10,909 \\
+    \text{Diluted shares outstanding} &= 800,000 + 10,909 = 810,909 \\
+    \text{Basic EPS} &= \frac{2,300,000}{800,000} = 2.875 \\
+    \text{Diluted EPS} &= \frac{2,300,000}{810,909} \approx 2.84
+  \end{align*}
+
+  \item \textbf{Example 14 (IFRS Treatment):}
+  \begin{itemize}
+    \item IFRS uses a similar approach without naming it the treasury stock method.
+    \item Weighted average shares for diluted EPS include incremental shares calculated identically.
+    \item Resulting diluted EPS matches the US GAAP calculation.
+  \end{itemize}
+\end{itemize}
+
+\subsection*{Changes in EPS}
+
+\begin{itemize}
+  \item AB InBev’s fully diluted EPS from continuing operations rose significantly from USD 0.68 in 2016 to USD 3.96 in 2017 (see Exhibit 12).
+  \item General reasons for an EPS increase:
+  \begin{itemize}
+    \item Increase in net income (numerator).
+    \item Decrease in weighted average shares outstanding (denominator).
+    \item Combination of both factors.
+  \end{itemize}
+  \item For AB InBev, weighted average shares outstanding for both basic and diluted EPS were \textit{higher} in 2017 than 2016.
+  \item Therefore, the EPS improvement was primarily driven by a significant increase in net income.
+  \item Changes in numerator and denominator explain EPS changes arithmetically, but understanding business drivers requires additional analysis.
+  \item Lesson 5 covers analytical tools to identify key factors influencing EPS changes.
+\end{itemize}
+
+\section*{2.06 Income Statement Ratios and Common-Size Analysis}
+
+\subsection*{Common-Size Analysis of the Income Statement}
+
+\begin{itemize}
+  \item \textbf{Purpose:}  
+    \begin{itemize}
+      \item Assess a company's performance over time or relative to peers by expressing each income statement line item as a percentage of revenue.
+      \item Removes size effects, enabling meaningful time-series and cross-sectional comparisons.
+    \end{itemize}
+
+  \item \textbf{Illustration with Hypothetical Companies (Exhibit 18):}  
+    \begin{itemize}
+      \item Companies A and B each have USD 10 million sales; Company C has USD 2 million.
+      \item Operating profit in absolute terms: A (USD 2M), B (USD 1.5M), C (USD 0.4M).
+      \item Common-size statements show Company C and A have identical expense and profit percentages relative to sales.
+      \item Company C's operating profit margin (20\%) exceeds Company B’s (15\%), despite lower absolute profits.
+    \end{itemize}
+    
+    \begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Panel A: Income Statements (USD)} & \textbf{Company A} & \textbf{Company B} & \textbf{Company C} \\
+\hline
+Sales & 10,000,000 & 10,000,000 & 2,000,000 \\
+Cost of sales & 3,000,000 & 7,500,000 & 600,000 \\
+Gross profit & 7,000,000 & 2,500,000 & 1,400,000 \\
+Selling, general, and administrative expenses & 1,000,000 & 1,000,000 & 200,000 \\
+Research and development & 2,000,000 & -- & 400,000 \\
+Advertising & 2,000,000 & -- & 400,000 \\
+Operating profit & 2,000,000 & 1,500,000 & 400,000 \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Panel B: Common-Size Income Statements (\% of Sales)} & \textbf{Company A} & \textbf{Company B} & \textbf{Company C} \\
+\hline
+Sales & 100\% & 100\% & 100\% \\
+Cost of sales & 30 & 75 & 30 \\
+Gross profit & 70 & 25 & 70 \\
+Selling, general, and administrative expenses & 10 & 10 & 10 \\
+Research and development & 20 & 0 & 20 \\
+Advertising & 20 & 0 & 20 \\
+Operating profit & 20 & 15 & 20 \\
+\hline
+\end{tabular}
+\caption{Income Statement for Three Hypothetical Companies: Panel A shows absolute amounts, Panel B shows common-size percentages.}
+\end{table}
+
+
+  \item \textbf{Insights from Expense Patterns:}  
+    \begin{itemize}
+      \item Company A has much higher gross profit margin (70\%) than Company B (25\%).
+      \item Company A spends more on research and development and advertising than Company B.
+      \item These expenditures likely lead to technologically superior products and stronger brand awareness.
+      \item Company B’s lower gross margin may result from lower investment in R\&D and advertising, possibly competing on price.
+      \item Differences in strategies highlight importance of further research to understand implications for future performance.
+    \end{itemize}
+
+  \item \textbf{Tax Comparison:}  
+    \begin{itemize}
+      \item Taxes are better compared to pretax income than to sales.
+      \item Effective tax rates can be examined from notes disclosures and used to project future net income.
+    \end{itemize}
+
+  \item \textbf{Cross-Sectional Use:}  
+    \begin{itemize}
+      \item Vertical common-size analysis is useful for comparing companies in the same period or against industry/sector aggregates.
+      \item Data sources: peer companies, published industry data, or databases like Compustat.
+      \item Enables evaluating relative performance versus industry medians or peers.
+    \end{itemize}
+
+  \item \textbf{Median Common-Size Income Statement Data (Exhibit 19):}  
+    \begin{table}[H]
+      \centering
+      \footnotesize
+      \setlength{\tabcolsep}{4pt}
+      \begin{tabular}{lcccccc}
+        \hline
+        \textbf{Sector} & \textbf{Energy} & \textbf{Materials} & \textbf{Industrials} & \textbf{Cons. Disc.} & \textbf{Cons. Staples} & \textbf{Health Care} \\
+        \hline
+        \# Observations & 34 & 27 & 69 & 81 & 34 & 59 \\
+        Gross Margin & 37.7\% & 33.0\% & 36.8\% & 37.6\% & 43.4\% & 59.0\% \\
+        Operating Margin & 6.4\% & 14.9\% & 13.5\% & 11.0\% & 17.2\% & 17.4\% \\
+        Net Profit Margin & 4.9\% & 9.9\% & 8.8\% & 6.0\% & 10.9\% & 7.2\% \\
+        \hline
+        \textbf{Sector} & \textbf{Financials} & \textbf{Info Tech} & \textbf{Telecom} & \textbf{Utilities} & \textbf{Real Estate} & \\
+        \hline
+        \# Observations & 63 & 64 & 4 & 29 & 29 & \\
+        Gross Margin & 40.5\% & 62.4\% & 56.4\% & 34.3\% & 39.8\% & \\
+        Operating Margin & 36.5\% & 21.1\% & 15.4\% & 21.7\% & 30.1\% & \\
+        Net Profit Margin & 18.5\% & 11.3\% & 13.1\% & 10.1\% & 21.3\% & \\
+        \hline
+      \end{tabular}
+      \caption{Median Common-Size Income Statement Statistics for the S\&P 500 by GICS Sector, 2017}
+    \end{table}
+
+    \item \textbf{Source:} Compustat database; Operating margin based on EBIT.
+\end{itemize}
+
+\subsection*{Income Statement Ratios}
+
+\begin{itemize}
+  \item \textbf{Profitability Metrics:}
+  \begin{itemize}
+    \item \textbf{Net Profit Margin:} 
+      \[
+      \text{Net Profit Margin} = \frac{\text{Net Income}}{\text{Revenue}} \times 100\%
+      \]
+      Measures income generated per dollar of revenue; higher margin indicates better profitability.
+    \item AB InBev's net profit margin based on continuing operations was 16.2\% in 2017, up from 6.0\% in 2016 but down from 22.9\% in 2015.
+    \item \textbf{Gross Profit Margin:}
+      \[
+      \text{Gross Profit Margin} = \frac{\text{Gross Profit}}{\text{Revenue}} \times 100\%
+      \]
+      Measures gross profit earned per dollar of revenue; influenced by company strategy and product differentiation.
+    \item AB InBev’s gross profit margin was 62.1\% (2017), 60.9\% (2016), and 60.7\% (2015), showing relative stability.
+  \end{itemize}
+  
+  \item \textbf{Interpretation:}
+  \begin{itemize}
+    \item A higher net profit margin is generally more desirable.
+    \item Gross profit margin differences may reflect strategic choices such as product differentiation or cost control.
+    \item Increased operating expenses and finance costs in 2016 (post-merger with SABMiller) led to lower profitability despite stable gross margins.
+  \end{itemize}
+  
+  \item \textbf{Other Profitability Margins:}
+  \begin{itemize}
+    \item Operating Profit Margin = Profit from operations / Revenue
+    \item Pretax Margin = Profit before tax / Revenue
+  \end{itemize}
+
+  \item \textbf{Example: AB InBev's Margins (2015–2017)}  
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt} % reduce column padding
+\begin{tabular}{lrrrrrrrrr}
+\hline
+ & \multicolumn{3}{c}{\textbf{2017}} & \multicolumn{3}{c}{\textbf{2016}} & \multicolumn{3}{c}{\textbf{2015}} \\
+\cline{2-4} \cline{5-7} \cline{8-10}
+ & \textbf{US dollars} & \textbf{\%} & & \textbf{US dollars} & \textbf{\%} & & \textbf{US dollars} & \textbf{\%} & \\
+\hline
+Revenue & 56,444 & 100.0 & & 45,517 & 100.0 & & 43,604 & 100.0 & \\
+Cost of sales & (21,386) & (37.9) & & (17,803) & (39.1) & & (17,137) & (39.3) & \\
+\textbf{Gross profit} & \textbf{35,058} & \textbf{62.1} & & \textbf{27,715} & \textbf{60.9} & & \textbf{26,467} & \textbf{60.7} & \\
+Distribution expenses & (5,876) & (10.4) & & (4,543) & (10.0) & & (4,259) & (9.8) & \\
+Sales and marketing expenses & (8,382) & (14.9) & & (7,745) & (17.0) & & (6,913) & (15.9) & \\
+Administrative expenses & (3,841) & (6.8) & & (2,883) & (6.3) & & (2,560) & (5.9) & \\
+\textit{Portions omitted} & & & & & & & & & \\
+\textbf{Profit from operations} & \textbf{17,152} & \textbf{30.4} & & \textbf{12,882} & \textbf{28.3} & & \textbf{13,904} & \textbf{31.9} & \\
+Finance cost & (6,885) & (12.2) & & (9,382) & (20.6) & & (3,142) & (7.2) & \\
+Finance income & 378 & 0.7 & & 818 & 1.8 & & 1,689 & 3.9 & \\
+Net finance income/(cost) & (6,507) & (11.5) & & (8,564) & (18.8) & & (1,453) & (3.3) & \\
+Share of result of associates and joint ventures & 430 & 0.8 & & 16 & 0.0 & & 10 & 0.0 & \\
+\textbf{Profit before tax} & \textbf{11,076} & \textbf{19.6} & & \textbf{4,334} & \textbf{9.5} & & \textbf{12,461} & \textbf{28.6} & \\
+Income tax expense & (1,920) & (3.4) & & (1,613) & (3.5) & & (2,594) & (5.9) & \\
+\textbf{Profit from continuing operations} & \textbf{9,155} & \textbf{16.2} & & \textbf{2,721} & \textbf{6.0} & & \textbf{9,867} & \textbf{22.6} & \\
+Profit from discontinued operations & 28 & 0.0 & & 48 & 0.1 & & --- & --- & \\
+\textbf{Profit of the year} & \textbf{9,183} & \textbf{16.3} & & \textbf{2,769} & \textbf{6.1} & & \textbf{9,867} & \textbf{22.6} & \\
+\hline
+\end{tabular}
+\caption{AB InBev’s Margins: Abbreviated Common-Size Income Statement}
+\end{table}
+
+\begin{itemize}
+  \item \textbf{Insights:}
+  \begin{itemize}
+    \item Despite higher gross profits in 2016 than 2015, AB InBev’s profitability decreased due to increased operating and finance costs.
+    \item The 2016 merger with SABMiller explains the revenue jump (from around USD 45B to USD 56B) and the rise in finance costs.
+    \item Common-size income statements and profitability ratios help identify such operational and financial impacts.
+  \end{itemize}
+\end{itemize}
+
+
+\end{document}
+

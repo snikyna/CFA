@@ -1,0 +1,1746 @@
+% Economics Study Notes for CFA Level I
+% Comprehensive notes covering microeconomics and macroeconomics principles
+% Topics include market structures, firms behavior, supply and demand analysis
+% Essential for understanding economic foundations in investment analysis
+% Study Material: 2024 CFA Level I Curriculum
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{graphicx} % make sure to include in preamble
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{tabularx}
+
+
+\geometry{margin=1in}
+
+\title{Economics}
+\date{}
+
+\begin{document}
+\maketitle
+\section*{12 FIRMS AND MARKET STRUCTURES}
+
+\subsection*{12.1 Breakeven, Shutdown, and Scale}
+
+\begin{itemize}
+    \item \textbf{Short run vs. long run:}
+    \begin{itemize}
+        \item \textbf{Short run:} Some inputs (e.g., capital) are fixed, so plant size/scale cannot change. Fixed costs must still be paid.
+        \item \textbf{Long run:} All costs are variable, and the firm can change scale (e.g., let leases expire, sell equipment).
+    \end{itemize}
+
+    \item \textbf{Breakeven point (BEP):}
+    \begin{itemize}
+        \item Occurs where \(\text{Price} = AR = ATC\).
+        \item \(\pi_{econ} = 0\), firm earns normal profit.
+    \end{itemize}
+
+    \item \textbf{Shutdown decision under perfect competition:}
+    \begin{itemize}
+        \item If \(AR < AVC\): shut down immediately in short run.
+        \item If \(AVC \leq AR < ATC\): continue in short run (covering variable costs, but not all fixed costs).
+        \item If \(AR \geq ATC\): continue in both short and long run.
+    \end{itemize}
+
+    \item \textbf{General decision rules:}
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Condition & Short Run & Long Run \\
+    \hline
+    \(AR \geq ATC\) & Operate & Stay in market \\
+    \(AVC \leq AR < ATC\) & Operate (minimize losses) & Exit in long run \\
+    \(AR < AVC\) & Shut down & Exit in long run \\
+    \hline
+    \end{tabular}
+    \caption{Shutdown and Breakeven Rules (Perfect Competition)}
+    \end{table}
+
+    \item \textbf{Shutdown decision under imperfect competition:}
+    \begin{itemize}
+        \item Marginal revenue \(\neq\) price (since demand is downward sloping).
+        \item Better to compare total revenue (TR), total cost (TC), and total variable cost (TVC).
+    \end{itemize}
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    Condition & Decision \\
+    \hline
+    \(TR = TC\) & Break even \\
+    \(TC > TR > TVC\) & Operate in short run, exit in long run \\
+    \(TR < TVC\) & Shut down in both short and long run \\
+    \hline
+    \end{tabular}
+    \caption{Shutdown and Breakeven Rules (Imperfect Competition)}
+    \end{table}
+
+    \item \textbf{Examples:}
+    \begin{itemize}
+        \item \textbf{Short-run shutdown:} \\
+        Legion Gaming: 
+        \[
+        TR = 700{,}000,\; TVC = 800{,}000,\; TFC = 400{,}000
+        \] 
+        \(\Rightarrow TR < TVC\). \\
+        If operate: Loss \(= TC - TR = 1{,}200{,}000 - 700{,}000 = 500{,}000\). \\
+        If shut down: Loss \(= TFC = 400{,}000\). \\
+        $\Rightarrow$ Better to shut down.
+        
+        \item \textbf{Long-run shutdown:} \\
+        If \(TR = 850{,}000\), then:
+        \[
+        TVC = 800{,}000,\; TFC = 400{,}000
+        \]
+        Short run: \(TR > TVC\) → continue operating. \\
+        Long run: \(TR < TC = 1{,}200{,}000\) → exit eventually.
+    \end{itemize}
+
+    \item \textbf{Economies and diseconomies of scale:}
+    \begin{itemize}
+        \item Long-run average total cost (LRATC) is U-shaped.
+        \item \textbf{Economies of scale (downward-sloping LRATC):}
+        \begin{itemize}
+            \item Factors: labor specialization, mass production, more efficient technology, bulk input purchases.
+            \item Result: average costs fall as output increases.
+        \end{itemize}
+        \item \textbf{Minimum Efficient Scale (MES):} Point where LRATC is minimized.
+        \item \textbf{Constant returns to scale:} LRATC flat over a range of output.
+        \item \textbf{Diseconomies of scale (upward-sloping LRATC):}
+        \begin{itemize}
+            \item Causes: bureaucracy, motivation/communication issues in large firms, barriers to innovation.
+            \item Result: average costs rise as firm grows too large.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Graphical intuition:}
+    \begin{itemize}
+        \item \textbf{Short-run:} ATC, AVC, and MC curves determine shutdown/breakeven points.
+        \item \textbf{Long-run:} LRATC envelops all SRATC curves, showing optimal scale decisions.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{12.2 Characteristics of Market Structures}
+
+\textbf{LOS 12.b: Characteristics of Market Structures}
+
+\begin{itemize}
+    \item \textbf{Criteria to compare market structures:}
+    \begin{enumerate}
+        \item Number of firms and relative sizes
+        \item Degree of product differentiation
+        \item Bargaining power in pricing
+        \item Barriers to entry/exit
+        \item Non-price competition (advertising, branding, features)
+    \end{enumerate}
+
+    \item \textbf{Market structures overview:}
+    \begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Characteristic & Perfect Comp. & Monopolistic Comp. & Oligopoly & Monopoly \\
+\hline
+Firms & Many small & Many small/medium & Few large & Single \\
+Products & Identical & Differentiated & Similar or diff. & Unique \\
+Demand curve & Perfectly elastic & Downward-sloping & Downward-sloping & Market demand \\
+Price power & None & Limited (brand-based) & Significant, interdependent & Full price-setter \\
+Barriers & Very low & Low & High & Very high \\
+Example & Wheat & Toothpaste & Autos, oil & Local utility, patents \\
+\hline
+\end{tabular}}
+\caption{Comparison of Market Structures}
+\end{table}
+\end{itemize}
+
+---
+
+\textbf{LOS 12.c: Monopolistic Competition – Price/Output and Strategy}
+
+\begin{itemize}
+    \item \textbf{Key features:}
+    \begin{itemize}
+        \item Many independent sellers with small market share.
+        \item Products differentiated (quality, features, branding).
+        \item Demand curve is downward sloping.
+        \item Low entry/exit barriers.
+        \item High advertising/marketing costs.
+    \end{itemize}
+
+    \item \textbf{Short run:}
+    \begin{itemize}
+        \item Profit maximization where \(MR = MC\).
+        \item Firm charges price from demand curve: \(P^* > ATC^*\).
+        \item Positive economic profit attracts new entrants.
+    \end{itemize}
+
+    \item \textbf{Long run:}
+    \begin{itemize}
+        \item Entry of new firms shifts demand downwards.
+        \item Long-run equilibrium when \(P = ATC\) and \(\pi_{econ} = 0\).
+        \item Firms still produce where \(MR = MC\).
+    \end{itemize}
+
+    \item \textbf{Comparison with perfect competition:}
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|}
+    \hline
+    Feature & Monopolistic Comp. & Perfect Comp. \\
+    \hline
+    Price & \(P > MC\) & \(P = MC\) \\
+    ATC & Not at minimum (excess capacity) & Minimum ATC \\
+    Product differentiation & Present & None \\
+    Long-run profit & Zero & Zero \\
+    Efficiency & Lower & Higher \\
+    \hline
+    \end{tabular}
+    \caption{Monopolistic vs. Perfect Competition}
+    \end{table}
+
+    \item \textbf{Example: Toothpaste market}
+    \begin{itemize}
+        \item Firms differentiate with whitening, freshness, decay-prevention claims.
+        \item Advertising is key.
+        \item Consumers switch brands, but not perfectly elastic demand.
+    \end{itemize}
+\end{itemize}
+
+---
+
+\textbf{LOS 12.d: Oligopoly – Price/Output and Strategy}
+
+\begin{itemize}
+    \item \textbf{Key features:}
+    \begin{itemize}
+        \item Few large firms, interdependent decisions.
+        \item High barriers to entry (scale, branding, capital intensity).
+        \item Products may be similar (oil) or differentiated (autos).
+    \end{itemize}
+
+    \item \textbf{Models of Oligopoly:}
+    \begin{enumerate}
+        \item \textbf{Kinked Demand Curve:}
+        \begin{itemize}
+            \item Competitors unlikely to match price increase, but likely to match decrease.
+            \item Demand is elastic above \(P_K\), inelastic below.
+            \item Leads to kink at \(P_K, Q_K\).
+            \item MR has a discontinuity → price rigidity.
+        \end{itemize}
+
+        \item \textbf{Cournot Duopoly Model:}
+        \begin{itemize}
+            \item Two firms choose output simultaneously.
+            \item Each assumes other’s output fixed.
+            \item Equilibrium: firms split market, price between monopoly and competition.
+            \item Generalizes to more firms → price approaches competitive level.
+        \end{itemize}
+
+        \item \textbf{Stackelberg Model:}
+        \begin{itemize}
+            \item Sequential decision-making.
+            \item Leader sets price/output first, follower reacts.
+            \item Leader captures larger share of profits.
+        \end{itemize}
+
+        \item \textbf{Nash Equilibrium (strategic games):}
+        \begin{itemize}
+            \item Equilibrium when no firm can improve profits by changing strategy unilaterally.
+            \item Example payoff matrix:
+            \[
+            \begin{array}{|c|c|c|}
+            \hline
+             & \text{Firm B: High P} & \text{Firm B: Low P} \\
+            \hline
+            \text{Firm A: High P} & (1000, 600) & (600, 700) \\
+            \hline
+            \text{Firm A: Low P} & (500, 400) & (300, 300) \\
+            \hline
+            \end{array}
+            \]
+            Nash equilibrium: Firm A = High P, Firm B = Low P.
+        \end{itemize}
+    \end{enumerate}
+
+    \item \textbf{Collusion (cartels):}
+    \begin{itemize}
+        \item Firms agree to fix prices/output (illegal in many countries).
+        \item Maximizes joint profits (like monopoly).
+        \item Example: OPEC.
+        \item Success factors: fewer firms, homogeneous products, similar costs, frequent small purchases, credible retaliation, weak outside competition.
+    \end{itemize}
+
+    \item \textbf{Dominant Firm Model:}
+    \begin{itemize}
+        \item One large firm (DF) sets price, smaller competitive firms (CFs) take it as given.
+        \item DF determines price where \(MR_{DF} = MC_{DF}\).
+        \item CFs produce where \(MC_{CF} = P^*\).
+        \item If CFs cut prices, DF cuts price further → CFs lose share in long run.
+    \end{itemize}
+
+    \item \textbf{Range of outcomes:}
+    \begin{itemize}
+        \item Price lies between:
+        \[
+        P_{competition} < P_{oligopoly} < P_{monopoly}
+        \]
+        \item \(\pi_{econ}\) between zero (competition) and maximum (monopoly).
+    \end{itemize}
+
+    \item \textbf{Examples:}
+    \begin{itemize}
+        \item \textbf{Autos:} Toyota vs. Ford, interdependent strategies.
+        \item \textbf{Oil:} OPEC cartel, collusion with occasional cheating.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{12.3 Identifying Market Structures}
+
+\textbf{LOS 12.e: Identify market structure and describe use/limitations of concentration measures}
+
+\begin{itemize}
+    \item \textbf{Identifying market structure:}
+    \begin{itemize}
+        \item Based on characteristics: 
+        number of firms, entry barriers, product differentiation, substitutes, 
+        and pricing interdependence.  
+        \item \textbf{Perfect Competition:} many firms, homogeneous products, no pricing power.  
+        \item \textbf{Monopolistic Competition:} many firms, differentiated products, limited pricing power.  
+        \item \textbf{Oligopoly:} few large firms, high barriers, interdependence, significant pricing power.  
+        \item \textbf{Monopoly:} single firm, unique product, very high barriers, full price control.
+    \end{itemize}
+
+    \item \textbf{Market structure overview (recap):}
+    \begin{table}[H]
+    \centering
+\resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|c|c|c|c|}
+    \hline
+    Characteristic & Perfect Comp. & Monopolistic Comp. & Oligopoly & Monopoly \\
+    \hline
+    Firms & Many small & Many small/medium & Few large & Single \\
+    Products & Identical & Differentiated & Similar or diff. & Unique \\
+    Demand curve & Perfectly elastic & Downward-sloping & Downward-sloping & Market demand \\
+    Price power & None & Limited (branding) & Significant, interdependent & Full control \\
+    Barriers & Very low & Low & High & Very high \\
+    Example & Wheat & Toothpaste & Autos, oil & Local utility, patents \\
+    \hline
+    \end{tabular}}
+    \caption{Comparison of Market Structures (recap)}
+    \end{table}
+
+    \item \textbf{Measuring market concentration:}
+    \begin{itemize}
+        \item Regulators assess market power via concentration ratios.
+        \item \textbf{N-firm concentration ratio:}
+        \[
+        CR_N = \sum_{i=1}^N s_i
+        \]
+        where \(s_i\) = market share (\%).
+        \begin{itemize}
+            \item Simple to calculate, but insensitive to distribution among top firms.
+            \item E.g., 2 firms each with 30\% vs. one firm 60\% → same \(CR_2 = 60\%\).
+        \end{itemize}
+        \item \textbf{Herfindahl-Hirschman Index (HHI):}
+        \[
+        HHI = \sum_{i=1}^N s_i^2
+        \]
+        (shares expressed as decimals).
+        \begin{itemize}
+            \item Gives more weight to larger firms.
+            \item Sensitive to mergers → better measure of market concentration.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Example – Concentration ratio vs. HHI:}
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    Firm & Market Share (\%) \\
+    \hline
+    Acme & 25 \\
+    Blake & 15 \\
+    Carter & 15 \\
+    Delta & 10 \\
+    Others & 35 \\
+    \hline
+    \end{tabular}
+    \caption{Market Shares Before Merger}
+    \end{table}
+
+    \begin{itemize}
+        \item \textbf{Before merger:}
+        \[
+        CR_4 = 25 + 15 + 15 + 10 = 65\%
+        \]
+        \[
+        HHI = 0.25^2 + 0.15^2 + 0.15^2 + 0.10^2 = 0.1175
+        \]
+        
+        \item \textbf{After merger (Acme + Blake = 40\%):}
+        \[
+        CR_4 = 40 + 15 + 10 + 5 = 70\%
+        \]
+        \[
+        HHI = 0.40^2 + 0.15^2 + 0.10^2 + 0.05^2 = 0.1950
+        \]
+
+        \item \textbf{Interpretation:}
+        \begin{itemize}
+            \item CR increased slightly (65\% → 70\%), suggesting modest concentration rise.
+            \item HHI rose significantly (0.1175 → 0.1950), reflecting higher dominance of merged firm.
+            \item Shows why HHI is more informative for mergers.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Limitations of concentration measures:}
+    \begin{itemize}
+        \item Do not consider entry barriers: high share firms may still lack pricing power if entry is easy.
+        \item Do not directly measure demand elasticity.
+        \item Potential competition may discipline pricing even in concentrated markets.
+        \item Sensitive to market definition (geographic, product scope).
+    \end{itemize}
+\end{itemize}
+
+\section*{13 UNDERSTANDING BUSINESS CYCLES}
+
+\subsection*{13.1 Business Cycles}
+
+\textbf{LOS 13.a: Describe the business cycle and its phases}
+
+\begin{itemize}
+    \item \textbf{Definition:} Business cycle = fluctuations in economic activity, measured mainly by real GDP.  
+    \item \textbf{Phases:}
+    \begin{enumerate}
+        \item \textbf{Expansion:} 
+        \begin{itemize}
+            \item Real GDP rising, employment and investment increasing.  
+            \item Inflation may accelerate near the peak.  
+        \end{itemize}
+        \item \textbf{Peak:} 
+        \begin{itemize}
+            \item Real GDP growth slows and turns negative.  
+            \item Inflation typically highest here.  
+        \end{itemize}
+        \item \textbf{Contraction (Recession):}
+        \begin{itemize}
+            \item Real GDP declining, unemployment rising, investment and spending falling.  
+            \item Inflation decreases.  
+        \end{itemize}
+        \item \textbf{Trough:} 
+        \begin{itemize}
+            \item GDP growth turns positive again.  
+            \item Inflation moderate/low, unemployment high but falling.  
+        \end{itemize}
+    \end{enumerate}
+
+    \item \textbf{Alternative measures of cycles:}
+    \begin{itemize}
+        \item \textbf{Classical cycle:} Real GDP relative to a base level.  
+        \item \textbf{Growth cycle:} GDP relative to trend value.  
+        \item \textbf{Growth rate cycle:} Changes in annualized growth rate (peaks/troughs detected earlier).  
+        \item Preferred by economists = growth rate cycle.  
+    \end{itemize}
+
+    \item \textbf{Dating rules:}
+    \begin{itemize}
+        \item Expansion: usually 2 consecutive quarters of positive GDP growth.  
+        \item Recession: 2 consecutive quarters of negative GDP growth.  
+        \item Official dating (e.g., NBER in the U.S.) uses broader data: unemployment, industrial production, inflation.  
+    \end{itemize}
+
+    \item \textbf{Important:} Cycles recur, but not at regular intervals (duration varies: 1 year to 10+ years).
+\end{itemize}
+
+---
+
+\textbf{LOS 13.b: Credit Cycles}
+
+\begin{itemize}
+    \item \textbf{Definition:} Cyclical fluctuations in interest rates and credit availability.  
+    \item \textbf{Expansion:} Loose credit, easier lending, lower interest rates → may fuel bubbles.  
+    \item \textbf{Contraction:} Tight credit, higher rates, less lending.  
+    \item \textbf{Amplification:} Expansions stronger and recessions deeper when coinciding with credit cycles.  
+    \item \textbf{Example:} Subprime mortgage bubble (2007–2009). Easy credit fueled housing bubble; crash amplified recession.  
+    \item \textbf{Duration:} Credit cycles often longer than business cycles.  
+\end{itemize}
+
+---
+
+\textbf{LOS 13.c: Resource Use, Consumer/Business, Housing, External Trade}
+
+\begin{itemize}
+    \item \textbf{Inventories (resource use):}
+    \begin{itemize}
+        \item Firms balance sales vs. inventory.  
+        \item Near peak: sales slow, inventories rise → firms cut production.  
+        \item Near trough: sales pick up, inventories depleted → firms raise production.  
+    \end{itemize}
+
+    \item \textbf{Labor and capital use:}
+    \begin{itemize}
+        \item Short-term: adjust overtime, utilization of current workers and machines.  
+        \item Long-term: hiring/layoffs and capital investment changes.  
+    \end{itemize}
+
+    \item \textbf{Consumer sector:}
+    \begin{itemize}
+        \item Spending ↑ in expansions, ↓ in recessions.  
+        \item \textbf{Durable goods:} highly cyclical (cars, furniture, appliances).  
+        \item \textbf{Nondurables:} relatively stable (food, household supplies).  
+        \item \textbf{Services:} moderately cyclical (travel, restaurants) but partly stable (healthcare, insurance).  
+    \end{itemize}
+
+    \item \textbf{Housing sector:}
+    \begin{enumerate}
+        \item \textbf{Mortgage rates:} low → more buying, high → less.  
+        \item \textbf{Income vs. housing costs:} high affordability → ↑ demand.  
+        \item \textbf{Speculative activity:} expectations of rising prices → bubble risk (e.g., 2007–08).  
+        \item \textbf{Demographics:} young population (25–40 yrs) → ↑ demand; urbanization drives housing booms.  
+    \end{enumerate}
+
+    \item \textbf{External trade sector:}
+    \begin{itemize}
+        \item Domestic GDP ↑ → imports ↑.  
+        \item Trading partners’ GDP ↑ → exports ↑.  
+        \item Exchange rate ↑ (domestic currency stronger) → exports ↓, imports ↑.  
+        \item Exchange rate ↓ → exports ↑, imports ↓.  
+    \end{itemize}
+\end{itemize}
+
+---
+
+\textbf{Summary of Phases and Characteristics}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+ & \textbf{Trough} & \textbf{Expansion} & \textbf{Peak} & \textbf{Contraction} \\
+\hline
+GDP Growth & Neg. → Pos. & Increasing & Decreasing & Negative \\
+Unemployment & High, ↓ overtime/temp & Decreasing & Low but ↓ slower & Increasing \\
+Consumer Spending & Durables ↑ & Strong ↑ & Slower ↑ & ↓ (esp. durables) \\
+Investment & Low → rising & Rising & Slowing & Falling \\
+Housing & May ↑ early & Rising & Slowing & Falling \\
+Inflation & Moderate/↓ & Rising & Highest & ↓ (lagged) \\
+Imports & Low & Increasing & High & Decreasing \\
+\hline
+\end{tabular}
+\caption{Characteristics of Business Cycle Phases}
+\end{table}
+
+---
+
+\textbf{Economic Indicators Classification}
+
+\begin{itemize}
+    \item \textbf{Leading Indicators:} Change before peaks/troughs.  
+    Examples: Average weekly hours, new orders, stock prices, consumer expectations, housing permits, initial jobless claims.  
+    \item \textbf{Coincident Indicators:} Change at same time as economy.  
+    Examples: GDP, industrial production, personal income, non-farm employment.  
+    \item \textbf{Lagging Indicators:} Change after economy turns.  
+    Examples: Unemployment duration, inflation, labor cost per unit, commercial loans outstanding.  
+\end{itemize}
+
+\section*{14 FISCAL POLICY}
+\subsection*{14.1 Fiscal Policy Objectives}
+
+\textbf{LOS 14.a: Compare monetary and fiscal policy}
+
+\begin{itemize}
+    \item \textbf{Fiscal Policy:} Government use of taxation and spending to influence economic activity.  
+    \begin{itemize}
+        \item Balanced budget: Tax revenues = expenditures.  
+        \item Surplus: Revenues $>$ expenditures.  
+        \item Deficit: Expenditures $>$ revenues.  
+        \item Expansionary: Increase deficit (or reduce surplus) → ↑ GDP.  
+        \item Contractionary: Reduce deficit (or increase surplus) → ↓ GDP.  
+    \end{itemize}
+
+    \item \textbf{Monetary Policy:} Central bank actions influencing money and credit supply.  
+    \begin{itemize}
+        \item Expansionary (easy): Increase quantity of money/credit.  
+        \item Contractionary (tight): Decrease quantity of money/credit.  
+    \end{itemize}
+
+    \item \textbf{Both policies aim to:}
+    \begin{itemize}
+        \item Maintain price stability.  
+        \item Foster sustainable economic growth.  
+        \item Fiscal policy additionally redistributes wealth and allocates resources.  
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|}
+\hline
+ & \textbf{Fiscal Policy} & \textbf{Monetary Policy} \\
+\hline
+Authority & Government (legislature, treasury) & Central Bank \\
+Tools & Taxes, government spending & Money supply, interest rates, credit \\
+Objective & Demand mgmt., redistribution, resource allocation & Inflation control, stability, growth \\
+Expansionary & $\downarrow$ taxes, $\uparrow$ spending & $\downarrow$ interest rates, $\uparrow$ money supply \\
+Contractionary & $\uparrow$ taxes, $\downarrow$ spending & $\uparrow$ interest rates, $\downarrow$ money supply \\
+Time Lag & Longer (political process) & Shorter (policy committees) \\
+\hline
+\end{tabular}}
+\caption{Comparison: Fiscal vs. Monetary Policy}
+\end{table}
+
+---
+
+\textbf{LOS 14.b: Roles, Objectives, and National Debt Concerns}
+
+\begin{itemize}
+    \item \textbf{Roles and objectives of fiscal policy:}
+    \begin{enumerate}
+        \item Influence aggregate demand and economic activity.  
+        \item Redistribute income/wealth.  
+        \item Allocate resources among sectors (e.g., infrastructure, education).  
+    \end{enumerate}
+
+    \item \textbf{Mechanics:}
+    \begin{itemize}
+        \item Expansionary: $\downarrow$ taxes or $\uparrow$ government spending → ↑ AD, ↑ GDP, ↑ employment.  
+        \item Contractionary: $\uparrow$ taxes or $\downarrow$ spending → ↓ AD, ↓ GDP, ↓ inflation.  
+        \item Automatic stabilizers: Built-in mechanisms (e.g., tax receipts fall + welfare spending ↑ in recession).  
+        \item Discretionary policy: Active changes in taxation/spending to stabilize economy.  
+    \end{itemize}
+
+    \item \textbf{Schools of thought:}
+    \begin{itemize}
+        \item \textbf{Keynesians:} Fiscal policy strongly effective at less than full employment.  
+        \item \textbf{Monetarists:} Fiscal stimulus only temporary; monetary policy better for long-term inflation control.  
+    \end{itemize}
+
+    \item \textbf{Debt-to-GDP dynamics:}
+    \[
+    \text{Debt Ratio} = \frac{\text{Government Debt}}{\text{GDP}}
+    \]
+    \begin{itemize}
+        \item If $r > g$ (real interest rate $>$ real GDP growth) → debt ratio worsens over time.  
+        \item If $r < g$ → debt ratio improves over time.  
+    \end{itemize}
+
+    \item \textbf{Arguments \underline{for concern} with high deficits:}
+    \begin{itemize}
+        \item Higher future taxes $\Rightarrow$ ↓ incentives to work/invest $\Rightarrow$ ↓ growth.  
+        \item Default/inflation risk if markets lose confidence (esp. if foreign currency debt).  
+        \item Crowding-out: Government borrowing ↑ interest rates → ↓ private investment.  
+    \end{itemize}
+
+    \item \textbf{Arguments \underline{against concern}:}
+    \begin{itemize}
+        \item If debt mostly held domestically, risk overstated.  
+        \item If debt finances productive investment, future gains repay debt.  
+        \item Deficits may encourage tax reform.  
+        \item Ricardian equivalence: Households save more today in anticipation of future taxes → offsetting effect.  
+        \item At less than full capacity, deficits can boost GDP and employment without displacing private capital.  
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+ & \textbf{Arguments For Concern} & \textbf{Arguments Against Concern} \\
+\hline
+Future Taxes & Higher deficits → higher taxes, lower growth & Ricardian equivalence may offset via higher savings \\
+Default Risk & Risk of default or inflation if markets lose confidence & Domestic-held debt less risky; gov. can service in local currency \\
+Crowding-Out & Gov. borrowing ↑ interest rates, ↓ private investment & At less than full capacity, deficits ↑ GDP without displacing investment \\
+Productivity & Debt not always productive & Productive debt → future gains cover repayment \\
+Reform Impact & Higher taxes discourage work & Deficits may prompt tax reform \\
+\hline
+\end{tabular}
+\caption{Arguments For vs. Against Concern Over Fiscal Deficits}
+\end{table}
+
+\subsection*{14.2 Fiscal Policy Tools and Implementation}
+
+\textbf{LOS 14.c: Tools of Fiscal Policy (Advantages \& Disadvantages)}
+
+\begin{itemize}
+    \item \textbf{Spending Tools:}
+    \begin{itemize}
+        \item \textbf{Transfer payments:} Redistribution (e.g., Social Security, unemployment insurance). Not included in GDP.  
+        \item \textbf{Current spending:} Ongoing purchases (e.g., defense, education, administration).  
+        \item \textbf{Capital spending:} Infrastructure investment (roads, bridges, schools, hospitals). Boosts long-term productivity.  
+    \end{itemize}
+
+    \item \textbf{Revenue Tools:}
+    \begin{itemize}
+        \item \textbf{Direct taxes:} Income, wealth, estate, corporate, capital gains, Social Security. Often progressive → redistribution.  
+        \item \textbf{Indirect taxes:} VAT, sales taxes, excise taxes. Can discourage undesirable consumption (alcohol, tobacco).  
+    \end{itemize}
+
+    \item \textbf{Desirable tax attributes:}
+    \begin{itemize}
+        \item Simplicity (easy to use and enforce).  
+        \item Efficiency (minimal distortion to markets).  
+        \item Fairness (horizontal = equal treatment, vertical = higher income $\rightarrow$ higher tax).  
+        \item Sufficiency (enough revenue to meet spending needs).  
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+ & \textbf{Advantages} & \textbf{Disadvantages} \\
+\hline
+Indirect taxes & Quick to implement, raise revenue cheaply, influence social behavior (e.g., tobacco tax) & Can be regressive (hit low-income harder), distort consumption \\
+Direct taxes & Redistributive, predictable revenue & Take time to implement, may reduce work incentives \\
+Spending tools & Direct boost to AD, capital spending raises long-term productivity & Slow to implement (esp. infrastructure), effects lag actual need \\
+Announcements & Expectations adjust immediately (can curb AD fast) & May dampen confidence, reduce investment \\
+\hline
+\end{tabular}
+\caption{Advantages and Disadvantages of Fiscal Policy Tools}
+\end{table}
+
+---
+
+\textbf{Fiscal Multiplier}
+
+\begin{itemize}
+    \item Spending multiplier formula:
+    \[
+    \text{Multiplier} = \frac{1}{1 - MPC \times (1 - t)}
+    \]
+    where $MPC =$ marginal propensity to consume, $t =$ tax rate.
+    \item Example: $MPC = 0.8$, $t = 0.25$:  
+    \[
+    \text{Multiplier} = \frac{1}{1 - 0.8(1-0.25)} = 2.5
+    \]  
+    $\Rightarrow$ A \$100 spending increase $\rightarrow$ \$250 increase in AD.
+\end{itemize}
+
+\textbf{Balanced Budget Multiplier}
+\begin{itemize}
+    \item Example: Increase spending by \$100, financed by \$100 tax increase.  
+    \item Tax effect: Initial $\Delta C = 100 \times 0.8 = 80$; total effect = $100(0.8)(2.5) = 200$ decrease.  
+    \item Net effect: $+250 - 200 = +50$.  
+    \item $\Rightarrow$ Balanced budget multiplier is \textbf{positive}.  
+\end{itemize}
+
+\textbf{Ricardian Equivalence}
+\begin{itemize}
+    \item If taxpayers fully anticipate future taxes to service debt, they increase savings today → offsetting government deficit.  
+    \item Then fiscal stimulus has no effect on AD.  
+    \item In reality, may not hold (taxpayers underestimate liability).  
+\end{itemize}
+
+---
+
+\textbf{LOS 14.d: Implementation of Fiscal Policy}
+
+\begin{itemize}
+    \item \textbf{Expansionary:} $\uparrow$ spending, $\downarrow$ taxes → increase AD, GDP, employment.  
+    \item \textbf{Contractionary:} $\downarrow$ spending, $\uparrow$ taxes → reduce AD, inflation.  
+    \item Fiscal stance often measured by change in budget balance (surplus or deficit).  
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|l|c|c|}
+\hline
+ & \textbf{Expansionary Policy} & \textbf{Contractionary Policy} \\
+\hline
+Taxes & Decrease & Increase \\
+Spending & Increase & Decrease \\
+Budget & Larger deficit / smaller surplus & Larger surplus / smaller deficit \\
+Impact & Boost AD, GDP, jobs & Slow AD, inflation control \\
+\hline
+\end{tabular}
+\caption{Expansionary vs. Contractionary Fiscal Policy}
+\end{table}
+
+---
+
+\textbf{Difficulties in Implementation}
+
+\begin{enumerate}
+    \item \textbf{Recognition lag:} Time to identify recession/inflation.  
+    \item \textbf{Action lag:} Time for political debate and legislation.  
+    \item \textbf{Impact lag:} Time for spending/tax changes to affect economy.  
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|l|p{10cm}|}
+\hline
+Lag Type & Description \\
+\hline
+Recognition & Delay in recognizing downturn/overheating \\
+Action & Time for government to approve policy changes \\
+Impact & Delay between enactment and economic effect \\
+\hline
+\end{tabular}
+\caption{Fiscal Policy Lags}
+\end{table}
+
+---
+
+\textbf{Complications and Limitations}
+
+\begin{itemize}
+    \item \textbf{Misreading economy:} If economy is already at full capacity, expansionary policy only fuels inflation.  
+    \item \textbf{Crowding-out effect:} Government borrowing raises interest rates $\rightarrow$ ↓ private investment.  
+    \item \textbf{Supply constraints:} If slowdown is due to supply shortages, AD stimulus won’t help.  
+    \item \textbf{Deficit limits:} Too much borrowing → loss of investor confidence, ↑ interest rates.  
+    \item \textbf{Multiple targets:} High unemployment + high inflation (stagflation) cannot be solved with one fiscal tool.  
+\end{itemize}
+
+\textbf{Structural Budget Deficit}
+\begin{itemize}
+    \item Adjusts deficit for cyclical effects (i.e., what deficit would be at full employment).  
+    \item Used to distinguish automatic stabilizers vs. discretionary policy.  
+\end{itemize}
+
+\section*{15 MONETARY POLICY}
+
+\subsection*{15.1 Central Bank Objectives and Tools}
+
+\textbf{LOS 15.a: Roles and Objectives of Central Banks}
+
+\begin{itemize}
+    \item \textbf{Roles of central banks:}
+    \begin{enumerate}
+        \item Sole supplier of currency (legal tender, fiat money).
+        \item Banker to government and other banks.
+        \item Regulator/supervisor of payments system.
+        \item Lender of last resort (prevents bank runs).
+        \item Holder of FX and gold reserves.
+        \item Conductor of monetary policy.
+    \end{enumerate}
+
+    \item \textbf{Primary objective:} Price stability (control inflation).  
+    \begin{itemize}
+        \item High inflation $\rightarrow$ uncertainty, menu costs, shoe leather costs.
+        \item Target inflation = 2–3\% (avoid 0\%, which risks deflation).
+    \end{itemize}
+
+    \item \textbf{Other possible objectives:}
+    \begin{itemize}
+        \item Stable exchange rates.
+        \item Full employment.
+        \item Sustainable positive economic growth.
+        \item Moderate long-term interest rates.
+    \end{itemize}
+
+    \item \textbf{Country differences:}
+    \begin{itemize}
+        \item U.S. Fed: dual mandate — maximum employment + moderate long-term rates (no explicit inflation target).
+        \item Bank of Japan: focus on avoiding deflation (not inflation).
+        \item Some developing countries: peg exchange rates to USD $\rightarrow$ manage money supply/interest rates to match U.S. inflation.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Country/Region} & \textbf{Primary Goal} & \textbf{Other Goals} \\
+\hline
+U.S. Fed & Employment + moderate LT rates & Implicit inflation stability \\
+ECB & Explicit 2\% inflation target & Growth, stability \\
+BoJ (Japan) & Avoid deflation & Growth support \\
+Pegging countries & Exchange rate stability (vs. USD) & Implied inflation convergence \\
+\hline
+\end{tabular}
+\caption{Examples of Central Bank Objectives}
+\end{table}
+
+---
+
+\textbf{LOS 15.b: Tools of Monetary Policy \& Transmission Mechanism}
+
+\begin{itemize}
+    \item \textbf{Main tools:}
+    \begin{enumerate}
+        \item \textbf{Policy rate (short-term interest rate):}
+        \begin{itemize}
+            \item U.S.: Discount rate (borrowing from Fed).  
+            \item ECB: Refinancing rate.  
+            \item BoE: Two-week repo rate.  
+            \item Fed also targets \textbf{federal funds rate} (interbank overnight rate).  
+            \item Lower policy rate $\rightarrow$ cheaper borrowing, ↑ lending, ↓ interest rates.  
+        \end{itemize}
+
+        \item \textbf{Reserve requirements:}
+        \begin{itemize}
+            \item $\uparrow$ reserve ratio $\rightarrow$ ↓ lending capacity, ↓ money supply, ↑ rates.  
+            \item $\downarrow$ reserve ratio $\rightarrow$ ↑ lending capacity, ↑ money supply, ↓ rates.  
+        \end{itemize}
+
+        \item \textbf{Open market operations (OMO):}
+        \begin{itemize}
+            \item Central bank buys securities $\rightarrow$ ↑ reserves, ↑ lending, ↑ MS, ↓ rates.  
+            \item Central bank sells securities $\rightarrow$ ↓ reserves, ↓ lending, ↓ MS, ↑ rates.  
+            \item Fed’s most common tool to hit Fed funds target.  
+        \end{itemize}
+    \end{enumerate}
+
+    \item \textbf{Monetary transmission mechanism:}
+    \begin{itemize}
+        \item Step 1: Policy rate ↑ $\rightarrow$ short-term bank lending rates ↑.  
+        \item Step 2: ↑ discount rate applied to bonds, equities → asset values ↓ (wealth effect).  
+        \item Step 3: Expectations of growth ↓ $\rightarrow$ less consumption + investment.  
+        \item Step 4: Higher rates attract foreign capital → currency appreciates → exports ↓, imports ↑.  
+        \item Net effect: ↓ aggregate demand → ↓ inflation, ↓ growth (short run).  
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\textbf{Policy Action} & \textbf{Expansionary Effects} & \textbf{Contractionary Effects} \\
+\hline
+Policy Rate & ↓ borrowing costs, ↑ lending & ↑ borrowing costs, ↓ lending \\
+Reserve Requirements & ↓ reserves held $\rightarrow$ ↑ money supply & ↑ reserves held $\rightarrow$ ↓ money supply \\
+Open Market Ops & Buy securities $\rightarrow$ ↑ reserves, ↓ rates & Sell securities $\rightarrow$ ↓ reserves, ↑ rates \\
+Currency Impact & Depreciation $\rightarrow$ ↑ exports & Appreciation $\rightarrow$ ↓ exports \\
+\hline
+\end{tabular}
+\caption{Expansionary vs. Contractionary Monetary Tools}
+\end{table}
+
+---
+
+\textbf{Relation to Growth, Inflation, Interest, FX}
+
+\begin{itemize}
+    \item \textbf{Expansionary Policy:}
+    \begin{itemize}
+        \item $\uparrow$ reserves $\rightarrow$ ↓ rates, ↑ lending.  
+        \item ↓ real interest rates $\rightarrow$ domestic currency depreciation.  
+        \item ↑ investment (business), ↑ durable goods demand (consumers).  
+        \item Net exports ↑ due to weaker currency.  
+        \item Overall effect: ↑ AD, ↑ inflation, ↑ GDP, ↑ employment.  
+    \end{itemize}
+
+    \item \textbf{Contractionary Policy:}
+    \begin{itemize}
+        \item Opposite effects: ↑ rates, ↓ asset values, ↓ investment, stronger currency.  
+        \item ↓ AD, ↓ inflation.  
+    \end{itemize}
+
+    \item \textbf{Money neutrality:}
+    \begin{itemize}
+        \item Long run: Monetary policy only affects price level (not real growth).  
+        \item Short run: Monetary policy affects real GDP, inflation, interest rates, and FX.  
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Variable} & \textbf{Expansionary Policy} & \textbf{Contractionary Policy} \\
+\hline
+GDP Growth & ↑ (short run) & ↓ \\
+Inflation & ↑ & ↓ \\
+Interest Rates & ↓ & ↑ \\
+Currency (FX) & Depreciates & Appreciates \\
+Unemployment & ↓ & ↑ \\
+\hline
+\end{tabular}
+\caption{Effects of Monetary Policy on Key Variables}
+\end{table}
+
+\subsection*{15.2 Monetary Policy Effects and Limitations}
+
+\subsubsection*{LOS 15.c: Qualities of Effective Central Banks}
+
+\begin{itemize}
+    \item \textbf{Independence}  
+    \begin{itemize}
+        \item \textit{Operational independence}: central bank sets policy rate independently.  
+        \item \textit{Target independence}: central bank defines inflation computation, sets target, and time horizon.  
+        \item Example: The ECB has both; most others only operational independence.
+        \item Importance: prevents political interference, e.g., politicians may want expansion before elections.
+    \end{itemize}
+
+    \item \textbf{Credibility}  
+    \begin{itemize}
+        \item Central banks must follow through on commitments.  
+        \item If credible, expectations align: e.g., if target inflation = 3\%, wage contracts are based on 3\%, making it self-fulfilling.  
+        \item Governments with high debt lack credibility (incentive to allow higher inflation).
+    \end{itemize}
+
+    \item \textbf{Transparency}  
+    \begin{itemize}
+        \item Regular reports (inflation outlook, policy rationale).  
+        \item Improves credibility and makes policy changes easier to anticipate.  
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Inflation, Interest Rate, and Exchange Rate Targeting}
+
+\begin{itemize}
+    \item \textbf{Interest Rate Targeting} (used in the past)  
+    \begin{itemize}
+        \item Increase money supply if interest rates rise above target band.  
+        \item Decrease money supply if interest rates fall below target.  
+    \end{itemize}
+
+    \item \textbf{Inflation Targeting} (most common today)  
+    \begin{itemize}
+        \item Used by UK, Brazil, Canada, Australia, Mexico, ECB.  
+        \item Typical target: 2\% with band 1--3\%.  
+        \item Example: If current inflation = 4\%, central bank tightens policy; if 0\%, expansionary stance.  
+    \end{itemize}
+
+    \item \textbf{Exchange Rate Targeting} (mainly developing countries)  
+    \begin{itemize}
+        \item Peg currency to another (often USD).  
+        \item If domestic currency falls: buy domestic currency using reserves $\Rightarrow$ reduces money supply, raises rates.  
+        \item If currency rises: sell domestic currency $\Rightarrow$ increases money supply, lowers rates.  
+        \item Long-run effect: inflation rate converges to pegged country’s inflation.  
+        \item Limitation: foreign reserves may run out.  
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Limitations of Monetary Policy}
+
+\begin{itemize}
+    \item \textbf{Transmission mechanism limitations}:  
+    \begin{itemize}
+        \item Long-term rates may not move with short-term rates if expectations of inflation shift.  
+        \item Example: If policy raises short-term rates but markets expect lower inflation, long-term rates may fall.  
+    \end{itemize}
+
+    \item \textbf{Liquidity Trap}:  
+    \begin{itemize}
+        \item Demand for money becomes elastic.  
+        \item Individuals hold cash even with zero interest rates.  
+        \item Policy becomes ineffective (e.g., Japan in 1990s, US/UK post-2008).  
+    \end{itemize}
+
+    \item \textbf{Deflation}:  
+    \begin{itemize}
+        \item Expansionary policy limited by zero lower bound (nominal rates cannot go below 0).  
+        \item Harder to reverse than inflation.  
+    \end{itemize}
+
+    \item \textbf{Bank Lending Constraint}:  
+    \begin{itemize}
+        \item Even with higher reserves, banks may not lend (post-2008 credit crisis).  
+        \item Led to \textbf{Quantitative Easing (QE)}:
+        \begin{itemize}
+            \item UK: bought government bonds (3--5 year maturities).  
+            \item US: QE1 = mortgage-backed securities, QE2 = long-term Treasuries.  
+            \item Goal: lower long-term rates, improve balance sheets, stimulate lending.  
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Monetary Policy in Developing Economies}
+
+\begin{itemize}
+    \item Lack of liquid government debt market $\Rightarrow$ weak interest rate signals.  
+    \item Rapid growth $\Rightarrow$ difficult to estimate neutral rate.  
+    \item Financial innovation changes demand for money.  
+    \item Weak credibility if past inflation targets were missed.  
+    \item Limited independence from politics.  
+\end{itemize}
+
+\subsubsection*{LOS 15.d: Interaction of Monetary and Fiscal Policy}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Policy Mix} & \textbf{Effects on Economy} & \textbf{Example Scenario} \\
+\hline
+Expansionary Fiscal + Expansionary Monetary & Highly expansionary; lower rates, strong GDP growth. & Post-2008 stimulus + QE in US. \\
+\hline
+Contractionary Fiscal + Contractionary Monetary & Strongly contractionary; lower GDP, higher rates. & Tight austerity with rate hikes. \\
+\hline
+Expansionary Fiscal + Contractionary Monetary & GDP up (from fiscal); higher interest rates (crowding-out). Govt spending/GDP rises. & US 1980s: Reagan fiscal expansion + Volcker tight money. \\
+\hline
+Contractionary Fiscal + Expansionary Monetary & Lower interest rates; private sector grows; govt spending/GDP falls. & EU post-crisis austerity + ECB loose policy. \\
+\hline
+\end{tabular}
+\caption{Interaction of Fiscal and Monetary Policy}
+\end{table}
+
+\begin{itemize}
+    \item Fiscal multipliers vary:  
+    \begin{itemize}
+        \item \textbf{Highest}: direct government spending.  
+        \item \textbf{Moderate}: transfers to poor.  
+        \item \textbf{Lower}: tax cuts.  
+    \end{itemize}
+    \item \textbf{Key Insight:} Expansionary fiscal policy is most effective when combined with expansionary monetary policy.  
+\end{itemize}
+
+\section*{16 INTRODUCTION TO GEOPOLITICS}
+
+\subsection*{16.1 Geopolitics}
+
+\subsubsection*{LOS 16.a: Geopolitics – Cooperation vs Competition}
+\begin{itemize}
+  \item \textbf{Definition:} Geopolitics = interactions among nations (state and nonstate actors) shaped by geography, economics, culture, and politics.  
+  \item \textbf{Cooperation:}
+    \begin{itemize}
+      \item Areas: diplomacy, military alliances, trade, tariffs, technology exchange, cultural flows.  
+      \item Example: \textit{NATO as military cooperation; EU Single Market as economic cooperation}.  
+    \end{itemize}
+  \item \textbf{Competition / Noncooperation:}
+    \begin{itemize}
+      \item Countries prioritize national interest at expense of others.  
+      \item Example: \textit{Trade wars, protectionist tariffs}.  
+    \end{itemize}
+  \item \textbf{Determinants of cooperation:} domestic politics, political cycles, resource endowment (e.g., mineral-rich but food-deficient nations must trade).  
+  \item \textbf{Nonstate actors:} Firms and NGOs push for regulatory harmonization (e.g., IFRS adoption).  
+  \item \textbf{Soft power:} Influence through culture, language, and IP (e.g., Hollywood exports).
+\end{itemize}
+
+\subsubsection*{LOS 16.b: Geopolitics and Globalization}
+\begin{itemize}
+  \item \textbf{Globalization:} Long-term integration of economies and cultures.  
+    \begin{itemize}
+      \item Trade openness grew from \textbf{25\% (1970s)} to \textbf{60\% (2008)} (World Bank).  
+      \item Driven by cross-border flows of goods, capital, services, information.  
+    \end{itemize}
+  \item \textbf{Nationalism:} Prioritizing self-interest, protectionism, reduced openness.  
+  \item Spectrum: Countries fall between extremes of globalization vs nationalism.  
+\end{itemize}
+
+\subsubsection*{Framework: Cooperation vs Globalization}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+ & \textbf{Cooperation} & \textbf{Noncooperation} \\
+\hline
+\textbf{Globalization} & Multilateralism & Hegemony \\
+\hline
+\textbf{Nationalism} & Bilateralism & Autarky \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+  \item \textbf{Autarky:} Self-reliance, state dominance (e.g., North Korea).  
+  \item \textbf{Hegemony:} Global influence without cooperation (e.g., U.S. in some policies).  
+  \item \textbf{Bilateralism:} Two-country agreements (e.g., U.S.–Mexico trade).  
+  \item \textbf{Multilateralism:} Broad cooperation (e.g., WTO, EU, ASEAN).  
+\end{itemize}
+
+\subsubsection*{LOS 16.c: International Trade Organizations}
+\begin{itemize}
+  \item \textbf{IMF (International Monetary Fund):}
+    \begin{itemize}
+      \item Goals: Monetary cooperation, exchange stability, balanced growth, BoP support.  
+      \item Tools: Lending, surveillance, policy advice.  
+    \end{itemize}
+  \item \textbf{World Bank:}
+    \begin{itemize}
+      \item Mission: Poverty reduction, development support.  
+      \item Institutions: IBRD (middle-income), IDA (poorest nations).  
+      \item Provides: Low-interest loans, grants, capacity building.  
+    \end{itemize}
+  \item \textbf{WTO (World Trade Organization):}
+    \begin{itemize}
+      \item Role: Enforce trade rules, reduce barriers, settle disputes.  
+      \item Agreements: Legally binding trade frameworks.  
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{LOS 16.d: Geopolitical Risk}
+\begin{itemize}
+  \item \textbf{Types of Risk:}
+    \begin{itemize}
+      \item Event risk: Known timing, uncertain outcome (e.g., elections).  
+      \item Exogenous risk: Unexpected events (e.g., war, terrorism, pandemics).  
+      \item Thematic risk: Long-term patterns (e.g., cyber risk, migration).  
+    \end{itemize}
+  \item \textbf{Key dimensions:} Probability, Impact, Velocity.  
+  \item \textbf{Black swan risk:} Low probability, high impact exogenous risk (e.g., 9/11, COVID-19).  
+\end{itemize}
+
+\subsubsection*{LOS 16.e: Tools of Geopolitics}
+\begin{itemize}
+  \item \textbf{National Security Tools:}  
+    \begin{itemize}
+      \item Armed conflict, espionage, treaties.  
+      \item Active (in use) vs. Threatened (deterrent).  
+    \end{itemize}
+  \item \textbf{Economic Tools:}  
+    \begin{itemize}
+      \item Cooperative: Free trade areas, common markets, monetary unions.  
+      \item Noncooperative: Tariffs, export restraints, nationalization.  
+    \end{itemize}
+  \item \textbf{Financial Tools:}  
+    \begin{itemize}
+      \item Cooperative: Capital mobility, FDI, currency convertibility.  
+      \item Noncooperative: Capital controls, sanctions.  
+    \end{itemize}
+\end{itemize}
+
+\subsection*{LOS 16.f: Investment Impact of Geopolitical Risk}
+\begin{itemize}
+  \item \textbf{Investment effects:}
+    \begin{itemize}
+      \item Raises/lower risk premiums on assets.  
+      \item Discrete (industry-specific) vs Broad (country/region-wide).  
+    \end{itemize}
+  \item \textbf{Business cycle sensitivity:} Risks have greater effects during recessions.  
+  \item \textbf{Analysis methods:}  
+    \begin{itemize}
+      \item Scenario analysis (qualitative/quantitative).  
+      \item Signposts: Indicators signaling rising risk (e.g., CDS spreads, volatility indices).  
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Example Table: Risk Types vs Investment Impact}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Risk Type} & \textbf{Example} & \textbf{Velocity} & \textbf{Investment Impact} \\
+\hline
+Event & Election outcome & Medium & Policy shifts, sector winners/losers \\
+Exogenous & War outbreak & High & Market crash, currency fall \\
+Thematic & Cyber risk & Low–Medium & Tech sector costs, ESG implications \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{17 INTERNATIONAL TRADE}
+
+\subsection*{17.1 International Trade}
+
+\subsubsection*{LOS 17.a: Benefits and Costs of International Trade}
+
+\begin{itemize}
+    \item \textbf{Comparative Advantage:}
+    \begin{itemize}
+        \item Countries specialize in goods with lower \emph{opportunity cost}.
+        \item Example: 
+        \begin{itemize}
+            \item Country A: lower cost of steel $\rightarrow$ exports steel.
+            \item Country B: lower cost of textiles $\rightarrow$ exports textiles.
+            \item Both gain: total world output increases.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{New Trade Theory (beyond Ricardo):}
+    \begin{itemize}
+        \item Gains from \textbf{economies of scale}.
+        \item Variety of products increases.
+        \item Domestic monopolies lose pricing power $\rightarrow$ consumer welfare increases.
+        \item Example: automobile industry: Germany exports BMW, Japan exports Toyota, USA exports Ford — consumers get variety and lower prices.
+    \end{itemize}
+
+    \item \textbf{Costs of Free Trade:}
+    \begin{itemize}
+        \item \textbf{Job losses} in import-competing industries.
+        \item \textbf{Income inequality} may rise.
+        \item Example: 
+        \begin{itemize}
+            \item U.S. textile industry loses jobs when cheaper imports from Bangladesh enter the market.
+            \item Domestic steel consumers in importing country benefit from cheaper steel, but local steel workers lose.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Dynamic Adjustment:}
+    \begin{itemize}
+        \item In the long run, workers retrain and reallocate to other industries.
+        \item Economic theory: \textbf{net welfare gains exceed losses}.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{LOS 17.b: Trade Restrictions and Their Economic Implications}
+
+\begin{itemize}
+    \item \textbf{Motivations for Restrictions:}
+    \begin{itemize}
+        \item Infant industry protection (valid argument).
+        \item National security goods (valid argument).
+        \item Protecting domestic jobs (weak argument).
+        \item Retaliation, tariff revenue, political lobbying.
+    \end{itemize}
+
+    \item \textbf{Types of Restrictions:}
+    \begin{enumerate}
+        \item Tariffs (taxes on imports).
+        \item Quotas (quantity limits on imports).
+        \item Export subsidies (government payments to exporters).
+        \item Minimum domestic content rules.
+        \item Voluntary export restraints (VERs).
+    \end{enumerate}
+
+    \item \textbf{Economic Implications:}
+    \begin{itemize}
+        \item Tariffs $\rightarrow$ higher domestic price, lower imports, government gains revenue.
+        \item Quotas $\rightarrow$ same effect as tariffs but revenue depends on whether government sells licenses.
+        \item Export subsidies $\rightarrow$ help exporters but hurt domestic consumers.
+        \item VERs $\rightarrow$ benefit foreign exporters with licenses (quota rents).
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\caption{Comparison of Trade Restrictions}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Policy} & \textbf{Winners} & \textbf{Losers} & \textbf{Govt. Revenue?} \\
+\hline
+Tariff & Domestic producers, Govt. & Consumers, Foreign exporters & Yes \\
+\hline
+Quota (licenses sold) & Domestic producers, Govt. & Consumers, Foreign exporters & Yes \\
+\hline
+Quota (licenses free) & Domestic producers, Foreign exporters (quota rents) & Consumers & No \\
+\hline
+VER & Domestic producers, Foreign exporters with quota rents & Consumers & No \\
+\hline
+Export subsidy & Domestic exporters & Consumers (higher price), Govt. (costs subsidy) & Negative (budget loss) \\
+\hline
+\end{tabular}}
+\end{table}
+
+\textbf{Welfare Analysis:}
+\begin{itemize}
+    \item Consumer Surplus (CS) decreases.
+    \item Producer Surplus (PS) increases.
+    \item Govt. revenue depends on policy.
+    \item Deadweight loss = welfare loss from lost efficiency.
+\end{itemize}
+
+\subsubsection*{LOS 17.c: Trading Blocs, Common Markets, and Economic Unions}
+
+\begin{itemize}
+    \item \textbf{Integration Types (in increasing order):}
+    \begin{enumerate}
+        \item Free Trade Area (FTA): no tariffs among members. (e.g., NAFTA/USMCA)
+        \item Customs Union: FTA + common external tariffs.
+        \item Common Market: Customs Union + free movement of labor/capital.
+        \item Economic Union: Common Market + shared institutions/policies. (e.g., EU)
+        \item Monetary Union: Economic Union + single currency. (e.g., Eurozone)
+    \end{enumerate}
+
+    \item \textbf{Benefits:}
+    \begin{itemize}
+        \item Increased efficiency and competition.
+        \item Larger markets, economies of scale.
+        \item Comparative advantage exploited more fully.
+    \end{itemize}
+
+    \item \textbf{Costs:}
+    \begin{itemize}
+        \item Job and wage losses in less competitive industries.
+        \item Possible trade diversion (switching imports from cheaper non-members to higher-cost members).
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\caption{Levels of Economic Integration}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Feature} & FTA & Customs Union & Common Market & Economic Union & Monetary Union \\
+\hline
+Free movement of goods/services & Yes & Yes & Yes & Yes & Yes \\
+\hline
+Common external tariffs & No & Yes & Yes & Yes & Yes \\
+\hline
+Free movement of labor/capital & No & No & Yes & Yes & Yes \\
+\hline
+Common policies/institutions & No & No & No & Yes & Yes \\
+\hline
+Single currency & No & No & No & No & Yes \\
+\hline
+Example & NAFTA/USMCA & MERCOSUR & --- & EU & Eurozone \\
+\hline
+\end{tabular}}
+\end{table}
+
+\section*{18 CAPITAL FLOWS AND THE FX MARKET}
+
+\subsection*{18.1: The Foreign Exchange Market}
+
+\begin{itemize}
+  \item \textbf{Functions of the FX Market:}
+    \begin{itemize}
+      \item Facilitates cross-border trade in goods and services (denominated in foreign currencies).
+      \item Enables capital flows: purchase of foreign financial securities and physical assets.
+      \item Provides hedging opportunities against exchange rate risk (e.g., forward contracts).
+      \item Allows speculation on future movements of exchange rates.
+    \end{itemize}
+
+  \item \textbf{Participants in the FX Market:}
+    \begin{itemize}
+      \item \textbf{Sell side:} Large multinational banks (primary dealers in FX and originators of forwards).
+      \item \textbf{Buy side:}
+        \begin{itemize}
+          \item \textit{Corporations:} Conduct cross-border transactions, hedge FX risk.
+          \item \textit{Investment accounts:}
+            \begin{itemize}
+              \item Real money accounts: pension funds, insurance firms, mutual funds.
+              \item Leveraged accounts: hedge funds, proprietary trading firms.
+            \end{itemize}
+          \item \textit{Governments and central banks:} Hold reserves, intervene for policy.
+          \item \textit{Retail investors:} Households and small institutions (tourism, investments).
+        \end{itemize}
+    \end{itemize}
+
+  \item \textbf{Types of Exchange Rates:}
+    \begin{itemize}
+      \item \textbf{Nominal exchange rate:} Price of one currency in terms of another at current period. \\
+        Example: \(1.25 \, \text{USD/EUR}\) means 1 EUR costs 1.25 USD.
+      \item \textbf{Real exchange rate:} Adjusted for relative price levels between two countries.  
+        \[
+        R_{P/B} = \text{Nominal}_{P/B} \times \frac{CPI_{B}}{CPI_{P}}
+        \]
+        where $P$ = price currency country, $B$ = base currency country.
+    \end{itemize}
+
+  \item \textbf{Direct vs Indirect Quotes:}
+    \begin{itemize}
+      \item Direct quote: Price of one unit of foreign (base) currency in terms of domestic (price) currency.
+      \item Indirect quote: Price of one unit of domestic currency in terms of foreign currency.
+      \item Example:  
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Quote & USD-based investor & EUR-based investor \\
+        \hline
+        1.17 USD/EUR & Direct & Indirect \\
+        0.855 EUR/USD & Indirect & Direct \\
+        \hline
+        \end{tabular}
+    \end{itemize}
+
+  \item \textbf{Effects of Exchange Rate Changes:}
+    \begin{itemize}
+      \item If USD/EUR rises from 1.10 to 1.15:
+        \begin{itemize}
+          \item EUR becomes more expensive for U.S. consumers.
+          \item Purchasing power of USD decreases.
+        \end{itemize}
+      \item If Eurozone prices rise relative to U.S. prices:
+        \begin{itemize}
+          \item Real USD/EUR increases, reducing USD purchasing power.
+        \end{itemize}
+    \end{itemize}
+
+  \item \textbf{Example – Real Exchange Rate:}  
+  Base period:  
+  \[
+  \text{Exchange rate} = 1.70 \, \text{USD/£}, \quad CPI_{US}=100, \quad CPI_{UK}=100
+  \]  
+  After 3 years:  
+  \[
+  \text{Exchange rate} = 1.60 \, \text{USD/£}, \quad CPI_{US}=110, \quad CPI_{UK}=112
+  \]  
+  Calculation:  
+  \[
+  R_{USD/£} = 1.60 \times \frac{112}{110} = 1.629 \, \text{USD/£}
+  \]  
+  \textbf{Interpretation:} The real exchange rate fell from 1.70 to 1.629. The USD gained purchasing power, but less than if relative prices were unchanged.
+
+  \item \textbf{Spot vs Forward Exchange Rates:}
+    \begin{itemize}
+      \item Spot: Immediate delivery (usually T+2).
+      \item Forward: Agreed exchange at a future date (e.g., 30, 60, 90 days).
+      \item Example: A French firm receives £10m in 6 months. With forward rate \(1.192 \, \text{EUR/GBP}\), it locks in:  
+        \[
+        10m \times 1.192 = 11.92m \, \text{EUR}
+        \]
+        => Eliminates FX risk.
+    \end{itemize}
+
+  \item \textbf{Percentage Change in Currency Value:}
+    \begin{itemize}
+      \item Formula:  
+      \[
+      \%\Delta = \frac{S_{t} - S_{0}}{S_{0}}
+      \]
+      where $S$ = exchange rate.
+      \item Example: USD/EUR falls from 1.42 to 1.39.  
+        \[
+        \%\Delta_{\text{Euro}} = \frac{1.39}{1.42} - 1 = -2.11\% \quad \Rightarrow \text{Euro depreciated}
+        \]
+        Convert to EUR/USD:  
+        \[
+        1/1.42 = 0.7042, \quad 1/1.39 = 0.7194
+        \]
+        \[
+        \%\Delta_{\text{USD}} = \frac{0.7194}{0.7042} - 1 = +2.16\% \quad \Rightarrow \text{USD appreciated}
+        \]
+    \end{itemize}
+
+\end{itemize}
+
+\subsection*{18.2: Managing Exchange Rates}
+
+\begin{itemize}
+  \item \textbf{Exchange Rate Regimes (IMF Classification):}
+    \begin{itemize}
+      \item \textbf{Countries without their own currency:}
+        \begin{itemize}
+          \item \textit{Formal Dollarization:} Use another country’s currency (e.g., Panama uses USD). 
+            \begin{itemize}
+              \item No independent monetary policy.
+              \item Inflation rate = inflation of adopted currency.
+            \end{itemize}
+          \item \textit{Monetary Union:} Countries adopt a common currency (e.g., Eurozone).
+            \begin{itemize}
+              \item Shared monetary policy (ECB in Eurozone).
+              \item Sacrifice national monetary sovereignty.
+            \end{itemize}
+        \end{itemize}
+
+      \item \textbf{Countries with their own currency:}
+        \begin{itemize}
+          \item \textit{Currency Board Arrangement:}
+            \begin{itemize}
+              \item Explicitly backs domestic money with foreign reserves at fixed rate.
+              \item Example: Hong Kong Monetary Authority backs HKD with USD.
+              \item Pros: Stability, credibility. Cons: No independent monetary policy.
+            \end{itemize}
+          \item \textit{Conventional Fixed Peg:}
+            \begin{itemize}
+              \item Peg within ±1\% band to another currency or basket.
+              \item Maintained by \textbf{direct intervention} (FX buying/selling) or \textbf{indirect intervention} (interest rates, regulation).
+            \end{itemize}
+          \item \textit{Pegged within Horizontal Bands (Target Zone):}
+            \begin{itemize}
+              \item Wider bands (e.g., ±2\%).
+              \item Provides more monetary flexibility than conventional peg.
+            \end{itemize}
+          \item \textit{Crawling Peg:}
+            \begin{itemize}
+              \item Adjusted periodically to offset inflation differential.
+              \item \textbf{Passive crawling peg:} Adjustments follow inflation.  
+              \item \textbf{Active crawling peg:} Pre-announced adjustments to influence expectations.
+            \end{itemize}
+          \item \textit{Crawling Bands:}
+            \begin{itemize}
+              \item Bands around peg widen over time.
+              \item Used as transition from fixed to floating system.
+            \end{itemize}
+          \item \textit{Managed Float:}
+            \begin{itemize}
+              \item Exchange rate market-determined but monetary authority intervenes if needed.
+              \item No specific long-run target.
+            \end{itemize}
+          \item \textit{Independent Float:}
+            \begin{itemize}
+              \item Fully market-determined exchange rate.
+              \item Intervention only to reduce volatility (not target levels).
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+
+  \item \textbf{Summary Table of Regimes:}
+
+  \begin{tabular}{|l|l|l|l|}
+  \hline
+  \textbf{Regime} & \textbf{Flexibility} & \textbf{Example} & \textbf{Policy Autonomy} \\
+  \hline
+  Dollarization & None & Panama (USD) & None \\
+  Monetary Union & Shared & Eurozone & Limited (ECB level) \\
+  Currency Board & Very low & Hong Kong (USD peg) & None \\
+  Fixed Peg ±1\% & Low & Gulf states (USD peg) & Limited \\
+  Target Zone ±2\% & Medium & ERM II (EUR) & Moderate \\
+  Crawling Peg & Low & Some LatAm countries & Limited \\
+  Crawling Bands & Increasing & Transition cases & Rising \\
+  Managed Float & High & China (historically) & High \\
+  Independent Float & Full & USD, EUR, JPY & Full \\
+  \hline
+  \end{tabular}
+
+  \item \textbf{Effects of Exchange Rate Changes on Trade \& Capital Flows:}
+    \begin{itemize}
+      \item If \textbf{USD/EUR decreases}, then USD appreciates:
+        \begin{itemize}
+          \item Eurozone goods cheaper in USD → U.S. imports rise.
+          \item U.S. goods more expensive in EUR → Eurozone imports from U.S. fall.
+        \end{itemize}
+      \item Goods trade (exports/imports) adjusts \textbf{slowly}.
+      \item Capital flows (investment in assets, debt) adjust \textbf{quickly}.
+    \end{itemize}
+
+  \item \textbf{Balance of Payments (BoP) Identity:}
+    \[
+    (X - M) + (CI - CO) + (FI - FO) = 0
+    \]
+    where:
+    \begin{itemize}
+      \item $X-M$ = Net exports (trade balance).
+      \item $CI-CO$ = Net capital inflows/outflows.
+      \item $FI-FO$ = Net financial inflows/outflows.
+    \end{itemize}
+
+    Alternative representation (from macro identity):  
+    \[
+    (X - M) = (S - I) + (T - G)
+    \]
+    \begin{itemize}
+      \item Trade deficit ($X-M < 0$) means savings $<$ investment → foreign capital needed.
+      \item Example: U.S. trade deficit with China is offset by China’s purchase of U.S. Treasuries (capital inflow).
+    \end{itemize}
+
+  \item \textbf{Capital Flows:}
+    \begin{itemize}
+      \item \textbf{Short-run:} Determined mainly by capital flows (fast adjustment).
+      \item \textbf{Long-run:} Determined mainly by trade flows (goods/services adjust slowly).
+    \end{itemize}
+
+  \item \textbf{Government Capital Restrictions (LOS 18.c):}
+    \begin{itemize}
+      \item Objectives:
+        \begin{itemize}
+          \item Reduce volatility of domestic asset prices.
+          \item Maintain fixed exchange rate targets.
+          \item Keep domestic interest rates low (restrict outflows).
+          \item Protect strategic industries (e.g., defense, telecom).
+        \end{itemize}
+      \item Example: China restricts capital outflows to maintain RMB peg and keep domestic rates low.
+    \end{itemize}
+
+\end{itemize}
+
+\section*{19 EXCHANGE RATE CALCULATIONS}
+
+\subsection*{19.1: Foreign Exchange Rates}
+
+\begin{itemize}
+  \item \textbf{LOS 19.a: Currency Cross-Rates}
+    \begin{itemize}
+      \item Definition: A \textbf{cross rate} is the exchange rate between two currencies implied by their exchange rates with a common third currency (usually USD or EUR).
+      \item Formula: 
+      \[
+        \text{Cross Rate (A/B)} = \frac{\text{A/USD}}{\text{B/USD}}
+      \]
+      if both rates are quoted against USD.
+      \item Key Rule: Ensure the bases of quotation match. If needed, invert the rate.
+      
+      \item \textbf{Example 1: MXN/AUD}
+        \begin{itemize}
+          \item MXN/USD = 10.70, USD/AUD = 0.60
+          \item Convert: MXN/AUD = (MXN/USD) $\times$ (USD/AUD) = 10.70 $\times$ 0.60 = 6.42
+          \item Interpretation: 1 AUD = 6.42 MXN.
+        \end{itemize}
+
+      \item \textbf{Example 2: CHF/NZD}
+        \begin{itemize}
+          \item CHF/USD = 1.7799, NZD/USD = 2.2529
+          \item CHF/NZD = (CHF/USD) / (NZD/USD) = 1.7799 / 2.2529 = 0.7900
+          \item Interpretation: 1 NZD = 0.79 CHF.
+        \end{itemize}
+    \end{itemize}
+
+  \item \textbf{LOS 19.b: Forward Exchange Rates and Arbitrage (Covered Interest Parity)}
+    \begin{itemize}
+      \item \textbf{No-Arbitrage Principle:}  
+      An investor cannot earn more than the domestic risk-free rate by borrowing domestically, converting to foreign currency, investing abroad, and locking in a forward contract.
+      \[
+        F_{d/f} = S_{d/f} \times \frac{(1 + R_d)}{(1 + R_f)}
+      \]
+      where:
+      \begin{itemize}
+        \item $F_{d/f}$ = forward exchange rate (domestic per foreign)
+        \item $S_{d/f}$ = spot exchange rate
+        \item $R_d$ = domestic risk-free rate
+        \item $R_f$ = foreign risk-free rate
+      \end{itemize}
+
+      \item \textbf{Example 1: 1-Year Forward ABE/DUB}
+        \begin{itemize}
+          \item Spot: ABE/DUB = 4.5671
+          \item $R_{ABE}$ = 5\%, $R_{DUB}$ = 3\%
+          \item $F = 4.5671 \times \frac{1.05}{1.03} = 4.6558$
+          \item Forward premium = $\frac{4.6558}{4.5671} - 1 = 1.94\%$
+          \item Interpretation: ABE has higher interest rate → expected depreciation.
+        \end{itemize}
+
+      \item \textbf{Example 2: Arbitrage Profit if Forward Mispriced}
+        \begin{itemize}
+          \item Given forward = 4.6000 (below no-arbitrage rate 4.6558).
+          \item Strategy:
+            \begin{enumerate}
+              \item Borrow 1,000 DUB at 3\% -> repay 1,030 after 1 year.
+              \item Convert to ABE: 1,000 $\times$ 4.5671 = 4,567.1 ABE.
+              \item Invest at 5\% -> 4,795.45 ABE after 1 year.
+              \item Sell forward at 4.6000 -> 4,795.45 / 4.6000 = 1,042.49 DUB.
+              \item Net = 1,042.49 - 1,030 = 12.49 DUB arbitrage profit.
+            \end{enumerate}
+          \item Arbitrage pushes spot and forward rates back into parity.
+        \end{itemize}
+
+      \item \textbf{Short-Term Forwards:}  
+        For 30, 90, 180-day contracts, use money market rates:
+        \[
+          F = S \times \frac{(1 + R_d \times \tfrac{t}{360})}{(1 + R_f \times \tfrac{t}{360})}
+        \]
+
+      \item \textbf{Forward Quotes in Points:}
+        \begin{itemize}
+          \item Each point = last decimal place in spot.
+          \item Example: AUD/EUR = 0.7313, 1Y forward = +3.5 points.
+          \item Forward = 0.7313 + 0.00035 = 0.73165.
+        \end{itemize}
+
+      \item \textbf{Forward Quotes in Percentage:}
+        \begin{itemize}
+          \item Example: AUD/EUR = 0.7313, forward = -0.062\% (120-day).
+          \item Forward = 0.7313 (1 - 0.00062) = 0.7308.
+        \end{itemize}
+
+      \item \textbf{Forward Premium / Discount:}
+        \[
+          \text{Premium or Discount} = \frac{F}{S} - 1
+        \]
+        \begin{itemize}
+          \item Example: USD/EUR spot = 1.312, forward = 1.320
+          \item Premium = 1.320 / 1.312 - 1 = 0.61\% (Euro forward premium).
+          \item Annualized Premium = 0.61\% $\times \frac{12}{3} = 2.44\%$
+          \item Interpretation: More USD needed to buy 1 EUR -> EUR expected to appreciate.
+        \end{itemize}
+    \end{itemize}
+
+  \item \textbf{Summary Table: Cross-Rates and Forward Rates}
+
+\begin{center}
+\resizebox{\textwidth}{!}{%
+  \begin{tabular}{|l|l|l|l|}
+  \hline
+  \textbf{Concept} & \textbf{Formula} & \textbf{Example} & \textbf{Result} \\
+  \hline
+  Cross Rate & A/USD $\div$ B/USD & CHF/USD = 1.7799, NZD/USD = 2.2529 & 0.7900 CHF/NZD \\
+  Forward Rate (CIP) & $S \times \frac{1+R_d}{1+R_f}$ & Spot 4.5671, $R_d=5\%$, $R_f=3\%$ & 4.6558 \\
+  Points & $F = S + \tfrac{\text{points}}{10,000}$ & 0.7313, +35 points & 0.73165 \\
+  Percent & $F = S(1 + q)$ & 0.7313, $q=-0.062\%$ & 0.7308 \\
+  Premium/Discount & $\tfrac{F}{S} - 1$ & 1.312 vs 1.320 & +0.61\% premium \\
+  \hline
+  \end{tabular}}
+\end{center}
+
+\end{itemize}
+
+\end{document}
