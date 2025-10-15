@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.21)  11 AUG 2025 09:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.21)  15 OCT 2025 21:43
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**"financial analysis.tex"
-(./financial analysis.tex
+**"/Applications/study/CFA/Level 1/financial analysis/financial analysis.tex"
+(/Applications/study/CFA/Level 1/financial analysis/financial analysis.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -228,23 +227,23 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count283
 \l__pdf_internal_box=\box58
 )
-(./financial analysis.aux)
+(/Applications/study/CFA/Level 1/financial analysis/financial analysis.aux)
 \openout1 = `"financial analysis.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -310,62 +309,62 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Warning: No \author given.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 []|\OT1/cmr/bx/n/10.95 Articulate the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 \OT1/cmr/bx/n/10.95 pur-pose and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 \OT1/cmr/bx/n/10.95 con-text of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 []\OT1/cmr/m/n/10.95 Questionnaires and in-dus-
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 68--69
+Underfull \hbox (badness 1997) in paragraph at lines 75--76
 []\OT1/cmr/m/n/10.95 Financial state-ments and
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 69--70
+Underfull \hbox (badness 1270) in paragraph at lines 76--77
 []\OT1/cmr/m/n/10.95 Completed ques-tion-naires,
  []
 
 
-Underfull \hbox (badness 4621) in paragraph at lines 74--75
+Underfull \hbox (badness 4621) in paragraph at lines 81--82
 []\OT1/cmr/m/n/10.95 Adjusted fi-nan-cial state-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 []|\OT1/cmr/bx/n/10.95 Analyze/interpret
  []
 
 
-Underfull \hbox (badness 2564) in paragraph at lines 86--86
+Underfull \hbox (badness 2564) in paragraph at lines 93--93
 \OT1/cmr/bx/n/10.95 mu-ni-cate con-clu-
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 88--89
+Underfull \hbox (badness 1137) in paragraph at lines 95--96
 []\OT1/cmr/m/n/10.95 Analytical re-port an-swer-
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 89--90
+Underfull \hbox (badness 3375) in paragraph at lines 96--97
 []\OT1/cmr/m/n/10.95 Recommendations on in-
  []
 
 
-Overfull \hbox (8.86264pt too wide) in paragraph at lines 43--99
+Overfull \hbox (8.86264pt too wide) in paragraph at lines 50--106
  [][] 
  []
 
@@ -374,46 +373,46 @@ Overfull \hbox (8.86264pt too wide) in paragraph at lines 43--99
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 [2] [3]
-Overfull \hbox (24.23169pt too wide) in paragraph at lines 193--194
+Overfull \hbox (24.23169pt too wide) in paragraph at lines 200--201
 []\OT1/cmr/m/n/12 Understand is-suer's macroe-co-nomic en-vi-ron-ment (e.g., ec
 o-nomic growth prospects,
  []
 
 [4] [5] [6] [7]
-Underfull \hbox (badness 1102) in paragraph at lines 389--389
+Underfull \hbox (badness 1102) in paragraph at lines 396--396
 []|\OT1/cmr/bx/n/10.95 Panel B: News Ar-ti-cle Sum-mary
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 392--393
+Underfull \hbox (badness 1297) in paragraph at lines 399--400
 []\OT1/cmr/m/n/10.95 Gross profit: US\TS1/cmr/m/n/10.95 $\OT1/cmr/m/n/10.95 1.1
  bil-lion, up
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 393--394
+Underfull \hbox (badness 1178) in paragraph at lines 400--401
 []\OT1/cmr/m/n/10.95 Net loss: US\TS1/cmr/m/n/10.95 $\OT1/cmr/m/n/10.95 (931.2)
  mil-lion vs.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 []\OT1/cmr/m/n/10.95 Strategic shift: Sus-pended e-
  []
 
 [8]
-Underfull \hbox (badness 5331) in paragraph at lines 427--428
+Underfull \hbox (badness 5331) in paragraph at lines 434--435
 \OT1/cmr/m/n/10.95 and fi-nan-cial per-for-mance, sub-
  []
 
 [9] [10]
-Overfull \hbox (1.77199pt too wide) in paragraph at lines 514--515
+Overfull \hbox (1.77199pt too wide) in paragraph at lines 521--522
 []\OT1/cmr/m/n/12 Laws and reg-u-la-tions re-main jurisdiction-specific, ne-ces
 -si-tat-ing co-op-er-a-tion among
  []
 
 [11] [12] [13] [14] [15]
-Overfull \hbox (21.56706pt too wide) in paragraph at lines 772--789
+Overfull \hbox (21.56706pt too wide) in paragraph at lines 779--796
  [][] 
  []
 
@@ -422,27 +421,27 @@ Overfull \hbox (21.56706pt too wide) in paragraph at lines 772--789
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17] [18] [19] [20]
-Underfull \hbox (badness 3179) in paragraph at lines 1020--1021
+Underfull \hbox (badness 3179) in paragraph at lines 1027--1028
 []|\OT1/cmr/m/n/10 FIFO and Weighted Av-er-age
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1024--1024
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1031
 []|\OT1/cmr/m/n/10 Reversal of in-ven-tory
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 1024--1025
+Underfull \hbox (badness 1888) in paragraph at lines 1031--1032
 []|\OT1/cmr/m/n/10 Permissible if spec-i-fied con-di-
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1066
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
 []|\OT1/cmr/m/n/10 New Fi-nan-cial Prod-
  []
 
 [22]
-Underfull \hbox (badness 2460) in paragraph at lines 1122--1122
+Underfull \hbox (badness 2460) in paragraph at lines 1129--1129
 []|\OT1/cmr/m/n/10 Obtain man-age-ment's ex-pla-na-tion of es-ti-mates,
  []
 
@@ -450,132 +449,134 @@ Underfull \hbox (badness 2460) in paragraph at lines 1122--1122
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [23] [24]
-Overfull \hbox (13.82281pt too wide) in paragraph at lines 1205--1206
+Overfull \hbox (13.82281pt too wide) in paragraph at lines 1212--1213
 []\OT1/cmr/bx/n/12 Press Re-leases: \OT1/cmr/m/n/12 An-nounce-ments on events, 
 prod-uct changes, man-age-ment changes,
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1253--1253
+Underfull \hbox (badness 10000) in paragraph at lines 1260--1260
 []|\OT1/cmr/m/n/10 Proprietary Third-Party
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1254--1254
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1261
 []|\OT1/cmr/m/n/10 Proprietary Pri-mary Re-
  []
 
 [26]
-Overfull \hbox (63.54178pt too wide) in paragraph at lines 1294--1301
+Overfull \hbox (63.54178pt too wide) in paragraph at lines 1301--1308
  [][] 
  []
 
 [27]
-Overfull \hbox (21.02457pt too wide) in paragraph at lines 1312--1313
+Overfull \hbox (21.02457pt too wide) in paragraph at lines 1319--1320
 []\OT1/cmr/m/n/12 Aim: Pro-vide a principles-based ap-proach ap-pli-ca-ble acro
 ss di-verse revenue-generating
  []
 
 [28]
-Overfull \hbox (8.14297pt too wide) in paragraph at lines 1396--1397
+Overfull \hbox (8.14297pt too wide) in paragraph at lines 1403--1404
 []\OT1/cmr/m/n/12 Revenue dis-ag-gre-gated into company-owned store sales, fran
 -chise roy-al-ties/fees,
  []
 
 [29] [30]
-Underfull \hbox (badness 1014) in paragraph at lines 1479--1480
+Underfull \hbox (badness 1014) in paragraph at lines 1486--1487
 []|\OT1/cmr/bx/n/10 Expensed Costs (In-come State-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 1483--1483
+Underfull \hbox (badness 1675) in paragraph at lines 1490--1490
 []|\OT1/cmr/m/n/10 Software de-vel-op-ment costs meet-ing
  []
 
 
-Overfull \hbox (1.21504pt too wide) in paragraph at lines 1494--1495
+Overfull \hbox (1.21504pt too wide) in paragraph at lines 1501--1502
 []\OT1/cmr/m/n/12 Analysts must un-der-stand company-specific poli-cies to ad-j
 ust com-pa-ra-bil-ity across
  []
 
 [31] [32] [33]
-Overfull \hbox (0.19159pt too wide) in paragraph at lines 1643--1644
+Overfull \hbox (0.19159pt too wide) in paragraph at lines 1650--1651
 []\OT1/cmr/m/n/12 A com-pany pur-chases a GBP300 com-puter with a 3-year life, 
 de-pre-ci-at-ing GBP100
  []
 
 [34] [35] [36]
-Overfull \hbox (16.06917pt too wide) in paragraph at lines 1772--1773
+Overfull \hbox (16.06917pt too wide) in paragraph at lines 1779--1780
 []\OT1/cmr/m/n/12 Analysts should com-pute key ra-tios (e.g., P/E, Price/Operat
 ing Cash Flow, EV/EBITDA)
  []
 
 [37] [38]
-Overfull \hbox (56.33316pt too wide) in paragraph at lines 1865--1892
+Overfull \hbox (56.33316pt too wide) in paragraph at lines 1872--1899
  [][] 
  []
 
 [39] [40] [41] [42] [43] [44] [45] [46]
-Overfull \hbox (3.54301pt too wide) in paragraph at lines 2254--2255
+Overfull \hbox (3.54301pt too wide) in paragraph at lines 2261--2262
 []\OT1/cmr/m/n/12 Convertible pre-ferred shares are no longer out-stand-ing, in
 -creas-ing the weighted
  []
 
 
-Overfull \hbox (10.31268pt too wide) in paragraph at lines 2259--2260
+Overfull \hbox (10.31268pt too wide) in paragraph at lines 2266--2267
 []\OT1/cmr/bx/n/12 Diluted EPS For-mula (If-Converted Method for Con-vert-ible 
 Pre-ferred Stock): 
  []
 
 [47]
-Overfull \hbox (38.004pt too wide) detected at line 2277
+Overfull \hbox (38.004pt too wide) detected at line 2284
 [] \OT1/cmr/m/n/10.95 = [] = [] = [] = 3\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95
  10
  []
 
 [48]
-Overfull \hbox (38.77614pt too wide) detected at line 2353
+Overfull \hbox (38.77614pt too wide) detected at line 2360
 [] \OT1/cmr/m/n/10.95 = []
  []
 
 [49] [50]
-Overfull \hbox (56.91188pt too wide) in paragraph at lines 2438--2451
+Overfull \hbox (56.91188pt too wide) in paragraph at lines 2445--2458
  [][] 
  []
 
 [51]
-Overfull \hbox (5.96265pt too wide) in paragraph at lines 2482--2499
+Overfull \hbox (5.96265pt too wide) in paragraph at lines 2489--2506
  [][] 
  []
 
-[52] [53] [54] (./financial analysis.aux) ) 
+[52] [53] [54]
+(/Applications/study/CFA/Level 1/financial analysis/financial analysis.aux) ) 
 Here is how much of TeX's memory you used:
- 4697 strings out of 476025
- 77436 string characters out of 5790017
+ 4698 strings out of 476025
+ 77891 string characters out of 5790017
  1872388 words of memory out of 5000000
  25122 multiletter control sequences out of 15000+600000
  522753 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,16n,63p,322b,463s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-
-super/sfrm1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-su
-per/sfrm1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-supe
-r/sfrm1200.pfb>
-Output written on "financial analysis.pdf" (54 pages, 319765 bytes).
+ 57i,16n,63p,373b,463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
+sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/
+local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/lo
+cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
+xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
+2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2
+023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/202
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023
+/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2023/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2023/tex
+mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on "/Applications/study/CFA/Level 1/financial analysis/financial
+ analysis.pdf" (54 pages, 319765 bytes).
 PDF statistics:
  265 PDF objects out of 1000 (max. 8388607)
  173 compressed objects within 2 object streams
