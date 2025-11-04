@@ -1,0 +1,3280 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx} % for including images and figures
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{adjustbox}  % put in preamble
+
+
+\geometry{margin=1in}
+
+\title{Equity Investment}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Module 68.1: Derivatives Markets}
+
+\subsection*{LOS 68.a: Definition and Basic Features of a Derivative}
+
+\paragraph{1. Definition}
+\begin{itemize}
+    \item A \textbf{derivative} is a financial instrument whose value is derived from the value of another asset, rate, or index — the \textbf{underlying}.
+    \item The derivative’s price depends on the performance of the underlying at a specific future date.
+    \item Common underlyings: equities, bonds, indices, currencies, interest rates, or commodities.
+\end{itemize}
+
+\paragraph{2. Key Contract Terms}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Core Features of a Derivative Contract}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+\hline
+\textbf{Term} & \textbf{Definition / Example} \\
+\hline
+\textbf{Underlying} & The asset, rate, or index upon which the derivative’s payoff depends (e.g., stock, bond, interest rate). \\
+\hline
+\textbf{Forward Price (Exercise / Strike Price)} & Agreed price at which the underlying will be exchanged in the future (e.g., \$30 per share). \\
+\hline
+\textbf{Contract Size} & Quantity of the underlying per contract (e.g., 100 shares). \\
+\hline
+\textbf{Settlement / Maturity Date} & Future date on which the transaction is executed or settled. \\
+\hline
+\textbf{Value at Initiation} & Typically set to zero for both parties (no upfront cost). \\
+\hline
+\textbf{Settlement Type} & 
+\begin{itemize}
+  \item \textbf{Physical (Deliverable):} Actual delivery of the underlying asset.  
+  \item \textbf{Cash-Settled:} Only the net gain/loss exchanged in cash.
+\end{itemize} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{3. Forward Contract Example}
+
+\textbf{Forward Contract:} Buy 100 shares of Acme at \$30 in 3 months.
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Settlement Outcomes}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Spot Price (\$)} & \textbf{Forward Price (\$)} & \textbf{Buyer’s Gain/Loss} & \textbf{Seller’s Gain/Loss} \\
+\hline
+30 & 30 & 0 & 0 \\
+\hline
+40 & 30 & +1,000 & -1,000 \\
+\hline
+25 & 30 & -500 & +500 \\
+\hline
+\end{tabular}
+\end{table}
+
+\[
+\text{Payoff to Long = Spot Price} - \text{Forward Price}
+\]
+\[
+\text{Payoff to Short = Forward Price} - \text{Spot Price}
+\]
+
+\begin{itemize}
+  \item \textbf{Long Position (Buyer):} Gains when price $\uparrow$.
+  \item \textbf{Short Position (Seller):} Gains when price $\downarrow$.
+\end{itemize}
+
+
+
+\paragraph{4. Hedging vs. Speculation}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Purpose of Derivative Use}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Use} & \textbf{Description / Example} \\
+\hline
+\textbf{Hedging} & Using a derivative to offset an existing risk exposure.  
+Example: A farmer sells a forward on wheat to lock in the selling price. \\
+\hline
+\textbf{Speculation} & Using a derivative to gain exposure to price movements without owning the underlying.  
+Example: Buying an oil forward to profit if oil prices rise. \\
+\hline
+\textbf{Arbitrage} & Exploiting price discrepancies across markets to earn risk-free profits. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. Economic Function of Derivatives}
+\begin{itemize}
+  \item Transfer risk efficiently between parties.
+  \item Provide leverage and low-cost market exposure.
+  \item Reduce transaction costs relative to spot market trades.
+  \item Allow customized exposures to specific risks (interest rates, FX, credit, weather, etc.).
+\end{itemize}
+
+
+
+\paragraph{6. Examples of Underlyings and Risk Transfers}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Common Underlyings and Risk Use Cases}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Underlying} & \textbf{Example and Risk Type} \\
+\hline
+\textbf{Equity (Stock)} & Forward on Acme shares → risk: stock price movements. \\
+\hline
+\textbf{Bond} & Forward on 30-year U.S. Treasury bond → risk: interest rate or bond price. \\
+\hline
+\textbf{Index} & S\&P 500 forward → hedge or gain exposure to equity index performance. \\
+\hline
+\textbf{Currency} & Forward on GBP/USD → hedge FX risk from future payments/receipts. \\
+\hline
+\textbf{Interest Rate} & Forward rate agreement (FRA) → hedge future borrowing or lending rates. \\
+\hline
+\textbf{Commodity} & Wheat or oil forward → hedge producer or consumer price risk. \\
+\hline
+\textbf{Credit} & Credit default swap (CDS) → transfer risk of borrower default. \\
+\hline
+\textbf{Other} & Weather, carbon, longevity, or crypto derivatives → hedge non-financial risks. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{7. Hedging Rule of Thumb}
+\[
+\text{“Do in the futures market what you must do in the future.”}
+\]
+\begin{itemize}
+  \item Need to buy in future → go \textbf{long} futures/forwards.
+  \item Need to sell in future → go \textbf{short} futures/forwards.
+\end{itemize}
+
+
+
+\paragraph{8. Major Derivative Types Overview}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Core Derivative Instruments}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Instrument} & \textbf{Definition and Key Characteristics} \\
+\hline
+\textbf{Forwards} & Customized OTC agreement to buy/sell at a future date for fixed price. \\
+\hline
+\textbf{Futures} & Standardized version of a forward, traded on exchanges. \\
+\hline
+\textbf{Options} & Right (not obligation) to buy/sell underlying at strike price.  
+Call = buy; Put = sell. \\
+\hline
+\textbf{Swaps} & Exchange of future cash flows (e.g., fixed vs. floating interest payments). \\
+\hline
+\textbf{Credit Derivatives} & Transfer default or credit spread risk (e.g., CDS). \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 68.b: Derivative Market Structures – Exchange-Traded vs. OTC}
+
+\paragraph{1. Overview}
+\begin{itemize}
+  \item Two primary venues for derivative trading:
+  \begin{enumerate}
+    \item \textbf{Exchange-Traded Derivatives (ETDs)}
+    \item \textbf{Over-the-Counter (OTC) Derivatives}
+  \end{enumerate}
+  \item Differ mainly by standardization, counterparty risk, liquidity, and regulation.
+\end{itemize}
+
+
+
+\subsubsection*{(a) Exchange-Traded Derivatives (ETDs)}
+\begin{itemize}
+  \item Traded on centralized exchanges (e.g., CME Group, B3 Brazil, NSE India).
+  \item \textbf{Standardized contracts} with uniform terms (size, maturity, underlying, settlement).
+  \item Backed by a \textbf{central clearinghouse (CCH)} that performs novation — takes opposite side of every trade.
+  \item \textbf{Margin requirements:} Both sides post initial margin + variation margin (mark-to-market daily).
+  \item High \textbf{liquidity, transparency}, and low default risk.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Exchange-Traded Derivative Features}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Feature} & \textbf{Description} \\
+\hline
+\textbf{Trading Venue} & Centralized exchange with electronic/physical trading. \\
+\hline
+\textbf{Standardization} & Contract terms predefined by the exchange. \\
+\hline
+\textbf{Clearing Mechanism} & Central clearinghouse guarantees settlement (novation). \\
+\hline
+\textbf{Margining} & Initial + maintenance margin required; daily marking-to-market. \\
+\hline
+\textbf{Liquidity and Transparency} & High — public price discovery and regulatory oversight. \\
+\hline
+\textbf{Counterparty Risk} & Minimal — guaranteed by clearinghouse. \\
+\hline
+\textbf{Exit Mechanism} & Easy offset by taking opposite position (liquid secondary market). \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsubsection*{(b) Over-the-Counter (OTC) Derivatives}
+\begin{itemize}
+  \item Custom bilateral contracts negotiated privately between counterparties.
+  \item Examples: forwards, swaps, bespoke options.
+  \item \textbf{Highly customizable:} contract size, settlement, underlying, dates, etc.
+  \item \textbf{Counterparty risk:} each party exposed to the other’s default.
+  \item Less regulated, less transparent, and less liquid.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 7: OTC Derivative Features}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Feature} & \textbf{Description} \\
+\hline
+\textbf{Trading Venue} & Decentralized (phone, Bloomberg, interdealer platforms). \\
+\hline
+\textbf{Standardization} & Customizable — tailored to user needs. \\
+\hline
+\textbf{Clearing} & Bilateral settlement or via central counterparty (CCP) for mandated products. \\
+\hline
+\textbf{Regulation} & Light regulation (though stricter post-2008 reforms). \\
+\hline
+\textbf{Liquidity / Transparency} & Limited; trades not publicly reported (except SEFs). \\
+\hline
+\textbf{Counterparty Risk} & High (reduced for cleared swaps). \\
+\hline
+\textbf{Collateralization} & Often no mandatory margining for uncleared trades. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Example – Central Clearing Mandate (Post-2008 Reform):}
+\begin{itemize}
+  \item Many swaps must now clear through a \textbf{Central Counterparty (CCP)}.  
+  \item CCP replaces bilateral trade with two offsetting trades (reducing bilateral risk).  
+  \item Trades reported to \textbf{Swap Execution Facility (SEF)} for transparency.  
+  \item \textbf{Advantage:} lower counterparty risk; \textbf{Disadvantage:} risk concentration in CCP.
+\end{itemize}
+
+
+
+\paragraph{2. Comparison Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 8: Exchange-Traded vs. OTC Derivatives}
+\begin{tabular}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Characteristic} & \textbf{Exchange-Traded} & \textbf{OTC (Dealer Market)} \\
+\hline
+Trading Venue & Centralized exchange & Decentralized bilateral network \\
+\hline
+Contract Form & Standardized & Customized \\
+\hline
+Clearing & Central clearinghouse (CCH) & Bilateral or CCP (for cleared swaps) \\
+\hline
+Counterparty Risk & Minimal (CCH guarantees) & Significant (unless cleared) \\
+\hline
+Regulation & Highly regulated & Light (some post-crisis reforms) \\
+\hline
+Liquidity & High & Variable / low \\
+\hline
+Transparency & High (public data) & Low (private negotiation) \\
+\hline
+Transaction Costs & Low (standardized) & Higher (customized) \\
+\hline
+Collateral / Margin & Mandatory margining & Not always required \\
+\hline
+Best Use Case & Speculative or standardized hedging needs & Bespoke risk management \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Takeaways Summary}
+
+\begin{itemize}
+  \item \textbf{Derivatives:} Instruments whose value derives from an underlying asset, rate, or index.
+  \item \textbf{Key Features:} Underlying, price/strike, contract size, settlement date, zero-value initiation.
+  \item \textbf{Positions:}
+    \begin{itemize}
+      \item \textbf{Long:} Gains when underlying $\uparrow$.  
+      \item \textbf{Short:} Gains when underlying $\downarrow$.
+    \end{itemize}
+  \item \textbf{Use:} Hedging, speculation, arbitrage.
+  \item \textbf{Exchange-Traded:} Standardized, liquid, cleared, low risk.
+  \item \textbf{OTC:} Customized, less transparent, higher counterparty risk.
+  \item \textbf{Post-2008 Reform:} CCPs introduced for many swaps $\Rightarrow$ centralized risk management.
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 9: Formula and Concept Recap}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Concept} & \textbf{Formula / Rule} \\
+\hline
+Forward Contract Payoff (Long) & $V_T = S_T - F_0$ \\
+\hline
+Forward Contract Payoff (Short) & $V_T = F_0 - S_T$ \\
+\hline
+Notional Exposure & Contract Size × Underlying Price \\
+\hline
+Leverage Effect & Small change in underlying → large change in derivative value \\
+\hline
+Hedging Rule & “Do in the futures market what you must do in the future.” \\
+\hline
+Clearinghouse (CCH) Function & Novation + margining + default guarantee \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 69.1–69.2: Forwards, Futures, Swaps, Options, and Credit Derivatives}
+
+\subsection*{LOS 69.a: Define and Compare Basic Derivative Instruments}
+
+\paragraph{1. Forward Contracts}
+\begin{itemize}
+  \item \textbf{Definition:} A bilateral agreement where the \textbf{buyer (long)} agrees to purchase, and the \textbf{seller (short)} agrees to deliver, an asset at a specified price and date in the future.
+  \item \textbf{Payoff at Settlement:}
+  \[
+  V_T^{\text{Long}} = S_T - F_0 \quad \text{and} \quad V_T^{\text{Short}} = F_0 - S_T
+  \]
+  \item \textbf{Characteristics:}
+  \begin{itemize}
+    \item OTC contract — customized, privately negotiated.
+    \item No cash exchanged at initiation (value = 0).
+    \item Subject to counterparty credit risk.
+    \item Typically settled by delivery or cash.
+  \end{itemize}
+  \item \textbf{Use:} Hedging or speculation on future price changes.
+\end{itemize}
+
+\paragraph{Example: Forward Contract on Stock}
+Buy 100 shares at \$30 in 3 months.
+\[
+\text{Gain/Loss}_{\text{Long}} = 100 \times (S_T - 30)
+\]
+If $S_T = 40$ =$>$ Gain = +\$1,000; if $S_T = 25$ =$>$ Loss = –\$500.
+
+
+
+\paragraph{2. Futures Contracts}
+\begin{itemize}
+  \item \textbf{Definition:} Standardized, exchange-traded version of a forward contract.
+  \item \textbf{Differences vs. Forwards:}
+  \begin{itemize}
+    \item Traded on organized exchanges.
+    \item Backed by a \textbf{clearinghouse} (no counterparty risk).
+    \item \textbf{Daily mark-to-market:} Profits/losses settled daily.
+    \item \textbf{Margin requirements:} Initial + maintenance margin deposits required.
+    \item High liquidity and price transparency.
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Example: Gold Futures Margining}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Mark-to-Market Process for 100 oz Gold Futures}
+\begin{tabular}{|p{1cm}|p{3.5cm}|p{3cm}|p{4.5cm}|p{4cm}|}
+\hline
+\textbf{Day} & \textbf{Settlement Price} & \textbf{Change (\$/oz)} & \textbf{Buyer’s Balance (\$)} & \textbf{Seller’s Balance (\$)} \\
+\hline
+0 & 1,950 & — & 5,000 (Initial) & 5,000 (Initial) \\
+1 & 1,947.5 & –2.5 & 4,750 & 5,250 \\
+2 & 1,945 & –2.5 & 4,500 $\Rightarrow$ margin call +500 → 5,000 & 5,500 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Futures Margin Formulas}
+\[
+\text{Daily Gain/Loss} = (\text{Price}_{t} - \text{Price}_{t-1}) \times \text{Contract Size}
+\]
+
+\textbf{Price Limits and Circuit Breakers:}
+\begin{itemize}
+  \item Exchanges impose daily maximum price moves to control volatility.
+  \item If exceeded, trading halts temporarily (“limit up” / “limit down”).
+\end{itemize}
+
+
+
+\paragraph{3. Comparison: Forwards vs. Futures}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Key Differences between Forwards and Futures}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Feature} & \textbf{Forward} & \textbf{Futures} \\
+\hline
+Trading Venue & OTC (private) & Exchange-traded \\
+\hline
+Standardization & Customized & Standardized \\
+\hline
+Liquidity & Low & High \\
+\hline
+Counterparty Risk & High & Minimal (clearinghouse) \\
+\hline
+Settlement & Single (at maturity) & Daily mark-to-market \\
+\hline
+Margins & None required & Initial + maintenance margin \\
+\hline
+Price Limits & None & Imposed by exchange \\
+\hline
+Transparency & Low & High \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 69.a (continued): Swaps, Credit Derivatives, and Options}
+
+\paragraph{4. Swaps}
+\begin{itemize}
+  \item \textbf{Definition:} Agreement to exchange a series of cash flows on periodic settlement dates over time.
+  \item \textbf{Most common:} \textbf{Interest rate swap} — one party pays fixed, the other pays floating.
+  \item \textbf{Equivalent to:} A series of forward contracts.
+  \item \textbf{Exposure:} Counterparty credit risk unless cleared by a central counterparty (CCP).
+\end{itemize}
+
+\paragraph{Example: Fixed-for-Floating Interest Rate Swap}
+\[
+\text{Notional Principal} = \$10,000,000
+\]
+\[
+\text{Fixed Rate} = 2\% \quad \Rightarrow \text{Quarterly Fixed Payment} = 10,000,000 \times \frac{0.02}{4} = 50,000
+\]
+\[
+\text{Floating Rate (SOFR)} = 1.6\% \quad \Rightarrow \text{Floating Payment} = 10,000,000 \times \frac{0.016}{4} = 40,000
+\]
+\textbf{Net Payment:} Fixed payer pays 10,000 to the floating payer.
+
+\begin{itemize}
+  \item \textbf{Hedging Example:} A firm with floating-rate debt enters a fixed-pay swap to convert exposure into fixed-rate liability.
+\end{itemize}
+
+
+
+\paragraph{5. Credit Default Swaps (CDS)}
+\begin{itemize}
+  \item \textbf{Definition:} Protection buyer pays periodic premiums; protection seller compensates buyer if a credit event occurs.
+  \item \textbf{Credit event:} Default, bankruptcy, or restructuring of the reference entity.
+  \item \textbf{Payoff:} Protection seller pays loss amount = (1 – recovery rate) × notional.
+  \item \textbf{Risk Profiles:}
+  \begin{itemize}
+    \item Protection buyer = long credit risk protection (short credit exposure).
+    \item Protection seller = earns premium but assumes credit risk.
+  \end{itemize}
+\end{itemize}
+
+\paragraph{CDS Analogy}
+\[
+\text{CDS Spread} \approx \text{Default Probability} \times \text{Loss Given Default (LGD)}
+\]
+
+
+
+\paragraph{6. Options (Calls and Puts)}
+\begin{itemize}
+  \item \textbf{Call Option:} Right (not obligation) to \textbf{buy} underlying at strike price \( X \).
+  \item \textbf{Put Option:} Right (not obligation) to \textbf{sell} underlying at strike price \( X \).
+  \item \textbf{Option Buyer (Holder):} Pays \textbf{premium}; has limited loss (premium) and unlimited profit potential (for calls).
+  \item \textbf{Option Seller (Writer):} Receives premium; faces opposite payoff.
+\end{itemize}
+
+\paragraph{Option Value at Expiration}
+\[
+\text{Call Payoff} = \max(0, S_T - X) \qquad
+\text{Put Payoff} = \max(0, X - S_T)
+\]
+
+\paragraph{Profit Formulas}
+\[
+\text{Call Buyer Profit} = \max(0, S_T - X) - \text{Premium}
+\]
+\[
+\text{Put Buyer Profit} = \max(0, X - S_T) - \text{Premium}
+\]
+\[
+\text{Writer Profit} = \text{Premium} - \text{Option Payoff}
+\]
+
+
+
+\subsection*{LOS 69.b: Option Payoffs and Profit Diagrams}
+
+\paragraph{1. Call Option Example}
+\[
+\text{Exercise Price} = \$50, \quad \text{Premium} = \$5
+\]
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Call Option Profits at Expiration}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Stock Price (S)} & \textbf{Call Value} & \textbf{Buyer Profit} & \textbf{Writer Profit} \\
+\hline
+40 & 0 & –5 & +5 \\
+\hline
+50 & 0 & –5 & +5 \\
+\hline
+55 & 5 & 0 (breakeven) & 0 \\
+\hline
+60 & 10 & +5 & –5 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+  \item \textbf{Breakeven:} $X + \text{Premium} = 55$
+  \item \textbf{Max Loss (Buyer):} \$5 (premium)
+  \item \textbf{Max Loss (Writer):} Unlimited
+  \item \textbf{Max Profit (Writer):} \$5
+\end{itemize}
+
+
+
+\paragraph{2. Put Option Example}
+\[
+\text{Exercise Price} = \$50, \quad \text{Premium} = \$5
+\]
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Put Option Profits at Expiration}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Stock Price (S)} & \textbf{Put Value} & \textbf{Buyer Profit} & \textbf{Writer Profit} \\
+\hline
+60 & 0 & –5 & +5 \\
+\hline
+50 & 0 & –5 & +5 \\
+\hline
+45 & 5 & 0 (breakeven) & 0 \\
+\hline
+40 & 10 & +5 & –5 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+  \item \textbf{Breakeven:} $X - \text{Premium} = 45$
+  \item \textbf{Max Gain (Buyer):} $X - \text{Premium} = 45$
+  \item \textbf{Max Loss (Buyer):} Premium = \$5
+  \item \textbf{Max Loss (Writer):} \$45
+\end{itemize}
+
+\paragraph{3. Summary of Option Exposures}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Option Position Payoff Summary}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Position} & \textbf{Exposure to Underlying} & \textbf{Profit When...} \\
+\hline
+Call Buyer (Long Call) & Long & Price rises ($S_T \uparrow$) \\
+\hline
+Call Writer (Short Call) & Short & Price falls ($S_T \downarrow$) \\
+\hline
+Put Buyer (Long Put) & Short & Price falls ($S_T \downarrow$) \\
+\hline
+Put Writer (Short Put) & Long & Price rises ($S_T \uparrow$) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{4. Example: Combined Option Profit}
+Given: \( X = 40 \), \( \text{Call Premium} = 3 \), \( \text{Put Premium} = 0.75 \).
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Option Profits at Expiration}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Stock Price (S)} & \textbf{Long Call} & \textbf{Short Call} & \textbf{Long Put} & \textbf{Short Put} \\
+\hline
+35 & –3 & +3 & +4.25 & –4.25 \\
+\hline
+43 & 0 & 0 & –0.75 & +0.75 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+  \item Call profitable when $S > 43$.
+  \item Put profitable when $S < 39.25$.
+\end{itemize}
+
+
+
+\subsection*{LOS 69.c: Forward Commitments vs. Contingent Claims}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 7: Comparison of Derivative Claim Types}
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\textbf{Feature} & \textbf{Forward Commitment} & \textbf{Contingent Claim} \\
+\hline
+\textbf{Definition} & Obligation to transact in the future. & Payoff depends on occurrence of specific event. \\
+\hline
+\textbf{Examples} & Forwards, futures, swaps. & Options, CDS. \\
+\hline
+\textbf{Obligation} & Both parties must perform. & Only exercised if event favorable. \\
+\hline
+\textbf{Initial Value} & Typically zero at inception. & Buyer pays upfront premium. \\
+\hline
+\textbf{Payoff Trigger} & Always executed at maturity. & Only if condition met (e.g., $S_T > X$ or credit default). \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Interpretation:}
+\begin{itemize}
+  \item Forward commitments = linear payoffs (obligation).
+  \item Contingent claims = nonlinear payoffs (optionality).
+\end{itemize}
+
+
+
+\subsection*{Key Takeaways Summary}
+
+\begin{itemize}
+  \item \textbf{Forwards:} Customized OTC; one-time settlement; counterparty risk.
+  \item \textbf{Futures:} Standardized, exchange-traded, daily mark-to-market, low counterparty risk.
+  \item \textbf{Swaps:} Series of forward commitments; most common = interest rate swap.
+  \item \textbf{Credit Derivatives (CDS):} Payoff contingent on credit event; used for credit risk hedging.
+  \item \textbf{Options:} Nonlinear contingent claims; provide asymmetric risk exposures.
+  \item \textbf{Forward Commitments vs. Contingent Claims:}  
+  Obligation vs. optional payoff.
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 8: Formula Recap}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Derivative Type} & \textbf{Key Formula} \\
+\hline
+Forward Payoff (Long) & $S_T - F_0$ \\
+\hline
+Futures Daily Gain & $(P_t - P_{t-1}) \times \text{Contract Size}$ \\
+\hline
+Swap Fixed Payment & $\text{Notional} \times \frac{\text{Fixed Rate}}{m}$ \\
+\hline
+Call Payoff & $\max(0, S_T - X)$ \\
+\hline
+Put Payoff & $\max(0, X - S_T)$ \\
+\hline
+Call Profit (Buyer) & $\max(0, S_T - X) - C_0$ \\
+\hline
+Put Profit (Buyer) & $\max(0, X - S_T) - P_0$ \\
+\hline
+CDS Payout & $(1 - \text{Recovery Rate}) \times \text{Notional}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 70.1: Uses, Benefits, and Risks of Derivatives}
+
+\subsection*{LOS 70.a: Benefits and Risks of Derivative Instruments}
+
+\paragraph{1. Advantages of Derivatives}
+
+\begin{itemize}
+    \item Derivatives allow investors and issuers to \textbf{alter, transfer, or manage risk exposures} without transacting directly in the underlying cash markets.
+    \item They also enhance market efficiency, improve price discovery, and reduce operational costs.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Summary of Derivative Advantages}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Advantage Category} & \textbf{Explanation and Examples} \\
+\hline
+\textbf{(1) Risk Transfer and Management} &
+\begin{itemize}
+    \item \textbf{Hedging:} Reduce exposure to undesirable price movements.
+    \item Example: A manufacturer hedges FX risk of future USD receipts by selling USD forward.
+    \item Example: A floating-rate note issuer enters a swap to pay fixed and receive floating.
+    \item Example: An equity investor buys a put option to limit downside risk.
+    \item \textbf{Speculation:} Gain exposure to desired risk (e.g., buying calls for upside participation).
+\end{itemize} \\
+\hline
+\textbf{(2) Information Discovery} &
+\begin{itemize}
+    \item Derivative prices reveal market expectations:
+    \begin{itemize}
+        \item \textbf{Option prices} =$>$ imply expected volatility (\textit{implied volatility}).
+        \item \textbf{Futures/forwards} =$>$ imply expected future prices of underlying.
+        \item \textbf{Interest rate futures} =$>$ imply expected future short-term rates or policy changes.
+    \end{itemize}
+\end{itemize} \\
+\hline
+\textbf{(3) Operational Advantages} &
+\begin{itemize}
+    \item \textbf{Ease of short sales:} No need to borrow the underlying asset (e.g., selling futures).
+    \item \textbf{Lower transaction costs:} Avoid costs of transportation, insurance, and settlement.
+    \item \textbf{Greater leverage:} Small margin requirement allows large notional exposure.
+    \item \textbf{Greater liquidity:} Low capital requirement enables rapid large-scale adjustments.
+\end{itemize} \\
+\hline
+\textbf{(4) Improved Market Efficiency} &
+\begin{itemize}
+    \item Lower trading costs and ease of arbitrage → fewer mispricings.
+    \item Example: Arbitrage through index futures keeps spot and futures prices aligned.
+\end{itemize} \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+
+\paragraph{2. Risks of Derivatives}
+
+\begin{itemize}
+    \item Despite their advantages, derivatives entail several types of risks.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Major Risks Associated with Derivatives}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Risk Type} & \textbf{Explanation and Example} \\
+\hline
+\textbf{(1) Implicit Leverage Risk} &
+\begin{itemize}
+    \item Small initial margin = high leverage.
+    \item Example: Futures margin = 5\% =$>$ leverage = 20:1. A 1\% price drop =$>$ 20\% loss on margin.
+    \item Amplifies both gains and losses; may lead to margin calls or forced liquidation.
+\end{itemize} \\
+\hline
+\textbf{(2) Basis Risk} &
+\begin{itemize}
+    \item Occurs when the hedge and the exposure are imperfectly correlated.
+    \item Example: A fund hedges portfolio of 50 large-cap stocks with S\&P 500 futures → imperfect hedge.
+    \item Example: Farmer sells October corn futures for a September harvest → mismatch in timing.
+\end{itemize} \\
+\hline
+\textbf{(3) Liquidity Risk} &
+\begin{itemize}
+    \item Hedge cash flows and underlying cash flows do not align.
+    \item Example: Farmer short wheat futures → margin calls when price rises even if harvest value offsets losses.
+    \item Lack of liquidity to meet interim margin calls can destroy hedge effectiveness.
+\end{itemize} \\
+\hline
+\textbf{(4) Counterparty Credit Risk} &
+\begin{itemize}
+    \item Risk that the counterparty fails to perform.
+    \item Forwards: Both parties face risk (bilateral).
+    \item Options: Only buyer faces risk (seller has received premium).
+    \item Futures: Counterparty risk minimized via central clearinghouse and daily margining.
+\end{itemize} \\
+\hline
+\textbf{(5) Systemic Risk} &
+\begin{itemize}
+    \item Excessive speculation and interconnected exposures may threaten entire markets.
+    \item Post-2008 reforms: central clearing mandates for swaps aim to reduce systemic counterparty risk.
+\end{itemize} \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\paragraph{3. Implicit Leverage Formula}
+\[
+\text{Leverage Ratio} = \frac{1}{\text{Margin Requirement}}
+\]
+Example: Margin = 4\% =$>$ leverage = 25:1.  
+A 1\% adverse price move causes:
+\[
+\text{Loss on Margin} = 1\% \times 25 = 25\% \text{ of equity.}
+\]
+
+
+
+\paragraph{4. Summary Diagram: Derivative Benefits vs. Risks}
+\[
+\boxed{
+\begin{aligned}
+\textbf{Benefits:} & \quad \text{Risk transfer, information discovery, efficiency, leverage, liquidity.} \\
+\textbf{Risks:} & \quad \text{Leverage, basis mismatch, liquidity stress, counterparty risk, systemic contagion.}
+\end{aligned}
+}
+\]
+
+
+
+\subsection*{LOS 70.b: Derivative Use by Issuers vs. Investors}
+
+\paragraph{1. Corporate Issuers (Hedgers / Risk Managers)}
+
+\begin{itemize}
+    \item Firms use derivatives to manage earnings and balance sheet volatility due to market, interest rate, FX, or commodity price movements.
+    \item \textbf{Issuers of derivatives} include corporations creating swap or forward exposures.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Examples of Derivative Use by Issuers}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Exposure / Problem} & \textbf{Derivative Solution and Result} \\
+\hline
+\textbf{Foreign currency receipts} &
+Use \textbf{forward contracts} to lock in domestic-currency value (cash flow hedge). \\
+\hline
+\textbf{Fixed-rate debt valued at fair value} &
+Enter \textbf{interest rate swap} as floating-rate payer → reduces fair value volatility (fair value hedge). \\
+\hline
+\textbf{Commodity inventory at fair value} &
+Sell \textbf{commodity forwards} to offset inventory value changes. \\
+\hline
+\textbf{Foreign subsidiary value volatility} &
+Use \textbf{FX forwards/futures} as a \textbf{net investment hedge} to stabilize reported equity value. \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\paragraph{2. Hedge Accounting Classifications}
+\begin{itemize}
+    \item \textbf{Cash Flow Hedge:} Reduces variability in future cash flows.  
+      Example: FX forward for future foreign currency receipts.
+    \item \textbf{Fair Value Hedge:} Reduces volatility in balance sheet values.  
+      Example: Interest rate swap to stabilize fixed-rate debt valuation.
+    \item \textbf{Net Investment Hedge:} Protects against FX changes in foreign subsidiaries.  
+      Example: FX forward on subsidiary’s equity value.
+\end{itemize}
+
+\paragraph{3. Benefits to Issuers}
+\begin{itemize}
+    \item Reduce earnings volatility.
+    \item Stabilize reported financials.
+    \item Align economic and accounting exposures via hedge accounting.
+\end{itemize}
+
+
+
+\paragraph{4. Investors (Buy-side Users)}
+\begin{itemize}
+    \item Use derivatives to hedge, modify, or amplify exposure to underlying risks (equities, rates, FX, commodities).
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Examples of Derivative Use by Investors}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Objective} & \textbf{Derivative Example and Effect} \\
+\hline
+\textbf{Hedging Risk Exposure} &
+Buy index put to limit downside risk while maintaining upside potential. \\
+\hline
+\textbf{Speculative Exposure (Leverage)} &
+Buy silver forwards to gain exposure with low capital outlay. \\
+\hline
+\textbf{Duration Management} &
+Enter interest rate swap (pay floating / receive fixed) to increase portfolio duration. \\
+\hline
+\textbf{Market Timing / Tactical Allocation} &
+Buy S\&P 500 futures to temporarily increase equity exposure, or sell to reduce it. \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\paragraph{5. Key Comparison: Issuers vs. Investors}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Comparison of Derivative Use}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Aspect} & \textbf{Issuers (Corporates)} & \textbf{Investors (Buy-side)} \\
+\hline
+Primary Goal & Hedge financial reporting and cash flow volatility. & Adjust portfolio risk/return profile. \\
+\hline
+Typical Instruments & Swaps, forwards, futures (hedges). & Options, futures, swaps (speculative or hedge). \\
+\hline
+Accounting Impact & Subject to hedge accounting (IFRS/GAAP rules). & Reflected at fair value in portfolio returns. \\
+\hline
+Time Horizon & Medium-to-long term balance sheet exposures. & Short-term tactical or strategic positions. \\
+\hline
+Example Use & FX forward for export receipts. & Index puts to protect equity portfolio. \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+
+\paragraph{6. Conceptual Summary Diagram}
+\[
+\boxed{
+\begin{aligned}
+\textbf{Issuers:} & \quad \text{Manage risk on balance sheet items (FX, interest rates, commodities).} \\
+\textbf{Investors:} & \quad \text{Manage portfolio exposures (hedge, leverage, or speculate).}
+\end{aligned}
+}
+\]
+
+
+
+\subsection*{Key Formulas and Concepts Recap}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Quantitative and Conceptual Recap}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Key Idea} \\
+\hline
+Leverage Ratio & $\text{Leverage} = \frac{1}{\text{Margin Requirement}}$ \\
+\hline
+Basis Risk & $\text{Basis} = \text{Spot Price} - \text{Futures Price}$ \\
+\hline
+Counterparty Risk & Higher for OTC forwards/swaps; minimal for exchange-traded futures. \\
+\hline
+Hedge Effectiveness & Correlation between underlying exposure and derivative hedge. \\
+\hline
+Cash Flow Hedge & Stabilizes future cash flows (e.g., FX forward). \\
+\hline
+Fair Value Hedge & Stabilizes asset/liability valuations (e.g., interest rate swap). \\
+\hline
+Net Investment Hedge & Offsets FX changes on foreign subsidiaries. \\
+\hline
+Liquidity Risk & Mismatch between hedge cash flow timing and underlying exposure. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Final Summary Box}
+
+\[
+\boxed{
+\begin{aligned}
+\textbf{Advantages:} & \; \text{Risk transfer, low cost, liquidity, leverage, price discovery, efficiency.} \\
+\textbf{Risks:} & \; \text{Leverage, basis mismatch, liquidity stress, counterparty, systemic risk.} \\
+\textbf{Issuers:} & \; \text{Use derivatives to hedge accounting and operational exposures.} \\
+\textbf{Investors:} & \; \text{Use derivatives to hedge, speculate, or modify portfolio exposures.}
+\end{aligned}
+}
+\]
+
+\section*{Module 71.1: Arbitrage, Replication, and Carrying Costs}
+
+\subsection*{LOS 71.a: Arbitrage and Replication in Derivative Pricing}
+
+\paragraph{1. No-Arbitrage Principle}
+\begin{itemize}
+  \item \textbf{Arbitrage:} A simultaneous purchase and sale of identical (or equivalent) assets to earn a \textbf{risk-free profit with zero net investment}.
+  \item \textbf{No-Arbitrage Condition:} If two portfolios generate the same future payoff under all states, they must have the same value today.
+  \[
+  \text{If } \text{Payoff}_A = \text{Payoff}_B \Rightarrow \text{Value}_A = \text{Value}_B
+  \]
+  \item Any deviation creates an arbitrage opportunity that will quickly be eliminated by market forces.
+\end{itemize}
+
+
+
+\paragraph{2. Example: No-Arbitrage Forward Price Derivation}
+
+\textbf{Given:}
+\[
+S_0 = \$30, \quad R_f = 5\%, \quad T = 1 \text{ year}, \quad \text{No dividends.}
+\]
+
+\textbf{Portfolio 1 (Synthetic Stock):}
+\begin{itemize}
+  \item Buy bond paying $F_0(1)$ at $t=1$ → Cost = $F_0(1)/(1.05)$.
+  \item Enter \textbf{long forward} (zero cost).
+  \item Payoff at $t=1$: $S_1$.
+\end{itemize}
+
+\textbf{Portfolio 2 (Actual Stock):}
+\begin{itemize}
+  \item Buy Acme share today → Cost = $30$.
+  \item Payoff at $t=1$: $S_1$.
+\end{itemize}
+
+\textbf{By Law of One Price:}
+\[
+F_0(1)/1.05 = 30 \quad \Rightarrow \quad \boxed{F_0(1) = 30(1.05) = 31.50}
+\]
+
+\textbf{No-Arbitrage Forward Price:}
+\[
+\boxed{F_0(T) = S_0(1 + R_f)^T}
+\]
+
+
+
+\paragraph{3. Arbitrage Scenarios}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Forward Mispricing and Arbitrage Actions}
+\begin{tabular}{|c|c|p{8cm}|}
+\hline
+\textbf{Case} & \textbf{Condition} & \textbf{Arbitrage Strategy} \\
+\hline
+Forward price too high & $F_0(1) > 31.50$ &
+\begin{itemize}
+  \item Sell (short) the forward.
+  \item Buy the underlying (Acme share).
+  \item Borrow to finance purchase if necessary.
+  \item Deliver share at $t=1$, receive $F_0$, repay loan $\Rightarrow$ profit = $F_0 - S_0(1+R_f)$.
+\end{itemize} \\
+\hline
+Forward price too low & $F_0(1) < 31.50$ &
+\begin{itemize}
+  \item Buy the forward.
+  \item Short sell the underlying, invest proceeds at $R_f$.
+  \item Receive $S_0(1+R_f)$ at $t=1$, use $F_0$ to close short $\Rightarrow$ profit = $S_0(1+R_f) - F_0$.
+\end{itemize} \\
+\hline
+\end{tabular}
+\end{table}
+
+\[
+\boxed{
+\text{Arbitrage condition: } F_0(T) = S_0(1 + R_f)^T
+}
+\]
+
+
+
+\paragraph{4. Replication Concept}
+
+\textbf{Replication:} Constructing a portfolio of cash-market instruments that produces the same payoff as the derivative under all states of the world.
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Replicating Forward Positions}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Position} & \textbf{Replicating Strategy (Same Payoff at $T$)} \\
+\hline
+\textbf{Long Forward} &
+Borrow $S_0$ at $R_f$, buy one share.  
+At $T$: Payoff = $S_T - S_0(1+R_f)^T = S_T - F_0(T)$. \\
+\hline
+\textbf{Short Forward} &
+Short one share, invest proceeds $S_0$ at $R_f$.  
+At $T$: Payoff = $S_0(1+R_f)^T - S_T = F_0(T) - S_T$. \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Therefore:} When forward is correctly priced,
+\[
+F_0(T) = S_0(1 + R_f)^T
+\]
+
+\paragraph{Intuition:}
+\begin{itemize}
+  \item A long forward = long spot + short bond.
+  \item A short forward = short spot + long bond.
+\end{itemize}
+
+
+
+\subsection*{LOS 71.b: Spot Price, Expected Future Price, and Cost of Carry}
+
+\paragraph{1. Forward Pricing with Costs and Benefits}
+
+\textbf{Base Formula (Discrete Compounding):}
+\[
+\boxed{F_0(T) = [S_0 + PV_0(\text{costs}) - PV_0(\text{benefits})] (1 + R_f)^T}
+\]
+
+\begin{itemize}
+  \item \textbf{Costs of carry:} Storage, insurance, financing, etc. → increase forward price.
+  \item \textbf{Benefits of holding:} Dividends, coupon income, convenience yield → decrease forward price.
+\end{itemize}
+
+\paragraph{Example 1: With Storage Cost Only}
+\[
+S_0 = 100, \quad PV_0(\text{storage}) = 2, \quad R_f = 5\%, \quad T = 1
+\]
+\[
+F_0(1) = (100 + 2)(1.05) = 107.10
+\]
+
+\paragraph{Example 2: With Dividend Benefit}
+\[
+S_0 = 30, \quad \text{Dividend} = 1, \quad R_f = 5\%
+\]
+\[
+F_0(1) = [30 - PV_0(1)](1.05) = 30(1.05) - 1 = 31.50 - 1 = 30.50
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+  \item Benefits ($\uparrow$) =$>$ Forward price ($\downarrow$)
+  \item Costs ($\uparrow$) =$>$ Forward price ($\uparrow$)
+\end{itemize}
+
+
+
+\paragraph{2. Cost of Carry with Continuous Compounding}
+
+\textbf{Without Costs/Benefits:}
+\[
+F_0(T) = S_0 e^{rT}
+\]
+
+\textbf{With Costs (rate = $c$):}
+\[
+F_0(T) = S_0 e^{(r + c)T}
+\]
+
+\textbf{With Benefits (rate = $b$):}
+\[
+F_0(T) = S_0 e^{(r + c - b)T}
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+  \item $r$ = risk-free rate (financing cost)  
+  \item $c$ = storage cost rate  
+  \item $b$ = benefit yield (dividend or convenience yield)
+\end{itemize}
+
+
+
+\paragraph{3. Example: Continuous Compounding}
+
+\[
+S_0 = 1{,}550, \quad r = 3\%, \quad b = 1.3\%, \quad T = 0.5
+\]
+\[
+F_0 = 1{,}550 \times e^{(0.03 - 0.013)(0.5)} = 1{,}550 \times e^{0.0085} = \boxed{1{,}563.23}
+\]
+
+\textbf{Interpretation:}  
+Forward price reflects interest cost (carry) net of benefits.
+
+
+
+\paragraph{4. Cost of Carry Definition}
+
+\[
+\text{Cost of Carry} = \text{Financing Cost (r + c)} - \text{Benefits (b)}
+\]
+
+\textbf{Effect on Forward Price:}
+\begin{itemize}
+  \item If $b > (r + c)$ → Forward price $<$ Spot (backwardation).
+  \item If $b < (r + c)$ → Forward price $>$ Spot (contango).
+\end{itemize}
+
+\[
+\boxed{
+F_0(T) = S_0 e^{(\text{Cost of Carry})T}
+}
+\]
+
+
+
+\subsection*{Forward Contracts on Currencies}
+
+\paragraph{1. Covered Interest Rate Parity (CIRP)}
+
+\[
+\boxed{F_0 = S_0 \times \frac{(1 + R_{\text{price}})}{(1 + R_{\text{base}})}}
+\]
+
+\textbf{Continuous Compounding Form:}
+\[
+F_0 = S_0 e^{(r_{\text{price}} - r_{\text{base}})T}
+\]
+
+
+
+\paragraph{2. Example: USD/EUR Forward Arbitrage}
+
+\textbf{Given:}
+\[
+S_0 = 1.10 \, (\text{USD/EUR}), \quad R_{\text{USD}} = 2\%, \quad R_{\text{EUR}} = 3\%, \quad T = 1
+\]
+\[
+F_0 = 1.10 \times \frac{1.02}{1.03} = \boxed{1.0893}
+\]
+or equivalently,
+\[
+F_0 = 1.10 e^{(0.0198 - 0.0296)} = 1.0893
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+  \item Forward EUR price falls (USD expected to appreciate).
+  \item Higher foreign (EUR) rate =$>$ base currency (USD) expected to strengthen.
+\end{itemize}
+
+
+
+\paragraph{3. Arbitrage Illustration}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Currency Arbitrage Transactions (USD-based Investor)}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{Step} & \textbf{Transaction and Cash Flows} \\
+\hline
+1. Borrow USD & Borrow \$100 at 2\% interest. \\
+\hline
+2. Convert to EUR & \$100 / 1.10 = €90.91. \\
+\hline
+3. Invest in EUR asset & €90.91 × 1.03 = €93.64 at year-end. \\
+\hline
+4. Use Forward to convert back & Sell €93.64 at forward rate 1.0893 USD/EUR → \$102.00. \\
+\hline
+5. Repay USD loan & \$100 × 1.02 = \$102.00 → No arbitrage profit. \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Interpretation:}  
+If forward rate deviates from parity, arbitrage exists:
+\[
+F_{\text{too high}} \Rightarrow \text{Sell forward (USD overpriced)} \\
+F_{\text{too low}} \Rightarrow \text{Buy forward (USD underpriced)}
+\]
+
+
+
+\subsection*{Key Takeaways Summary}
+
+\begin{itemize}
+  \item \textbf{Arbitrage:} Exploiting price differences to earn risk-free profits.
+  \item \textbf{Replication:} Reconstructing derivative payoffs using spot and risk-free assets.
+  \item \textbf{No-Arbitrage Forward Price (discrete):} $F_0(T) = S_0(1 + R_f)^T$
+  \item \textbf{Continuous compounding:} $F_0(T) = S_0 e^{(r + c - b)T}$
+  \item \textbf{Cost of Carry:} $(r + c - b)$ — determines contango or backwardation.
+  \item \textbf{Currency forwards:} $F_0 = S_0 e^{(r_{\text{price}} - r_{\text{base}})T}$
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Formula Recap}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Relationship} \\
+\hline
+No-arbitrage forward (discrete) & $F_0(T) = S_0(1 + R_f)^T$ \\
+\hline
+No-arbitrage forward (continuous) & $F_0(T) = S_0 e^{rT}$ \\
+\hline
+Forward with costs/benefits & $F_0(T) = [S_0 + PV(\text{cost}) - PV(\text{benefit})](1+R_f)^T$ \\
+\hline
+Continuous compounding (general) & $F_0(T) = S_0 e^{(r + c - b)T}$ \\
+\hline
+Currency forward (discrete) & $F_0 = S_0 \times \frac{(1 + R_{\text{price}})}{(1 + R_{\text{base}})}$ \\
+\hline
+Currency forward (continuous) & $F_0 = S_0 e^{(r_{\text{price}} - r_{\text{base}})T}$ \\
+\hline
+Cost of Carry & $\text{Cost of Carry} = (r + c - b)$ \\
+\hline
+Replication (Long Forward) & Buy spot, borrow at $R_f$ \\
+\hline
+Replication (Short Forward) & Short spot, lend at $R_f$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\[
+\boxed{
+\textbf{Summary Rule:} \quad
+\begin{cases}
+F_0 > S_0(1 + R_f)^T & \Rightarrow \text{Sell forward, buy underlying} \\
+F_0 < S_0(1 + R_f)^T & \Rightarrow \text{Buy forward, short underlying}
+\end{cases}
+}
+\]
+
+
+\section*{Module 72.1: Forward Contract Valuation}
+
+\subsection*{LOS 72.a: Value and Price of a Forward Contract}
+
+\paragraph{1. Key Distinction: Price vs. Value}
+
+\begin{itemize}
+    \item \textbf{Forward Price} ($F_0(T)$): the agreed-upon delivery price set \emph{at initiation}.
+    \item \textbf{Forward Value} ($V_t(T)$): the \emph{current market value} of an existing forward to either party.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Difference Between Forward Price and Forward Value}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Term} & \textbf{Meaning and Notes} \\
+\hline
+Forward Price ($F_0(T)$) & The delivery price that makes the contract's initial value zero. Set by no-arbitrage. \\
+\hline
+Forward Value ($V_t(T)$) & The market value of the contract at time $t$ (may be positive or negative as spot price changes). \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{2. Valuation at Initiation}
+
+\[
+F_0(T) = S_0 (1 + R_f)^T
+\]
+\[
+V_0(T) = S_0 - F_0(T)(1 + R_f)^{-T} = 0
+\]
+
+\textbf{Interpretation:}  
+At initiation, the forward price is chosen such that the contract has zero value to both parties (no arbitrage).
+
+
+
+\paragraph{3. Valuation During Contract Life}
+
+At time $t < T$, the \textbf{value to the long (buyer)} is:
+
+\[
+\boxed{V_t(T) = S_t - F_0(T)(1 + R_f)^{-(T-t)}}
+\]
+
+\textbf{Logic:}
+\begin{itemize}
+    \item $S_t$: current spot value of the underlying.
+    \item $F_0(T)(1 + R_f)^{-(T-t)}$: present value of forward delivery price.
+    \item If $S_t > PV(F_0)$ → gain to long; if $S_t < PV(F_0)$ → loss to long.
+\end{itemize}
+
+\textbf{Replication:}  
+Sell the asset short at $S_t$ and invest $F_0(T)(1 + R_f)^{-(T-t)}$ at the risk-free rate → locks in the current forward value.
+
+
+
+\paragraph{4. Valuation at Expiration}
+
+\[
+\boxed{V_T(T) = S_T - F_0(T)}
+\]
+
+\begin{itemize}
+    \item \textbf{Long forward payoff:} $S_T - F_0(T)$
+    \item \textbf{Short forward payoff:} $F_0(T) - S_T$
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item If $S_T > F_0(T)$ → gain for the long.
+    \item If $S_T < F_0(T)$ → gain for the short.
+\end{itemize}
+
+
+
+\paragraph{5. General Case with Costs and Benefits}
+
+\[
+\boxed{V_t(T) = [S_t + PV_t(\text{costs}) - PV_t(\text{benefits})] - F_0(T)(1 + R_f)^{-(T-t)}}
+\]
+
+\begin{itemize}
+    \item \textbf{Costs:} storage, insurance, financing.  
+    \item \textbf{Benefits:} dividends, coupons, convenience yield.
+    \item \textbf{Net effect:} costs increase, benefits decrease forward value.
+\end{itemize}
+
+
+
+\paragraph{6. Example: Forward Value During Life}
+
+\textbf{Given:}
+\[
+S_0 = 100,\ R_f = 4\%,\ T = 1,\ \text{so } F_0 = 104.
+\]
+After 6 months ($t=0.5$ yr):
+\[
+S_t = 103
+\]
+
+\textbf{Value to Long:}
+\[
+V_t = 103 - 104(1.04)^{-0.5} = 103 - 101.96 = \boxed{+1.04}
+\]
+\textbf{Interpretation:}  
+The long could close the contract now and lock in a profit of \$1.04 per unit.
+
+
+
+\paragraph{7. Summary Table of Forward Valuation}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Forward Price and Value Summary}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Timing} & \textbf{Forward Price} & \textbf{Value to Long} \\
+\hline
+Initiation & $F_0(T) = S_0(1 + R_f)^T$ & $0$ \\
+\hline
+During Life & Fixed at $F_0(T)$ & $S_t - F_0(T)(1 + R_f)^{-(T-t)}$ \\
+\hline
+At Expiration & $F_0(T)$ & $S_T - F_0(T)$ \\
+\hline
+With Costs/Benefits & $[S_0 + PV_0(c) - PV_0(b)](1 + R_f)^T$ & $[S_t + PV_t(c) - PV_t(b)] - PV(F_0)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 72.b: Forward Rates and Interest Rate Forward Contracts}
+
+\paragraph{1. Definition: Forward Rate}
+\begin{itemize}
+    \item A \textbf{forward rate} is the implied interest rate for a loan or investment \emph{that begins in the future}.
+    \item Denoted as:
+    \[
+    F_{m,n} = \text{Forward rate for an $n$-year loan starting in $m$ years.}
+    \]
+    \item Examples:
+    \[
+    F_{1,1} \text{ (1y1y)} = \text{1-year loan starting 1 year from now.}
+    \]
+    \[
+    F_{2,1} \text{ (2y1y)} = \text{1-year loan starting 2 years from now.}
+    \]
+\end{itemize}
+
+
+
+\paragraph{2. Forward Rate Derivation}
+
+\[
+(1 + Z_2)^2 = (1 + Z_1)(1 + F_{1,1})
+\]
+
+\[
+\boxed{F_{1,1} = \frac{(1 + Z_2)^2}{(1 + Z_1)} - 1}
+\]
+
+\textbf{General Formula:}
+\[
+(1 + Z_{m+n})^{m+n} = (1 + Z_m)^m (1 + F_{m,n})^n
+\]
+\[
+\boxed{F_{m,n} = \left( \frac{(1 + Z_{m+n})^{m+n}}{(1 + Z_m)^m} \right)^{1/n} - 1}
+\]
+
+
+
+\paragraph{3. Example: Implied Forward Rate}
+
+\textbf{Given:}
+\[
+Z_2 = 2\%, \quad Z_3 = 3\%
+\]
+Find $F_{2,1}$.
+
+\[
+(1 + 0.03)^3 = (1 + 0.02)^2 (1 + F_{2,1})
+\]
+\[
+1.0927 = 1.0404(1 + F_{2,1}) \Rightarrow F_{2,1} = 5.03\%
+\]
+
+\textbf{Interpretation:}  
+The implied 1-year rate starting 2 years from now is 5.03\%.
+
+
+
+\paragraph{4. Forward Rate Agreement (FRA)}
+
+\begin{itemize}
+    \item A forward contract on an interest rate.
+    \item \textbf{Parties:}
+    \begin{itemize}
+        \item \textbf{Fixed-rate payer (long):} pays fixed forward rate, receives floating.
+        \item \textbf{Floating-rate payer (short):} pays realized reference rate, receives fixed.
+    \end{itemize}
+    \item Used by financial institutions to hedge or speculate on future interest rates.
+\end{itemize}
+
+
+
+\paragraph{5. FRA Payoff Formula (to Fixed-Rate Payer)}
+
+\[
+\boxed{
+\text{Payoff} = \frac{(\text{Reference Rate} - \text{Forward Rate}) \times \text{Notional} \times (d/360)}{1 + \text{Reference Rate} \times (d/360)}
+}
+\]
+
+where $d$ = days in interest period.
+
+
+
+\paragraph{6. Example: FRA Valuation}
+
+\textbf{Given:}
+\begin{itemize}
+    \item 3m6m FRA (loan starts 3 months from now, lasts 6 months)
+    \item Notional = \$1 million  
+    \item Forward rate $= 1.3\%$, realized 6-month rate $= 1.5\%$
+\end{itemize}
+
+\[
+\text{Payoff} = \frac{(0.015 - 0.013) \times 1{,}000{,}000 \times 0.5}{1 + 0.015 \times 0.5}
+= \frac{1{,}000}{1.0075} = \boxed{\$993.}
+\]
+
+\textbf{Interpretation:}  
+Since the floating rate \(>\) forward rate, the fixed-rate payer receives a gain.
+
+
+
+\paragraph{7. FRA Uses}
+
+\begin{itemize}
+    \item \textbf{Banks / Issuers:} Hedge future funding costs or interest income.
+    \item \textbf{Investors:} Speculate on rate movements or hedge bond duration.
+    \item \textbf{Building Blocks:} Multi-period FRAs = Interest rate swaps.
+\end{itemize}
+
+
+
+\paragraph{8. Summary of Forward Rate Notation}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Forward Rate Interpretation}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Notation} & \textbf{Meaning} \\
+\hline
+1y1y or $F_{1,1}$ & 1-year loan beginning 1 year from today \\
+\hline
+2y1y or $F_{2,1}$ & 1-year loan beginning 2 years from today \\
+\hline
+3y2y or $F_{3,2}$ & 2-year loan beginning 3 years from today \\
+\hline
+3m6m & 6-month rate beginning 3 months from today \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Formula Recap}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Formula and Relationship Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Interpretation} \\
+\hline
+Forward Price (no cost) & $F_0(T) = S_0(1 + R_f)^T$ \\
+\hline
+Forward Value at $t$ & $V_t(T) = S_t - F_0(T)(1 + R_f)^{-(T-t)}$ \\
+\hline
+Forward Value with costs/benefits & $[S_t + PV_t(c) - PV_t(b)] - PV(F_0)$ \\
+\hline
+Expiration Payoff (Long) & $S_T - F_0(T)$ \\
+\hline
+Implied Forward Rate (discrete) & $(1 + Z_{m+n})^{m+n} = (1 + Z_m)^m(1 + F_{m,n})^n$ \\
+\hline
+Forward Rate (continuous) & $F_{m,n} = \frac{Z_{m+n}(m+n) - Z_m m}{n}$ \\
+\hline
+FRA Payoff (fixed-rate payer) & $\frac{(R_{\text{ref}} - R_{\text{fwd}})N(d/360)}{1 + R_{\text{ref}}(d/360)}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Conceptual Summary Box}
+
+\[
+\boxed{
+\begin{aligned}
+\textbf{Forward Contract:} & \text{ At initiation } V_0 = 0,\ \text{Price fixed at } F_0(T). \\
+\textbf{During Life:} & \text{ Value changes with spot price: } V_t = S_t - PV(F_0). \\
+\textbf{At Expiration:} & V_T = S_T - F_0. \\
+\textbf{Forward Rates:} & \text{Implied from zero rates: } (1 + Z_{m+n})^{m+n} = (1 + Z_m)^m(1 + F_{m,n})^n. \\
+\textbf{FRAs:} & \text{Single-period interest rate swaps for hedging future rates.}
+\end{aligned}
+}
+\]
+
+\section*{Module 73.1: Futures Valuation}
+
+\subsection*{LOS 73.a: Comparing the Value and Price of Forwards and Futures}
+
+\paragraph{1. Key Concept: Price vs. Value}
+
+\begin{itemize}
+    \item \textbf{Forward Contract:}
+    \begin{itemize}
+        \item The \textbf{forward price} ($F_0$) is fixed at initiation.
+        \item The \textbf{value} ($V_t$) fluctuates with the spot price of the underlying but is \emph{not settled} until maturity.
+    \end{itemize}
+    \item \textbf{Futures Contract:}
+    \begin{itemize}
+        \item Both the \textbf{price and value} change daily.
+        \item Gains/losses are realized and settled daily through the \textbf{mark-to-market (MTM)} process.
+    \end{itemize}
+\end{itemize}
+
+
+
+\paragraph{2. Daily Mark-to-Market (MTM) Example:}
+
+\textbf{Example: Futures on 100 oz gold at \$1,870}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Daily Settlement Illustration (Simplified)}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Day} & \textbf{Settlement Price (\$/oz)} & \textbf{Change (\$/oz)} & \textbf{Daily Gain/Loss (\$)} \\
+\hline
+0 & 1,870 & – & – \\
+1 & 1,872 & +2 & +200 \\
+2 & 1,868 & –4 & –400 \\
+3 & 1,869 & +1 & +100 \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Explanation:}
+\begin{itemize}
+    \item The contract’s \textbf{price changes daily}, and each day’s gain/loss is settled.
+    \item After settlement, the \textbf{contract value resets to zero}.
+    \item Forward contracts, by contrast, do not have daily settlements; their values simply accumulate until expiration.
+\end{itemize}
+
+
+
+\paragraph{3. Futures Price Definition (Interest Rate Futures)}
+
+\[
+\boxed{\text{Futures Price} = 100 - (100 \times \text{MRR}_{A,B-A})}
+\]
+
+\textbf{Example:}
+\[
+\text{If futures price = 97,} \quad \Rightarrow \text{MRR}_{6m,6m} = 3\%.
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Futures prices move inversely to market reference rates (MRR).
+    \item As interest rates rise → futures price decreases.
+\end{itemize}
+
+
+
+\paragraph{4. Basis Point Value (BPV)}
+
+\[
+\boxed{\text{BPV} = \text{Notional Principal} \times \text{Period} \times 0.01\%}
+\]
+
+\textbf{Example:}
+\[
+\text{BPV} = 1{,}000{,}000 \times \frac{0.0001}{2} = €50.
+\]
+\textbf{Interpretation:}  
+A one-basis-point change in the MRR changes the contract value by €50.
+
+
+
+\paragraph{5. Forward vs. Futures Comparison}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Comparison of Forwards and Futures}
+\small
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabularx}{\textwidth}{@{} l >{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}X @{}}
+\toprule
+\textbf{Feature} & \textbf{Forward Contract} & \textbf{Futures Contract} \\
+\midrule
+Trading venue & OTC (customized) & Exchange-traded (standardized) \\
+Settlement & Single payment at expiration & Daily mark-to-market (MTM) settlements \\
+Credit risk & Counterparty risk (no clearinghouse) & Minimal counterparty risk (clearinghouse) \\
+Liquidity & Less liquid (custom contracts) & Highly liquid \\
+Value behavior & Value changes continuously; no interim cash flows & Value resets to zero daily through mark-to-market (MTM) \\
+Price behavior & Essentially fixed over contract life (set at \(F_0\)) & Fluctuates daily with market expectations \\
+Correlation effect & Less affected by interest-rate correlation & Correlation between interest rates and futures prices affects valuation \\
+\bottomrule
+\end{tabularx}
+\end{adjustbox}
+\end{table}
+
+
+
+\subsection*{LOS 73.b: Why Forward and Futures Prices Differ}
+
+\paragraph{1. Daily Settlement Impact}
+
+\begin{itemize}
+    \item \textbf{Forwards:} No daily cash flow until maturity → gains/losses accrue.
+    \item \textbf{Futures:} Daily gains/losses settled → immediate reinvestment or withdrawal affects future interest income.
+\end{itemize}
+
+\paragraph{2. Correlation Between Interest Rates and Futures Prices}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Effect of Correlation on Futures vs. Forwards}
+\begin{tabular}{|c|p{5cm}|p{6cm}|}
+\hline
+\textbf{Correlation} & \textbf{Outcome} & \textbf{Interpretation} \\
+\hline
+Positive $(r \uparrow, \text{Futures Price} \uparrow)$ &
+Futures more valuable than forwards. &
+Long gains (positive MTM) coincide with higher rates, allowing higher reinvestment returns. \\
+\hline
+Negative $(r \uparrow, \text{Futures Price} \downarrow)$ &
+Futures less valuable than forwards. &
+Gains occur when rates are low → less reinvestment income. \\
+\hline
+Zero / Constant Rates & No difference. & Futures and forwards priced equally. \\
+\hline
+\end{tabular}
+\end{table}
+
+\[
+\boxed{
+\text{If } \text{Corr}(r, \text{Futures Price}) > 0 \Rightarrow F_{\text{fut}} > F_{\text{fwd}}
+}
+\]
+
+
+
+\paragraph{3. Example: Interest Rate Futures Convexity Bias}
+
+\textbf{Given:}
+\begin{itemize}
+    \item \$1,000,000 6-month interest rate future priced at 97.50 (i.e. MRR = 2.5\%).
+    \item Settlement in six months.
+    \item Each 1-bp change = \$50.
+\end{itemize}
+
+\textbf{Scenario A: MRR rises to 2.51\%}
+\[
+\text{Gain to long (forward)} = \frac{50}{1 + 0.0251/2} = 49.3803
+\]
+
+\textbf{Scenario B: MRR falls to 2.49\%}
+\[
+\text{Loss to long (forward)} = -\frac{50}{1 + 0.0249/2} = -49.3852
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item The value change is asymmetric — a decrease in rates increases value slightly more than an equivalent rate increase decreases it.
+    \item This curvature is called \textbf{convexity bias}.
+\end{itemize}
+
+
+
+\paragraph{4. Convexity Bias Summary}
+
+\[
+\boxed{%
+\begin{aligned}
+\text{Futures exhibit greater linear sensitivity (daily MTM),}\\
+\text{Forwards exhibit convexity bias (nonlinear response).}
+\end{aligned}%
+}
+\]
+
+\textbf{Analogy:}  
+Like bond convexity — value gain from rate decreases $>$ value loss from rate increases of equal magnitude.
+
+
+
+\paragraph{5. Interest Rate Futures vs. Forward Rate Agreements (FRA)}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Interest Rate Futures vs. FRAs}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Feature} & \textbf{Interest Rate Futures} vs. \textbf{FRA} \\
+\hline
+Market Type & Exchange-traded (standardized) vs. OTC (customized). \\
+\hline
+Quotation & Price basis: $100 - (100 \times \text{MRR})$ vs. Rate basis (direct interest rate). \\
+\hline
+Settlement & Daily MTM vs. Single cash settlement at start of forward period. \\
+\hline
+Valuation & Value resets to 0 daily vs. Value changes continuously until maturity. \\
+\hline
+Convexity Effect & Linear (no convexity) vs. Convexity bias present (asymmetric sensitivity). \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{6. Summary Example: Correlation and Futures Superiority}
+
+\textbf{Scenario: Positive Correlation between Interest Rates and Futures Price}
+
+\begin{itemize}
+    \item When rates $\uparrow$, futures prices $\uparrow$, gains settled daily → funds reinvested at high rates.
+    \item When rates $\downarrow$, losses settled daily → funds paid at low opportunity cost.
+\end{itemize}
+
+\textbf{Conclusion:}  
+\[
+\boxed{F_{\text{fut}} > F_{\text{fwd}} \text{ when correlation } \rho(r, F_{\text{price}}) > 0.}
+\]
+
+
+
+\subsection*{Conceptual Flow Summary}
+
+\[
+\boxed{
+\begin{aligned}
+\textbf{Forwards:} & \quad \text{One-time settlement at maturity; fixed price $F_0$.} \\
+\textbf{Futures:} & \quad \text{Daily settlement (MTM); price changes each day.} \\
+\textbf{Correlation Effect:} & \quad \rho(r, F_{\text{price}}) > 0 \Rightarrow F_{\text{fut}} > F_{\text{fwd}}. \\
+\textbf{Convexity Bias:} & \quad \text{Futures less convex → differ for long-term interest contracts.}
+\end{aligned}
+}
+\]
+
+
+
+\subsection*{Formula Summary Table}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Key Formulas Recap}
+\begin{tabular}{|p{3cm}|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Relationship} \\
+\hline
+Futures Price (interest rate futures) & $P_{\text{fut}} = 100 - (100 \times \text{MRR})$ \\
+\hline
+BPV (Basis Point Value) & $\text{BPV} = \text{Notional} \times \text{Period} \times 0.0001$ \\
+\hline
+Forward Value & $V_t = S_t - F_0(1 + R_f)^{-(T-t)}$ \\
+\hline
+Forward Expiration Value & $V_T = S_T - F_0$ \\
+\hline
+Futures vs. Forwards (Correlation Rule) & $\rho(r, F_{\text{price}}) > 0 \Rightarrow F_{\text{fut}} > F_{\text{fwd}}$ \\
+\hline
+Futures Convexity Bias & $\text{Forward Value Change (↓r)} > |\text{Forward Value Change (↑r)}|$ \\
+\hline
+Interest Rate Futures Increment & $\Delta V = \text{BPV} \times \Delta \text{MRR (bps)}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Takeaways}
+
+\[
+\boxed{
+\begin{aligned}
+& \textbf{1. Forwards:} \text{Fixed forward price, single settlement, value fluctuates.} \\
+& \textbf{2. Futures:} \text{Daily MTM; both price and value change daily.} \\
+& \textbf{3. Correlation:} \text{If } \rho(r, F_{\text{price}}) > 0 \Rightarrow F_{\text{fut}} > F_{\text{fwd}}. \\
+& \textbf{4. Convexity Bias:} \text{Forwards show non-linear (convex) rate sensitivity.} \\
+& \textbf{5. Practical Impact:} \text{In short maturities, } F_{\text{fut}} \approx F_{\text{fwd}}.
+\end{aligned}
+}
+\]
+
+\section*{Module 74.1: Swap Valuation}
+
+\subsection*{LOS 74.a: Swaps vs. Series of Forward Rate Agreements (FRAs)}
+
+\paragraph{1. Basic Definition}
+
+\begin{itemize}
+    \item An \textbf{interest rate swap (IRS)} is a derivative contract in which:
+    \begin{itemize}
+        \item One party pays a \textbf{fixed rate} on a notional principal.
+        \item The other pays a \textbf{floating rate} (typically a market reference rate, MRR).
+    \end{itemize}
+    \item Payments are netted — only the \emph{difference} between fixed and floating is exchanged.
+\end{itemize}
+
+\[
+\boxed{
+\text{Net Payment at period } n = (\text{MRR}_n - F) \times \text{Notional} \times \frac{\text{Days}}{360}
+}
+\]
+
+
+
+\paragraph{2. Structure Example: 1-Year Quarterly Swap}
+
+\[
+\text{Fixed Rate} = F, \quad \text{Floating Rate} = \text{90-day MRR}_n
+\]
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Quarterly Cash Flows (Fixed-for-Floating Swap)}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Quarter (n)} & \textbf{Floating Rate (MRR\textsubscript{n})} & \textbf{Fixed Rate (F)} & \textbf{Net Payment to Fixed Payer} \\
+\hline
+1 & Known at initiation (MRR\textsubscript{1}) & F & MRR\textsubscript{1} - F \\
+\hline
+2 & Unknown (MRR\textsubscript{2}) & F & MRR\textsubscript{2} - F \\
+\hline
+3 & Unknown (MRR\textsubscript{3}) & F & MRR\textsubscript{3} - F \\
+\hline
+4 & Unknown (MRR\textsubscript{4}) & F & MRR\textsubscript{4} - F \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item The first floating rate payment (based on current MRR\textsubscript{1}) is \emph{known} at time 0.
+    \item Future floating payments (MRR\textsubscript{2-4}) are \emph{unknown} and depend on future rates.
+\end{itemize}
+
+
+
+\paragraph{3. Swap = Series of Forward Rate Agreements (FRAs)}
+
+\[
+\boxed{
+\text{A fixed-for-floating swap is equivalent to a portfolio of long FRAs for the fixed payer.}
+}
+\]
+
+\textbf{Structure:}
+\begin{itemize}
+    \item FRA 1 → Settlement in 90 days: Pays $(\text{MRR}_2 - F)$
+    \item FRA 2 → Settlement in 180 days: Pays $(\text{MRR}_3 - F)$
+    \item FRA 3 → Settlement in 270 days: Pays $(\text{MRR}_4 - F)$
+\end{itemize}
+
+\textbf{However:}
+\begin{itemize}
+    \item Each FRA has a contract rate equal to $F$, but FRAs individually may not be zero-value at initiation.
+    \item The \textbf{sum of all FRA values} at initiation equals zero — defining the \textbf{par swap rate}.
+\end{itemize}
+
+
+
+\paragraph{4. No-Arbitrage Interpretation}
+
+\begin{itemize}
+    \item The fixed payer’s position (pay fixed, receive floating) can be \textbf{replicated} by:
+    \[
+    \boxed{
+    \text{Borrowing at the fixed rate and lending at the floating rate.}
+    }
+    \]
+    \item The par swap rate $F_{\text{par}}$ is the rate that makes the \emph{value of the swap at initiation} equal to zero.
+\end{itemize}
+
+\[
+\boxed{
+\text{PV(Fixed Leg)} = \text{PV(Floating Leg)}
+}
+\]
+
+\textbf{Result:}
+\[
+V_0^{\text{swap}} = 0
+\]
+
+
+
+\paragraph{5. Relationship Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Swap vs. Series of FRAs}
+\small
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabularx}{\textwidth}{@{} l >{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}X @{}}
+\toprule
+\textbf{Characteristic} & \textbf{Swap} & \textbf{Series of FRAs} \\
+\midrule
+Underlying & Floating reference rate (e.g., 90‑day MRR) & Same underlying rate (each FRA references the same index) \\
+Structure & Multiple fixed-versus-floating exchanges across reset dates & Each FRA covers one fixed-versus-floating period \\
+Payment timing & Net interest differential settled at each reset (often netted) & Payments typically occur at the start of each FRA period (PV‑adjusted) \\
+Valuation at initiation & Par swap rate chosen so total PV of payments = 0 & Individual FRAs may have nonzero initial values; the sum can replicate the swap PV profile \\
+Cash-flow equivalence & Sum of all FRAs can replicate swap cash flows if notional and conventions match & Equivalent when notionals, accrual conventions and payment dates align \\
+\bottomrule
+\end{tabularx}
+\end{adjustbox}
+\end{table}
+
+
+
+\paragraph{6. Example: Swap as Series of FRAs}
+
+Given: 1-year quarterly swap (4 periods), fixed rate = 4\%, notional = \$1,000,000.
+
+\begin{table}[h!]
+\centering
+\caption*{Swap as Series of FRAs — Net Flows per Quarter}
+\begin{tabular}{|p{3cm}|p{5cm}|p{7cm}|}
+\hline
+\textbf{Quarter} & \textbf{Forward 90-day MRR} & \textbf{Net Flow (MRR $-$ 4\%) $\times$ \tfrac{1}{4} $\times$ \$1,000,000} \\
+\hline
+1 & 4.00\% (known) & \$0 \\
+2 & 4.25\% & +\$625 \\
+3 & 3.75\% & -\$625 \\
+4 & 4.10\% & +\$250 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 74.b: Swap Value and Swap Price}
+
+\paragraph{1. Distinction Between Price and Value}
+
+\begin{itemize}
+    \item \textbf{Price:} The fixed rate specified in the swap contract — the \emph{par swap rate}.
+    \item \textbf{Value:} The difference between the PV of floating and fixed legs — can change over time.
+\end{itemize}
+
+\[
+\boxed{
+\text{Swap Price} = F_{\text{par}} \quad ; \quad \text{Swap Value at time } t = PV(\text{Float Leg}) - PV(\text{Fixed Leg})
+}
+\]
+
+
+
+\paragraph{2. Swap Valuation Logic}
+
+At initiation:
+\[
+V_0^{\text{swap}} = PV(\text{Float}) - PV(\text{Fixed}) = 0
+\]
+
+During the swap life:
+\[
+V_t^{\text{swap}} = PV_t(\text{Expected Floating Payments}) - PV_t(\text{Fixed Payments})
+\]
+
+At any given time, changes in expected future short-term rates will shift the swap’s value:
+\begin{itemize}
+    \item If expected future MRRs $\uparrow$ → value of fixed payer’s position $\uparrow$
+    \item If expected future MRRs $\downarrow$ → value of fixed payer’s position $\downarrow$
+\end{itemize}
+
+
+
+\paragraph{3. Determining the Par Swap Rate}
+
+Let:
+\begin{itemize}
+    \item $S_i$ = Spot rate for period $i$ (e.g., 90-day, 180-day, 270-day, 360-day)
+    \item $MRR_i$ = Implied forward rate for period $i$
+    \item $F$ = Fixed swap rate (unknown)
+\end{itemize}
+
+\[
+\boxed{
+PV(\text{Fixed Leg}) = PV(\text{Floating Leg})
+}
+\]
+
+\[
+F = \frac{1 - (1 + S_4)^{-4}}{\frac{1}{4}\left[(1 + S_1)^{-1} + (1 + S_2)^{-2} + (1 + S_3)^{-3} + (1 + S_4)^{-4}\right]}
+\]
+
+\textbf{Interpretation:}  
+The par swap rate is the fixed rate $F$ that makes the swap’s net PV = 0.
+
+
+
+\paragraph{4. Swap Value After Initiation}
+
+If market rates change:
+\[
+V_t^{\text{swap}} = PV_t(\text{Float Leg at new MRR}) - PV_t(\text{Fixed Leg at F})
+\]
+\[
+> 0 \Rightarrow \text{Value to fixed payer if rates rise.}
+\]
+
+
+
+\paragraph{5. Example: Swap Valuation Concept}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Notional = \$1,000,000
+    \item Quarterly swap, 1 year remaining
+    \item Fixed rate = 3\%
+    \item Current implied forward 90-day MRRs = 2.8\%, 3.2\%, 3.4\%, 3.6\%
+\end{itemize}
+
+\textbf{Step 1: Compute PV(Fixed Leg):}
+\[
+PV(\text{Fixed}) = 0.0075(1 + 0.028/4)^{-1} + 0.0075(1 + 0.032/4)^{-2} + \dots
+\]
+
+\textbf{Step 2: Compute PV(Floating Leg):}
+\[
+PV(\text{Float}) = \sum \frac{\text{Expected MRR}_i}{4(1 + S_i)^i}
+\]
+
+\textbf{Step 3: Swap Value:}
+\[
+V = PV(\text{Float}) - PV(\text{Fixed})
+\]
+
+\textbf{If } V > 0 \text{ → gain to fixed payer (rates have risen)}.
+
+
+
+\paragraph{6. Relationship Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Swap Price vs. Swap Value}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Definition / Behavior} \\
+\hline
+Swap Price & Fixed rate in the contract ($F_{\text{par}}$). Constant throughout. \\
+\hline
+Swap Value & Changes with market expectations of future floating rates. \\
+\hline
+At Initiation & PV(Fixed) = PV(Floating) → Value = 0. \\
+\hline
+If Expected Rates Rise & Fixed payer gains; floating payer loses. \\
+\hline
+If Expected Rates Fall & Fixed payer loses; floating payer gains. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{7. Conceptual Illustration}
+
+\[
+\boxed{
+\text{Swap} = \text{Series of FRAs (long fixed, short floating)} \Rightarrow
+\begin{cases}
+\text{Price} = F_{\text{par}} \\
+\text{Value} = PV_{\text{Float}} - PV_{\text{Fixed}}
+\end{cases}
+}
+\]
+
+
+
+\subsection*{Summary of Key Formulas}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Core Swap Formulas}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula} \\
+\hline
+Swap Net Payment & $(\text{MRR}_n - F) \times \text{Notional} \times \frac{d}{360}$ \\
+\hline
+Par Swap Rate & $\displaystyle F_{\text{par}} = \frac{1 - (1 + S_N)^{-N}}{\sum_{i=1}^{N} (1 + S_i)^{-i} \times \Delta t_i}$ \\
+\hline
+Swap Value & $V_t = PV_t(\text{Float}) - PV_t(\text{Fixed})$ \\
+\hline
+Value to Fixed Payer & Increases when expected short-term rates rise. \\
+\hline
+Value to Floating Payer & Increases when expected short-term rates fall. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Takeaways}
+
+\[
+\boxed{
+\begin{aligned}
+& \textbf{1. Swap = Series of FRAs:} \text{ Each period behaves like a forward on MRR.} \\
+& \textbf{2. Price (Par Swap Rate):} \text{ Fixed rate ensuring PV(Fixed) = PV(Floating).} \\
+& \textbf{3. Value:} \text{ Difference in PVs — changes with expected rates.} \\
+& \textbf{4. Direction:} \uparrow \text{Expected MRR} \Rightarrow \uparrow \text{Value to fixed payer.} \\
+& \textbf{5. Initiation:} \text{ Always zero value under no-arbitrage.}
+\end{aligned}
+}
+\]
+
+\section*{Module 75.1: Option Valuation}
+
+\subsection*{LOS 75.a: Exercise Value, Moneyness, and Time Value of an Option}
+
+\paragraph{1. Moneyness Definitions}
+
+\begin{itemize}
+    \item \textbf{Moneyness} indicates whether immediate exercise yields a gain.
+    \item Let $S$ = current price of the underlying, and $X$ = exercise (strike) price.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Moneyness Conditions}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Option Type} & \textbf{In the Money (ITM)} & \textbf{At the Money (ATM)} & \textbf{Out of the Money (OTM)} \\
+\hline
+Call Option & $S - X > 0$ & $S = X$ & $S - X < 0$ \\
+\hline
+Put Option & $X - S > 0$ & $S = X$ & $X - S < 0$ \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\textbf{Example:}  
+July 40 Call \& Put, stock price = \$37  
+\[
+\begin{aligned}
+\text{Call: } S - X &= 37 - 40 = -3 \Rightarrow 3\text{ out of the money.} \\
+\text{Put: } X - S &= 40 - 37 = +3 \Rightarrow 3\text{ in the money.}
+\end{aligned}
+\]
+
+
+
+\paragraph{2. Exercise (Intrinsic) Value}
+
+\[
+\boxed{
+\text{Exercise Value (Intrinsic Value)} = \max(0, \text{Amount In the Money})
+}
+\]
+
+\[
+\begin{aligned}
+\text{Call: } & \max(0, S - X) \\
+\text{Put: } & \max(0, X - S)
+\end{aligned}
+\]
+
+\textbf{Interpretation:}  
+Intrinsic value = immediate exercise payoff (if exercised now).
+
+
+
+\paragraph{3. Time Value}
+
+\[
+\boxed{
+\text{Option Premium} = \text{Exercise Value} + \text{Time Value}
+}
+\]
+
+\textbf{Time Value (Speculative Value):}
+\[
+\text{Time Value} = \text{Market Price of Option} - \text{Intrinsic Value}
+\]
+
+\begin{itemize}
+    \item Reflects potential for future favorable price moves.
+    \item Always positive before expiration.
+    \item Decreases as expiration approaches (\emph{time decay}).
+\end{itemize}
+
+\[
+\boxed{
+\text{At expiration: Time Value} = 0
+}
+\]
+
+
+
+\paragraph{4. Illustration: Option Value Composition}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Option Premium Decomposition}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Option} & \textbf{Market Price} & \textbf{Intrinsic Value} & \textbf{Time Value} \\
+\hline
+Call @ \$5, $S - X = 3$ & \$5 & \$3 & \$2 \\
+\hline
+Put @ \$4, $X - S = 0$ & \$4 & \$0 & \$4 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 75.b: Arbitrage and Replication in Option Pricing}
+
+\paragraph{1. Difference from Forward Commitments}
+
+\begin{itemize}
+    \item \textbf{Forward commitments:} Initial value = 0 for both parties.
+    \item \textbf{Options (contingent claims):} Initial value $>$ 0 (buyer pays premium).
+    \item Forward payoffs are \textbf{symmetric}; option payoffs are \textbf{one-sided}.
+\end{itemize}
+
+\[
+\text{Call payoff: } \max(0, S_T - X), \quad \text{Put payoff: } \max(0, X - S_T)
+\]
+
+\textbf{Replication:}  
+Option values derived by replicating option payoff through combinations of:
+\begin{itemize}
+    \item The underlying asset (long/short),
+    \item A pure discount bond (borrowing/lending at $R_f$).
+\end{itemize}
+
+
+
+\paragraph{2. Upper Bounds (No Arbitrage)}
+
+\begin{itemize}
+    \item \textbf{Call option:}
+    \[
+    \boxed{c_t \leq S_t}
+    \]
+    No one pays more than the current asset price for a call.
+    \item \textbf{Put option:}
+    \[
+    \boxed{p_t \leq X(1 + R_f)^{-(T - t)}}
+    \]
+    Max payoff discounted to present (since puts are European).
+\end{itemize}
+
+
+
+\paragraph{3. Lower Bounds (No Arbitrage)}
+
+\textbf{For Call Options:}
+
+\[
+\boxed{
+c_0 \geq \max[0, S_0 - X(1 + R_f)^{-T}]
+}
+\]
+
+\textbf{Derivation:}
+Construct a zero-risk portfolio:
+\begin{itemize}
+    \item Long call $(+c_0)$
+    \item Long risk-free bond paying $X$ at $T$
+    \item Short one share of stock $(-S_0)$
+\end{itemize}
+
+\[
+c_0 - S_0 + X(1 + R_f)^{-T} \geq 0
+\Rightarrow
+c_0 \geq S_0 - X(1 + R_f)^{-T}
+\]
+
+
+
+\textbf{For Put Options:}
+
+\[
+\boxed{
+p_0 \geq \max[0, X(1 + R_f)^{-T} - S_0]
+}
+\]
+
+\textbf{Derivation:}
+Construct:
+\begin{itemize}
+    \item Long put $(+p_0)$
+    \item Long stock $(+S_0)$
+    \item Short risk-free bond (borrow $X(1 + R_f)^{-T}$)
+\end{itemize}
+
+\[
+p_0 + S_0 - X(1 + R_f)^{-T} \geq 0
+\Rightarrow
+p_0 \geq X(1 + R_f)^{-T} - S_0
+\]
+
+
+
+\paragraph{4. Summary of Option Boundaries}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Price Bounds for European Options}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Option Type} & \textbf{Lower Bound} & \textbf{Upper Bound} \\
+\hline
+Call Option & $\max[0, S_0 - X(1 + R_f)^{-T}]$ & $S_0$ \\
+\hline
+Put Option & $\max[0, X(1 + R_f)^{-T} - S_0]$ & $X(1 + R_f)^{-T}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Lower bound ensures no negative value (no arbitrage).
+    \item Upper bound ensures no overpricing (cheaper to transact directly in underlying).
+\end{itemize}
+
+
+
+\subsection*{LOS 75.c: Factors Affecting Option Value}
+
+\paragraph{1. Six Key Determinants}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Factors Affecting Option Values}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\textbf{Factor} & \textbf{Effect on Call Value} & \textbf{Effect on Put Value} \\
+\hline
+1. Price of Underlying ($S \uparrow$) & $\uparrow$ Call Value & $\downarrow$ Put Value \\
+\hline
+2. Exercise Price ($X \uparrow$) & $\downarrow$ Call Value & $\uparrow$ Put Value \\
+\hline
+3. Risk-Free Rate ($R_f \uparrow$) & $\uparrow$ Call Value & $\downarrow$ Put Value \\
+\hline
+4. Volatility ($\sigma \uparrow$) & $\uparrow$ Call Value & $\uparrow$ Put Value \\
+\hline
+5. Time to Expiration ($T \uparrow$) & $\uparrow$ Call Value & $\uparrow$ (usually) but may $\downarrow$ for deep ITM puts \\
+\hline
+6. Costs / Benefits of Holding Asset &
+\begin{tabular}[c]{@{}l@{}}Dividends $\downarrow$ Call Value \\ Storage costs $\uparrow$ Call Value\end{tabular} &
+\begin{tabular}[c]{@{}l@{}}Dividends $\uparrow$ Put Value \\ Storage costs $\downarrow$ Put Value\end{tabular} \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+
+\paragraph{2. Conceptual Intuition for Risk-Free Rate Impact}
+
+\begin{itemize}
+    \item \textbf{Call holder:} Pays strike $X$ in future → higher $R_f$ reduces PV(X) → call becomes more valuable.
+    \item \textbf{Put holder:} Receives $X$ in future → higher $R_f$ reduces PV(X) → put becomes less valuable.
+\end{itemize}
+
+\[
+\boxed{
+R_f \uparrow \Rightarrow C \uparrow, \quad P \downarrow
+}
+\]
+
+
+
+\paragraph{3. Volatility Effect}
+
+\begin{itemize}
+    \item Volatility increases potential payoff range.
+    \item Options have \emph{limited downside (premium)} but \emph{unlimited upside (for calls)}.
+    \item Hence, higher volatility $\Rightarrow$ higher value for both calls and puts.
+\end{itemize}
+
+
+
+\paragraph{4. Time to Expiration}
+
+\begin{itemize}
+    \item Longer time $\Rightarrow$ more uncertainty $\Rightarrow$ higher value.
+    \item At expiration, time value = 0.
+    \item Exception: Deep in-the-money European puts (delayed receipt reduces PV).
+\end{itemize}
+
+
+
+\paragraph{5. Example: Combined Effects}
+
+\[
+\text{Given: } S_0 = 50, X = 55, R_f = 5\%, \sigma = 20\%, T = 1.
+\]
+
+\begin{itemize}
+    \item If $S_0$ increases to 60 → call value rises, put value falls.
+    \item If $\sigma$ increases to 30\% → both call and put values rise.
+    \item If $R_f$ decreases to 2\% → call value falls, put value rises.
+\end{itemize}
+
+
+
+\subsection*{Key Formula Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Core Relationships and Bounds}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Relationship} \\
+\hline
+Intrinsic (Exercise) Value & Call: $\max(0, S - X)$; \quad Put: $\max(0, X - S)$ \\
+\hline
+Option Premium & $\text{Premium} = \text{Intrinsic} + \text{Time Value}$ \\
+\hline
+Call Lower Bound & $c_0 \geq \max[0, S_0 - X(1 + R_f)^{-T}]$ \\
+\hline
+Put Lower Bound & $p_0 \geq \max[0, X(1 + R_f)^{-T} - S_0]$ \\
+\hline
+Call Upper Bound & $c_t \leq S_t$ \\
+\hline
+Put Upper Bound & $p_t \leq X(1 + R_f)^{-(T - t)}$ \\
+\hline
+Risk-Free Rate Impact & $R_f \uparrow \Rightarrow C \uparrow, \ P \downarrow$ \\
+\hline
+Volatility Impact & $\sigma \uparrow \Rightarrow C \uparrow, \ P \uparrow$ \\
+\hline
+Time Decay & $\text{As } T \to 0, \ \text{Time Value} \to 0$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Summary Box: Conceptual Overview}
+
+\[
+\boxed{
+\begin{aligned}
+& \textbf{Moneyness:} \text{Determines ITM, OTM, ATM status based on } S \text{ vs. } X. \\
+& \textbf{Intrinsic Value:} \max(0, S - X) \text{ (call) or } \max(0, X - S) \text{ (put)}. \\
+& \textbf{Time Value:} \text{Premium – Intrinsic; reflects future potential.} \\
+& \textbf{Boundaries:} \text{Ensure no-arbitrage range for option prices.} \\
+& \textbf{Determinants:} S, X, R_f, \sigma, T, \text{and holding costs/benefits.} \\
+& \textbf{Key Dynamics:}
+\begin{cases}
+S \uparrow \Rightarrow C \uparrow, P \downarrow \\
+X \uparrow \Rightarrow C \downarrow, P \uparrow \\
+R_f \uparrow \Rightarrow C \uparrow, P \downarrow \\
+\sigma \uparrow \Rightarrow C, P \uparrow
+\end{cases}
+\end{aligned}
+}
+\]
+
+\section*{Module 76.1: Put–Call Parity}
+
+\subsection*{LOS 76.a: Put–Call Parity for European Options}
+
+\paragraph{1. Overview and Key Concept}
+
+\begin{itemize}
+    \item \textbf{Put–Call Parity (PCP)} defines the equilibrium relationship between European call and put options that share:
+    \begin{itemize}
+        \item The same underlying asset.
+        \item The same strike price ($X$).
+        \item The same expiration date ($T$).
+    \end{itemize}
+    \item Based on the principle of \textbf{no arbitrage}: portfolios with identical payoffs must have identical prices.
+\end{itemize}
+
+
+
+\paragraph{2. Core Portfolio Structures}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Key Portfolios in Put–Call Parity}
+\begin{tabular}{|l|p{6.5cm}|p{6.5cm}|}
+\hline
+\textbf{Portfolio} & \textbf{Composition} & \textbf{Payoff at Expiration ($t=T$)} \\
+\hline
+\textbf{Fiduciary Call} & Long call $(+c)$ and long risk-free bond paying $X$ at $T$ & 
+\begin{itemize}
+\item If $S_T > X$: $X + (S_T - X) = S_T$
+\item If $S_T \le X$: $X$
+\end{itemize} \\
+\hline
+\textbf{Protective Put} & Long stock $(+S)$ and long put $(+p)$ & 
+\begin{itemize}
+\item If $S_T > X$: $S_T$
+\item If $S_T \le X$: $S_T + (X - S_T) = X$
+\end{itemize} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Result:}  
+At expiration, both fiduciary call and protective put pay \emph{identical outcomes}:
+\[
+\text{Payoff} = \max(S_T, X)
+\]
+
+
+
+\paragraph{3. Put–Call Parity Equation}
+
+By the \textbf{no-arbitrage condition}:
+\[
+\boxed{
+c + X(1 + R_f)^{-T} = S + p
+}
+\]
+
+\begin{itemize}
+    \item LHS: Value of \textbf{Fiduciary Call}
+    \item RHS: Value of \textbf{Protective Put}
+\end{itemize}
+
+
+
+\paragraph{4. Rearranged Equivalent Forms}
+
+\[
+\boxed{
+\begin{aligned}
+c &= S + p - X(1 + R_f)^{-T} \\
+p &= c - S + X(1 + R_f)^{-T} \\
+S &= c - p + X(1 + R_f)^{-T} \\
+X(1 + R_f)^{-T} &= S + p - c
+\end{aligned}
+}
+\]
+
+\textbf{Interpretation:}  
+Each of the four securities can be \emph{synthetically replicated} using the other three.
+
+
+
+\paragraph{5. Synthetic Equivalent Constructions}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Synthetic Positions from Put–Call Parity}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Security to Replicate} & \textbf{Synthetic Combination (Long = +, Short = –)} \\
+\hline
+Stock ($S$) & $+c - p + X(1 + R_f)^{-T}$ \\
+\hline
+Call ($c$) & $+S + p - X(1 + R_f)^{-T}$ \\
+\hline
+Put ($p$) & $+c - S + X(1 + R_f)^{-T}$ \\
+\hline
+Risk-Free Bond (PV of $X$) & $+S + p - c$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Example: Synthetic Stock}
+\[
+S = c - p + X(1 + R_f)^{-T}
+\]
+\textit{To create a synthetic stock:} Long call, short put, and long risk-free bond.
+
+
+
+\paragraph{6. Example: Call Option Valuation Using PCP}
+
+\textbf{Given:}
+\[
+S_0 = 52, \quad X = 50, \quad R_f = 5\%, \quad T = 0.25, \quad p_0 = 1.50
+\]
+
+\textbf{Find:} $c_0$.
+
+\[
+\begin{aligned}
+c_0 &= S_0 + p_0 - X(1 + R_f)^{-T} \\
+    &= 52 + 1.50 - 50(1.05)^{-0.25} \\
+    &= 52 + 1.50 - 49.39 = \boxed{4.11}
+\end{aligned}
+\]
+
+\textbf{Interpretation:}  
+A 3-month, \$50 call should be priced at approximately \$4.11 to prevent arbitrage.
+
+
+
+\paragraph{7. Intuition of Parity}
+
+\begin{itemize}
+    \item Both portfolios guarantee $\max(S_T, X)$ at expiration.
+    \item Arbitrage ensures that current values are equal.
+    \item If violated, traders can lock in riskless profits by buying the underpriced portfolio and selling the overpriced one.
+\end{itemize}
+
+
+
+\paragraph{8. Arbitrage Example (If Parity Violated)}
+
+Suppose:
+\[
+c + X(1 + R_f)^{-T} > S + p
+\]
+
+\textbf{Strategy:}
+\begin{itemize}
+    \item Sell fiduciary call (LHS), receive cash.
+    \item Buy protective put (RHS).
+    \item Lock in arbitrage gain with zero risk.
+\end{itemize}
+
+
+
+\subsection*{LOS 76.b: Put–Call Forward Parity for European Options}
+
+\paragraph{1. Conceptual Difference}
+
+\begin{itemize}
+    \item Instead of using the current spot price ($S_0$), we substitute a synthetic forward price.
+    \item A \textbf{forward contract} is equivalent to borrowing or lending at $R_f$ and agreeing to buy the asset later at $F_0(T)$.
+\end{itemize}
+
+\[
+\boxed{
+F_0(T) = S_0 (1 + R_f)^T
+}
+\]
+
+\textbf{Synthetic Asset via Forward:}
+\[
+\text{Long Forward} + \text{Risk-Free Bond (PV of } F_0(T)) \Rightarrow \text{Equivalent to owning asset at } T.
+\]
+
+
+
+\paragraph{2. Derivation of Put–Call Forward Parity}
+
+\[
+\text{Start with: } c + X(1 + R_f)^{-T} = S + p
+\]
+
+Replace the spot price $S$ with its synthetic equivalent $F_0(T)(1 + R_f)^{-T}$:
+
+\[
+\boxed{
+F_0(T)(1 + R_f)^{-T} + p_0 = c_0 + X(1 + R_f)^{-T}
+}
+\]
+
+\[
+\boxed{
+p_0 - c_0 = [X - F_0(T)](1 + R_f)^{-T}
+}
+\]
+
+
+
+\paragraph{3. Interpretation and Insights}
+
+\begin{itemize}
+    \item This relationship links option prices directly to the forward price.
+    \item When the forward is at fair value (no arbitrage), PCP ensures consistency between forward-based and spot-based valuation.
+\end{itemize}
+
+\textbf{If $X = F_0(T)$:}
+\[
+p_0 = c_0
+\]
+(both options are equally valuable).
+
+
+
+\paragraph{4. Example: Put–Call Forward Parity Application}
+
+\textbf{Given:}
+\[
+F_0(T) = 105, \quad X = 100, \quad R_f = 4\%, \quad T = 1, \quad c_0 = 8
+\]
+
+\textbf{Find:} $p_0$.
+
+\[
+p_0 = c_0 + [X - F_0(T)](1 + R_f)^{-T} = 8 + (100 - 105)(1.04)^{-1} = 8 - 4.81 = \boxed{3.19}
+\]
+
+
+
+\paragraph{5. Corporate Finance Interpretation (Options on Firm Value)}
+
+\textbf{Equity as a Call Option:}
+\[
+\text{Equity Value} = \max(0, V_T - D)
+\]
+\begin{itemize}
+    \item $V_T$: Firm value at time $T$.
+    \item $D$: Debt due at maturity (exercise price).
+\end{itemize}
+
+\textbf{Debt as Risk-Free Bond – Short Put:}
+\[
+\text{Debt Value} = D(1 + R_f)^{-T} - p
+\]
+\textbf{or equivalently:}
+\[
+\text{Debt payoff} = \min(V_T, D)
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Equity = Call on firm value.
+    \item Debt = Risk-free bond minus put on firm value.
+\end{itemize}
+
+
+
+\subsection*{Summary of Key Equations}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Core Formulas – Put–Call Parity Relationships}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Expression} \\
+\hline
+\textbf{Spot-based PCP} & $c + X(1 + R_f)^{-T} = S + p$ \\
+\hline
+\textbf{Call (explicit form)} & $c = S + p - X(1 + R_f)^{-T}$ \\
+\hline
+\textbf{Put (explicit form)} & $p = c - S + X(1 + R_f)^{-T}$ \\
+\hline
+\textbf{Synthetic Stock} & $S = c - p + X(1 + R_f)^{-T}$ \\
+\hline
+\textbf{Forward-based PCP} & $F_0(T)(1 + R_f)^{-T} + p_0 = c_0 + X(1 + R_f)^{-T}$ \\
+\hline
+\textbf{Put–Call Spread Relation} & $p_0 - c_0 = [X - F_0(T)](1 + R_f)^{-T}$ \\
+\hline
+\textbf{Equity as Option} & $E = \max(0, V_T - D)$ \\
+\hline
+\textbf{Debt as Option} & $D_{\text{holders}} = D(1 + R_f)^{-T} - p$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Conceptual Summary Box}
+
+\[
+\boxed{
+\begin{aligned}
+& \textbf{1. Put–Call Parity (Spot):} c + PV(X) = S + p \\
+& \textbf{2. Put–Call Forward Parity:} F_0(T)PV + p = c + PV(X) \\
+& \textbf{3. Synthetic Equivalents:} 
+\begin{cases}
+S = c - p + PV(X) \\
+c = S + p - PV(X) \\
+p = c - S + PV(X)
+\end{cases} \\
+& \textbf{4. Corporate Analogy:}
+\begin{cases}
+\text{Equity = Call on firm value, strike = debt due.} \\
+\text{Debt = Risk-free bond - Put on firm value.}
+\end{cases}
+\end{aligned}
+}
+\]
+
+
+
+\subsection*{Key Takeaways}
+
+\begin{itemize}
+    \item Put–call parity ensures \textbf{pricing consistency} between puts, calls, and the underlying asset.
+    \item Applies only to \textbf{European options} with identical $X$ and $T$.
+    \item Synthetic creation allows replication and arbitrage-free valuation.
+    \item Put–call-forward parity extends the concept to forward contracts.
+    \item Firm valuation can be modeled via option theory:
+    \begin{itemize}
+        \item Equity = Call option on assets.
+        \item Debt = Bond – Put option on assets.
+    \end{itemize}
+\end{itemize}
+
+\section*{Module 77.1: Binomial Model for Option Values}
+
+\subsection*{LOS 77.a: Valuing a Derivative Using a One-Period Binomial Model}
+
+\paragraph{1. Concept Overview}
+
+\begin{itemize}
+    \item The \textbf{binomial model} assumes that over one period, the underlying asset price can take one of two possible values:
+    \[
+    S_u = S_0 \times u \quad \text{(up-move)}, \qquad S_d = S_0 \times d \quad \text{(down-move)}
+    \]
+    \item Inputs required:
+    \begin{itemize}
+        \item Current asset price $S_0$.
+        \item Exercise price $X$.
+        \item Up and down factors: $u$ and $d$.
+        \item Risk-free rate $R_f$.
+    \end{itemize}
+    \item Used to derive the \textbf{no-arbitrage fair value} of the option at time 0.
+\end{itemize}
+
+
+
+\paragraph{2. Example: One-Period Call Option}
+
+\[
+S_0 = 50, \quad X = 55, \quad S_u = 60, \quad S_d = 42, \quad R_f = 3\%
+\]
+\[
+u = \frac{60}{50} = 1.20, \quad d = \frac{42}{50} = 0.84
+\]
+
+\textbf{Call payoffs at expiration:}
+\[
+C_u = \max(0, 60 - 55) = 5, \quad C_d = \max(0, 42 - 55) = 0
+\]
+
+
+
+\paragraph{3. Hedge Portfolio Construction (Replication Approach)}
+
+\begin{itemize}
+    \item Construct a portfolio of $h$ shares of stock and one short call (–1 call):
+    \[
+    V_0 = hS_0 - c_0
+    \]
+    \item Portfolio payoffs:
+    \[
+    \begin{aligned}
+    V_u &= hS_u - C_u \\
+    V_d &= hS_d - C_d
+    \end{aligned}
+    \]
+    \item Set $V_u = V_d$ (riskless portfolio condition):
+    \[
+    hS_u - C_u = hS_d - C_d
+    \]
+\end{itemize}
+
+\textbf{Solve for $h$:}
+\[
+h = \frac{C_u - C_d}{S_u - S_d} = \frac{5 - 0}{60 - 42} = 0.278
+\]
+
+
+
+\paragraph{4. Portfolio Value and Option Price}
+
+\textbf{Value of the hedged portfolio:}
+\[
+V_u = 0.278(60) - 5 = 11.68, \quad V_d = 0.278(42) - 0 = 11.68
+\]
+
+Since $V_u = V_d$, this is a risk-free portfolio.
+
+\textbf{Present value of risk-free portfolio:}
+\[
+V_0 = \frac{11.68}{1.03} = 11.34
+\]
+
+\textbf{Solve for the option price $c_0$:}
+\[
+V_0 = hS_0 - c_0 \Rightarrow c_0 = hS_0 - V_0 = 0.278(50) - 11.34 = \boxed{2.56}
+\]
+
+
+
+\paragraph{5. Interpretation of Hedge Ratio ($h$)}
+
+\begin{itemize}
+    \item $h = 0.278$ means: to replicate one call option, hold 0.278 shares of stock.
+    \item This ratio (also called \textbf{Delta, $\Delta$}) indicates option sensitivity to underlying price movement.
+\end{itemize}
+
+\[
+\boxed{
+\Delta = \frac{C_u - C_d}{S_u - S_d}
+}
+\]
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Summary of One-Period Binomial Call Valuation}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Parameter} & \textbf{Value / Formula} \\
+\hline
+Current Stock Price & $S_0 = 50$ \\
+\hline
+Up Price / Down Price & $S_u = 60, \ S_d = 42$ \\
+\hline
+Call Payoffs & $C_u = 5, \ C_d = 0$ \\
+\hline
+Hedge Ratio & $h = \frac{5 - 0}{60 - 42} = 0.278$ \\
+\hline
+Risk-Free Rate & $R_f = 3\%$ \\
+\hline
+Riskless Portfolio Value & $V_u = V_d = 11.68$ \\
+\hline
+Present Value of Portfolio & $V_0 = \frac{11.68}{1.03} = 11.34$ \\
+\hline
+Option Value & $c_0 = 0.278(50) - 11.34 = 2.56$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{6. Summary Equation (Replication Method)}
+
+\[
+\boxed{
+c_0 = hS_0 - \frac{hS_d - C_d}{(1 + R_f)}
+}
+\]
+
+
+
+\subsection*{LOS 77.b: Risk Neutral Valuation}
+
+\paragraph{1. Concept of Risk Neutrality}
+
+\begin{itemize}
+    \item Risk-neutral pricing assumes investors are indifferent to risk.
+    \item Under risk neutrality, expected returns on all assets = risk-free rate.
+    \item Therefore, we can price options by discounting the \textbf{expected payoff at the risk-free rate}.
+\end{itemize}
+
+
+
+\paragraph{2. Risk-Neutral Probability Derivation}
+
+\[
+p^* = \frac{(1 + R_f) - d}{u - d}
+\]
+
+\begin{itemize}
+    \item $p^*$ = risk-neutral probability of an up-move.
+    \item $1 - p^*$ = probability of a down-move.
+\end{itemize}
+
+
+
+\paragraph{3. Example: Risk-Neutral Valuation of a Call Option}
+
+\textbf{Given:}
+\[
+S_0 = 30, \quad X = 30, \quad u = 1.15, \quad d = 0.87, \quad R_f = 7\%
+\]
+\[
+S_u = 30(1.15) = 34.50, \quad S_d = 30(0.87) = 26.10
+\]
+\[
+C_u = \max(0, 34.5 - 30) = 4.5, \quad C_d = \max(0, 26.1 - 30) = 0
+\]
+
+\textbf{Step 1: Compute Risk-Neutral Probabilities}
+\[
+p^* = \frac{1.07 - 0.87}{1.15 - 0.87} = \frac{0.20}{0.28} = 0.715
+\]
+\[
+1 - p^* = 0.285
+\]
+
+\textbf{Step 2: Expected Option Payoff (Risk-Neutral World)}
+\[
+E(C_T) = (p^* \times C_u) + [(1 - p^*) \times C_d] = (0.715)(4.5) + (0.285)(0) = 3.22
+\]
+
+\textbf{Step 3: Discount Expected Payoff to Present}
+\[
+c_0 = \frac{E(C_T)}{1.07} = \frac{3.22}{1.07} = \boxed{3.01}
+\]
+
+
+
+\paragraph{4. Example: Risk-Neutral Valuation of a Put Option}
+
+\textbf{Given same data:} $S_0 = 30, \ X = 30, \ u = 1.15, \ d = 0.87, \ R_f = 7\%$
+
+\textbf{Put Payoffs:}
+\[
+P_u = \max(0, 30 - 34.5) = 0, \quad P_d = \max(0, 30 - 26.1) = 3.9
+\]
+
+\textbf{Expected Put Payoff:}
+\[
+E(P_T) = (p^* \times P_u) + [(1 - p^*) \times P_d] = (0.715)(0) + (0.285)(3.9) = 1.11
+\]
+
+\textbf{Discount to Present:}
+\[
+p_0 = \frac{E(P_T)}{1.07} = \frac{1.11}{1.07} = \boxed{1.04}
+\]
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Risk-Neutral Pricing Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Parameter} & \textbf{Formula / Result} \\
+\hline
+Risk-Neutral Probability & $p^* = \dfrac{(1 + R_f) - d}{u - d}$ \\
+\hline
+Expected Option Payoff & $E(V_T) = p^*V_u + (1 - p^*)V_d$ \\
+\hline
+Option Present Value & $V_0 = \dfrac{E(V_T)}{(1 + R_f)}$ \\
+\hline
+Call Example Result & $c_0 = 3.01$ \\
+\hline
+Put Example Result & $p_0 = 1.04$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{5. Key Insights and Interpretation}
+
+\begin{itemize}
+    \item Risk-neutral probabilities are \textbf{not real probabilities}; they are derived from arbitrage-free pricing.
+    \item They allow us to compute expected option values without needing investor risk preferences.
+    \item Option value = discounted expected payoff under the risk-neutral measure.
+\end{itemize}
+
+\[
+\boxed{
+V_0 = \frac{p^*V_u + (1 - p^*)V_d}{1 + R_f}
+}
+\]
+
+
+
+\subsection*{Summary Comparison: Replication vs. Risk-Neutral Methods}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Comparison of Binomial Approaches}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\textbf{Method} & \textbf{Replication Portfolio Approach} & \textbf{Risk-Neutral Valuation} \\
+\hline
+Logic & Construct hedge with no risk ($\Delta$ shares, short option) & Use arbitrage-free probabilities $p^*$ \\
+\hline
+Key Step & Solve $V_u = V_d$ for hedge ratio $h$ & Compute $p^* = \frac{(1 + R_f) - d}{u - d}$ \\
+\hline
+Option Value Formula & $c_0 = hS_0 - \frac{V_u}{1 + R_f}$ & $c_0 = \frac{p^*C_u + (1 - p^*)C_d}{1 + R_f}$ \\
+\hline
+Uses Actual Probabilities? & No & No (uses risk-neutral) \\
+\hline
+Underlying Assumption & No-arbitrage equilibrium & Risk neutrality \\
+\hline
+Output & Identical fair value for option under both methods & Same as replication method \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+
+\subsection*{Summary of Key Formulas}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Formula Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula} \\
+\hline
+Up / Down Factors & $u = \frac{S_u}{S_0}, \quad d = \frac{S_d}{S_0}$ \\
+\hline
+Call Payoffs & $C_u = \max(0, S_u - X), \ C_d = \max(0, S_d - X)$ \\
+\hline
+Hedge Ratio (Delta) & $h = \frac{C_u - C_d}{S_u - S_d}$ \\
+\hline
+Portfolio Value (Riskless) & $V_0 = \frac{hS_d - C_d}{1 + R_f}$ \\
+\hline
+Call Price (Replication) & $c_0 = hS_0 - V_0$ \\
+\hline
+Risk-Neutral Probability & $p^* = \frac{(1 + R_f) - d}{u - d}$ \\
+\hline
+Option Value (Risk-Neutral) & $V_0 = \frac{p^*V_u + (1 - p^*)V_d}{1 + R_f}$ \\
+\hline
+Put–Call Parity Check & $c_0 - p_0 = S_0 - X(1 + R_f)^{-T}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Takeaways Box}
+
+\[
+\boxed{
+\begin{aligned}
+& \textbf{1. One-Period Binomial Model:} \text{Price changes → Up/Down moves.} \\
+& \textbf{2. Replication Approach:} \text{Construct riskless hedge, use } V_u = V_d. \\
+& \textbf{3. Risk-Neutral Approach:} \text{Use } p^* = \frac{(1 + R_f) - d}{u - d}, \text{ discount expected payoff.} \\
+& \textbf{4. Delta (h):} \text{Shares per option to hedge.} \\
+& \textbf{5. Equivalence:} \text{Both methods yield identical option values under no-arbitrage.}
+\end{aligned}
+}
+\]
+
+
+\end{document}

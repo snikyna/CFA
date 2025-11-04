@@ -1,0 +1,5595 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx} % for including images and figures
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{adjustbox}  % put in preamble
+
+
+\geometry{margin=1in}
+
+\title{Equity Investment}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Module 49.1: Fixed-Income Instrument Features}
+
+\subsection*{LOS 49.a: Features of a Fixed-Income Security}
+
+\paragraph{1. Definition}
+\begin{itemize}
+    \item Fixed-income instruments represent \textbf{debt investments} in which investors lend capital to an issuer in exchange for promised interest (coupon) and repayment of principal (par value).
+    \item Two major forms:
+    \begin{enumerate}
+        \item \textbf{Loans:} Private, non-tradable debt agreements.
+        \item \textbf{Bonds:} Standardized, tradable securities.
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{2. Key Bond Features}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Core Bond Features and Examples}
+\begin{tabular}{|p{3cm}|p{5cm}|p{6cm}|}
+\hline
+\textbf{Feature} & \textbf{Definition} & \textbf{Example / Notes} \\
+\hline
+\textbf{Issuer} & Entity issuing the bond & Governments (sovereign, local), corporations, supranationals (e.g., IMF, World Bank), or special purpose entities (SPEs). \\
+\hline
+\textbf{Maturity / Tenor} & Date or period until final payment. Bonds $\leq 1$ year = \textbf{Money Market}; $> 1$ year = \textbf{Capital Market}; perpetual bonds = no maturity. & A 10-year corporate bond matures in 2035. A perpetual bond (e.g., UK Consol) never matures. \\
+\hline
+\textbf{Principal (Par)} & Amount repaid at maturity; base for coupon calculation. & Typically \$1,000 or €1,000. Mortgage loans may amortize principal over time. \\
+\hline
+\textbf{Coupon Rate \& Frequency} & Annual interest rate applied to par; defines periodic payments. & 5\% annual coupon on \$1,000 = \$50/year. Semiannual = \$25 every 6 months. \\
+\hline
+\textbf{Seniority} & Ranking of debt repayment priority in liquidation. & Senior debt repaid before subordinated (junior) debt. \\
+\hline
+\textbf{Contingency Provisions} & Embedded options giving rights to issuer or bondholder. & Callable, putable, or convertible bonds. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Coupon Structures}
+\begin{itemize}
+    \item \textbf{Fixed-rate bond:} Constant coupon based on stated rate.
+    \item \textbf{Floating-rate note (FRN):} Coupon = Market Reference Rate (MRR) + fixed margin (spread).
+    \[
+    \text{Coupon Payment} = (\text{MRR} + \text{Margin}) \times \text{Par Value}
+    \]
+    Example: If MRR = 4\%, Margin = 50 bps = 0.5\%, Coupon = 4.5\%.
+    \item \textbf{Zero-coupon bond (pure discount):} No coupon; sold below par, pays par at maturity.
+    \[
+    \text{Price} = \frac{\text{Par}}{(1 + y)^n}
+    \]
+    Example: 10-year \$1,000 bond at 7\% $\Rightarrow P \approx \$508$.
+\end{itemize}
+
+\paragraph{4. Yield and Price Relationship}
+\[
+P \downarrow \Rightarrow Y \uparrow, \quad P \uparrow \Rightarrow Y \downarrow
+\]
+\begin{itemize}
+    \item Fixed cash flows $\Rightarrow$ inverse price-yield relationship.
+    \item Yield reflects expected return based on current price and future cash flows.
+\end{itemize}
+
+\paragraph{5. Yield Curves}
+\begin{itemize}
+    \item Graph plotting yield (\%) vs. maturity.
+    \item \textbf{Normal curve:} Upward sloping (long-term yields > short-term yields).
+    \item \textbf{Inverted curve:} Downward sloping (long-term yields < short-term yields).
+    \item \textbf{Benchmark:} Government yield curves used as reference for credit spreads.
+\end{itemize}
+
+\paragraph{Example: Credit Spread}
+\[
+\text{Corporate Yield} - \text{Gov’t Yield} = 6\% - 5\% = 1\% \text{ spread}
+\]
+A higher spread indicates higher credit or liquidity risk.
+
+\bigskip
+
+\subsection*{LOS 49.b: Bond Indenture and Covenants}
+
+\paragraph{1. Definition}
+\begin{itemize}
+    \item The \textbf{bond indenture} (or trust deed) is the legal contract between the bond issuer and bondholders.
+    \item Specifies all rights, obligations, and restrictions:
+    \begin{itemize}
+        \item Bond features (coupon, maturity, par).
+        \item Sources of repayment.
+        \item Collateral and guarantees.
+        \item Covenants (affirmative and negative).
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Sources of Repayment}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Sources of Bond Repayment by Issuer Type}
+\begin{tabular}{|p{3cm}|p{5cm}|p{6cm}|}
+\hline
+\textbf{Issuer Type} & \textbf{Repayment Source} & \textbf{Example} \\
+\hline
+\textbf{Sovereign Government} & Tax revenues and monetary powers (printing money). & U.S. Treasury or German Bunds. \\
+\hline
+\textbf{Local Government} & Local taxes or project revenues (e.g., tolls). & Municipal bonds repaid from property taxes. \\
+\hline
+\textbf{Corporations} & Operating cash flows; possibly backed by collateral. & Secured (mortgage-backed) vs. unsecured (debenture). \\
+\hline
+\textbf{Special Purpose Entity (SPE)} & Cash flows from underlying assets (ABS/MBS). & Mortgage-backed securities. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Secured vs. Unsecured Debt}
+\begin{itemize}
+    \item \textbf{Secured Bonds:} Have legal claim (lien/pledge) on specific assets (collateral).
+    \item \textbf{Unsecured Bonds (Debentures):} Backed only by issuer’s overall creditworthiness.
+\end{itemize}
+
+\paragraph{4. Types of Covenants}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Bond Covenant Comparison}
+\begin{tabular}{|p{4cm}|p{4cm}|p{7cm}|}
+\hline
+\textbf{Covenant Type} & \textbf{Definition / Purpose} & \textbf{Examples} \\
+\hline
+\textbf{Affirmative (Positive)} & Specify actions issuer \textbf{must perform}. & 
+\begin{itemize}
+\item Provide audited financial statements.
+\item Maintain insurance and compliance with laws.
+\item Use proceeds for declared purpose.
+\item \textbf{Cross-default clause:} Default on any other debt = default here.
+\item \textbf{Pari passu clause:} Equal ranking with other senior debt.
+\end{itemize} \\
+\hline
+\textbf{Negative (Restrictive)} & Restrict actions that could increase credit risk. & 
+\begin{itemize}
+\item Limitations on additional debt.
+\item Restrictions on asset sales, leasebacks, and collateral pledges.
+\item \textbf{Negative pledge:} Cannot issue more senior secured debt.
+\item Dividend or share buyback limits (based on leverage or coverage ratios).
+\end{itemize} \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. Incurrence Test Example}
+\[
+\text{Restriction: New debt or dividend allowed only if } \frac{\text{Debt}}{\text{EBITDA}} < 3.5
+\]
+Protects bondholders by limiting financial risk.
+
+\paragraph{6. Covenant Balance}
+\begin{itemize}
+    \item \textbf{Goal:} Protect bondholders without overly restricting issuer flexibility.
+    \item Too lenient → increased default risk.
+    \item Too restrictive → limits operational agility.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS Integration: Yield Curve \& Indenture Context}
+
+\paragraph{1. Yield Curve Insights}
+\begin{itemize}
+    \item Provides benchmark yields across maturities.
+    \item Corporate spreads over government curve reflect perceived credit risk.
+\end{itemize}
+
+\paragraph{2. Credit Structure Summary}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Bond Hierarchy and Claim Priority}
+\begin{tabular}{|l|p{9cm}|}
+\hline
+\textbf{Type} & \textbf{Priority / Risk Level} \\
+\hline
+Senior Secured Debt & First claim on specific assets (lowest credit risk). \\
+\hline
+Senior Unsecured Debt & Claim on issuer’s general assets. \\
+\hline
+Subordinated (Junior) Debt & Paid after senior claims; higher yield required. \\
+\hline
+Equity (Common / Preferred) & Residual claim only; highest risk, highest expected return. \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{Example Summary Calculations}
+
+\paragraph{1. Fixed Coupon Example}
+\[
+\text{Coupon Payment} = 0.05 \times \$1{,}000 = \$50 \text{ per year}
+\]
+Semiannual = \$25 every 6 months.
+
+\paragraph{2. Zero-Coupon Example}
+\[
+P_0 = \frac{1{,}000}{(1.07)^{10}} = \$508
+\]
+Investor earns entire yield from price appreciation at maturity.
+
+\paragraph{3. Floating-Rate Example}
+\[
+\text{Coupon Rate} = \text{MRR} + 1.25\%
+\]
+If MRR = 3.75\% → Coupon = 5.00\% → Payment = 0.05 × \$1,000 = \$50.
+
+\bigskip
+
+\subsection*{Key Takeaways Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Module 49.1 Summary Overview}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Core Insights} \\
+\hline
+49.a & Fixed-income securities define issuer, maturity, par, coupon, seniority, and options. Prices and yields move inversely. Yield curves plot yield vs. maturity. \\
+\hline
+49.b & The bond indenture defines repayment sources, collateral, and covenants. Affirmative covenants require issuer actions; negative covenants restrict risk-increasing actions. Proper covenant balance protects bondholders. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Conceptual Summary:}
+\begin{itemize}
+    \item Bonds = legally binding debt with predictable cash flows.
+    \item Issuer’s credit quality, maturity, and covenants define risk-return tradeoff.
+    \item Yield curves and spreads reflect market perception of credit risk.
+    \item The bond indenture legally protects investors through covenants and collateral provisions.
+\end{itemize}
+
+\section*{Module 50.1: Fixed-Income Cash Flows and Types}
+
+\subsection*{LOS 50.a: Common Cash Flow Structures and Contingency Provisions}
+
+\paragraph{1. Overview}
+\begin{itemize}
+    \item Fixed-income instruments differ by \textbf{cash flow timing, composition, and embedded options}.
+    \item Main structures:
+    \begin{enumerate}
+        \item Bullet (single repayment at maturity)
+        \item Amortizing (principal repaid over time)
+        \item Partially amortizing (balloon payment)
+        \item Sinking fund or structured (ABS/MBS waterfalls)
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{2. Bullet Structure}
+\begin{itemize}
+    \item Interest (\textbf{coupon}) paid periodically; principal repaid fully at maturity.
+    \item Example: \$1{,}000 par, 5\% annual coupon, 5-year maturity.
+\end{itemize}
+
+\[
+\text{Coupon Payment} = 0.05 \times 1{,}000 = \$50 \text{ annually}
+\]
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Bullet Bond Cash Flow Schedule}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Year} & \textbf{Coupon (\$)} & \textbf{Principal (\$)} \\
+\hline
+1–4 & 50 & 0 \\
+\hline
+5 & 50 & 1,000 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Fully Amortizing Loan}
+\begin{itemize}
+    \item Each payment includes both interest and principal.
+    \item Final payment reduces principal to zero.
+    \item Example parameters: $N = 5, I/Y = 5\%, PV = 1,000, FV = 0$
+    \[
+    \text{PMT} = 230.97
+    \]
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Fully Amortizing Bond Example (\$1,000, 5\%, 5 years)}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Year} & \textbf{Payment} & \textbf{Interest} & \textbf{Principal Repay.} \\
+\hline
+1 & 230.97 & 50.00 & 180.97 \\
+2 & 230.97 & 40.95 & 190.02 \\
+3 & 230.97 & 31.45 & 199.52 \\
+4 & 230.97 & 21.48 & 209.49 \\
+5 & 230.97 & 10.47 & 220.50 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Partially Amortizing (Balloon Payment)}
+\begin{itemize}
+    \item Partial principal repayment with final “balloon” at maturity.
+    \item Example parameters: $N=5$, $I/Y=5\%$, $PV=1,000$, $FV=-200$
+    \[
+    \text{PMT} = 194.78
+    \]
+\end{itemize}
+
+\paragraph{5. Sinking Fund and Waterfall Structures}
+\begin{itemize}
+    \item \textbf{Sinking Fund:} Issuer repays fixed portions of principal over time.
+    \[
+    \text{Example: } \$300\,\text{m issue, redeem \$20m annually from Year 6–20.}
+    \]
+    \begin{itemize}
+        \item \textbf{Advantage:} Lower credit risk (gradual repayment).
+        \item \textbf{Disadvantage:} Reinvestment risk if rates fall (cash returned early).
+    \end{itemize}
+    \item \textbf{Waterfall (ABS/MBS):} Cash flows distributed hierarchically by tranche.
+    \begin{itemize}
+        \item Senior tranches repaid first.
+        \item Junior tranches absorb default losses.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{6. Coupon Structures Overview}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Coupon Structures}
+\begin{tabular}{|l|p{5cm}|p{6cm}|}
+\hline
+\textbf{Type} & \textbf{Definition} & \textbf{Example / Note} \\
+\hline
+\textbf{Fixed-Rate} & Coupon fixed at issue date. & Most common. Predictable cash flows. \\
+\hline
+\textbf{Floating-Rate (FRN)} & Coupon = MRR + Margin (spread). & Quarterly coupon: $(2.3\% + 0.75\%)/4 = 0.7625\%$ of par. \\
+\hline
+\textbf{Step-Up} & Coupon increases by schedule. & Protects investors if rates rise. \\
+\hline
+\textbf{Credit-Linked} & Coupon adjusts with credit rating. & MRR + 2.5\% $\to$ MRR + 3\% if leverage > 3×. \\
+\hline
+\textbf{PIK (Payment-in-Kind)} & Interest paid by issuing more debt instead of cash. & Used by highly leveraged issuers; high yield. \\
+\hline
+\textbf{Green Bonds} & Coupon rises if environmental targets not met. & Example: CO$_2$ reduction failure $\Rightarrow$ coupon +25bps. \\
+\hline
+\textbf{Inflation-Linked} & Coupon or principal linked to CPI or similar. & Protects real returns; e.g., U.S. TIPS. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{7. Inflation-Linked Bonds}
+\begin{itemize}
+    \item \textbf{Interest-Indexed:} Coupon adjusts for inflation; principal fixed.
+    \item \textbf{Capital-Indexed (TIPS):} Coupon fixed; principal adjusts by inflation rate.
+    \item Example: 3\% coupon, semiannual, inflation +1\%:
+    \[
+    \text{New Principal} = 1{,}000(1.01) = 1{,}010, \quad \text{Semiannual Coupon} = 1.5\%\times1{,}010 = 15.15
+    \]
+    \item Protects real purchasing power: real rate = 3\%.
+\end{itemize}
+
+\paragraph{8. Deferred and Zero-Coupon Bonds}
+\begin{itemize}
+    \item \textbf{Zero-Coupon:} Single payment at maturity; trades below par.
+    \item \textbf{Deferred Coupon:} No interest initially; coupons begin later.
+    \item Used by issuers expecting delayed revenue (e.g., project financing).
+\end{itemize}
+
+\paragraph{9. Embedded Contingency Provisions (Embedded Options)}
+\begin{itemize}
+    \item \textbf{Callable Bonds:} Option to issuer.
+    \item \textbf{Putable Bonds:} Option to investor.
+    \item \textbf{Convertible Bonds:} Option to investor to convert to shares.
+    \item Bonds without options = \textbf{straight bonds}.
+\end{itemize}
+
+\subsubsection*{Callable Bonds}
+\begin{itemize}
+    \item Issuer may redeem early at preset price (call price).
+    \item \textbf{Example:}
+    \begin{itemize}
+        \item Callable after 5 years at 102\% of par.
+        \item Price cap in market $\Rightarrow$ higher yield, lower price.
+    \end{itemize}
+    \item \textbf{Call Risk:} Reinvestment risk for investors when rates fall.
+\end{itemize}
+
+\[
+\text{If yield falls from 6\% to 4\%, issuer can refinance at lower cost.}
+\]
+
+\subsubsection*{Putable Bonds}
+\begin{itemize}
+    \item Bondholder can sell bond back at par before maturity.
+    \item Protects investor when yields rise or credit worsens.
+    \item \textbf{Put Option Value} $\Rightarrow$ higher price, lower yield vs. straight bond.
+\end{itemize}
+
+\subsubsection*{Convertible Bonds}
+\begin{itemize}
+    \item Bondholder may convert bond into equity.
+    \item \textbf{Formulas:}
+    \[
+    \text{Conversion Ratio} = \frac{\text{Par Value}}{\text{Conversion Price}}
+    \]
+    \[
+    \text{Conversion Value} = (\text{Share Price}) \times (\text{Conversion Ratio})
+    \]
+    \item \textbf{Example:} \$1{,}000 bond, conversion price = \$40:
+    \[
+    \text{Ratio} = 25 \text{ shares}, \quad \text{Share Price} = 50 \Rightarrow V_c = 25 \times 50 = 1{,}250
+    \]
+\end{itemize}
+
+\subsubsection*{Warrants}
+\begin{itemize}
+    \item Detachable right to buy stock at a fixed price.
+    \item Example: Warrant strike \$40 → value if share price $>40$.
+\end{itemize}
+
+\subsubsection*{Contingent Convertible Bonds (CoCos)}
+\begin{itemize}
+    \item Convert to equity automatically if trigger (e.g., bank’s capital ratio) is breached.
+    \item Used by banks to meet regulatory capital requirements.
+    \item Benefit issuer: automatic recapitalization without new issue.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 50.b: Legal, Regulatory, and Tax Considerations}
+
+\paragraph{1. Bond Market Classifications}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Bond Issuance Categories}
+\begin{tabular}{|l|p{5cm}|p{6cm}|}
+\hline
+\textbf{Type} & \textbf{Definition} & \textbf{Example} \\
+\hline
+\textbf{Domestic Bond} & Issued and traded in issuer’s home market. & Deutsche Bank issuing euro bonds in Germany. \\
+\hline
+\textbf{Foreign Bond} & Issued by foreign entity in domestic market. & Toyota issues USD bonds in the U.S. (Yankee bond). \\
+\hline
+\textbf{Eurobond} & Issued outside jurisdiction of any single country, any currency. & Chinese firm issues yen-denominated Euroyen bonds in London. \\
+\hline
+\textbf{Global Bond} & Trades in both domestic and Eurobond markets. & Apple global USD bond traded in U.S. and London. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{2. Eurobond Features}
+\begin{itemize}
+    \item Typically less regulated; may be bearer or registered form.
+    \item \textbf{Naming convention:} by currency (Eurodollar, Euroyen, etc.).
+    \item Currency denomination primarily determines yield differences due to domestic interest rates.
+\end{itemize}
+
+\paragraph{3. Islamic (Sukuk) Bonds}
+\begin{itemize}
+    \item Must comply with Sharia (no interest).
+    \item Investors earn \textbf{rent income} from underlying tangible assets.
+    \item Funds must be used for permissible (halal) purposes.
+\end{itemize}
+
+\paragraph{4. Taxation Considerations}
+\begin{itemize}
+    \item \textbf{Interest Income:} Taxed as ordinary income.
+    \item \textbf{Municipal Bonds (U.S.):} Usually exempt from federal and in-state taxes.
+    \item \textbf{Capital Gains:} Taxed upon sale; lower rate for long-term holdings.
+    \item \textbf{Original Issue Discount (OID):}
+    \begin{itemize}
+        \item Zero-coupon or deep-discount bonds.
+        \item Accreted interest taxed annually even with no cash payment.
+    \end{itemize}
+    \item \textbf{Premium Bonds:} Amortized premium can reduce taxable coupon income.
+\end{itemize}
+
+\bigskip
+
+\subsection*{Key Takeaways Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Module 50.1 Summary Overview}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Core Insights} \\
+\hline
+50.a & Bonds differ by cash flow structure (bullet, amortizing, sinking fund) and coupon design (fixed, floating, step-up, PIK, inflation-linked). Embedded options (call, put, convertibility) redistribute value between issuer and investor. \\
+\hline
+50.b & Legal/regulatory frameworks define issuance categories (domestic, foreign, Eurobond, global). Tax regimes affect after-tax returns. Sukuk and OID bonds have specialized treatment. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Conceptual Summary:}
+\begin{itemize}
+    \item \textbf{Structure defines timing of cash flows.}
+    \item \textbf{Coupon design} affects sensitivity to rates, inflation, and credit events.
+    \item \textbf{Embedded options} shift risk–reward between issuer and holder.
+    \item \textbf{Legal jurisdiction} impacts regulation, taxation, and yield levels.
+\end{itemize}
+
+\section*{Module 51.1: Fixed-Income Issuance and Trading}
+
+\subsection*{LOS 51.a: Fixed-Income Market Segments and Participants}
+
+\paragraph{1. Global Bond Market Segmentation}
+Bond markets can be segmented by several criteria:
+\begin{itemize}
+    \item \textbf{Type of Issuer:} Governments, Corporates, and Special Purpose Entities (SPEs) issuing Asset-Backed Securities (ABSs).
+    \item \textbf{Credit Quality:} Investment-grade vs. High-yield (speculative/junk).
+    \item \textbf{Maturity:} Short-term (≤ 1 year), Intermediate (1–10 years), Long-term (> 10 years).
+    \item \textbf{Other Classifications:} Currency, Geography, and ESG features.
+\end{itemize}
+
+\paragraph{2. Issuer Categories}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Issuer Types and Features}
+\begin{tabular}{|p{3cm}|p{4.5cm}|p{7cm}|}
+\hline
+\textbf{Issuer Type} & \textbf{Description} & \textbf{Example / Notes} \\
+\hline
+\textbf{Sovereign Governments} & National governments issuing Treasuries or sovereign bonds. & U.S. Treasury, German Bunds; lowest credit risk. \\
+\hline
+\textbf{Non-Sovereign Governments} & Regional or municipal authorities. & U.S. municipal bonds, German Länder bonds. \\
+\hline
+\textbf{Corporates} & Private sector issuers for funding operations, acquisitions, or investment. & Investment-grade: Apple Inc. / High-yield: Ford Motor Co. \\
+\hline
+\textbf{Special Purpose Entities (SPEs)} & Issue Asset-Backed or Mortgage-Backed Securities (ABS/MBS). & Cash flows come from underlying financial assets (e.g., auto loans, mortgages). \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Credit Quality Classifications}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Credit Rating Tiers}
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+\textbf{Category} & \textbf{S\&P} & \textbf{Moody's} & \textbf{Comment} \\
+\hline
+Investment Grade & AAA–BBB– & Aaa–Baa3 & Suitable for institutional portfolios. \\
+\hline
+High Yield / Speculative & BB+ and below & Ba1 and below & Also called “junk bonds.” \\
+\hline
+Fallen Angels & Downgraded from IG to HY & — & Example: BBB → BB downgrade. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Maturity Segments}
+\begin{itemize}
+    \item \textbf{Money Market:} ≤ 1 year (e.g., Treasury bills, commercial paper, repos).
+    \item \textbf{Intermediate-Term:} 1–10 years (e.g., notes, mid-term corporate debt).
+    \item \textbf{Long-Term:} > 10 years (e.g., Treasury bonds, corporate debentures, mortgages).
+\end{itemize}
+
+\paragraph{5. Example: Corporate Issuance Across Maturities}
+\begin{itemize}
+    \item Short-term → \textbf{Commercial Paper} for seasonal working capital.
+    \item Medium-term → \textbf{Bank Syndicated Loans} for equipment or expansion.
+    \item Long-term → \textbf{Bond Issuance} for capital investment projects.
+\end{itemize}
+
+\paragraph{6. Investor Positioning Along the Credit/Maturity Spectrum}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Investor Positioning by Risk and Maturity}
+\begin{tabular}{|p{4cm}|p{5cm}|p{6cm}|}
+\hline
+\textbf{Investor Type} & \textbf{Preferred Segment} & \textbf{Rationale / Objective} \\
+\hline
+\textbf{Pension Funds / Insurers} & Long-term, investment grade & Match long-term liabilities (pensions, insurance claims). \\
+\hline
+\textbf{Corporations} & Short-term, high credit quality & Manage working capital, excess liquidity (e.g., CP, repos). \\
+\hline
+\textbf{Central Banks} & Intermediate-term sovereign bonds & Use for monetary policy and liquidity control. \\
+\hline
+\textbf{Bond Funds / ETFs} & Intermediate, investment grade (ex-Treasuries) & Diversified fixed-income portfolios for stable returns. \\
+\hline
+\textbf{Asset Managers / Hedge Funds} & Intermediate, high-yield or distressed & Seek higher yield via credit risk. \\
+\hline
+\textbf{Banks / Financial Intermediaries} & Treasuries across maturity spectrum & Manage interest rate and liquidity risk. \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+\subsection*{LOS 51.b: Types of Fixed-Income Indexes}
+
+\paragraph{1. Key Distinctions from Equity Indexes}
+\begin{enumerate}
+    \item \textbf{More Constituents:} A single issuer can have hundreds of bond issues.
+    \item \textbf{Higher Turnover:} Due to frequent issuance, maturities, and redemptions.
+    \item \textbf{Sector Weights Shift:} Government and corporate issuance patterns affect index weights over time.
+\end{enumerate}
+
+\paragraph{2. Aggregate and Sector Indexes}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Major Fixed-Income Index Types}
+\begin{tabular}{|l|p{5cm}|p{6cm}|}
+\hline
+\textbf{Index Type} & \textbf{Description} & \textbf{Examples} \\
+\hline
+\textbf{Aggregate Index} & Broad-based; includes multiple sectors, maturities, and currencies. & Bloomberg Barclays Aggregate Index (excludes high-yield/unrated). \\
+\hline
+\textbf{Geographic Index} & Bonds from specific countries or regions. & ICE BofA U.S. Corporate Index, Euro Aggregate Index. \\
+\hline
+\textbf{Credit Quality Index} & Classified by rating (IG vs. HY). & Bloomberg U.S. High Yield Index. \\
+\hline
+\textbf{Sector Index} & Focused on specific issuers (corporate, sovereign, ABS). & JPMorgan Emerging Market Bond Index Plus. \\
+\hline
+\textbf{ESG / Sustainable Index} & Exclude certain industries; minimum ESG score. & Bloomberg Barclays MSCI Euro Corporate Sustainable SRI Index. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. ESG-Integrated Index Example}
+\begin{itemize}
+    \item Excludes firms in non-sustainable sectors (e.g., alcohol, coal).
+    \item Requires \textbf{min credit rating = BBB– (Baa3)} and \textbf{min ESG rating = BBB}.
+\end{itemize}
+
+\paragraph{4. Index as Benchmark}
+\begin{itemize}
+    \item Benchmark must align with portfolio exposure:
+    \begin{itemize}
+        \item Sector, maturity, currency, and credit quality.
+        \item Example: Emerging-market fund → JPM EMBI+ benchmark.
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+\subsection*{LOS 51.c: Primary vs. Secondary Markets}
+
+\paragraph{1. Primary Market}
+\begin{itemize}
+    \item \textbf{Definition:} Issuance of new bonds → issuer receives new capital.
+    \item \textbf{Two Forms:}
+    \begin{enumerate}
+        \item \textbf{Public Offering:} Registered with regulator; open to all investors.
+        \item \textbf{Private Placement:} Sold to select investors (e.g., institutions).
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{2. Issuance Methods}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Primary Market Issuance Types}
+\begin{tabular}{|l|p{5cm}|p{6cm}|}
+\hline
+\textbf{Method} & \textbf{Description} & \textbf{Example / Implication} \\
+\hline
+\textbf{Underwritten Offering} & Investment bank guarantees sale price to issuer. & Used by large investment-grade corporates; lower risk for issuer. \\
+\hline
+\textbf{Best-Efforts Offering} & Bank sells bonds on commission basis (no guarantee). & Used for smaller or high-yield issues; higher issuance risk. \\
+\hline
+\textbf{Shelf Registration} & Bonds pre-approved by regulator, issued over time. & Flexible funding for frequent issuers. \\
+\hline
+\textbf{Auction (Government)} & Bonds sold to bidders in competitive/noncompetitive auctions. & Common for Treasuries and sovereign debt. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Example: Debut vs. Repeat Issuer}
+\begin{itemize}
+    \item \textbf{Debut Issue:} Requires marketing roadshows; time-intensive.
+    \item \textbf{Repeat Issue:} For frequent issuers with shelf registrations, issuance may complete in hours.
+\end{itemize}
+
+\paragraph{4. Secondary Market}
+\begin{itemize}
+    \item \textbf{Definition:} Trading of existing bonds among investors.
+    \item \textbf{Structure:} Primarily \textbf{dealer (OTC) markets}, not exchanges.
+    \item \textbf{Dealer Quote:} Bid (buy) and Ask (sell) prices → spread = dealer’s margin.
+\end{itemize}
+
+\paragraph{5. Bid–Ask Spread by Liquidity}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Liquidity and Spreads}
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Bond Type} & \textbf{Typical Spread (bps)} & \textbf{Liquidity Note} \\
+\hline
+On-the-run Sovereigns & $< 1$ & Very liquid; high trading volume. \\
+\hline
+Investment-Grade Corporate & 2–5 & Actively traded, lower risk. \\
+\hline
+High-Yield / Seasoned Bonds & 10–20+ & Less liquid; wider spreads. \\
+\hline
+Distressed Debt & 50–200+ & Illiquid; speculative trading. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{6. Distressed Debt Market}
+\begin{itemize}
+    \item Bonds of issuers near or in bankruptcy.
+    \item Bought by specialized investors (hedge or distress funds).
+    \item Value from potential recovery or restructuring.
+    \item Temporary surge in trading volume when distress emerges.
+\end{itemize}
+
+\bigskip
+\subsection*{Key Takeaways Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 7: Summary of Module 51.1 LOS Concepts}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Core Insights} \\
+\hline
+51.a & Bond markets segmented by issuer, credit quality, and maturity. Issuers: sovereigns, corporates, SPEs. Investors allocate based on desired risk, return, and liability matching. \\
+\hline
+51.b & Fixed-income indexes differ from equities: more constituents, higher turnover, and sector shifts. Aggregate and ESG indexes cover global, regional, or sector exposures. \\
+\hline
+51.c & Primary market = issuance (underwritten, best-efforts, shelf, auction). Secondary market = OTC trading with bid–ask spreads by liquidity. Distressed debt involves high-risk, high-return repositioning. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Conceptual Summary:}
+\begin{itemize}
+    \item \textbf{Issuers:} Governments, Corporates, SPEs.
+    \item \textbf{Investors:} Position along maturity and risk curve based on objectives.
+    \item \textbf{Indexes:} Track market segments; used for benchmarking.
+    \item \textbf{Primary Market:} Capital-raising via offerings or auctions.
+    \item \textbf{Secondary Market:} Liquidity via dealer networks.
+    \item \textbf{Liquidity Indicator:} Bid–ask spread $\uparrow$ → liquidity $\downarrow$.
+\end{itemize}
+
+\section*{Module 52.1: Fixed-Income Markets for Corporate Issuers}
+
+\subsection*{LOS 52.a: Short-Term Funding Alternatives}
+
+\paragraph{1. Overview}
+Corporations and financial institutions use short-term financing to meet \textbf{working capital} needs, manage liquidity, or bridge to long-term funding.  
+Funding can be classified as:
+\begin{itemize}
+    \item \textbf{Loan-based financing (bank credit lines)}
+    \item \textbf{Security-based financing (commercial paper, repos, ABCP)}
+\end{itemize}
+
+\subsubsection*{A. Short-Term Funding for Nonfinancial Corporations}
+
+\paragraph{2. External Loan Financing}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Bank Lines of Credit}
+\begin{tabular}{|p{3cm}|p{5cm}|p{6cm}|}
+\hline
+\textbf{Type} & \textbf{Definition / Features} & \textbf{Example / Notes} \\
+\hline
+\textbf{Uncommitted Line of Credit} & Bank offers short-term funds at MRR + spread but may refuse to lend. Flexible but unreliable. & Suitable for stable firms maintaining deposits with bank. No commitment fees. \\
+\hline
+\textbf{Committed Line of Credit} & Bank commits funds for a defined period (e.g., 1 year). Borrower pays a commitment fee (\(\approx 50 \text{ bps}\)). & Reliable; subject to renewal risk. Syndicated among banks to spread risk. \\
+\hline
+\textbf{Revolving Line of Credit (Revolver)} & Multi-year facility allowing repeated borrowing and repayment. & More reliable; includes restrictive covenants (e.g., leverage ratios). \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Secured Loans and Factoring}
+\begin{itemize}
+    \item \textbf{Secured Loan:} Borrower pledges collateral (e.g., receivables, inventory, fixed assets).
+    \item \textbf{Factoring:} Sale of receivables to a “factor” at a discount → immediate cash inflow.
+    \[
+    \text{Discount} = \text{Face Value} - \text{Proceeds}
+    \]
+    \item Discount reflects customer credit quality + collection costs.
+\end{itemize}
+
+\paragraph{4. Security-Based Financing (Commercial Paper)}
+\begin{itemize}
+    \item \textbf{Commercial Paper (CP):} Unsecured, short-term promissory notes issued by highly rated firms.
+    \item \textbf{Maturity:} Usually \(< 270\) days (often 30–90 days).
+    \item \textbf{Cost:} Lower than bank loans (no intermediation margin).
+    \item \textbf{Rollover Risk:} Risk that CP cannot be refinanced at maturity.
+    \item \textbf{Mitigation:} Backup credit lines (\textit{liquidity enhancement lines}) with banks.
+\end{itemize}
+
+\paragraph{Example: CP Issuance}
+\[
+\text{Face Value} = \$10{,}000{,}000, \quad \text{Term} = 90 \text{ days}, \quad y = 5\%
+\]
+\[
+P = 10{,}000{,}000 \times \left(1 - 0.05 \times \frac{90}{360}\right) = 9{,}875{,}000
+\]
+Issuer receives \$9.875m today, repays \$10m at maturity.
+
+\paragraph{5. Eurocommercial Paper (ECP)}
+\begin{itemize}
+    \item Issued in international markets outside home jurisdiction.
+    \item Typically denominated in major currencies (USD, EUR, GBP, JPY).
+\end{itemize}
+
+\subsubsection*{B. Short-Term Funding for Financial Institutions}
+
+\paragraph{6. Deposit Funding}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Bank Deposit Types}
+\begin{tabular}{|l|p{5cm}|p{6cm}|}
+\hline
+\textbf{Deposit Type} & \textbf{Description} & \textbf{Notes} \\
+\hline
+\textbf{Demand Deposits} & Checking accounts; withdrawable anytime; usually non-interest-bearing. & Provide transaction services and liquidity. \\
+\hline
+\textbf{Operational Deposits} & Large clients’ deposits used for clearing/custody. & Integral to daily operations. \\
+\hline
+\textbf{Savings Deposits / CDs} & Pay interest; fixed maturity. & \textbf{Nonnegotiable CD:} cannot be sold before maturity. \textbf{Negotiable CD:} tradable before maturity. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{7. Interbank and Central Bank Funding}
+\begin{itemize}
+    \item \textbf{Interbank Funds:} Loans between banks (1 day–1 year) at interbank MRR (e.g., SOFR, €STR).
+    \item \textbf{Central Bank Funds Market:} Banks lend/borrow reserves held at central bank.
+    \item \textbf{Discount Window:} Lender of last resort facility; higher rate and regulatory scrutiny.
+\end{itemize}
+
+\paragraph{8. Asset-Backed Commercial Paper (ABCP)}
+\begin{enumerate}
+    \item Financial institution sells loans to a Special Purpose Entity (SPE).
+    \item SPE issues short-term securities backed by these loans.
+    \item Investors buy ABCP; SPE repays them with loan cash flows.
+    \item Sponsor bank provides liquidity line or credit enhancement.
+\end{enumerate}
+
+\bigskip
+\subsection*{LOS 52.b: Repurchase Agreements (Repos)}
+
+\paragraph{1. Definition}
+\begin{itemize}
+    \item A \textbf{repo} = sale of securities with an agreement to repurchase later at higher price.
+    \item Economically = short-term \textbf{collateralized loan}.
+\end{itemize}
+
+\paragraph{2. Key Formulas}
+\[
+\text{Repo Rate} = \frac{P_{\text{repurchase}} - P_{\text{initial}}}{P_{\text{initial}}} \times \frac{360}{\text{Days}}
+\]
+\[
+\text{Initial Margin} = \frac{\text{Collateral Value}}{\text{Loan Amount}} \times 100\%
+\]
+\[
+\text{Haircut} = 1 - \frac{1}{\text{Initial Margin}}
+\]
+
+\paragraph{Example: Repo Calculation}
+\begin{itemize}
+    \item Collateral Value = \$1{,}000{,}000
+    \item Initial Margin = 103\%
+    \item Repo Rate = 2\%, Term = 90 days
+\end{itemize}
+\[
+\text{Purchase Price} = \frac{1{,}000{,}000}{1.03} = 970{,}874
+\]
+\[
+\text{Repurchase Price} = 970{,}874[1 + 0.02(90/360)] = 975{,}728
+\]
+\[
+\text{Haircut} = 1 - \frac{970{,}874}{1{,}000{,}000} = 2.91\%
+\]
+
+\paragraph{3. Margining}
+\begin{itemize}
+    \item If collateral value ↓ → lender requests \textbf{variation margin}.
+    \item If collateral ↑ → borrower may request release of excess collateral.
+\end{itemize}
+
+\paragraph{4. Repo Types}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Types of Repo Agreements}
+\begin{tabular}{|l|p{5cm}|p{6cm}|}
+\hline
+\textbf{Type} & \textbf{Description} & \textbf{Comment} \\
+\hline
+\textbf{Overnight Repo} & Maturity = 1 day. & Used for daily liquidity management. \\
+\hline
+\textbf{Term Repo} & Maturity > 1 day (up to 1 year). & Common durations: 1 week, 1 month, 3 months. \\
+\hline
+\textbf{General Collateral Repo} & Collateral = any eligible security. & Common for liquidity operations. \\
+\hline
+\textbf{Special Repo} & Specific hard-to-borrow security as collateral. & Repo rate may be very low or even negative. \\
+\hline
+\textbf{Tri-Party Repo} & Third-party custodian manages collateral. & Reduces settlement & margining risk. \\
+\hline
+\textbf{Bilateral Repo} & Two-party direct agreement. & Greater counterparty risk. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. Repo Applications}
+\begin{itemize}
+    \item \textbf{Borrowers:} Finance trading positions.
+    \item \textbf{Lenders:} Earn repo rate on excess liquidity.
+    \item \textbf{Central Banks:} Monetary policy tool.
+    \item \textbf{Short Sellers:} Borrow securities for short sale via reverse repo.
+\end{itemize}
+
+\paragraph{6. Repo Rate Drivers}
+\begin{itemize}
+    \item \textbf{Higher} when: term longer, collateral quality lower, undercollateralized.
+    \item \textbf{Lower} when: collateral in high demand, overcollateralized, short term.
+\end{itemize}
+
+\paragraph{7. Risks}
+\begin{itemize}
+    \item Default risk (counterparty fails to repurchase).
+    \item Collateral risk (decline in collateral value).
+    \item Margining risk (incorrect/late margin).
+    \item Legal risk (unenforceable contract).
+    \item Netting/settlement risk (cross-contract payment failures).
+\end{itemize}
+
+\bigskip
+\subsection*{LOS 52.c: Long-Term Funding—Investment Grade vs. High Yield}
+
+\paragraph{1. General Observations}
+\begin{itemize}
+    \item \textbf{Normal Yield Curve:} Longer maturity → higher yield.
+    \item Spread between short vs. long maturity is \textbf{wider for high-yield} issuers.
+\end{itemize}
+
+\paragraph{2. Comparison Table}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Investment Grade vs. High Yield Debt Characteristics}
+\begin{tabular}{|l|p{5cm}|p{6cm}|}
+\hline
+\textbf{Feature} & \textbf{Investment Grade} & \textbf{High Yield} \\
+\hline
+\textbf{Default Risk} & Low; focus on downgrade risk. & High; focus on default and recovery rate. \\
+\hline
+\textbf{Credit Spread Component} & Small portion of total yield. & Dominant component of total yield. \\
+\hline
+\textbf{Covenants} & Limited, mainly restricting liens and sale/leaseback. & Extensive; include leverage and dividend restrictions. \\
+\hline
+\textbf{Collateral Requirement} & Typically unsecured. & Often secured or asset-backed. \\
+\hline
+\textbf{Maturity} & Broad range, often >10 years. & Shorter, typically ≤10 years. \\
+\hline
+\textbf{Standardization} & Highly standardized, benchmark issues. & Customized; less standardized, higher legal complexity. \\
+\hline
+\textbf{Flexibility} & Easy to refinance when rates fall. & Limited; higher refinancing cost. \\
+\hline
+\textbf{Optionality} & Few embedded options. & Often callable or prepayable. \\
+\hline
+\textbf{Return Profile} & Bond-like, predictable. & Equity-like; higher volatility. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Example: Yield Composition}
+\[
+\text{Yield}_{IG} = \text{Risk-free} + \text{Spread}_{IG} = 3\% + 1\% = 4\%
+\]
+\[
+\text{Yield}_{HY} = \text{Risk-free} + \text{Spread}_{HY} = 3\% + 5\% = 8\%
+\]
+
+\paragraph{4. Callable High-Yield Bonds}
+\begin{itemize}
+    \item Allow issuer to redeem early when credit improves.
+    \item Benefit to issuer: refinancing flexibility.
+    \item Cost to investor: reinvestment and call risk → higher required yield.
+\end{itemize}
+
+\paragraph{5. Summary of Funding Strategy}
+\begin{itemize}
+    \item \textbf{Investment Grade:} 
+        \begin{itemize}
+            \item Long-term maturities.
+            \item Broad investor base.
+            \item Benchmark curve issuance.
+        \end{itemize}
+    \item \textbf{High Yield:}
+        \begin{itemize}
+            \item Shorter-term maturities.
+            \item Heavier covenant and collateral structures.
+            \item Issuance driven by market timing and refinancing needs.
+        \end{itemize}
+\end{itemize}
+
+\bigskip
+\subsection*{Key Takeaways Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Module 52.1 Summary Overview}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Core Insights} \\
+\hline
+52.a & Nonfinancial firms: credit lines, secured loans, factoring, commercial paper. Financial institutions: deposits, CDs, interbank funds, central bank borrowing, and ABCP. \\
+\hline
+52.b & Repos are collateralized loans; repo rate determined by collateral quality, term, and market liquidity. Tri-party repos mitigate margining and settlement risk. \\
+\hline
+52.c & Investment-grade debt = longer maturities, fewer covenants, lower spreads. High-yield debt = shorter maturities, higher spreads, more covenants, often callable. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Conceptual Summary:}
+\begin{itemize}
+    \item \textbf{Short-term corporate funding} = flexibility vs. reliability trade-off.
+    \item \textbf{Repos} provide efficient, low-cost, collateralized funding.
+    \item \textbf{Credit quality} drives structure, maturity, and investor protections in long-term debt markets.
+\end{itemize}
+
+\section*{Module 53.1: Fixed-Income Markets for Government Issuers}
+
+\subsection*{LOS 53.a: Funding Choices by Sovereign, Nonsovereign, Quasi-Government, and Supranational Entities}
+
+\paragraph{1. Overview of Sovereign Debt}
+\begin{itemize}
+    \item \textbf{Definition:} Bonds issued by national governments to finance expenditures on public goods, infrastructure, and fiscal deficits.
+    \item \textbf{Backing:} Full faith and credit of the government, supported by \textbf{tax-raising power}.
+    \item \textbf{Issuer Profile:} Largest and typically highest credit quality issuer within domestic markets.
+\end{itemize}
+
+\paragraph{2. Accounting and Economic Perspective}
+\begin{itemize}
+    \item Government financial reports use \textbf{cash-based accounting} rather than accruals.
+    \item Analysts should view governments through an \textbf{“economic balance sheet”}:
+    \begin{itemize}
+        \item \textbf{Implied Assets:} Future tax revenues.
+        \item \textbf{Implied Liabilities:} Future social expenditures and obligations.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Developed vs. Emerging Market Sovereigns}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Comparison of Developed and Emerging Market Sovereign Issuers}
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\textbf{Aspect} & \textbf{Developed Market Sovereign} & \textbf{Emerging Market Sovereign} \\
+\hline
+Economic Base & Diversified, stable, transparent fiscal policy. & Concentrated, volatile, often commodity-dependent. \\
+\hline
+Currency & Reserve currency (e.g., USD, EUR, RMB). & Domestic or foreign reserve currency. \\
+\hline
+Debt Type & Domestic debt dominates. & Mix of domestic and external debt. \\
+\hline
+Investor Base & Predominantly domestic. & Often foreign due to limited domestic capacity. \\
+\hline
+Fiscal Stability & Predictable, credible. & Sensitive to commodity cycles and exchange rates. \\
+\hline
+Credit Rating & High (AAA to A). & Variable; may face downgrade or restructuring risk. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Types of Sovereign Debt}
+\begin{itemize}
+    \item \textbf{Domestic Debt:} Issued in local currency to domestic investors.
+    \begin{itemize}
+        \item May face \textit{liquidity} and \textit{convertibility} constraints.
+    \end{itemize}
+    \item \textbf{External Debt:} Issued to foreign investors, denominated in domestic or foreign (reserve) currency.
+    \begin{itemize}
+        \item Investors face \textbf{indirect currency risk} — repayment depends on the issuer’s ability to generate foreign currency.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{5. Fiscal Policy and Debt Issuance}
+\begin{itemize}
+    \item Government issues debt to finance fiscal deficits.
+    \item Fiscal expansion (↑ spending or ↓ taxes) → higher debt issuance.
+    \item Debt management policy targets stable maturity distribution between short- and long-term debt.
+\end{itemize}
+
+\paragraph{6. Ricardian Equivalence (Theoretical Reference)}
+\begin{itemize}
+    \item Suggests taxpayers are indifferent between:
+    \[
+    \text{Higher taxes now vs. issuing debt now (taxes later).}
+    \]
+    \item Holds only if:
+    \begin{itemize}
+        \item Rational expectations and no capital market frictions.
+        \item Taxpayers can perfectly smooth consumption and intergenerational transfer.
+    \end{itemize}
+    \item In practice, these assumptions fail → governments must \textbf{manage maturity mix}.
+\end{itemize}
+
+\paragraph{7. Benefits of Debt Across Maturities}
+\begin{itemize}
+    \item \textbf{Short-term debt:} Safe, liquid, alternative to bank deposits. But entails \textbf{rollover risk}.
+    \item \textbf{Long-term debt:} Provides benchmark yields, supports monetary policy, and hedges interest rate risk.
+\end{itemize}
+
+\paragraph{8. Use of Government Bonds in Financial System}
+\begin{itemize}
+    \item Used as \textbf{collateral} in repo markets.
+    \item Define \textbf{risk-free benchmark yield curve}.
+    \item \textbf{Central banks} use sovereign bonds for open-market operations.
+\end{itemize}
+
+\bigskip
+\subsubsection*{B. Nonsovereign and Quasi-Government Issuers}
+
+\paragraph{1. Nonsovereign Governments}
+\begin{itemize}
+    \item Include states, provinces, municipalities, and local authorities.
+    \item Issue debt to fund public works and infrastructure.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Types of Nonsovereign Bonds}
+\begin{tabular}{|p{3cm}|p{5.5cm}|p{5.5cm}|}
+\hline
+\textbf{Type} & \textbf{Definition} & \textbf{Repayment Source} \\
+\hline
+\textbf{General Obligation (GO) Bonds} & Backed by full taxing power of the issuer. & Local/regional tax revenues. \\
+\hline
+\textbf{Revenue Bonds} & Finances specific projects (e.g., toll roads, hospitals). & Fees or user charges from funded project. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{2. Quasi-Government (Agency) Bonds}
+\begin{itemize}
+    \item Issued by \textbf{government-sponsored entities (GSEs)} to fulfill specific mandates:
+    \begin{itemize}
+        \item Examples: Ginnie Mae (U.S.), KfW (Germany), Japan Finance Corp.
+    \end{itemize}
+    \item Often enjoy \textbf{implicit or explicit sovereign guarantee}.
+    \item \textbf{Yield} typically close to sovereign benchmark.
+\end{itemize}
+
+\paragraph{3. Supranational Agencies}
+\begin{itemize}
+    \item Formed by multiple governments to promote economic development.
+    \item \textbf{Examples:} World Bank (IBRD), IMF, Asian Development Bank, European Investment Bank.
+    \item \textbf{Credit Quality:} Extremely high (AA–AAA).
+    \item \textbf{Purpose:} Infrastructure, poverty reduction, financial stability.
+\end{itemize}
+
+\bigskip
+\subsection*{LOS 53.b: Issuance and Trading of Government vs. Corporate Debt}
+
+\paragraph{1. Issuance Method: Auctions vs. Underwriting}
+\begin{itemize}
+    \item \textbf{Sovereign Debt:} Issued via \textbf{public auctions}.
+    \item \textbf{Corporate Debt:} Issued via \textbf{underwritten offerings} or \textbf{private placements}.
+\end{itemize}
+
+\paragraph{2. Government Bond Auctions}
+\begin{itemize}
+    \item \textbf{Bid Types:}
+    \begin{itemize}
+        \item \textbf{Competitive Bid:} Investor specifies price/yield.
+        \item \textbf{Noncompetitive Bid:} Investor accepts auction yield and is guaranteed allocation.
+    \end{itemize}
+    \item \textbf{Allocation Process:}
+    \begin{enumerate}
+        \item Noncompetitive bids filled first at auction yield.
+        \item Competitive bids ranked from highest price (lowest yield) downward.
+        \item Allocation continues until issue amount met.
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{3. Auction Pricing Types}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Auction Mechanisms}
+\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
+\hline
+\textbf{Auction Type} & \textbf{Mechanism} & \textbf{Implication} \\
+\hline
+\textbf{Single-Price (Uniform)} & All successful bidders pay the same price — corresponding to the \textbf{cut-off yield}. & Reduces yield volatility; encourages broader participation. \\
+\hline
+\textbf{Multiple-Price (Discriminatory)} & Each bidder pays the price they actually bid. & Yields closer together; encourages large, informed bids. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Primary Dealers}
+\begin{itemize}
+    \item Licensed institutions required to:
+    \begin{itemize}
+        \item Submit competitive bids in auctions.
+        \item Act as counterparties for central bank open-market operations.
+        \item Distribute government bonds to the broader market.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{5. Secondary Market Trading}
+\begin{itemize}
+    \item \textbf{Market Type:} OTC quote-driven dealer markets.
+    \item \textbf{On-the-Run Bonds:} Most recent issue of a given maturity; most liquid and used as \textbf{benchmark yields}.
+    \item \textbf{Off-the-Run Bonds:} Older issues; less liquid, trade at higher yields.
+\end{itemize}
+
+\paragraph{6. Investor Types and Objectives}
+\begin{itemize}
+    \item \textbf{Economic Investors:} Seek yield and total return (e.g., mutual funds, pension funds).
+    \item \textbf{Non-Economic Investors:}
+    \begin{itemize}
+        \item Central banks (for monetary policy operations).
+        \item Foreign governments (reserve holdings).
+        \item Financial institutions (regulatory liquidity requirements).
+    \end{itemize}
+\end{itemize}
+
+\paragraph{7. Yield Effects}
+\begin{itemize}
+    \item Non-economic demand (central banks, regulators) pushes yields below equilibrium.
+    \item Government debt thus serves as \textbf{low-risk benchmark} for corporate credit spreads.
+\end{itemize}
+
+\bigskip
+\subsection*{Key Formula and Example: Cut-Off Yield Determination}
+
+\[
+\text{Cut-off Yield} = \text{Yield of the lowest-price (highest-yield) successful bid.}
+\]
+
+\textbf{Example:}  
+A Treasury auction issues \$100 million of 10-year bonds.
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Sample Auction Bids}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Bidder} & \textbf{Price (\% of Par)} & \textbf{Bid Amount (\$m)} \\
+\hline
+A & 101.00 & 40 \\
+B & 100.75 & 30 \\
+C & 100.50 & 50 \\
+D & 100.25 & 40 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Allocation proceeds from highest price down.
+    \item Total \$100m issued → allocations to A (\$40m) + B (\$30m) + C (\$30m).
+    \item \textbf{Cut-off yield} corresponds to price = 100.50.
+\end{itemize}
+
+\begin{itemize}
+    \item Under a \textbf{single-price auction}, all pay 100.50.
+    \item Under a \textbf{multiple-price auction}, each pays their bid price.
+\end{itemize}
+
+\bigskip
+\subsection*{Key Summary Table}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Summary of Government Debt Characteristics}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{Issuer Type} & \textbf{Key Features} \\
+\hline
+\textbf{Sovereign Government} & Backed by taxation power; issues across maturity spectrum; benchmark yield curve; issued via public auctions. \\
+\hline
+\textbf{Nonsovereign Government} & States, provinces, municipalities; issue general obligation or revenue bonds; rely on local taxes or project fees. \\
+\hline
+\textbf{Agency / Quasi-Government} & Created to serve specific policy goals (e.g., housing, infrastructure); often sovereign-backed. \\
+\hline
+\textbf{Supranational Agency} & Multinational entities (World Bank, IMF); high credit quality; foster economic development. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Conceptual Takeaways}
+\begin{itemize}
+    \item Sovereign and supranational issuers anchor global fixed-income markets.
+    \item Governments issue across maturities to balance cost and rollover risk.
+    \item Auctions ensure transparency and wide investor participation.
+    \item On-the-run bonds define the \textbf{risk-free yield curve} for valuation.
+    \item Non-economic investors contribute to lower sovereign yields relative to corporate bonds.
+\end{itemize}
+
+\section*{Module 54.1: Fixed-Income Bond Valuation — Prices and Yields}
+
+\subsection*{LOS 54.a: Calculating a Bond’s Price Given a Yield-to-Maturity (YTM)}
+
+\paragraph{1. Bond Pricing Fundamentals}
+\begin{itemize}
+    \item \textbf{Definition:} The price of a bond equals the present value (PV) of its future cash flows, discounted at the bond’s yield to maturity (YTM).
+    \item \textbf{YTM:} The internal rate of return (IRR) assuming:
+    \begin{itemize}
+        \item The bond is held to maturity.
+        \item All coupons are paid in full and reinvested at the same YTM.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Formula: Annual Coupon Bond}
+\[
+P = \sum_{t=1}^{N} \frac{C}{(1+r)^t} + \frac{F}{(1+r)^N}
+\]
+where:  
+\begin{tabular}{ll}
+\( P \) & = price of bond (per \$100 par) \\
+\( C \) & = annual coupon payment (\(C = \text{coupon rate} \times F\)) \\
+\( F \) & = face value (par) \\
+\( r \) & = yield per period (YTM) \\
+\( N \) & = number of periods \\
+\end{tabular}
+
+\paragraph{Example 1: Annual-Pay Bond (Par, Premium, Discount)}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: 5-Year, 10\% Annual Coupon, \$100 Par Bond}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{YTM} & \textbf{Price (PV)} & \textbf{Comment} \\
+\hline
+10\% & 100.00 & Par bond (coupon = yield). \\
+\hline
+8\% & 107.99 & Premium bond (coupon > yield). \\
+\hline
+12\% & 92.79 & Discount bond (coupon < yield). \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item ↓ YTM ⇒ ↑ Bond Price (Inverse relationship).
+    \item Price increase for 2\% ↓ yield (from 10\% to 8\%) = +7.99.
+    \item Price decrease for 2\% ↑ yield (from 10\% to 12\%) = −7.21.
+    \item ⇒ \textbf{Asymmetry shows convexity.}
+\end{itemize}
+
+\paragraph{3. Semiannual Coupon Bond Pricing}
+\[
+P = \sum_{t=1}^{2N} \frac{C/2}{(1 + r/2)^t} + \frac{F}{(1 + r/2)^{2N}}
+\]
+\textbf{Example:}  
+5-year, 10\% coupon, semiannual payments, YTM = 8\%.  
+\[
+N = 10; \quad PMT = 5; \quad FV = 100; \quad I/Y = 4\%.
+\]
+\[
+PV = -108.11.
+\]
+\textbf{Result:} Price = 108.11 → Premium bond.
+
+\paragraph{4. Calculating YTM Given Price}
+\[
+N = 10; \quad PMT = 5; \quad FV = 100; \quad PV = -105.
+\]
+\[
+\text{Solve: } I/Y = 4.37\% \quad \Rightarrow \text{YTM} = 4.37\% \times 2 = 8.74\%.
+\]
+\textbf{Interpretation:}  
+If price > par → YTM < coupon rate.
+
+\paragraph{5. Accrued Interest, Flat Price, and Full Price}
+
+\textbf{Concepts:}
+\begin{itemize}
+    \item \textbf{Accrued Interest (AI)} = interest earned between coupon payments.  
+    \[
+    \text{AI} = \text{Coupon Payment} \times \frac{\text{Days Since Last Coupon}}{\text{Days in Coupon Period}}
+    \]
+    \item \textbf{Flat (Clean) Price:} Quoted price excluding accrued interest.
+    \item \textbf{Full (Dirty) Price:} Invoice price including accrued interest.
+    \[
+    \text{Full Price} = \text{Flat Price} + \text{Accrued Interest}
+    \]
+\end{itemize}
+
+\paragraph{6. Day-Count Conventions}
+\begin{itemize}
+    \item \textbf{Actual/Actual:} Use actual number of days.
+    \item \textbf{30/360:} Assume 30 days per month, 360 days per year.
+\end{itemize}
+
+\paragraph{Example 2: Accrued Interest Calculation}
+\textbf{Bond:} 4\% annual coupon, coupon date May 15, settlement Aug 10.  
+\[
+\text{Coupon} = 4\% \times 100 = \$4.
+\]
+\textbf{30/360 method:}  
+Days = 15 + 30 + 30 + 10 = 85 days  
+\[
+AI = 4 \times \frac{85}{360} = 0.944.
+\]
+\textbf{Actual/Actual method:}  
+Days = 16 + 30 + 31 + 10 = 87 days  
+\[
+AI = 4 \times \frac{87}{365} = 0.954.
+\]
+
+\paragraph{Example 3: Full vs. Flat Price}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Semiannual 5\% Bond, YTM = 4\%, Settlement Aug 21}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Step} & \textbf{Calculation} \\
+\hline
+1. PV on last coupon date & \( N = 4; \, PMT = 2.5; \, FV = 100; \, I/Y = 2\% \Rightarrow PV = 101.904 \). \\
+\hline
+2. Days since last coupon & 67 days; total coupon period = 183 days. \\
+\hline
+3. Full price & \( 101.904 \times (1.02)^{67/183} = 102.645 \). \\
+\hline
+4. Accrued interest & \( 2.5 \times \frac{67}{183} = 0.915 \). \\
+\hline
+5. Flat price & \( 102.645 - 0.915 = 101.73 \). \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Interpretation:} Flat price < value at last coupon date due to partial period discounting.
+
+
+
+\subsection*{LOS 54.b: Relationships Among Price, Coupon, Maturity, and Yield-to-Maturity}
+
+\paragraph{1. Fundamental Relationships}
+\begin{itemize}
+    \item Price and YTM are \textbf{inversely related}.
+    \item Lower coupon rate → \textbf{higher price sensitivity}.
+    \item Longer maturity → \textbf{higher duration and price sensitivity}.
+    \item Price-Yield relationship is \textbf{convex}.
+\end{itemize}
+
+\paragraph{2. Convexity Illustration}
+\begin{itemize}
+    \item For equal yield changes:
+    \[
+    |\Delta P_{\text{down}}| > |\Delta P_{\text{up}}|
+    \]
+    \item Example: 2\% ↓ yield increases price more than 2\% ↑ yield decreases it.
+\end{itemize}
+
+\paragraph{3. Pull-to-Par (Constant-Yield Price Trajectory)}
+\begin{itemize}
+    \item Regardless of coupon rate or YTM, bond price → par as maturity approaches.
+    \item This convergence is called the \textbf{pull to par}.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Bond Price vs. Yield Relationship}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Scenario} & \textbf{Outcome} \\
+\hline
+Coupon = YTM & Price = Par (\(P = 100\)). \\
+\hline
+Coupon > YTM & Price > Par (Premium Bond). \\
+\hline
+Coupon < YTM & Price < Par (Discount Bond). \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Graphical Summary}
+\begin{itemize}
+    \item \textbf{X-axis:} Yield to Maturity.
+    \item \textbf{Y-axis:} Bond Price.
+    \item The curve slopes downward and is convex.
+\end{itemize}
+
+\[
+\text{Convexity: } \frac{d^2P}{dr^2} > 0
+\]
+
+\paragraph{5. Example: Pull-to-Par Illustration}
+\textbf{3-year 6\% semiannual bond:}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Convergence Toward Par Over Time}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Time to Maturity} & \textbf{YTM = 3\%} & \textbf{YTM = 6\%} & \textbf{YTM = 12\%} \\
+\hline
+3 years & 107.7 & 100.0 & 85.8 \\
+\hline
+2 years & 105.1 & 100.0 & 90.6 \\
+\hline
+1 year & 102.4 & 100.0 & 95.3 \\
+\hline
+At maturity & 100.0 & 100.0 & 100.0 \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Interpretation:} Prices converge to par even though yields differ.
+
+
+
+\subsection*{LOS 54.c: Matrix Pricing}
+
+\paragraph{1. Concept}
+\begin{itemize}
+    \item Used when bonds are \textbf{illiquid or not traded}.
+    \item Estimates YTM or price using \textbf{comparable bonds} (same credit quality and maturity).
+    \item Involves \textbf{linear interpolation} between yields of similar traded issues.
+\end{itemize}
+
+\paragraph{2. Step-by-Step Process}
+\begin{enumerate}
+    \item Identify traded bonds with same rating and similar maturity.
+    \item Average yields if multiple bonds exist per maturity.
+    \item Interpolate YTM for the desired maturity.
+    \item Use interpolated YTM to calculate bond price.
+\end{enumerate}
+
+\paragraph{Example 1: Pricing an Illiquid Bond}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Interpolation for A+ 3-Year Bond}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Traded Bonds} & \textbf{YTM} \\
+\hline
+2-year A+ bond & 4.3\% \\
+5-year A+ bonds (avg) & 5.2\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\[
+\text{Interpolated 3-year YTM} = 4.3 + (5.2 - 4.3) \times \frac{3 - 2}{5 - 2} = 4.6\%.
+\]
+\[
+N = 3; \; PMT = 4; \; FV = 100; \; I/Y = 4.6 \Rightarrow PV = 98.354.
+\]
+\textbf{Estimated Value:} \$98.35 per \$100 par.
+
+\paragraph{3. Example 2: Spread-Based Matrix Pricing for New Issues}
+\textbf{Given:}
+\[
+\begin{aligned}
+4\text{-year Treasury YTM} &= 1.48\% \\
+6\text{-year Treasury YTM} &= 2.15\% \\
+5\text{-year A-rated corporate YTM} &= 2.64\%
+\end{aligned}
+\]
+
+\textbf{Interpolated 5-year Treasury YTM:}
+\[
+1.48 + (2.15 - 1.48) \times \frac{5 - 4}{6 - 4} = 1.815\%.
+\]
+\textbf{Spread:}
+\[
+2.64 - 1.815 = 0.825\%.
+\]
+\textbf{Required YTM for 6-year A-rated:}
+\[
+2.15 + 0.825 = 2.975\%.
+\]
+
+\paragraph{4. Practical Uses}
+\begin{itemize}
+    \item Valuing infrequently traded corporate or municipal bonds.
+    \item Estimating new issue pricing spreads.
+    \item Calibrating bond curves for valuation models.
+\end{itemize}
+
+
+
+\subsection*{Key Takeaways Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: LOS Summary Table}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Core Insights} \\
+\hline
+54.a & Price = PV of all future CFs discounted at YTM. Flat price excludes accrued interest; full price includes it. Accrued interest = coupon × fraction of period elapsed. \\
+\hline
+54.b & Price–yield relationship is inverse and convex. Lower coupon and longer maturity → higher sensitivity. All bond prices converge to par as maturity nears (pull to par). \\
+\hline
+54.c & Matrix pricing estimates yield or price for illiquid issues by interpolating between yields of traded bonds with similar rating and maturity. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Conceptual Summary:}
+\begin{itemize}
+    \item Bonds = discounted CF models.
+    \item Prices rise when yields fall, but asymmetrically (convexity).
+    \item Quoted price (flat) + accrued interest = full (dirty) price.
+    \item Matrix pricing bridges illiquid and benchmark bond valuations.
+\end{itemize}
+
+\section*{Module 55.1: Yield and Yield Spread Measures for Fixed-Rate Bonds}
+
+\subsection*{LOS 55.a: Calculate Annual Yield on a Bond for Varying Compounding Periods}
+
+\paragraph{1. Definition: Yield to Maturity (YTM)}
+\begin{itemize}
+    \item The \textbf{YTM} is the discount rate that equates the present value of a bond’s cash flows to its current market price:
+    \[
+    P = \sum_{t=1}^{N} \frac{C}{(1 + r)^t} + \frac{F}{(1 + r)^N}
+    \]
+    \item It is the internal rate of return (IRR) assuming:
+    \begin{itemize}
+        \item The bond is held to maturity.
+        \item All coupon payments are made and reinvested at the same YTM.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Example: Annual vs. Semiannual Yield}
+\textbf{Given:} 5-year, 7\% annual-pay bond, price = 102.078.  
+\[
+N = 5, \; PMT = 7, \; FV = 100, \; PV = -102.078 \Rightarrow I/Y = 6.5\%.
+\]
+\textbf{Interpretation:} Bond trades at a premium (price > par, YTM < coupon).
+
+\smallskip
+\textbf{Semiannual version:}
+\[
+\text{YTM (semiannual)} = 3.253\% \times 2 = 6.506\%.
+\]
+
+\paragraph{3. Effective Annual Yield (EAY)}
+\[
+\boxed{\text{EAY} = \left( 1 + \frac{\text{YTM}}{n} \right)^n - 1}
+\]
+where \(n\) = number of coupon periods per year (periodicity).
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Effective Annual Yield Comparison}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Periodicity (n)} & \textbf{Quoted YTM} & \textbf{Effective Annual Yield (EAY)} \\
+\hline
+1 (Annual) & 10.00\% & 10.00\% \\
+\hline
+2 (Semiannual) & 10.00\% & 10.25\% \\
+\hline
+4 (Quarterly) & 10.00\% & 10.38\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Adjusting Yields for Periodicity}
+\textbf{Example:} Atlas Corp. bond quoted at 4\% (semiannual).  
+\[
+\text{Semiannual rate} = 2\% \text{ per 6 months}.
+\]
+\textbf{Equivalent Annual (EAY):}
+\[
+(1.02)^2 - 1 = 4.04\%.
+\]
+\textbf{Equivalent Quarterly Quoted Yield:}
+\[
+(1.02)^{1/2} - 1 = 0.995\% \Rightarrow 4 \times 0.995 = 3.98\%.
+\]
+
+\textbf{Conclusion:}  
+\begin{itemize}
+    \item Annual-pay bond at 4.04\% EAY.
+    \item Semiannual-pay bond at 4.00\% nominal.
+    \item Quarterly-pay bond at 3.98\% nominal.
+\end{itemize}
+
+\paragraph{5. Street vs. True Yield}
+\begin{itemize}
+    \item \textbf{Street convention:} Uses stated coupon dates.
+    \item \textbf{True yield:} Adjusts for actual payment dates (weekends/holidays).  
+    $\Rightarrow$ True yield is slightly lower.
+\end{itemize}
+
+\paragraph{6. Current Yield (CY)}
+\[
+\boxed{\text{Current Yield} = \frac{\text{Annual Coupon Payment}}{\text{Flat Price}}}
+\]
+\textbf{Example:} 20-year, 6\% semiannual bond, price = 802.07.
+\[
+CY = \frac{60}{802.07} = 7.48\%.
+\]
+
+\paragraph{7. Simple Yield}
+\[
+\boxed{\text{Simple Yield} = \frac{\text{Annual Coupon} \pm \text{Amortized Discount/Premium}}{\text{Price}}}
+\]
+\textbf{Example:} 3-year, 8\% semiannual bond, price = 90.165.
+\[
+\text{Discount} = 100 - 90.165 = 9.835; \quad \text{Amortization per year} = \frac{9.835}{3} = 3.278.
+\]
+\[
+\text{Simple Yield} = \frac{8 + 3.278}{90.165} = 12.47\%.
+\]
+
+\paragraph{8. Yield to Call (YTC) and Yield to Worst (YTW)}
+\begin{itemize}
+    \item \textbf{YTC:} Yield assuming bond is called at a specific date and price.
+    \item \textbf{YTW:} The lowest of YTM and all YTC values.
+\end{itemize}
+
+\textbf{Example:}  
+6\% bond, price = 102, callable:
+\begin{itemize}
+    \item At 102 in 3 years.
+    \item At 101 in 4 years.
+\end{itemize}
+\[
+\text{YTM} = 5.54\%, \quad \text{YTC}_1 = 5.59\%, \quad \text{YTC}_2 = 5.56\%.
+\]
+\textbf{YTW} = 5.54\% (lowest value).
+
+\paragraph{9. Option-Adjusted Yield (OAY)}
+\[
+\text{Callable bond value} = \text{Straight bond value} - \text{Call option value.}
+\]
+\[
+\Rightarrow \text{Option-adjusted price} = \text{Callable bond price} + \text{Option value.}
+\]
+\[
+\text{Option-adjusted yield (OAY)} < \text{Callable bond YTM.}
+\]
+\textbf{Interpretation:} OAY “removes” option effects — yield as if option-free.
+
+
+
+\subsection*{LOS 55.b: Compare, Calculate, and Interpret Yield and Yield Spread Measures}
+
+\paragraph{1. Definition: Yield Spread}
+\[
+\boxed{\text{Yield Spread} = \text{Bond Yield} - \text{Benchmark Yield}}
+\]
+\begin{itemize}
+    \item Measured in \textbf{basis points (bps)}.
+    \item Reflects compensation for credit, liquidity, and optionality risk.
+\end{itemize}
+
+\paragraph{2. G-Spread (Government Spread)}
+\[
+\text{G-Spread} = \text{YTM}_{\text{bond}} - \text{YTM}_{\text{govt (same maturity)}}.
+\]
+\textbf{Example:}
+\begin{itemize}
+    \item Bond YTM = 6.82\%.
+    \item Interpolated Treasury yield (3-year) = 4.33\%.
+\end{itemize}
+\[
+G\text{-spread} = 6.82 - 4.33 = 2.49\% = 249 \text{ bps.}
+\]
+
+\paragraph{3. I-Spread (Interpolated Swap Spread)}
+\[
+\text{I-Spread} = \text{YTM}_{\text{bond}} - \text{Swap rate}_{\text{same tenor}}.
+\]
+\textbf{Interpretation:} Excess yield over interbank reference rate (e.g., EURIBOR or SOFR).
+
+\paragraph{4. Interpreting Yield Spreads}
+\begin{itemize}
+    \item \textbf{Macro factors:} Affect benchmark yield (risk-free rate, inflation).
+    \item \textbf{Micro factors:} Affect credit/liquidity → spread widens.
+\end{itemize}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Interpreting Spread Movements}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Observation} & \textbf{Interpretation} \\
+\hline
+Bond yield ↑, spread unchanged & Benchmark yield ↑ → macro factors. \\
+\hline
+Bond yield ↑, spread ↑ & Bond-specific risk ↑ → micro factors. \\
+\hline
+Bond yield ↓, spread ↓ & Improved credit/liquidity. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. Z-Spread (Zero-Volatility Spread)}
+\[
+\boxed{\text{Z-spread} = \text{Constant spread added to benchmark spot curve to match bond price.}}
+\]
+\[
+P = \sum_{t=1}^{N} \frac{CF_t}{(1 + s_t + ZS)^t}
+\]
+where \(s_t\) = spot rate at time \(t\).
+
+\textbf{Example:}
+\begin{itemize}
+    \item 3-year, 9\% coupon, price = 89.464.
+    \item Treasury spot rates = 4\%, 8.167\%, 12.377\%.
+\end{itemize}
+\[
+\text{G-spread} = 13.5\% - 12.0\% = 1.5\%.
+\]
+Find \(Z\)-spread by trial-and-error such that PV = 89.464.
+
+\paragraph{6. OAS (Option-Adjusted Spread)}
+\[
+\boxed{\text{OAS} = \text{Z-spread} - \text{Option Value (bps)}}
+\]
+\begin{itemize}
+    \item For \textbf{callable bonds:} \( \text{OAS} < \text{Z-spread} \).
+    \item For \textbf{putable bonds:} \( \text{OAS} > \text{Z-spread} \).
+\end{itemize}
+
+\textbf{Example:}
+\[
+\text{Z-spread} = 180\text{ bps}, \; \text{Option value} = 60\text{ bps}.
+\Rightarrow \text{OAS} = 120\text{ bps.}
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Z-spread = total yield premium (credit + liquidity + optionality).
+    \item OAS = yield premium excluding optionality.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Types of Yield Spreads}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Type} & \textbf{Benchmark} & \textbf{Interpretation} \\
+\hline
+G-spread & Government yield & Simple yield difference vs. Treasury. \\
+\hline
+I-spread & Swap rate & Spread vs. interbank curve. \\
+\hline
+Z-spread & Spot yield curve & Spread constant over maturities. \\
+\hline
+OAS & Spot yield curve (option-free) & Spread net of embedded option. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Relationships and Formulas}
+
+\paragraph{Effective Yield Conversions:}
+\[
+\text{EAY} = (1 + \frac{r_{nom}}{n})^n - 1
+\]
+\paragraph{Current Yield:}
+\[
+CY = \frac{\text{Annual Coupon}}{\text{Price}}
+\]
+\paragraph{Simple Yield:}
+\[
+SY = \frac{\text{Annual Coupon} \pm \frac{(100 - P)}{T}}{P}
+\]
+\paragraph{Yield to Worst:}
+\[
+YTW = \min(\text{YTM}, \text{YTC}_1, \text{YTC}_2, \ldots)
+\]
+\paragraph{Z-Spread vs. OAS Relationship:}
+\[
+Z\text{-spread} = OAS + \text{Option Value}
+\]
+
+
+
+\subsection*{Summary Table}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: LOS 55 Summary}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Summary} \\
+\hline
+55.a & YTM depends on compounding frequency. Effective annual yield rises with periodicity. Street yields assume nominal dates; true yields adjust for holidays. Current yield = coupon / price. Simple yield includes amortized discount/premium. Yield to worst = lowest YTM or YTC. Option-adjusted yield removes embedded option effect. \\
+\hline
+55.b & Yield spreads measure risk premium vs. benchmark (G, I, Z, or OAS). Z-spread adjusts for the term structure of spot rates. OAS removes option impact, isolating credit + liquidity effects. G-spread and I-spread use YTMs; Z-spread and OAS use spot curves. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Key Insights:}
+\begin{itemize}
+    \item \textbf{Higher compounding frequency =$>$ higher effective yield.}
+    \item \textbf{Callable bonds:} YTW = minimum of YTM and YTCs.
+    \item \textbf{Z-spread vs. OAS:} OAS = Z-spread minus option value.
+    \item \textbf{Macro vs. micro factors:} Benchmark vs. spread changes.
+\end{itemize}
+
+\section*{Module 56.1: Yield and Yield Spread Measures for Floating-Rate Instruments}
+
+\subsection*{LOS 56.a: Calculate and Interpret Yield Spread Measures for Floating-Rate Notes (FRNs)}
+
+\paragraph{1. Overview of Floating-Rate Notes (FRNs)}
+\begin{itemize}
+    \item \textbf{Definition:} A bond whose coupon payments adjust periodically according to a variable market reference rate (MRR) plus a fixed margin.
+    \item \textbf{General Formula:}
+    \[
+    \text{Coupon Rate}_t = \text{MRR}_t + \text{Quoted Margin (QM)}
+    \]
+    \item \textbf{Coupon Reset:} Based on current market reference rate at the beginning of each coupon period; interest is paid \textbf{in arrears}.
+\end{itemize}
+
+\paragraph{2. Key Terminology}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Floating-Rate Note Margin Definitions}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+\hline
+\textbf{Term} & \textbf{Definition / Interpretation} \\
+\hline
+\textbf{Market Reference Rate (MRR)} & Short-term market rate (e.g., LIBOR, EURIBOR, SOFR, etc.). \\
+\hline
+\textbf{Quoted Margin (QM)} & Fixed spread over MRR specified at issuance. \\
+\hline
+\textbf{Discount Margin (DM)} & Required margin over MRR that equates market price to par (reflects current credit risk). \\
+\hline
+\textbf{Required Margin} & Same as discount margin — the yield premium investors currently demand. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Par, Premium, and Discount Pricing Relationships}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: FRN Valuation Logic}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Condition} & \textbf{Relationship Between QM and DM} & \textbf{Price Behavior} \\
+\hline
+At issuance & QM = DM & FRN trades at par. \\
+\hline
+Credit quality worsens & QM < DM & FRN trades at a discount. \\
+\hline
+Credit quality improves & QM > DM & FRN trades at a premium. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Analogy to Fixed-Rate Bonds}
+\begin{itemize}
+    \item Fixed-rate bond analogy:
+    \[
+    \text{Coupon vs. YTM} \Longleftrightarrow \text{Quoted Margin vs. Discount Margin}
+    \]
+    \item If yield demanded $>$ coupon → bond trades below par.  
+      Similarly, if DM $>$ QM → FRN trades below par.
+\end{itemize}
+
+\paragraph{5. Simplified Valuation on Reset Date}
+\[
+P = \sum_{t=1}^{N} \frac{CF_t}{(1 + \text{MRR} + \text{DM})^t}
+\]
+where \( CF_t = (\text{MRR} + \text{QM}) \times \text{Face Value} \).
+
+\paragraph{Example 1: FRN Valuation}
+\textbf{Given:}
+\begin{itemize}
+    \item Par value = \$100,000.
+    \item Semiannual coupon = MRR + 120 bps.
+    \item MRR = 3.0\% (annualized), DM = 1.5\% (annualized).
+    \item Remaining maturity = 5 years → 10 semiannual periods.
+\end{itemize}
+
+\textbf{Step 1: Compute coupon per period}
+\[
+\text{Coupon rate} = (3.0 + 1.2)\% = 4.2\% \Rightarrow \text{semiannual coupon} = 2.1\%.
+\]
+
+\textbf{Step 2: Compute discount rate per period}
+\[
+\text{Discount rate} = (3.0 + 1.5)\% / 2 = 2.25\%.
+\]
+
+\textbf{Step 3: Calculate PV}
+\[
+N = 10; \; PMT = 2.1; \; FV = 100; \; I/Y = 2.25; \Rightarrow PV = 98.67.
+\]
+
+\textbf{Result:} FRN Value = \$98,670 → trades below par since DM > QM.
+
+\paragraph{6. Interpretation Summary}
+\begin{itemize}
+    \item \textbf{If DM > QM:} Investors demand higher yield → price $<$ 100 (discount).
+    \item \textbf{If DM < QM:} Investors accept lower yield → price $>$ 100 (premium).
+    \item \textbf{If DM = QM:} Price = 100 (at par on reset dates).
+\end{itemize}
+
+
+
+\subsection*{LOS 56.b: Calculate and Interpret Yield Measures for Money Market Instruments}
+
+\paragraph{1. Overview}
+\begin{itemize}
+    \item \textbf{Money Market Instruments:} Short-term debt (maturity ≤ 1 year).
+    \item Examples: Treasury bills, commercial paper, CDs, repos.
+    \item Yields vary by:
+    \begin{itemize}
+        \item Quotation basis (add-on vs. discount).
+        \item Day-count convention (360-day vs. 365-day year).
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Add-On Yield (AOY) — Interest on Principal}
+\[
+\boxed{\text{Quoted Add-On Yield} = \text{HPY} \times \frac{\text{Year Days}}{\text{Days to Maturity}}}
+\]
+where:
+\[
+\text{HPY} = \frac{\text{Interest Earned}}{\text{Price Paid}}.
+\]
+
+\textbf{Example:} 100-day CD, AOY = 1.5\% (365-day year)
+\[
+\text{HPY} = 1.5\% \times \frac{100}{365} = 0.41\%.
+\]
+\[
+\text{Future Value} = 1000(1.0041) = 1004.10.
+\]
+
+\paragraph{3. Discount Yield (DY) — Discount from Face Value}
+\[
+\boxed{\text{Quoted Discount Yield} = \text{Discount} \times \frac{360}{\text{Days to Maturity}}}
+\]
+\[
+\text{Discount} = 1 - \frac{P}{F}.
+\]
+
+\textbf{Example:} 180-day T-bill quoted at 2.2\% on a 360-day basis.
+\[
+\text{Discount} = 0.022 \times \frac{180}{360} = 0.011.
+\]
+\[
+\text{Price} = 1000(1 - 0.011) = 989.
+\]
+\[
+\text{HPY} = \frac{1000 - 989}{989} = 1.11\%.
+\]
+
+\paragraph{4. Converting Between Yield Conventions}
+\begin{itemize}
+    \item Required to compare securities quoted on different bases.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Money Market Yield Conversions}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Conversion} & \textbf{Formula} \\
+\hline
+Discount yield $\rightarrow$ Price & $P = F \left(1 - \frac{d \times t}{360}\right)$ \\
+\hline
+Price $\rightarrow$ Add-on yield & $r = \frac{F - P}{P} \times \frac{365}{t}$ \\
+\hline
+Add-on yield (360) $\rightarrow$ Bond Equivalent Yield (BEY) & $r_{BEY} = r_{360} \times \frac{365}{360}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. Example: Comparing Different Money Market Quotes}
+\textbf{Case 1: 90-day T-bill}  
+Discount = 1.2\%, 360-day basis.
+\[
+P = 1000(1 - 0.012 \times 90 / 360) = 997.
+\]
+\[
+\text{Add-on yield (BEY)} = \frac{3}{997} \times \frac{365}{90} = 1.22\%.
+\]
+
+\textbf{Case 2: 120-day CD}  
+Add-on yield = 1.4\% (365-day).
+\[
+\text{Interest} = 0.014 \times \frac{120}{365} = 0.004603.
+\]
+\[
+\text{Maturity value} = 1,000,000(1.004603) = 1,004,603.
+\]
+
+\textbf{Case 3: 100-day deposit}  
+Add-on yield = 1.5\% (360-day).
+\[
+\text{Bond equivalent yield (BEY)} = 1.5 \times \frac{365}{360} = 1.5208\%.
+\]
+\[
+\text{HPY} = 1.5\% \times \frac{100}{360} = 0.4167\%.
+\]
+\[
+\text{Effective annual yield} = (1.004167)^{3.65} - 1 = 1.5294\%.
+\]
+\[
+\text{Semiannual bond yield} = 2 \times \left( (1.015294)^{1/2} - 1 \right) = 1.5236\%.
+\]
+
+\paragraph{6. Bond Equivalent Yield (BEY)}
+\begin{itemize}
+    \item \textbf{Definition:} Add-on yield annualized using 365 days — allows direct comparison with bond yields.
+    \item \textbf{Formula:}
+    \[
+    \boxed{\text{BEY} = \frac{\text{HPY} \times 365}{\text{Days to Maturity}}}
+    \]
+\end{itemize}
+
+\paragraph{7. Interpretation of Yield Basis}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Quotation Conventions in Money Markets}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Instrument} & \textbf{Quotation Basis} & \textbf{Year Convention} \\
+\hline
+Treasury bills, commercial paper & Discount yield & 360-day \\
+\hline
+Bank CDs, repos, interbank deposits & Add-on yield & 365-day \\
+\hline
+Bond equivalent yields (BEY) & Add-on yield & 365-day \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Formulas Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Summary of Core Yield Formulas}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula} \\
+\hline
+Floating-Rate Coupon & \( \text{Coupon} = (\text{MRR} + \text{QM}) \times F \) \\
+\hline
+FRN Discount Rate & \( r = \text{MRR} + \text{DM} \) \\
+\hline
+Add-On Yield & \( r_{AOY} = \frac{F - P}{P} \times \frac{\text{Year Days}}{\text{Days to Maturity}} \) \\
+\hline
+Discount Yield & \( r_{DY} = \frac{F - P}{F} \times \frac{360}{\text{Days to Maturity}} \) \\
+\hline
+Bond Equivalent Yield (BEY) & \( r_{BEY} = \text{HPY} \times \frac{365}{\text{Days to Maturity}} \) \\
+\hline
+FRN Price Approximation & \( P = \sum_{t=1}^{N} \frac{CF_t}{(1 + \text{MRR} + \text{DM})^t} \) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Summary Table: LOS 56.a–56.b}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Conceptual Summary}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Core Insights} \\
+\hline
+56.a & FRNs pay MRR + quoted margin (QM). Required margin (DM) reflects investor credit demands. FRN trades at par if QM = DM, at discount if QM < DM, and at premium if QM > DM. Value estimated using MRR + DM as discount rate. \\
+\hline
+56.b & Money market yields differ by quotation (add-on vs. discount) and year convention (360 or 365). Bond equivalent yield (BEY) = add-on yield using 365-day basis. Yield conversions allow cross-comparison of securities. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Key Takeaways:}
+\begin{itemize}
+    \item FRNs reset coupons periodically, making price less volatile than fixed-rate bonds.
+    \item The relationship \( \text{QM vs. DM} \) drives FRN price deviations from par.
+    \item Money market yields require standardization (BEY) for comparison across instruments.
+    \item Discount instruments quote yields below face; add-on instruments quote above price paid.
+\end{itemize}
+
+\section*{Module 57.1: The Term Structure of Interest Rates — Spot, Par, and Forward Curves}
+
+\subsection*{LOS 57.a: Define Spot Rates and the Spot Curve; Calculate the Price of a Bond Using Spot Rates}
+
+\paragraph{1. Definition of Spot Rates}
+\begin{itemize}
+    \item A \textbf{spot rate} (\(S_t\)) is the market discount rate for a single future payment at time \(t\).
+    \item Also called \textbf{zero-coupon rate} or \textbf{zero rate}.
+    \item Represents yield on a zero-coupon bond maturing at \(t\).
+\end{itemize}
+
+\paragraph{2. Bond Valuation Using Spot Rates}
+\[
+\boxed{
+P_0 = \sum_{t=1}^{N} \frac{CF_t}{(1 + S_t)^t}
+}
+\]
+where \(CF_t\) = coupon or principal at time \(t\), discounted by the corresponding spot rate \(S_t\).
+
+\paragraph{3. Example: Bond Valuation Using Spot Rates}
+\textbf{Given:}
+\[
+S_1 = 3\%, \quad S_2 = 4\%, \quad S_3 = 5\%, \quad \text{Coupon rate} = 5\%, \quad FV = 100
+\]
+\[
+P = \frac{5}{1.03} + \frac{5}{(1.04)^2} + \frac{105}{(1.05)^3} = 100.18
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Bond value slightly $>$ par → YTM slightly $<$ coupon (4.93\%).
+    \item Price derived from spot rates = \textbf{no-arbitrage price}.
+\end{itemize}
+
+\paragraph{4. Conceptual View}
+\begin{itemize}
+    \item Each cash flow discounted at its own appropriate zero-coupon yield.
+    \item YTM is a weighted average of spot rates.
+    \item Spot curve: graphical plot of spot rates (\(y\)-axis) vs. maturity (\(x\)-axis).
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Spot Rates vs. Bond Pricing}
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Scenario} & \textbf{Relative Spot/YTM Levels} & \textbf{Resulting Bond Price} \\
+\hline
+Spot rates increase with maturity (normal) & YTM slightly below long-term spot & Price $\approx$ par \\
+\hline
+Flat spot curve & All spot rates equal to YTM & Price = par \\
+\hline
+Inverted spot curve & YTM higher than early spot rates & Price $<$ par \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 57.b: Define Par and Forward Rates; Compute Par Rates, Forward Rates, and Spot Rates}
+
+\paragraph{1. Par Yield (or Par Rate)}
+\begin{itemize}
+    \item The \textbf{par yield} is the coupon rate that causes a bond’s price to equal its par value.
+    \item For an \(N\)-year bond:
+    \[
+    100 = \sum_{t=1}^{N} \frac{PMT}{(1 + S_t)^t} + \frac{100}{(1 + S_N)^N}
+    \]
+    Solve for \(PMT\) → the \textbf{par yield}.
+\end{itemize}
+
+\paragraph{Example:}
+Given spot rates \(S_1=1\%, S_2=2\%, S_3=3\%\):
+\[
+\frac{PMT}{1.01} + \frac{PMT}{(1.02)^2} + \frac{100 + PMT}{(1.03)^3} = 100
+\]
+\[
+\Rightarrow PMT = 2.96\%
+\]
+\textbf{Interpretation:} 3-year par bond has coupon = 2.96\% to trade at par.
+
+
+
+\paragraph{2. Forward Rates (Notation and Concept)}
+\begin{itemize}
+    \item Forward rate \(a y b y\): rate for a \(b\)-year loan beginning \(a\) years from now.
+    \[
+    \text{Example: } 2y1y \text{ = 1-year rate beginning 2 years from today.}
+    \]
+    \item Forward rates are implied future rates ensuring no-arbitrage between investing now vs. investing later.
+\end{itemize}
+
+\paragraph{3. Relationship Between Spot and Forward Rates}
+\[
+\boxed{(1 + S_N)^N = \prod_{t=1}^{N} (1 + f_{t-1,t})}
+\]
+where \(f_{t-1,t}\) = forward rate for period \(t\).
+
+\textbf{Example 1: Compute Spot from Forward Rates}
+\[
+S_1 = 2\%, \quad 1y1y = 3\%, \quad 2y1y = 4\%
+\]
+\[
+(1 + S_3)^3 = (1.02)(1.03)(1.04) \Rightarrow S_3 = (1.02 \times 1.03 \times 1.04)^{1/3} - 1 = 2.997\%
+\]
+
+\textbf{Interpretation:} The 3-year spot rate is the geometric mean of one 1-year spot and two forward rates.
+
+
+
+\paragraph{4. Computing Forward Rate from Spot Rates}
+\[
+\boxed{(1 + S_2)^2 = (1 + S_1)(1 + 1y1y)}
+\Rightarrow 1y1y = \frac{(1 + S_2)^2}{(1 + S_1)} - 1
+\]
+\textbf{Example 2:}
+\[
+S_1 = 4\%, \quad S_2 = 8\% \Rightarrow 1y1y = \frac{1.08^2}{1.04} - 1 = 12.154\%.
+\]
+\textbf{Meaning:} Investors earn 4\% first year, then 12.15\% next year, equivalent to 8\% annualized for two years.
+
+
+
+\paragraph{5. 3-Year Extension}
+\[
+(1 + S_3)^3 = (1 + S_2)^2 (1 + 2y1y)
+\Rightarrow 2y1y = \frac{(1 + S_3)^3}{(1 + S_2)^2} - 1
+\]
+\textbf{Example 3:}
+\[
+S_1 = 4\%, \quad S_2 = 8\%, \quad S_3 = 12\%
+\Rightarrow 2y1y = \frac{1.12^3}{1.08^2} - 1 = 20.45\%.
+\]
+
+\textbf{Quick Approximation:}
+\[
+2y1y \approx (3 \times 12) - (2 \times 8) = 20\%.
+\]
+
+
+
+\paragraph{6. Multi-Period Forward Rates}
+\[
+(1 + S_4)^4 = (1 + S_2)^2 (1 + 2y2y)^2
+\Rightarrow 2y2y = \sqrt{\frac{(1 + S_4)^4}{(1 + S_2)^2}} - 1
+\]
+\textbf{Example 4:}
+\[
+S_2 = 6\%, \quad S_4 = 8\% \Rightarrow 2y2y = 10.04\%.
+\]
+\textbf{Approximation:} \((4 \times 8 - 2 \times 6)/2 = 10\%\).
+
+
+
+\paragraph{7. Valuing a Bond Using Forward Rates}
+\textbf{Given:}
+\[
+S_1 = 4\%, \; 1y1y = 5\%, \; 2y1y = 6\%; \quad 3\text{-year, 5\% coupon, } FV = 1000.
+\]
+
+\textbf{Discount Factors:}
+\[
+DF_1 = \frac{1}{1.04}, \quad DF_2 = \frac{1}{(1.04)(1.05)}, \quad DF_3 = \frac{1}{(1.04)(1.05)(1.06)}.
+\]
+\[
+P = 50(DF_1 + DF_2 + DF_3) + 1000(DF_3) = 1000.7.
+\]
+
+\textbf{Interpretation:} Forward-based valuation = spot-based valuation → both yield \textbf{no-arbitrage price}.
+
+
+
+\subsection*{LOS 57.c: Compare the Spot Curve, Par Curve, and Forward Curve}
+
+\paragraph{1. Spot Curve (Zero Curve)}
+\begin{itemize}
+    \item Plots spot rates (\(S_t\)) vs. maturities.
+    \item Derived from zero-coupon or stripped Treasury bonds.
+    \item Represents pure time-value yields.
+\end{itemize}
+
+\paragraph{2. Par Curve}
+\begin{itemize}
+    \item Plots \textbf{par yields} — coupon rates for bonds trading exactly at par.
+    \item Constructed using spot rates.
+    \item Less affected by illiquidity and taxation distortions than direct yield curves.
+\end{itemize}
+
+\paragraph{3. Forward Curve}
+\begin{itemize}
+    \item Plots forward rates (\(f_t\)) for successive periods.
+    \item Represents expected future short-term rates.
+\end{itemize}
+
+\paragraph{4. Relationships Among Curves}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Curve Relationship Summary}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Curve Type} & \textbf{Description} \\
+\hline
+Spot Curve & Set of yields on zero-coupon bonds (spot rates). \\
+\hline
+Par Curve & Hypothetical yields of par bonds for each maturity. \\
+\hline
+Forward Curve & Implied future short-term rates consistent with spot curve. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. Comparative Dynamics}
+\begin{itemize}
+    \item \textbf{Upward-sloping (normal) yield curve:}
+    \[
+    \text{Forward rates} > \text{Spot rates} > \text{Par yields}.
+    \]
+    \item \textbf{Downward-sloping (inverted) yield curve:}
+    \[
+    \text{Forward rates} < \text{Spot rates} < \text{Par yields}.
+    \]
+    \item \textbf{Flat curve:}
+    \[
+    \text{Forward rates} = \text{Spot rates} = \text{Par yields}.
+    \]
+\end{itemize}
+
+\paragraph{6. Example: Normal Yield Curve Intuition}
+\[
+S_1 = 1\%, \; 1y1y = 3\%.
+\Rightarrow S_2 \approx (1 + 0.01)(1 + 0.03)^{1/2} - 1 \approx 2\%.
+\]
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Forward curve steeper than spot curve.
+    \item Par yield curve smoother (weighted average of spots).
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Comparative Behavior of Yield Curves}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Yield Curve Type} & \textbf{Forward Curve vs. Spot Curve} & \textbf{Par Curve vs. Spot Curve} \\
+\hline
+Upward-sloping & Above & Slightly below \\
+\hline
+Flat & Equal & Equal \\
+\hline
+Downward-sloping & Below & Slightly above \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Summary Table: LOS 57.a–57.c}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Summary of Core Concepts}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Summary} \\
+\hline
+57.a & Spot rates are zero-coupon yields for specific maturities. Bond prices are found by discounting each cash flow at its respective spot rate (no-arbitrage price). \\
+\hline
+57.b & Par yields are coupon rates that make bonds price at par. Forward rates are implied future short-term rates consistent with the spot curve. Relations: $(1+S_2)^2=(1+S_1)(1+1y1y)$ and $(1+S_3)^3=(1+S_2)^2(1+2y1y)$. \\
+\hline
+57.c & Spot, par, and forward curves are interrelated: forward rates drive spot rates; spot rates drive par yields. In a normal curve, forward $>$ spot $>$ par. In an inverted curve, forward $<$ spot $<$ par. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Key Takeaways:}
+\begin{itemize}
+    \item Spot rates = pure time-value yields from zero-coupon bonds.
+    \item Forward rates = implied future short-term borrowing/lending rates.
+    \item Par yields = hypothetical coupon rates that price bonds at par.
+    \item Forward $\rightarrow$ Spot $\rightarrow$ Par sequence defines yield curve dynamics.
+\end{itemize}
+
+\section*{Module 58.1: Interest Rate Risk and Return}
+
+\subsection*{LOS 58.a: Sources of Return from Fixed-Rate Bonds}
+
+\paragraph{1. Overview}
+A fixed-rate bond provides three primary sources of return:
+
+\begin{enumerate}
+    \item \textbf{Coupon and Principal Payments:} Fixed periodic cash inflows promised by the issuer.
+    \item \textbf{Reinvestment Income:} Interest earned on reinvested coupon payments.
+    \item \textbf{Capital Gain or Loss:} Difference between sale price and purchase price if sold before maturity.
+\end{enumerate}
+
+\paragraph{2. Key Assumptions}
+\begin{itemize}
+    \item The bond makes all payments as promised (no default).
+    \item Coupons are reinvested at the bond’s original YTM.
+    \item YTM remains constant unless otherwise stated.
+\end{itemize}
+
+\paragraph{3. Five Key Results}
+\begin{itemize}
+    \item[(1)] Holding to maturity with constant YTM → realized return = YTM.
+    \item[(2)] Selling before maturity with unchanged YTM → realized return = YTM.
+    \item[(3)] YTM rises → realized return $>$ original YTM (if held to maturity).
+    \item[(4)] YTM rises → realized return $<$ original YTM (if short horizon).
+    \item[(5)] YTM falls → realized return $<$ original YTM (if long horizon).
+\end{itemize}
+
+
+
+\subsection*{Unchanged YTM — Bond Held to Maturity}
+
+\paragraph{Example 1:}
+\[
+\text{6\% annual-pay, 3-year bond, } YTM = 7\%
+\]
+\[
+N=3; I/Y=7; PMT=6; FV=100; \Rightarrow PV = -97.376
+\]
+
+\textbf{Coupon and Reinvestment Income:}
+\[
+FV_{\text{coupons}} = 6(1.07)^2 + 6(1.07) + 6 = 19.289
+\]
+Reinvestment income $= 19.289 - 18 = 1.289$
+
+\textbf{Total Future Value:}
+\[
+119.289 = 97.376 (1.07)^3
+\]
+\textbf{Conclusion:} Realized annual return = YTM = 7\%.
+
+
+
+\subsection*{Unchanged YTM — Bond Sold Before Maturity}
+
+\paragraph{Concept:}
+If YTM remains constant, bond value converges to par as maturity approaches.  
+Intermediate values = \textbf{carrying values} (on the constant-yield trajectory).
+
+\paragraph{Example 2: Capital Gain/Loss}
+\[
+\text{20-year bond, } 5\% \text{ semiannual coupon, } YTM = 6\%.
+\]
+Sold after 5 years (15 years remaining).
+
+\textbf{Carrying value:}
+\[
+N=30; I/Y=3; PMT=2.5; FV=100; \Rightarrow PV=-90.20
+\]
+Sold at 91.40 → Capital gain = 91.40 - 90.20 = 1.20.
+
+\paragraph{Conceptual Note:}
+\begin{itemize}
+    \item Bonds held or sold at constant YTM have no true capital gain/loss.
+    \item Price converges toward par through amortization of premium/discount.
+\end{itemize}
+
+
+
+\subsection*{Changed YTM — Bond Held to Maturity}
+
+\paragraph{Example 3: YTM Change After Purchase}
+\[
+\text{3-year 6\% bond, } YTM = 7\%, \text{Price = 97.376.}
+\]
+
+\textbf{Case 1: YTM rises to 8\%}
+\[
+FV_{\text{coupons}} = 6(1.08)^2 + 6(1.08) + 6 = 19.478
+\Rightarrow \text{Realized return } > 7\%.
+\]
+
+\textbf{Case 2: YTM falls to 6\%}
+\[
+FV_{\text{coupons}} = 6(1.06)^2 + 6(1.06) + 6 = 19.102
+\Rightarrow \text{Realized return } < 7\%.
+\]
+
+\paragraph{Interpretation:}
+\begin{itemize}
+    \item Reinvestment income dominates for long horizons.
+    \item Higher YTM $\Rightarrow$ more reinvestment income $\Rightarrow$ higher return.
+\end{itemize}
+
+
+
+\subsection*{Changed YTM — Bond Sold Before Maturity}
+
+\paragraph{Example 4: One-Year Horizon}
+\[
+\text{3-year 6\% bond, purchased at } 97.376, \text{ horizon = 1 year.}
+\]
+
+\textbf{Case 1: YTM increases to 8\%}
+\[
+N=2; I/Y=8; PMT=6; FV=100; PV=-96.433.
+\]
+Return $<$ 7\% (price loss dominates).
+
+\textbf{Case 2: YTM decreases to 6\%}
+\[
+N=2; I/Y=6; PMT=6; FV=100; PV=-100.00.
+\]
+Return $>$ 7\% (price gain dominates).
+
+\paragraph{Key Idea: Price Risk vs. Reinvestment Risk}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Price vs. Reinvestment Risk Tradeoff}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Investment Horizon} & \textbf{Dominant Risk} & \textbf{Effect of YTM Change} \\
+\hline
+Short-term & Price risk & YTM↑ → Return↓ (price loss) \\
+\hline
+Long-term & Reinvestment risk & YTM↑ → Return↑ (more coupon reinvestment income) \\
+\hline
+At balance (duration) & Equal & Return unaffected by small YTM shifts \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 58.b: Relationship Among Holding Period Return, Macaulay Duration, and Investment Horizon}
+
+\paragraph{Conceptual Link:}
+\begin{itemize}
+    \item \textbf{Holding Period Return (HPR):} Realized yield over investor’s horizon.
+    \item \textbf{Macaulay Duration:} Time-weighted average of cash flows; balance point of price vs. reinvestment risk.
+    \item \textbf{Investment Horizon:} Time investor plans to hold bond.
+\end{itemize}
+
+\paragraph{Relationship Summary:}
+\[
+\boxed{\text{Duration Gap} = D_{Mac} - \text{Investment Horizon}}
+\]
+
+\begin{itemize}
+    \item Positive duration gap → price risk dominates (YTM↑ → loss).
+    \item Negative duration gap → reinvestment risk dominates (YTM↓ → loss).
+    \item Zero duration gap → risks offset → horizon yield = original YTM.
+\end{itemize}
+
+
+
+\subsection*{LOS 58.c: Macaulay Duration — Definition, Calculation, and Interpretation}
+
+\paragraph{Definition:}
+\[
+\boxed{
+D_{Mac} = \sum_{t=1}^{N} \left( \frac{t \times PV(CF_t)}{P_0} \right)
+}
+\]
+where \(PV(CF_t) = \dfrac{CF_t}{(1+y)^t}\), and \(P_0 = \sum PV(CF_t)\).
+
+\paragraph{Interpretation:}
+Average time (in years) it takes to receive bond’s cash flows (weighted by PVs).
+
+
+
+\paragraph{Example 5: Macaulay Duration Calculation}
+
+\textbf{Bond:} 5-year, 11\% annual coupon, Price = 86.59, YTM = 15\%.
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Present Values and Weights for Macaulay Duration}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Year} & \textbf{Cash Flow (\$)} & \textbf{PV(CF)} & \textbf{Weight} & \textbf{t × Weight} \\
+\hline
+1 & 11 & 9.57 & 0.1105 & 0.1105 \\
+\hline
+2 & 11 & 8.32 & 0.0961 & 0.1922 \\
+\hline
+3 & 11 & 7.23 & 0.0835 & 0.2505 \\
+\hline
+4 & 11 & 6.29 & 0.0726 & 0.2904 \\
+\hline
+5 & 111 & 55.18 & 0.6373 & 3.1865 \\
+\hline
+\multicolumn{4}{|r|}{\textbf{Macaulay Duration:}} & \textbf{4.03 years} \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Interpretation:}
+\begin{itemize}
+    \item Investment horizon = 4 years → horizon yield = original YTM (15\%) regardless of rate change.
+    \item Confirms duration as point of risk neutrality.
+\end{itemize}
+
+
+
+\subsection*{Example: Horizon Yield Stability (Duration Balance)}
+
+\textbf{Bond:} 5-year, 11\% coupon, Price = 86.59, YTM = 15\%, Horizon = 4 years.
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Horizon Yield Outcomes}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{YTM Change} & \textbf{Sale Price (PV)} & \textbf{Horizon Yield} \\
+\hline
+Falls to 14\% & 97.368 & 15.0\% \\
+\hline
+Rises to 16\% & 95.690 & 15.0\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Conclusion:}
+\[
+\boxed{\text{When Horizon} = D_{Mac}, \; \text{Price Risk} = \text{Reinvestment Risk}.}
+\]
+
+
+
+\subsection*{Summary Tables}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: LOS Summary}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Summary} \\
+\hline
+58.a & Three return components: coupon/principal, reinvested coupons, capital gain/loss. Holding to maturity at constant YTM → realized return = YTM. \\
+\hline
+58.b & Price risk dominates short horizons; reinvestment risk dominates long horizons. Horizon yield equals YTM when investment horizon = Macaulay duration. \\
+\hline
+58.c & Macaulay duration = weighted average time to receipt of CFs. Duration gap = $D_{Mac} -$ investment horizon. Positive gap → price risk; negative gap → reinvestment risk. \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Risk and Horizon Relationship}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Case} & \textbf{Dominant Risk} & \textbf{Effect on Realized Return} \\
+\hline
+Short Horizon & Price risk & YTM↑ → Return↓, YTM↓ → Return↑ \\
+\hline
+Long Horizon & Reinvestment risk & YTM↑ → Return↑, YTM↓ → Return↓ \\
+\hline
+Horizon = Duration & Balanced & Return = Original YTM (risk offset) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Takeaways}
+\begin{itemize}
+    \item \textbf{Sources of Return:} Coupon, reinvestment, capital gain/loss.
+    \item \textbf{Risks:} 
+        \begin{itemize}
+            \item Price risk dominates short horizons.
+            \item Reinvestment risk dominates long horizons.
+        \end{itemize}
+    \item \textbf{Duration Neutral Point:} When horizon = Macaulay duration, realized return = YTM regardless of rate change.
+    \item \textbf{Duration Gap:} 
+    \[
+    D_{Mac} - \text{Investment Horizon} = 0 \Rightarrow \text{Perfect Immunization.}
+    \]
+\end{itemize}
+
+\section*{Module 59.1: Yield-Based Bond Duration Measures and Properties}
+
+\subsection*{LOS 59.a: Define, Calculate, and Interpret Modified Duration, Money Duration, and PVBP}
+
+\paragraph{1. Concept Overview}
+\begin{itemize}
+    \item \textbf{Macaulay Duration (MacDur):} Weighted average time to receive the bond’s cash flows.
+    \item \textbf{Modified Duration (ModDur):} Sensitivity measure of the bond’s price to a change in YTM.
+    \item \textbf{Money Duration (Dollar Duration):} Currency change in bond value per 1\% change in YTM.
+    \item \textbf{Price Value of a Basis Point (PVBP):} Currency change in bond value per 1 basis point (0.01\%) change in YTM.
+\end{itemize}
+
+
+
+\paragraph{2. Modified Duration (ModDur)}
+\[
+\boxed{
+\text{ModDur} = \frac{\text{MacDur}}{1 + \dfrac{\text{YTM}}{m}}
+}
+\]
+where \(m\) = number of coupon payments per year.
+
+\begin{itemize}
+    \item For annual-pay bonds: \(\text{ModDur} = \dfrac{\text{MacDur}}{1 + \text{YTM}}\)
+    \item For semiannual-pay bonds: \(\text{ModDur} = \dfrac{\text{MacDur}}{1 + \text{YTM}/2}\)
+\end{itemize}
+
+\paragraph{3. Price–Yield Approximation Using ModDur}
+\[
+\boxed{
+\frac{\Delta P}{P} \approx -\text{ModDur} \times \Delta \text{YTM}
+}
+\]
+\begin{itemize}
+    \item Estimates percentage price change for a 1\% change in YTM.
+    \item Negative sign reflects inverse relationship between price and yield.
+\end{itemize}
+
+
+
+\paragraph{Example 1: Modified Duration Calculation}
+
+\textbf{Given:}  
+5-year, 11\% annual coupon bond, Price = 86.59, YTM = 15\%, MacDur = 4.03.
+
+\[
+\text{ModDur} = \frac{4.03}{1.15} = 3.50
+\]
+
+\textbf{Interpretation:}
+\[
+\text{Approx.\% price change for 0.5\% yield increase} = -3.50 \times 0.005 = -1.75\%.
+\]
+\[
+\text{New Price} = 86.59 \times (1 - 0.0175) = 85.09 \text{ (approx.)}
+\]
+
+\textbf{Check:}
+\[
+\text{Exact Price at 15.5\% YTM} = 85.092 \Rightarrow \text{Estimation accuracy confirmed.}
+\]
+
+
+
+\paragraph{4. Approximate Modified Duration (Finite Difference Method)}
+\[
+\boxed{
+\text{Approx.\ ModDur} = \frac{V_{-} - V_{+}}{2 \times V_0 \times \Delta \text{YTM}}
+}
+\]
+where:
+\begin{itemize}
+    \item \(V_{-}\): Price if YTM decreases by $\Delta$YTM.
+    \item \(V_{+}\): Price if YTM increases by $\Delta$YTM.
+    \item \(V_0\): Current bond price.
+    \item $\Delta$YTM is entered as a decimal (e.g., 0.005 for 50 bps).
+\end{itemize}
+
+\paragraph{Example 2: Approximate ModDur}
+\textbf{Given:} 5-year, 11\% bond, Price = 86.59, $\Delta$YTM = 0.005.
+
+\[
+V_{+} = 85.092, \quad V_{-} = 88.127.
+\]
+\[
+\text{Approx.\ ModDur} = \frac{88.127 - 85.092}{2 \times 86.59 \times 0.005} = 3.505.
+\]
+
+\textbf{Result:} Approximation very close to theoretical ModDur = 3.50.
+
+
+
+\paragraph{5. Interpretation of ModDur}
+\begin{itemize}
+    \item ModDur measures \textbf{first-order price sensitivity}.
+    \item Linear approximation of convex (curved) price–yield relationship.
+    \item Accurate for small yield changes (≤ 100 bps).
+    \item Underestimates price increase and overestimates price decrease for larger yield moves due to convexity.
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\fbox{\parbox{0.85\linewidth}{
+\textbf{Figure Concept: Price–Yield Curve}  
+\\
+Curved relationship → convex shape.  
+\\
+ModDur is tangent slope — linear approximation around current YTM.
+}}
+\end{figure}
+
+
+
+\paragraph{6. Money Duration (Dollar Duration)}
+\[
+\boxed{
+\text{Money Duration} = \text{ModDur} \times \text{Full Price of Bond Position}
+}
+\]
+\begin{itemize}
+    \item Expressed in currency terms.
+    \item Represents dollar change for a 1\% change in YTM.
+\end{itemize}
+
+\paragraph{Example 3: Money Duration}
+\textbf{Given:}  
+ModDur = 7.42, Full Price = 101.32, Par = \$2,000,000.
+
+\[
+\text{Money Duration} = 7.42 \times 101.32\% \times 2,000,000 = 15,035,888.
+\]
+
+\textbf{Per \$100 of Par:}
+\[
+7.42 \times 101.32 = 751.79.
+\]
+
+\textbf{Impact of 25 bp Yield Increase:}
+\[
+15,035,888 \times 0.0025 = 37,589.72 \Rightarrow \text{Loss of \$37,589.72.}
+\]
+
+
+
+\paragraph{7. Price Value of a Basis Point (PVBP)}
+\[
+\boxed{
+\text{PVBP} = \frac{V_{-} - V_{+}}{2}
+}
+\]
+
+\begin{itemize}
+    \item Change in bond’s full price for a 1 bp (0.01\%) change in YTM.
+    \item Expressed in currency units per \$100 par.
+\end{itemize}
+
+\paragraph{Example 4: PVBP Calculation}
+\textbf{Given:} 20-year, 6\% annual bond, Price = 101.39, Par = \$1,000,000.
+
+\[
+YTM = 5.88\%, \quad V_{+} = 101.273, \quad V_{-} = 101.507.
+\]
+\[
+\text{PVBP per \$100 par} = \frac{101.507 - 101.273}{2} = 0.117.
+\]
+\[
+\text{PVBP total} = 0.117 \times \$1,000,000 \times 0.01 = \$1,170.
+\]
+
+\textbf{Alternative:}
+\[
+\text{PVBP} = \text{Money Duration} \times 0.0001.
+\]
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Summary of Duration and PVBP Relationships}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Measure} & \textbf{Formula / Interpretation} \\
+\hline
+Macaulay Duration & Weighted average time to receive CFs \\
+\hline
+Modified Duration & \( \dfrac{\text{MacDur}}{1 + \text{YTM}/m} \) — \% price change per 1\% $\Delta$YTM \\
+\hline
+Money Duration & \( \text{ModDur} \times \text{Full Price} \) — \$ change per 1\% $\Delta$YTM \\
+\hline
+PVBP & \( \dfrac{V_{-} - V_{+}}{2} \) — \$ change per 1 bp $\Delta$YTM \\
+\hline
+Relationship & PVBP = Money Duration × 0.0001 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 59.b: Factors Affecting Interest Rate Risk}
+
+\paragraph{1. Maturity Effect}
+\begin{itemize}
+    \item Longer maturity $\Rightarrow$ greater interest rate risk (usually).
+    \item Distant CFs more sensitive to discount rate changes.
+    \item Exception: for deep-discount bonds, duration increases then decreases with maturity.
+\end{itemize}
+
+\paragraph{2. Coupon Rate Effect}
+\begin{itemize}
+    \item Higher coupon $\Rightarrow$ lower duration $\Rightarrow$ less interest rate risk.
+    \item More CFs received sooner, reducing sensitivity to yield changes.
+    \item Zero-coupon bond has highest duration for given maturity.
+\end{itemize}
+
+\paragraph{3. Yield Level Effect}
+\begin{itemize}
+    \item Higher YTM $\Rightarrow$ lower duration $\Rightarrow$ lower price sensitivity.
+    \item Due to flatter (less steep) slope of price–yield curve at high yields.
+\end{itemize}
+
+\paragraph{4. Coupon Reset (for FRNs)}
+\begin{itemize}
+    \item Duration $\approx$ time to next reset date.
+    \item Frequent resets $\Rightarrow$ low price sensitivity.
+\end{itemize}
+
+\paragraph{5. Time Passage Effect (Rolling Down the Curve)}
+\begin{itemize}
+    \item Between coupon payments, duration decreases smoothly as time passes.
+    \item After coupon payment, duration jumps upward slightly as time to next payment resets.
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Factors Influencing Duration and Interest Rate Sensitivity}
+\begin{tabular}{|p{4cm}|p{4cm}|p{8cm}|}
+\hline
+\textbf{Factor} & \textbf{Effect on Duration} & \textbf{Interpretation} \\
+\hline
+Maturity ↑ & Duration ↑ & Long-term bonds = higher price sensitivity. \\
+\hline
+Coupon Rate ↑ & Duration ↓ & High-coupon bonds = lower interest rate risk. \\
+\hline
+YTM ↑ & Duration ↓ & Higher yields = flatter curve, less sensitivity. \\
+\hline
+FRN Reset Frequency ↑ & Duration ↓ & More frequent resets = lower risk. \\
+\hline
+Time (between coupons) & Duration ↓ & Duration declines steadily until coupon date, then resets. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Takeaways Summary}
+
+\begin{itemize}
+    \item \textbf{Modified Duration:} Measures \% change in price for 1\% $\Delta$YTM.
+    \item \textbf{Approx.\ ModDur:} Computed using $V_{-}$ and $V_{+}$ around current yield.
+    \item \textbf{Money Duration:} Currency change for 1\% $\Delta$YTM = ModDur × Price.
+    \item \textbf{PVBP:} Currency change for 1 bp = Money Duration × 0.0001.
+    \item \textbf{Interest Rate Risk Drivers:}
+        \begin{itemize}
+            \item Longer maturity → higher risk.
+            \item Lower coupon → higher risk.
+            \item Lower YTM → higher risk.
+            \item FRNs and high-coupon bonds → lower risk.
+        \end{itemize}
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Formula Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula} \\
+\hline
+Modified Duration & \( \text{ModDur} = \dfrac{\text{MacDur}}{1 + \text{YTM}/m} \) \\
+\hline
+Approx.\ ModDur & \( \dfrac{V_{-} - V_{+}}{2V_0 \Delta \text{YTM}} \) \\
+\hline
+Money Duration & \( \text{ModDur} \times \text{Full Price} \) \\
+\hline
+PVBP & \( \dfrac{V_{-} - V_{+}}{2} \) or \( \text{Money Duration} \times 0.0001 \) \\
+\hline
+Price Change Estimate & \( \dfrac{\Delta P}{P} \approx -\text{ModDur} \times \Delta \text{YTM} \) \\
+\hline
+Interest Rate Sensitivity & ↑ Maturity, ↓ Coupon, ↓ YTM → ↑ Duration \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 60.1: Yield-Based Bond Convexity and Portfolio Properties}
+
+\subsection*{LOS 60.a: Calculate and Interpret Convexity and Describe the Convexity Adjustment}
+
+\paragraph{1. Concept Overview}
+\begin{itemize}
+    \item Duration gives a \textbf{linear} (first-order) estimate of price sensitivity to yield changes.
+    \item The actual price–yield curve is \textbf{convex}; thus, duration alone underestimates price increases and overestimates price decreases.
+    \item \textbf{Convexity} measures the curvature (second-order sensitivity) of the price–yield relationship.
+    \item Adding convexity to duration improves price-change estimates, especially for larger $\Delta$YTM.
+\end{itemize}
+
+
+
+\paragraph{2. Formula: Convexity of a Single Cash Flow}
+\[
+\boxed{
+\text{Convexity of CF}_t = \frac{t(t+1)}{(1+r)^{t+2}}
+}
+\]
+where $r$ is the periodic yield ($\text{YTM}/m$).
+
+\paragraph{Bond Convexity (Weighted Average):}
+\[
+\boxed{
+\text{Convexity} = \frac{1}{P_0} \sum_{t=1}^{N} \frac{CF_t \times t(t+1)}{(1+r)^{t+2}}
+}
+\]
+\begin{itemize}
+    \item \( CF_t \): Cash flow at period \( t \).
+    \item \( P_0 \): Full price (present value) of the bond.
+    \item For semiannual bonds, divide by $m^2$ (typically $m = 2$) to annualize.
+\end{itemize}
+
+
+
+\paragraph{3. Example 1: Convexity by Cash-Flow Weighting}
+
+\textbf{Bond:} 5-year, 11\% annual coupon, price = 86.59, YTM = 15\%, MacDur = 4.03.  
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Convexity of Each Cash Flow}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Year} & \textbf{Cash Flow (\$)} & \textbf{Weight} & \textbf{CF Convexity Term} & \textbf{Weighted Contribution} \\
+\hline
+1 & 11 & 0.1105 & $(1\times2)/1.15^2=1.512$ & $0.1669$ \\
+2 & 11 & 0.0961 & $(2\times3)/1.15^4=4.537$ & $0.4359$ \\
+3 & 11 & 0.0835 & $(3\times4)/1.15^6=9.074$ & $0.7583$ \\
+4 & 11 & 0.0726 & $(4\times5)/1.15^8=15.123$ & $1.0979$ \\
+5 & 111 & 0.6373 & $(5\times6)/1.15^{10}=22.684$ & $14.4560$ \\
+\hline
+\multicolumn{4}{|r|}{\textbf{Bond Convexity:}} & \textbf{16.915} \\
+\hline
+\end{tabular}
+\end{table}
+
+\[
+\boxed{\text{Convexity} = 16.915}
+\]
+
+
+
+\paragraph{4. Approximate Convexity (Finite-Difference Formula)}
+\[
+\boxed{
+\text{Approx.\ Convexity} =
+\frac{V_{-} + V_{+} - 2V_0}{V_0(\Delta YTM)^2}
+}
+\]
+where
+\begin{itemize}
+    \item $V_{-}$ = bond price if yield decreases by $\Delta$YTM,  
+    \item $V_{+}$ = bond price if yield increases by $\Delta$YTM,  
+    \item $V_0$ = current bond price,  
+    \item $\Delta$YTM in decimal form (e.g., 0.005 for 50 bps).
+\end{itemize}
+
+\paragraph{Example 2: Approximate Convexity}
+\[
+V_0=86.59138, \; V_{+}=85.09217, \; V_{-}=88.12721, \; \Delta YTM=0.005
+\]
+\[
+\text{Approx.\ Convexity} = \frac{88.12721 + 85.09217 - 2(86.59138)}{86.59138(0.005)^2} = 16.92
+\]
+
+\textbf{Interpretation:}  
+Approximation matches true convexity ≈ 16.9.
+
+
+
+\paragraph{5. Characteristics Affecting Convexity}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Determinants of Convexity}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Characteristic} & \textbf{Effect on Convexity} \\
+\hline
+Longer maturity & Increases convexity \\
+\hline
+Lower coupon rate & Increases convexity \\
+\hline
+Lower YTM & Increases convexity \\
+\hline
+Greater CF dispersion & Higher convexity (for equal duration) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 60.b: Estimate Price Change Using Duration and Convexity}
+
+\paragraph{1. Combined Duration–Convexity Approximation}
+\[
+\boxed{
+\frac{\Delta P}{P}
+\approx -(\text{ModDur})\Delta y + \tfrac{1}{2}(\text{Convexity})(\Delta y)^2
+}
+\]
+where $\Delta y$ = change in yield (decimal).
+
+
+
+\paragraph{Example 3: Price Estimate with Duration + Convexity}
+\textbf{Given:} 5-year 11\% bond, $P_0=86.59138$, $\text{ModDur}=3.50$, $\text{Convexity}=16.9$, $\Delta y=-0.005$.
+
+\begin{align*}
+\text{Duration Effect} &= -3.50(-0.005)=+0.0175=1.75\%\\
+\text{Convexity Effect} &= 0.5(16.9)(-0.005)^2 = +0.000211 = 0.0211\%\\
+\text{Total \% Change} &= 1.75\% + 0.0211\% = 1.7711\%\\
+\text{Estimated New Price} &= 86.59138(1.017711)=\mathbf{88.125}
+\end{align*}
+
+\textbf{Interpretation:} Convexity adds a small positive adjustment improving accuracy of duration-only estimates.
+
+
+
+\paragraph{2. Money Duration and Money Convexity}
+\[
+\boxed{
+\begin{aligned}
+\text{Money Duration} &= \text{ModDur} \times \text{Full Price (Position)}\\
+\text{Money Convexity} &= \text{Convexity} \times \text{Full Price (Position)}
+\end{aligned}
+}
+\]
+
+\paragraph{Example 4: Money Measures for a \$10 million Position}
+\[
+P_0 = 0.8659138 \times 10,000,000 = 8,659,138
+\]
+\[
+\text{MoneyDur} = 3.50 \times 8,659,138 = 30,306,983
+\]
+\[
+\text{MoneyConv} = 16.9 \times 8,659,138 = 146,339,432
+\]
+
+\textbf{Estimate Change for } $\Delta y = -0.005$:
+\[
+\text{Duration Effect} = - (30,306,983)(-0.005) = +151,534.9
+\]
+\[
+\text{Convexity Effect} = 0.5(146,339,432)(-0.005)^2 = +1,829.3
+\]
+\[
+\text{Total Change} = 151,534.9 + 1,829.3 = 153,364.2
+\]
+\[
+\text{New Value} = 8,659,138 + 153,364.2 = \mathbf{8,812,502}
+\]
+
+\textbf{Consistency Check:} Matches price estimate ≈ 88.125 from previous example.
+
+
+
+\paragraph{3. Convexity Adjustment Interpretation}
+\begin{itemize}
+    \item The convexity adjustment is always \textbf{positive} for a bond with positive convexity.
+    \item \textbf{When yields fall:} Duration-only estimate underestimates price increase → convexity correction adds to price.
+    \item \textbf{When yields rise:} Duration-only estimate overestimates price drop → convexity correction reduces loss.
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\fbox{\parbox{0.85\linewidth}{
+\textbf{Figure Concept: Duration vs. Actual Price Curve} \\
+-- Duration line: tangent, linear. \\
+-- True curve: convex upward. \\
+-- Convexity term adds curvature, improving both sides of estimate.
+}}
+\end{figure}
+
+
+
+\subsection*{LOS 60.c: Portfolio Duration and Convexity}
+
+\paragraph{1. Two Approaches}
+
+\begin{enumerate}
+    \item \textbf{Aggregate Cash-Flow Approach (Theoretical):}  
+    Compute a single duration and convexity based on the portfolio’s total cash-flow stream.
+    \[
+    \text{Use aggregate CFs to find } P_0, \; D, \; \text{and Convexity.}
+    \]
+    \item \textbf{Weighted-Average Approach (Practical):}
+    \[
+    \boxed{
+    \begin{aligned}
+    D_{p} &= \sum_{i=1}^{n} w_i D_i \\
+    C_{p} &= \sum_{i=1}^{n} w_i C_i
+    \end{aligned}
+    }
+    \]
+    where $w_i =$ market-value weight of bond $i$ in portfolio.
+\end{enumerate}
+
+
+
+\paragraph{2. Limitation of Weighted Approach}
+\begin{itemize}
+    \item Assumes a \textbf{parallel shift} in the yield curve — all maturities change by the same $\Delta$YTM.
+    \item In practice, yield-curve changes often involve twists or steepening/flattening.
+    \item For nonparallel shifts, the weighted-average method will misestimate portfolio price change.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Portfolio Duration and Convexity Properties}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Approach} & \textbf{Description / Limitation} \\
+\hline
+Aggregate CF & Exact but computationally intensive. Requires full cash-flow projection. \\
+\hline
+Weighted Average & Practical; uses individual bond durations/convexities and market-value weights. Assumes parallel yield shifts. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Summary Tables and Key Formulas}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Duration–Convexity–Price Relationship}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Measure} & \textbf{Formula / Interpretation} \\
+\hline
+Convexity (cash-flow basis) & $\displaystyle \frac{1}{P_0}\sum \frac{CF_t t(t+1)}{(1+r)^{t+2}}$ \\
+\hline
+Approx.\ Convexity & $\displaystyle \frac{V_{-}+V_{+}-2V_0}{V_0(\Delta y)^2}$ \\
+\hline
+Price Change (\%) & $\displaystyle -\text{ModDur}\Delta y + 0.5(\text{Convexity})(\Delta y)^2$ \\
+\hline
+Money Duration & $\text{ModDur}\times \text{Full Price}$ \\
+\hline
+Money Convexity & $\text{Convexity}\times \text{Full Price}$ \\
+\hline
+Portfolio Duration & $\sum w_i D_i$ (approx., assumes parallel shift) \\
+\hline
+Portfolio Convexity & $\sum w_i C_i$ (approx., assumes parallel shift) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Takeaways}
+
+\begin{itemize}
+    \item \textbf{Convexity} captures the curvature of the bond’s price–yield relationship and refines duration estimates.
+    \item \textbf{Positive convexity} implies that duration-only estimates understate price gains and overstate price losses.
+    \item \textbf{Approx.\ Price Change:}
+        \[
+        \frac{\Delta P}{P} \approx -D_{mod}\Delta y + \tfrac{1}{2}C(\Delta y)^2
+        \]
+    \item \textbf{Money Measures:}
+        \[
+        \begin{aligned}
+        \text{MoneyDur} &= D_{mod} \times P_0 \\
+        \text{MoneyConv} &= C \times P_0
+        \end{aligned}
+        \]
+    \item \textbf{Portfolio Measures:}
+        \[
+        D_p = \sum w_i D_i, \quad C_p = \sum w_i C_i
+        \]
+        Valid only under parallel yield-curve shifts.
+    \item \textbf{Drivers of Convexity:}
+        \begin{itemize}
+            \item ↑ Maturity → ↑ Convexity  
+            \item ↓ Coupon → ↑ Convexity  
+            \item ↓ YTM → ↑ Convexity
+        \end{itemize}
+\end{itemize}
+
+\section*{Module 61.1: Curve-Based and Empirical Fixed-Income Risk Measures}
+
+\subsection*{LOS 61.a: Why Effective Duration and Effective Convexity Are Appropriate for Bonds with Embedded Options}
+
+\paragraph{1. Key Concept: Uncertain Cash Flows}
+\begin{itemize}
+    \item For \textbf{option-free bonds}, cash flows and maturities are known $\Rightarrow$ YTM-based duration is applicable.
+    \item For \textbf{bonds with embedded options} (e.g., callable, putable, MBS):
+    \begin{itemize}
+        \item Future cash flows and redemption dates are \textbf{uncertain}.
+        \item Exercise of the embedded option changes timing and amount of CFs.
+        \item These bonds have \textbf{no single well-defined YTM}.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Option Equivalence}
+\begin{itemize}
+    \item Callable Bond = Straight Bond $-$ Call Option (issuer owns call right).
+    \item Putable Bond = Straight Bond $+$ Put Option (investor owns put right).
+    \item MBS = Straight Bond $-$ Prepayment Option (borrowers can prepay).
+\end{itemize}
+
+
+
+\paragraph{3. Effective Duration (EffDur)}
+\[
+\boxed{
+\text{EffDur} = \frac{V_{-} - V_{+}}{2V_0 \Delta \text{Curve}}
+}
+\]
+where:
+\begin{itemize}
+    \item $V_{-}$ = bond value when benchmark curve decreases by $\Delta$Curve.
+    \item $V_{+}$ = bond value when benchmark curve increases by $\Delta$Curve.
+    \item $V_0$ = current bond value.
+    \item $\Delta$Curve = change in benchmark yield (decimal, e.g., 0.01 for 1\%).
+\end{itemize}
+
+\paragraph{Interpretation:}
+\begin{itemize}
+    \item Measures price sensitivity to \textbf{benchmark yield curve shifts}.
+    \item Reflects the option’s effect on future cash flows.
+    \item Assumes spreads for credit and liquidity risk remain constant.
+\end{itemize}
+
+
+
+\paragraph{4. Effective Convexity (EffCon)}
+\[
+\boxed{
+\text{EffCon} = \frac{V_{-} + V_{+} - 2V_0}{V_0 (\Delta \text{Curve})^2}
+}
+\]
+
+\paragraph{Interpretation:}
+\begin{itemize}
+    \item Captures curvature of price–yield relation for bonds with embedded options.
+    \item Uses changes in \textbf{benchmark curve} rather than YTM.
+\end{itemize}
+
+
+
+\paragraph{5. Convexity Profiles by Bond Type}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Convexity Behavior by Bond Type}
+\begin{tabular}{|p{4cm}|p{4cm}|p{6cm}|}
+\hline
+\textbf{Bond Type} & \textbf{Convexity Type} & \textbf{Reason} \\
+\hline
+Option-Free & Positive & Price–yield relation always convex. \\
+\hline
+Callable & Can be Negative (at low yields) & Call price caps price increase; issuer likely to call when rates fall. \\
+\hline
+Putable & Always Positive & Put option limits price drop at high yields. \\
+\hline
+MBS & Negative (similar to callable) & Borrowers prepay when rates fall. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{6. Price–Yield Relationships}
+\begin{itemize}
+    \item Callable bonds flatten upward (negative convexity) when rates fall.
+    \item Putable bonds flatten downward (positive convexity reinforced) when rates rise.
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\fbox{\parbox{0.9\linewidth}{
+\textbf{Figure Concept:} Callable vs. Option-Free vs. Putable Price–Yield Curves \\
+- Callable bond: price capped at call price (negative convexity region). \\
+- Putable bond: price floor near put price (always positive convexity). \\
+}}
+\end{figure}
+
+
+
+\paragraph{7. Modified vs. Effective Duration (Option-Free Bonds)}
+\begin{itemize}
+    \item For option-free bonds, ModDur ≈ EffDur when yield curve is flat.
+    \item In non-flat curves, $\Delta$ in par curve $\Rightarrow$ nonparallel shift in spot curve.
+    \item Hence, ModDur and EffDur differ slightly due to:
+    \begin{itemize}
+        \item Nonparallel shifts of government spot rates.
+        \item Constant credit spread assumption.
+    \end{itemize}
+\end{itemize}
+
+
+
+\subsection*{LOS 61.b: Estimate Price Change Using Effective Duration and Convexity}
+
+\paragraph{1. Formula for Price Change (with Respect to Benchmark Curve)}
+\[
+\boxed{
+\frac{\Delta P}{P_0} \approx -(\text{EffDur}) \times \Delta \text{Curve} + \frac{1}{2}(\text{EffCon}) \times (\Delta \text{Curve})^2
+}
+\]
+
+\paragraph{2. Example 1: Price Change Using Effective Measures}
+\textbf{Given:}  
+EffDur = 10.5, EffCon = 97.3, $\Delta \text{Curve} = -0.02$ (−200 bps).
+
+\begin{align*}
+\text{Duration Effect} &= -10.5(-0.02) = +0.21 = 21.0\% \\
+\text{Convexity Effect} &= 0.5(97.3)(-0.02)^2 = 0.0195 = 1.95\% \\
+\text{Total Change} &= 21.0 + 1.95 = \mathbf{22.95\%}
+\end{align*}
+
+\textbf{Interpretation:} Bond price expected to rise 22.95\% for a 200 bp curve drop.
+
+
+
+\paragraph{3. Effective vs. Modified Duration Summary}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Effective vs. Modified Duration}
+\begin{tabular}{|p{3cm}|p{4cm}|p{6cm}|}
+\hline
+\textbf{Aspect} & \textbf{Modified Duration} & \textbf{Effective Duration} \\
+\hline
+Applicable to & Option-free bonds & Bonds with embedded options \\
+\hline
+Yield Input & Bond’s YTM & Benchmark yield curve shift ($\Delta$Curve) \\
+\hline
+CF Certainty & Fixed & Uncertain (depends on option exercise) \\
+\hline
+Risk Captured & Total yield change (benchmark + spread) & Benchmark-only change \\
+\hline
+Use of Models & Analytical & Requires bond-pricing model \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 61.c: Key Rate Duration (Partial Duration)}
+
+\paragraph{1. Concept}
+\begin{itemize}
+    \item Effective duration assumes \textbf{parallel yield curve shifts}.
+    \item Key Rate Duration (KRD) measures price sensitivity to changes in the benchmark yield for a \textbf{specific maturity}, with other yields held constant.
+    \item The sum of all key rate durations equals the effective duration.
+\end{itemize}
+
+\[
+\boxed{
+D_{\text{Eff}} = \sum_{i=1}^{n} D_{\text{KeyRate},i}
+}
+\]
+
+\paragraph{2. Application: Measuring Shaping Risk}
+\begin{itemize}
+    \item Shaping risk = risk from \textbf{nonparallel} yield curve shifts (steepening, flattening, twists).
+    \item KRDs allow assessment of sensitivity at individual maturities (e.g., 2y, 5y, 10y, 30y).
+\end{itemize}
+
+
+
+\paragraph{Example 2: Portfolio Key Rate Duration}
+
+\textbf{Portfolio:}
+\begin{itemize}
+    \item 50\% in 5-year zero-coupon bond ($y=5\%$).
+    \item 50\% in 10-year bond ($y=6\%$).
+\end{itemize}
+
+\textbf{Step 1. Compute Modified Durations:}
+\[
+D_{5} = \frac{5}{1.05} = 4.762, \quad D_{10} = \frac{10}{1.06} = 9.434
+\]
+
+\textbf{Step 2. Compute Key Rate Durations:}
+\[
+\text{KRD}_{5} = 4.762 \times 0.5 = 2.381, \quad
+\text{KRD}_{10} = 9.434 \times 0.5 = 4.717
+\]
+
+\textbf{Step 3. Apply Yield Changes:}
+\[
+\Delta y_5 = +0.005, \quad \Delta y_{10} = -0.0025
+\]
+
+\[
+\text{Impact (5-year)} = -2.381(0.005) = -0.0119 = -1.19\%
+\]
+\[
+\text{Impact (10-year)} = -4.717(-0.0025) = +0.0118 = +1.18\%
+\]
+\[
+\text{Total Change} = -1.19\% + 1.18\% = \mathbf{-0.01\%} \text{ (negligible change).}
+\]
+
+\textbf{Interpretation:}  
+Portfolio is well balanced for this nonparallel yield movement.
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Key Rate Duration Characteristics}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Feature} & \textbf{Explanation} \\
+\hline
+Definition & Sensitivity to yield change at specific maturity \\
+\hline
+Sum Property & $\sum \text{KRD}_i = \text{EffDur}$ \\
+\hline
+Captures & Nonparallel yield curve shifts (shape changes) \\
+\hline
+Uses & Portfolio immunization, yield-curve twist risk control \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 61.d: Empirical Duration vs. Analytical Duration}
+
+\paragraph{1. Analytical Duration}
+\begin{itemize}
+    \item Based on mathematical models and present value relationships.
+    \item Examples: Macaulay, Modified, and Effective Duration.
+    \item Assume:
+        \begin{itemize}
+            \item Parallel yield curve shifts.
+            \item Constant credit spread.
+        \end{itemize}
+\end{itemize}
+
+\paragraph{2. Empirical Duration}
+\begin{itemize}
+    \item Derived from \textbf{observed historical data}:
+    \[
+    \text{Empirical Duration} = \frac{\Delta P / P}{\Delta \text{Benchmark Yield}}
+    \]
+    \item Captures the \textbf{actual co-movement} of bond prices and benchmark yields.
+\end{itemize}
+
+\paragraph{3. When Empirical Duration is Preferred}
+\begin{itemize}
+    \item When changes in benchmark yields and spreads are \textbf{correlated}.
+    \item Especially for \textbf{credit-risky bonds} (e.g., corporates).
+    \item In “flight-to-quality” scenarios:
+        \begin{itemize}
+            \item Gov’t yields ↓ (prices ↑).
+            \item Corporate spreads ↑ (prices ↓ or stable).
+            \item Analytical duration overstates sensitivity; empirical duration is smaller.
+        \end{itemize}
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Analytical vs. Empirical Duration}
+\begin{tabular}{|p{3cm}|p{4cm}|p{6cm}|}
+\hline
+\textbf{Aspect} & \textbf{Analytical Duration} & \textbf{Empirical Duration} \\
+\hline
+Basis & Model / PV relationship & Historical regression data \\
+\hline
+Assumes & Constant spreads, parallel curve shifts & Real-world correlations (spreads + yields) \\
+\hline
+Best for & Government or low-credit-risk bonds & Corporate or spread-sensitive bonds \\
+\hline
+Example Scenario & Flat curve shift & Flight-to-quality (credit spreads widen) \\
+\hline
+Value of Duration & Typically higher & Typically lower \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Takeaways Summary}
+
+\begin{itemize}
+    \item \textbf{EffDur / EffCon:}  
+    Best for option-embedded bonds (uncertain CFs).  
+    Measured w.r.t. benchmark yield curve, not YTM.
+    \[
+    \frac{\Delta P}{P} \approx -(\text{EffDur})\Delta \text{Curve} + 0.5(\text{EffCon})(\Delta \text{Curve})^2
+    \]
+    \item \textbf{Callable Bonds:} May exhibit negative convexity at low yields.
+    \item \textbf{Putable Bonds:} Always have positive convexity.
+    \item \textbf{Key Rate Duration:}  
+    Measures partial sensitivity to specific maturities — captures nonparallel shifts.
+    \item \textbf{Empirical Duration:}  
+    Based on observed data; preferred for corporate bonds when credit spreads move with yields.
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Summary Formulas}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula} \\
+\hline
+Effective Duration & $\displaystyle \frac{V_{-} - V_{+}}{2V_0 \Delta \text{Curve}}$ \\
+\hline
+Effective Convexity & $\displaystyle \frac{V_{-} + V_{+} - 2V_0}{V_0 (\Delta \text{Curve})^2}$ \\
+\hline
+Price Change (\%) & $-\text{EffDur}(\Delta \text{Curve}) + 0.5(\text{EffCon})(\Delta \text{Curve})^2$ \\
+\hline
+Key Rate Duration (KRD) & Sensitivity to yield at one maturity (others constant) \\
+\hline
+Portfolio Effective Duration & $\sum w_i D_i$ (parallel shift assumption) \\
+\hline
+Empirical Duration & Observed $\frac{\Delta P / P}{\Delta \text{Benchmark Yield}}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 62.1: Credit Risk}
+
+\subsection*{LOS 62.a: Describe Credit Risk and Its Components}
+
+\paragraph{1. Definition and Nature of Credit Risk}
+\begin{itemize}
+    \item \textbf{Credit risk:} The risk of loss to a fixed-income investor due to a borrower's failure to pay interest or principal (i.e., failure to service its debt).
+    \item A borrower in default fails to meet contractual debt obligations.
+    \item Credit risk can be analyzed from:
+    \begin{itemize}
+        \item \textbf{Bottom-up (issuer-specific factors).}
+        \item \textbf{Top-down (macroeconomic and systemic factors).}
+    \end{itemize}
+\end{itemize}
+
+
+
+\paragraph{2. Bottom-Up Credit Factors (The 5 Cs of Credit Analysis)}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Bottom-Up Credit Analysis – The 5 Cs}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Factor} & \textbf{Explanation} \\
+\hline
+Capacity & Ability to make timely debt payments (e.g., interest coverage, cash flows). \\
+\hline
+Capital & Net worth and other funding sources that reduce reliance on debt. \\
+\hline
+Collateral & Assets pledged as security for debt repayment. \\
+\hline
+Covenants & Legal restrictions protecting lenders (e.g., leverage limits, payout limits). \\
+\hline
+Character & Integrity and reliability of management or borrower. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{3. Top-Down Credit Factors (The 3 Cs)}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Top-Down Factors Affecting Creditworthiness}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Factor} & \textbf{Explanation} \\
+\hline
+Conditions & General macroeconomic environment affecting debt servicing ability. \\
+\hline
+Country & Political/legal stability and fiscal institutions of the borrower’s country. \\
+\hline
+Currency & FX fluctuations affecting foreign-denominated debt repayment. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{4. Key Sources of Repayment by Borrower Type}
+\begin{itemize}
+    \item \textbf{Corporate Debt:}
+    \begin{itemize}
+        \item Secured debt $\rightarrow$ backed by operations + collateral cash flows.
+        \item Unsecured debt $\rightarrow$ backed only by operating CFs and assets.
+    \end{itemize}
+    \item \textbf{Sovereign Debt:}
+    \begin{itemize}
+        \item Backed by tax revenues, tariffs, and fees.
+        \item Secondary sources: privatizations, additional debt issuance.
+    \end{itemize}
+\end{itemize}
+
+
+
+\paragraph{5. Liquidity vs. Insolvency}
+\begin{itemize}
+    \item \textbf{Illiquidity:} Inability to raise cash (temporary shortfall).
+    \item \textbf{Insolvency:} Assets $<$ Liabilities (structural deficiency).
+\end{itemize}
+
+
+
+\paragraph{6. Bond Indenture Clauses}
+\begin{itemize}
+    \item \textbf{Cross-Default:} Default on one issue $\Rightarrow$ default on all issues.
+    \item \textbf{Pari Passu:} All bonds of same type rank equally in default process.
+    \item For secured debt, creditors have claim to pledged assets + general assets.
+\end{itemize}
+
+
+
+\paragraph{7. Measuring Credit Risk}
+\[
+\boxed{
+\text{Expected Loss (EL)} = \text{Probability of Default (POD)} \times \text{Loss Given Default (LGD)}
+}
+\]
+
+\begin{itemize}
+    \item \textbf{Probability of Default (POD):} Annualized probability borrower will fail to make payments.
+    \item \textbf{Loss Given Default (LGD):} Monetary or percentage loss incurred if default occurs.
+    \item \textbf{Recovery Rate:} Fraction of the claim recovered in default.
+    \[
+    \text{LGD\%} = \text{Expected Exposure} \times (1 - \text{Recovery Rate})
+    \]
+\end{itemize}
+
+
+
+\paragraph{8. Credit Spread as Compensation for Expected Loss}
+\[
+\boxed{
+\text{Credit Spread} \approx \text{POD} \times \text{LGD\%}
+}
+\]
+\begin{itemize}
+    \item If actual credit spread $>$ estimated spread → investor overcompensated.
+    \item If actual credit spread $<$ estimated spread → investor undercompensated.
+\end{itemize}
+
+
+
+\paragraph{Example 1: Expected Loss and Credit Spread}
+\begin{align*}
+\text{POD} &= 3\% = 0.03, \quad \text{Recovery Rate} = 75\% \\
+\text{LGD\%} &= 1 - 0.75 = 0.25 \\
+\text{Estimated Spread} &= 0.03 \times 0.25 = 0.0075 = 0.75\%
+\end{align*}
+\textbf{Actual Spread:} $4\% - 2.5\% = 1.5\%$ \\
+$\Rightarrow$ Bond fairly overcompensates for credit risk (1.5\% > 0.75\%).
+
+
+
+\paragraph{9. Relationship Between Credit Quality and Risk Metrics}
+\begin{itemize}
+    \item High credit quality $\Rightarrow$ low POD, strong fundamentals:
+    \[
+    \text{High EBIT margin, high interest coverage, low debt/EBITDA, high CF/net debt.}
+    \]
+    \item LGD depends on:
+    \begin{itemize}
+        \item Seniority of issue (secured vs. unsecured).
+        \item Collateral value.
+    \end{itemize}
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Example Comparison of Credit Risk Characteristics}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Issuer Type} & \textbf{Seniority} & \textbf{POD} & \textbf{LGD\%} \\
+\hline
+Investment Grade – Unsecured & Senior Unsecured & Low & Moderate \\
+\hline
+High Yield – Secured & Collateralized & Higher POD & Lower LGD (collateral recovery) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{LOS 62.b: Credit Ratings – Uses and Limitations}
+
+\paragraph{1. Definition and Purpose}
+\begin{itemize}
+    \item Ratings reflect forward-looking \textbf{creditworthiness} of:
+        \begin{itemize}
+            \item Issuer (corporate or sovereign).
+            \item Specific debt issue.
+        \end{itemize}
+    \item Ratings indicate \textbf{expected loss} (POD × LGD).
+\end{itemize}
+
+
+
+\paragraph{2. Common Uses of Ratings}
+\begin{itemize}
+    \item Compare credit risk across issuers, sectors, maturities.
+    \item Assess \textbf{credit migration risk} (downgrade risk).
+    \item Meet \textbf{regulatory, statutory, or contractual} investment requirements.
+\end{itemize}
+
+
+
+\paragraph{3. Major Credit Rating Agencies and Scales}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Rating Scale Comparison (S\&P, Moody’s, Fitch)}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Category} & \textbf{S\&P/Fitch} & \textbf{Moody’s} \\
+\hline
+Highest Quality & AAA & Aaa \\
+\hline
+High Grade & AA+, AA, AA- & Aa1, Aa2, Aa3 \\
+\hline
+Upper Medium Grade & A+, A, A- & A1, A2, A3 \\
+\hline
+Lower Medium Grade (Investment Grade) & BBB+, BBB, BBB- & Baa1, Baa2, Baa3 \\
+\hline
+Non-Investment Grade (High Yield) & BB+, BB, BB- & Ba1, Ba2, Ba3 \\
+\hline
+Highly Speculative & B+, B, B- & B1, B2, B3 \\
+\hline
+Substantial Risk / Default & CCC–C / D & Caa–C \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item \textbf{Investment Grade:} BBB– / Baa3 or higher.
+    \item \textbf{High Yield (Junk):} BB+ / Ba1 or lower.
+\end{itemize}
+
+
+
+\paragraph{4. Limitations of Ratings}
+\begin{enumerate}
+    \item \textbf{Lag Effect:} Ratings adjust slower than market prices/spreads.
+    \item \textbf{Inherent Uncertainty:} Ratings cannot capture all risks (e.g., litigation, disasters, fraud).
+    \item \textbf{Agency Errors:} Historical overrating (e.g., subprime 2008 crisis).
+    \item \textbf{Split Ratings:} Different agencies may assign different ratings.
+\end{enumerate}
+
+\textbf{Investor Implication:}  
+Rely on independent analysis — not only on ratings.
+
+
+
+\subsection*{LOS 62.c: Factors Influencing Yield Spreads}
+
+\paragraph{1. Definition}
+\begin{itemize}
+    \item \textbf{Credit spread risk:} The risk that yield spreads widen due to worsening credit conditions.
+    \item Affects both price level and volatility of credit-risky bonds.
+\end{itemize}
+
+
+
+\paragraph{2. Macroeconomic Factors}
+\begin{itemize}
+    \item Credit spreads narrow during economic expansions (low POD).
+    \item Credit spreads widen during recessions (high POD).
+    \item \textbf{Investment Grade:} Smaller, less volatile spreads.
+    \item \textbf{High Yield:} Larger, more volatile spreads (strong cyclical sensitivity).
+\end{itemize}
+
+\paragraph{Typical Spread Curve Behavior:}
+\begin{itemize}
+    \item Expansions → spreads fall and steepen.
+    \item Recessions → spreads rise and flatten (even invert for HY).
+\end{itemize}
+
+
+
+\paragraph{3. Market Factors}
+\begin{itemize}
+    \item \textbf{Liquidity Risk:} Cost of trading bonds (bid–offer spread width).
+    \item \textbf{Broker/Dealer Regulation:} Limits capital available for market making.
+    \item \textbf{Funding Stress:} Increases risk aversion, widens spreads.
+    \item \textbf{Supply–Demand Imbalances:} Heavy issuance vs. weak demand widens spreads.
+\end{itemize}
+
+
+
+\paragraph{4. Issuer-Specific Factors}
+\begin{itemize}
+    \item Issuer profitability, leverage, coverage ratios.
+    \item Worsening financial condition $\Rightarrow$ spread widens.
+    \item Analysts compare issuer’s spread to peer averages.
+\end{itemize}
+
+
+
+\paragraph{5. Example: Decomposing Yield Spread into Credit and Liquidity Components}
+\textbf{Given:} 10-year bond, 5\% coupon, Bid/Ask = 99.5/100.5, Benchmark yield = 3\%.
+
+\begin{align*}
+\text{Midprice} &= \frac{99.5 + 100.5}{2} = 100 \\
+\text{Bond Yield (mid)} &= 5\% \quad \Rightarrow \text{Spread} = 5 - 3 = 2\% \\
+\text{Yield}_{bid} &= 5.065\%, \quad \text{Yield}_{ask} = 4.935\% \\
+\text{Liquidity Spread} &= 5.065 - 4.935 = 0.13\% \\
+\text{Credit Spread} &= 2 - 0.13 = 1.87\%
+\end{align*}
+
+\[
+\boxed{
+\text{Total Yield Spread} = \text{Credit Spread} + \text{Liquidity Spread}
+}
+\]
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Summary of Spread Determinants}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Factor Type} & \textbf{Effect on Yield Spread} \\
+\hline
+Macroeconomic & Widen in recessions, narrow in expansions \\
+\hline
+Market & Widen with low liquidity or funding stress \\
+\hline
+Issuer-Specific & Widen with weak credit metrics \\
+\hline
+Maturity & Longer maturities → higher spreads (greater POD) \\
+\hline
+Credit Quality & Lower quality → wider spreads, higher volatility \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{6. Estimating Price Change from Spread Change}
+\[
+\boxed{
+\frac{\Delta P}{P} \approx -(\text{Duration}) \times \Delta \text{Spread} + \tfrac{1}{2}(\text{Convexity})(\Delta \text{Spread})^2
+}
+\]
+\textit{Replace $\Delta$YTM with $\Delta$Spread to measure credit spread risk.}
+
+
+
+\subsection*{Key Takeaways Summary}
+
+\begin{itemize}
+    \item \textbf{Credit Risk =} Probability of Default (POD) × Loss Given Default (LGD).
+    \item \textbf{Expected Loss:} 
+    \[
+    \text{EL} = \text{POD} \times (1 - \text{Recovery Rate})
+    \]
+    \item \textbf{Credit Spread Compensation:}
+    \[
+    \text{Credit Spread} \approx \text{POD} \times \text{LGD\%}
+    \]
+    \item \textbf{Ratings:} Useful benchmarks but lag market information.
+    \item \textbf{Spread Drivers:}
+    \begin{itemize}
+        \item Economic cycle (macro factor)
+        \item Issuer fundamentals (micro factor)
+        \item Market liquidity and funding (market factor)
+    \end{itemize}
+    \item \textbf{Decomposition:}
+    \[
+    \text{Yield Spread} = \text{Credit Spread} + \text{Liquidity Spread}
+    \]
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Formula Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Relationship} \\
+\hline
+Expected Loss (EL) & $\text{POD} \times \text{LGD}$ \\
+\hline
+Loss Given Default (\%) & $\text{Exposure} \times (1 - \text{Recovery Rate})$ \\
+\hline
+Credit Spread & $\text{POD} \times \text{LGD\%}$ \\
+\hline
+Total Yield Spread & Credit Spread + Liquidity Spread \\
+\hline
+Spread-Based Price Change & $-\text{Dur}(\Delta \text{Spread}) + 0.5(\text{Convexity})(\Delta \text{Spread})^2$ \\
+\hline
+Investment Grade Threshold & BBB– / Baa3 or higher \\
+\hline
+High Yield Threshold & BB+ / Ba1 or lower \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 63.1: Credit Analysis for Government Issuers}
+
+\subsection*{LOS 63.a: Explain Special Considerations in Evaluating Credit of Sovereign and Non-Sovereign Government Debt Issuers}
+
+\paragraph{1. Overview}
+\begin{itemize}
+    \item \textbf{Government (public sector) credit analysis} assesses the ability and willingness of a national or sub-national authority to service its debt obligations.
+    \item Two categories:
+    \begin{itemize}
+        \item \textbf{Sovereign Issuers:} National governments (countries).
+        \item \textbf{Non-Sovereign Issuers:} Regional, municipal, agency, or supranational bodies.
+    \end{itemize}
+    \item \textbf{Key distinction:} Sovereigns can control monetary policy (can print money); non-sovereigns cannot.
+\end{itemize}
+
+
+
+\subsection*{Sovereign Government Debt Analysis}
+
+\paragraph{2. Primary Source of Repayment}
+\begin{itemize}
+    \item Derived from the government’s ability to \textbf{tax economic activity}.
+    \item Assessment focuses on the long-term stability and credibility of fiscal and monetary frameworks.
+\end{itemize}
+
+
+\paragraph{3. Qualitative Factors (Five Pillars of Sovereign Creditworthiness)}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Qualitative Factors in Sovereign Credit Analysis}
+\begin{tabular}{|p{4cm}|p{12cm}|}
+\hline
+\textbf{Factor} & \textbf{Description and Analytical Focus} \\
+\hline
+\textbf{1. Institutions \& Policy Framework} & 
+Examines governance quality, political stability, rule of law, property rights, data transparency, and policy credibility.  
+-- Economically: enforcement of contracts, culture of debt repayment, data reliability.  
+-- Politically: stable regime, peaceful foreign relations.  
+-- Willingness to pay is crucial (sovereign immunity = limited legal recourse). \\
+\hline
+\textbf{2. Fiscal Flexibility} & 
+Assesses the ability to raise taxes or reduce expenditures to service debt.  
+-- Flexibility decreases with rigid spending (e.g., entitlement programs). \\
+\hline
+\textbf{3. Monetary Effectiveness} & 
+Measures the independence and credibility of the central bank.  
+-- Independent banks can control inflation without political interference.  
+-- Limited monetary independence $\Rightarrow$ higher inflation and currency risk. \\
+\hline
+\textbf{4. Economic Flexibility} & 
+Evaluates the structure and diversity of the economy.  
+-- High GDP per capita, diversified exports, and stable growth indicate stronger creditworthiness. \\
+\hline
+\textbf{5. External Status} & 
+Assesses position in global financial system and foreign reserve adequacy.  
+-- Reserve-currency nations can borrow externally in their own currency and sustain higher debt.  
+-- Geopolitical risk also affects external standing. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{4. Quantitative Factors (Three Core Metrics)}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Quantitative Indicators of Sovereign Credit Strength}
+\begin{tabular}{|p{4cm}|p{12cm}|}
+\hline
+\textbf{Factor} & \textbf{Typical Metrics and Interpretation} \\
+\hline
+\textbf{1. Fiscal Strength} & 
+-- Debt-to-GDP and Debt-to-Revenue ratios: measure debt burden.  
+-- Interest-to-GDP or Interest-to-Revenue ratios: measure affordability.  
+$\Downarrow$ Lower ratios $\Rightarrow$ stronger fiscal capacity. \\
+\hline
+\textbf{2. Economic Growth and Stability} & 
+-- High real GDP growth, large and diversified economy, stable output.  
+-- Low volatility of growth $\Rightarrow$ lower risk. \\
+\hline
+\textbf{3. External Stability} & 
+-- FX reserves to GDP or external debt ratios $\uparrow$ → strong liquidity buffer.  
+-- Low short-term external debt (due within 12 months) reduces rollover risk.  
+-- Commodity-dependent exporters face concentration risk tied to commodity prices. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{5. Special Analytical Considerations for Sovereigns}
+\begin{itemize}
+    \item Sovereigns can refinance via:
+        \begin{itemize}
+            \item Tax increases.
+            \item Domestic debt issuance.
+            \item Currency devaluation (via money creation).
+        \end{itemize}
+    \item Investors must assess \textbf{ability} and \textbf{willingness} to repay.
+    \item Political stability and institutional quality are paramount.
+\end{itemize}
+
+
+\subsection*{Non-Sovereign Government Debt}
+
+\paragraph{6. Types of Non-Sovereign Issuers}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Categories of Non-Sovereign Government Issuers}
+\begin{tabular}{|p{4cm}|p{12cm}|}
+\hline
+\textbf{Issuer Type} & \textbf{Description and Credit Support} \\
+\hline
+\textbf{Agencies} & 
+Quasi-governmental entities for specific functions (e.g., infrastructure, housing).  
+Backed by statutory or implicit sovereign guarantees → ratings near sovereign level. \\
+\hline
+\textbf{Government-Sector Banks / Financing Institutions} & 
+Publicly sponsored intermediaries for strategic projects (e.g., green bonds).  
+Implied sovereign backing; similar ratings to sovereign. \\
+\hline
+\textbf{Supranational Organizations} & 
+Entities formed by multiple sovereigns (e.g., World Bank, IMF, IDB).  
+Credit quality depends on support of member nations and callable capital. \\
+\hline
+\textbf{Regional / Local Governments} & 
+States, provinces, municipalities.  
+Debt known as \textbf{municipal bonds} (in the U.S.).  
+Typically issued as:
+\begin{itemize}
+    \item \textbf{General Obligation (GO) Bonds:} Backed by full faith, credit, and taxing power of issuer.  
+    \item \textbf{Revenue Bonds:} Backed by specific project revenues (airports, toll roads, hospitals).  
+\end{itemize} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{7. Analytical Distinctions Between Sovereign and Non-Sovereign Debt}
+\begin{itemize}
+    \item \textbf{Monetary Policy:}  
+    -- Sovereigns can create money; non-sovereigns cannot.
+    \item \textbf{Budget Constraints:}  
+    -- Regional governments usually must maintain balanced budgets.
+    \item \textbf{Tax Base:}  
+    -- Ability to service GO bonds depends on local economic strength and tax revenues.
+    \item \textbf{Project-Specific Risk:}  
+    -- Revenue bonds rely solely on project CFs (higher credit risk).
+\end{itemize}
+
+
+
+\paragraph{8. Revenue Bond Analysis (Corporate-Style Approach)}
+\begin{itemize}
+    \item Evaluate:
+        \begin{itemize}
+            \item Stability and predictability of project revenues.
+            \item Operating efficiency and cost control.
+            \item Debt-Service Coverage Ratio (DSCR):
+            \[
+            \boxed{
+            \text{DSCR} = \frac{\text{Revenue after Operating Costs}}{\text{Interest + Principal Payments}}
+            }
+            \]
+            \item DSCR $>$ 1.0 indicates adequate coverage.
+        \end{itemize}
+    \item Focus is similar to corporate credit analysis:
+        \begin{itemize}
+            \item Cash flow predictability.
+            \item Leverage and liquidity ratios.
+            \item Contingent support (e.g., state guarantees).
+        \end{itemize}
+\end{itemize}
+
+
+
+\paragraph{9. Comparative Example: Sovereign vs. Municipal}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Comparison of Sovereign and Non-Sovereign (Municipal) Debt}
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Feature} & \textbf{Sovereign Bonds} & \textbf{Municipal / Regional Bonds} \\
+\hline
+Primary Repayment Source & National tax revenues & Local tax revenues / project revenues \\
+\hline
+Monetary Control & Yes (can print money) & No \\
+\hline
+Budget Requirement & Flexible deficit financing & Often legally required to balance \\
+\hline
+Legal Enforcement & Limited (sovereign immunity) & Legal recourse possible within jurisdiction \\
+\hline
+Currency Risk & Often domestic currency; FX risk for foreign issues & Minimal if local currency \\
+\hline
+Common Bond Types & Treasury bills, notes, bonds & GO bonds, revenue bonds \\
+\hline
+Credit Support & Economic/fiscal/monetary policy credibility & Local tax base or project cash flows \\
+\hline
+Typical Credit Risk Level & Generally lower for reserve-currency sovereigns & Varies by local economic health \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{10. Example: Interpreting Quantitative Ratios for Sovereign Credit Quality}
+\begin{itemize}
+    \item \textbf{High Credit Quality Sovereign:}
+    \begin{itemize}
+        \item Low Debt-to-GDP ($<50\%$)
+        \item High FX Reserves to External Debt ($>100\%$)
+        \item Low Interest-to-Revenue ($<10\%$)
+        \item Stable Real GDP Growth ($\sim$2–4\%)
+    \end{itemize}
+    \item \textbf{Low Credit Quality Sovereign:}
+    \begin{itemize}
+        \item High Debt-to-GDP ($>90\%$)
+        \item Low FX Reserves to External Debt ($<30\%$)
+        \item Rising Inflation and Weak Currency
+        \item Volatile or negative real GDP growth
+    \end{itemize}
+\end{itemize}
+
+
+
+\subsection*{Key Takeaways Summary}
+
+\begin{itemize}
+    \item \textbf{Sovereign Credit Risk Drivers:}
+    \begin{enumerate}
+        \item \textit{Qualitative:} Institutions, Fiscal Flexibility, Monetary Effectiveness, Economic Flexibility, External Status.
+        \item \textit{Quantitative:} Fiscal Strength, Economic Growth/Stability, External Stability.
+    \end{enumerate}
+    \item \textbf{Non-Sovereign Issuers:}
+        \begin{itemize}
+            \item Agencies, government banks, supranationals, and regional governments.
+            \item Regional governments issue:
+                \begin{itemize}
+                    \item \textbf{GO Bonds:} Backed by taxing power (lower risk).
+                    \item \textbf{Revenue Bonds:} Backed by project CFs (higher risk).
+                \end{itemize}
+        \end{itemize}
+    \item \textbf{Key Ratios:}
+        \[
+        \text{Debt Burden} = \frac{\text{Debt}}{\text{GDP}}, \quad
+        \text{Debt Affordability} = \frac{\text{Interest}}{\text{Revenue}}, \quad
+        \text{FX Reserve Ratio} = \frac{\text{FX Reserves}}{\text{External Debt}}
+        \]
+    \item Sovereign risk is influenced by both \textbf{ability} (economic/fiscal) and \textbf{willingness} (institutional/political) to repay.
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Formula and Concept Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Definition} \\
+\hline
+Debt Burden Ratio & $\text{Debt}/\text{GDP}$ or $\text{Debt}/\text{Revenue}$ \\
+\hline
+Debt Affordability Ratio & $\text{Interest}/\text{GDP}$ or $\text{Interest}/\text{Revenue}$ \\
+\hline
+FX Reserve Ratio & $\text{FX Reserves}/\text{External Debt}$ \\
+\hline
+DSCR (Revenue Bonds) & $(\text{Revenue – Opex})/(\text{Interest + Principal})$ \\
+\hline
+GO Bond Support & Full faith and taxing power of issuer \\
+\hline
+Revenue Bond Support & Cash flows from specific project \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 64.1: Credit Analysis for Corporate Issuers}
+
+\subsection*{LOS 64.a: Qualitative and Quantitative Factors in Corporate Credit Analysis}
+
+\paragraph{1. Overview}
+\begin{itemize}
+    \item Corporate credit analysis evaluates a firm’s \textbf{likelihood of default (POD)} and potential \textbf{loss given default (LGD)}.
+    \item Uses both:
+    \begin{itemize}
+        \item \textbf{Qualitative factors:} business model, industry risk, governance.
+        \item \textbf{Quantitative factors:} profitability, leverage, coverage, and liquidity ratios.
+    \end{itemize}
+\end{itemize}
+
+
+
+\paragraph{2. Qualitative Factors}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Key Qualitative Factors in Corporate Credit Analysis}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Factor} & \textbf{Description and Implications for Credit Quality} \\
+\hline
+\textbf{Business Model} &
+\begin{itemize}
+    \item Predictable, recurring, and diversified cash flows → higher credit quality.  
+    \item Exposure to cyclical industries or customer concentration → higher risk.  
+    \item Long-term sustainability and adaptability of business model must be assessed.
+\end{itemize} \\
+\hline
+\textbf{Industry Competition} &
+\begin{itemize}
+    \item Lower competition = stronger pricing power and margins.  
+    \item Evaluate structural changes, barriers to entry, and future competitive threats.
+\end{itemize} \\
+\hline
+\textbf{Business Risk} &
+\begin{itemize}
+    \item Low volatility in revenue and operating margins → higher creditworthiness.  
+    \item Business risk sources: issuer-specific, industry-specific, or macroeconomic.
+\end{itemize} \\
+\hline
+\textbf{Corporate Governance} &
+\begin{itemize}
+    \item Fair treatment of debtholders, transparency, compliance with regulations.  
+    \item Focus areas:  
+        – Covenant protection  
+        – Accounting quality  
+        – Historical management behavior toward creditors.
+\end{itemize} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{3. Governance Considerations}
+\textbf{a) Covenants:}
+\begin{itemize}
+    \item \textbf{Investment-grade debt:} usually includes \textit{affirmative covenants} — maintain assets, pay taxes, comply with laws.
+    \item \textbf{High-yield debt:} includes \textit{negative covenants} — restrict dividend payments, new debt, or asset sales.
+    \item Analysts assess management history for debt-financed equity actions or covenant breaches.
+\end{itemize}
+
+\textbf{b) Accounting Policies:}
+\begin{itemize}
+    \item Aggressive accounting = red flag:
+    \begin{itemize}
+        \item Premature revenue recognition.
+        \item Capitalizing expenses instead of expensing.
+        \item Off-balance-sheet financing (e.g., operating leases).
+        \item Frequent auditor or CFO changes.
+    \end{itemize}
+\end{itemize}
+
+
+
+\paragraph{4. Quantitative Factors}
+\begin{itemize}
+    \item Quantitative analysis forecasts future financials to assess:
+    \begin{itemize}
+        \item Probability of Default (POD).
+        \item Loss Given Default (LGD).
+    \end{itemize}
+    \item \textbf{Top-down analysis:} Macroeconomic and industry trends.  
+    \textbf{Bottom-up analysis:} Company-specific drivers.  
+    \textbf{Hybrid approach:} Both combined.
+\end{itemize}
+
+\paragraph{Indicators of Strong Credit Quality:}
+\begin{itemize}
+    \item Strong, recurring operating profits.
+    \item Low leverage and debt reliance.
+    \item High interest coverage.
+    \item Ample liquidity (cash and undrawn lines of credit).
+\end{itemize}
+
+
+
+\subsection*{LOS 64.b: Financial Ratios Used in Corporate Credit Analysis}
+
+\paragraph{1. Key Cash Flow Measures}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Common Cash Flow Metrics}
+\begin{tabular}{|p{5cm}|p{12cm}|}
+\hline
+\textbf{Metric} & \textbf{Definition and Purpose} \\
+\hline
+\textbf{EBITDA} & 
+Operating Income + Depreciation + Amortization.  
+Proxy for operating cash flow but ignores capital expenditures and working capital needs. \\
+\hline
+\textbf{CFO (Cash Flow from Operations)} & 
+Net cash from core operations.  
+$= \text{Net Income} + \text{Non-Cash Charges} - \Delta \text{Working Capital}$.  
+Better indicator of cash available for debt service. \\
+\hline
+\textbf{FFO (Funds From Operations)} & 
+Net Income + Depreciation + Amortization + Deferred Taxes + Non-Cash Items.  
+Similar to CFO but excludes changes in working capital. \\
+\hline
+\textbf{FCF (Free Cash Flow)} & 
+CFO $-$ Capital Expenditures $+$ Net Interest Expense.  
+Represents discretionary cash available to debtholders and shareholders. \\
+\hline
+\textbf{RCF (Retained Cash Flow)} & 
+Operating Cash Flow $-$ Dividends.  
+Used to assess retained liquidity after shareholder payouts. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{2. Common Credit Ratios}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Key Financial Ratios in Corporate Credit Analysis}
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Category} & \textbf{Ratio} & \textbf{Interpretation} \\
+\hline
+\textbf{Profitability} & EBIT Margin = EBIT / Revenue & Higher margin = stronger profitability and higher credit quality. \\
+\hline
+\textbf{Coverage} & Interest Coverage = EBIT / Interest Expense & Higher coverage = stronger ability to service debt. \\
+\hline
+\textbf{Leverage} & Debt / EBITDA & Lower ratio = lower leverage, stronger credit profile. \\
+\hline
+\textbf{Leverage (Cash-based)} & RCF / Net Debt & Higher ratio = better internal funding capacity, lower credit risk. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{3. Example: Comparative Credit Assessment}
+\textbf{York, Inc. vs. Zale, Inc.}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Input Data}
+\begin{tabular}{|l|c|c|}
+\hline
+ & \textbf{York} & \textbf{Zale} \\
+\hline
+Revenue & \$2,200,000 & \$11,000,000 \\
+EBIT & \$550,000 & \$2,250,000 \\
+Interest Expense & \$40,000 & \$160,000 \\
+Depreciation/Amortization & \$220,000 & \$900,000 \\
+Debt & \$1,900,000 & \$2,700,000 \\
+CFO & \$300,000 & \$850,000 \\
+Dividends & \$30,000 & \$200,000 \\
+Cash & \$500,000 & \$1,000,000 \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Step 1: Profitability}
+\[
+\text{EBIT Margin (York)} = \frac{550,000}{2,200,000} = 25\%, \quad
+\text{EBIT Margin (Zale)} = \frac{2,250,000}{11,000,000} = 20.5\%
+\]
+$\Rightarrow$ York is more profitable.
+
+\textbf{Step 2: Coverage}
+\[
+\text{Interest Coverage (York)} = \frac{550,000}{40,000} = 13.8\times, \quad
+\text{Interest Coverage (Zale)} = \frac{2,250,000}{160,000} = 14.1\times
+\]
+$\Rightarrow$ Both strong; Zale slightly higher.
+
+\textbf{Step 3: Leverage}
+\[
+\text{Debt/EBITDA (York)} = \frac{1,900,000}{770,000} = 2.5\times, \quad
+\text{Debt/EBITDA (Zale)} = \frac{2,700,000}{3,150,000} = 0.9\times
+\]
+$\Rightarrow$ York more leveraged.
+
+\textbf{Step 4: Cash Flow Leverage}
+\[
+\text{RCF/Net Debt (York)} = \frac{270,000}{1,400,000} = 19\%, \quad
+\text{RCF/Net Debt (Zale)} = \frac{650,000}{1,700,000} = 38\%
+\]
+$\Rightarrow$ Zale generates more retained cash relative to its debt.
+
+\textbf{Conclusion:}
+\begin{itemize}
+    \item York has higher profitability but also higher leverage → slightly lower credit quality.
+    \item Zale stronger liquidity and lower leverage → stronger credit standing.
+\end{itemize}
+
+
+
+\subsection*{LOS 64.c: Debt Seniority, Security, and Priority of Claims}
+
+\paragraph{1. Concept of Seniority}
+\begin{itemize}
+    \item \textbf{Seniority ranking:} Determines priority of repayment in default.  
+    \item \textbf{Secured Debt:} Backed by collateral; has direct claim on pledged assets.  
+    \item \textbf{Unsecured Debt:} General claim on issuer’s assets and CFs.
+\end{itemize}
+
+
+
+\paragraph{2. Debt Hierarchy in Default}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Priority of Claims}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Rank} & \textbf{Debt Type / Example} \\
+\hline
+1 & First Lien / Mortgage (specific pledged asset) \\
+2 & Senior Secured (second lien) \\
+3 & Junior Secured \\
+4 & Senior Unsecured \\
+5 & Senior Subordinated \\
+6 & Subordinated \\
+7 & Junior Subordinated \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item All within same class rank \textbf{pari passu} (equal claim priority).
+    \item Secured creditors have claim on collateral + general assets.
+    \item If collateral value < obligation, deficiency ranks pari passu with senior unsecured.
+\end{itemize}
+
+
+
+\paragraph{3. Recovery and Credit Ratings}
+\begin{itemize}
+    \item \textbf{Recovery rates:} Decline as seniority decreases.  
+    \item \textbf{Credit risk:} Increases with subordination.  
+    \item Rating agencies assign:
+    \begin{itemize}
+        \item \textbf{Corporate Family Rating (CFR):} Issuer-level credit quality (usually senior unsecured).  
+        \item \textbf{Corporate Credit Rating (CCR):} Issue-specific rating (depends on seniority, collateral, covenants).  
+    \end{itemize}
+\end{itemize}
+
+
+
+\paragraph{4. Notching and Structural Subordination}
+\begin{itemize}
+    \item \textbf{Notching:} Adjusting an issue’s rating above/below issuer rating to reflect recovery potential.
+    \item \textbf{Structural Subordination:} Occurs when subsidiary debt has claim on subsidiary cash flows before parent’s debt.
+    \begin{itemize}
+        \item Parent bonds effectively subordinated to subsidiary’s debt.  
+        \item Common in holding company structures.
+    \end{itemize}
+    \item \textbf{Implication:}  
+    – Highly rated issuers → minimal notching (differences in recovery less relevant).  
+    – Lower-rated issuers → more notching (recovery differences matter more).
+\end{itemize}
+
+
+
+\paragraph{5. Practical Considerations in Bankruptcy}
+\begin{itemize}
+    \item \textbf{Absolute priority rule:} Senior creditors paid before junior ones.  
+    \item \textbf{In practice:} May be violated if junior creditors or equity accept early settlement to expedite resolution.
+    \item Bankruptcies are costly and slow — value of assets may deteriorate over time.
+\end{itemize}
+
+
+
+\subsection*{Key Takeaways Summary}
+
+\begin{itemize}
+    \item \textbf{Qualitative Factors:}  
+    Stable business model, low competition, low business risk, strong governance.
+    \item \textbf{Quantitative Factors:}  
+    High margins, high coverage, low leverage, high liquidity.
+    \item \textbf{Common Ratios:}
+    \[
+    \text{EBIT Margin} = \frac{\text{EBIT}}{\text{Revenue}}, \quad
+    \text{Interest Coverage} = \frac{\text{EBIT}}{\text{Interest}}, \quad
+    \text{Debt/EBITDA}, \quad
+    \text{RCF/Net Debt}
+    \]
+    \item \textbf{Seniority Hierarchy:}
+    \[
+    \text{First Lien} > \text{Senior Secured} > \text{Junior Secured} > \text{Senior Unsecured} > \text{Subordinated}
+    \]
+    \item \textbf{Notching:}  
+    Adjustment between issuer rating (CFR) and issue rating (CCR) based on collateral and seniority.
+    \item \textbf{Structural Subordination:}  
+    Parent debt is subordinate to subsidiary debt if upstream transfers are restricted.
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Formula and Concept Summary}
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline
+\textbf{Concept} & \textbf{Formula / Definition} \\
+\hline
+EBIT Margin & EBIT / Revenue \\
+\hline
+Interest Coverage & EBIT / Interest Expense \\
+\hline
+Debt / EBITDA & Total Debt / (EBIT + Depreciation + Amortization) \\
+\hline
+RCF / Net Debt & (CFO - Dividends) / (Debt - Cash) \\
+\hline
+Free Cash Flow & CFO - CapEx + Net Interest Expense \\
+\hline
+DSCR (Project Finance) & (Revenue - Opex) / (Interest + Principal) \\
+\hline
+Seniority Order & 1st Lien → Senior Secured → Junior Secured → Senior Unsecured → Subordinated \\
+\hline
+Notching & Difference between Issuer (CFR) and Issue (CCR) ratings \\
+\hline
+Structural Subordination & Parent debt subordinated to subsidiary debt due to cash transfer restrictions \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 65.1: Fixed-Income Securitization}
+
+\subsection*{LOS 65.a: Benefits of Securitization}
+
+\paragraph{1. Definition and Overview}
+\begin{itemize}
+    \item \textbf{Securitization:} The process of transforming illiquid financial assets (e.g., loans, receivables) into tradable securities known as \textbf{asset-backed securities (ABSs)}.
+    \item Connects \textbf{capital providers (investors)} directly with \textbf{capital users (borrowers)}.
+    \item Removes the originating institution (bank/corporation) from the intermediation process.
+\end{itemize}
+
+\paragraph{2. The Securitization Process}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Three-Step Securitization Process}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Step} & \textbf{Description} \\
+\hline
+\textbf{1. Origination} & A bank or corporation (the \textbf{originator}) creates a pool of loans or receivables (the \textbf{collateral}). Example: mortgages, auto loans, credit card receivables. \\
+\hline
+\textbf{2. Sale to SPE} & The pool of assets is sold to a \textbf{Special Purpose Entity (SPE)}—a separate legal vehicle that owns the assets and is bankruptcy remote. \\
+\hline
+\textbf{3. Issuance of ABS} & The SPE issues fixed-income securities (\textbf{asset-backed securities}) to investors. These are backed by cash flows from the underlying collateral. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Key Terms and Roles}
+\begin{itemize}
+    \item \textbf{Originator:} The bank/corporation that creates and sells the assets (e.g., mortgage lender, auto company).
+    \item \textbf{SPE / SPV:} The entity that buys the assets and issues ABSs. It is \textbf{bankruptcy remote}.
+    \item \textbf{Investors:} Buy ABSs and receive periodic cash flows from the underlying pool.
+\end{itemize}
+
+
+
+\paragraph{4. Benefits of Securitization}
+
+\subsubsection*{(a) Benefits to Issuers (Originators)}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Advantages of Securitization to Issuers}
+\begin{tabular}{|p{5cm}|p{12cm}|}
+\hline
+\textbf{Benefit} & \textbf{Explanation} \\
+\hline
+\textbf{Increased Lending Capacity} & Originators can re-lend proceeds from selling loans to the SPE, allowing greater loan creation beyond balance sheet limits. \\
+\hline
+\textbf{Improved Profitability} & Earn fees for loan origination and for structuring/selling collateral to the SPE. \\
+\hline
+\textbf{Lower Regulatory Capital} & Removal of loans from balance sheet lowers capital requirements for banks (Basel capital ratios). \\
+\hline
+\textbf{Improved Liquidity} & Converts illiquid assets (e.g., mortgages) into cash; improves liquidity management and risk-return efficiency. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsubsection*{(b) Benefits to Investors}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Advantages of Securitization to Investors}
+\begin{tabular}{|p{3cm}|p{12cm}|}
+\hline
+\textbf{Benefit} & \textbf{Explanation} \\
+\hline
+\textbf{Tailored Risk–Return Profile} & ABS structures (tranches) allow investors to select exposure suited to their risk appetite (senior vs. junior tranches). \\
+\hline
+\textbf{Diversified Access} & Investors gain access to diversified loan pools (e.g., auto loans, mortgages) without having to originate loans themselves. \\
+\hline
+\textbf{Enhanced Liquidity} & ABSs are tradable securities — more liquid than the underlying loans. Investors can exit positions more easily. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsubsection*{(c) Benefits to Economies and Financial Markets}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Macroeconomic and Market Benefits}
+\begin{tabular}{|p{4cm}|p{12cm}|}
+\hline
+\textbf{Benefit} & \textbf{Explanation} \\
+\hline
+\textbf{Reduced Liquidity Risk} & ABSs improve market liquidity relative to the underlying assets. \\
+\hline
+\textbf{Improved Market Efficiency} & Trading of ABSs allows for equilibrium pricing and better risk distribution. \\
+\hline
+\textbf{Lower Funding Costs} & Provides cheaper financing for originators than direct debt/equity issuance. \\
+\hline
+\textbf{Lower Leverage Ratios} & Growth via off-balance-sheet financing allows originators to expand without raising leverage. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsubsection*{(d) Risks to Investors}
+\begin{itemize}
+    \item \textbf{Cash flow uncertainty:} Timing and amount of cash flows vary due to prepayments or defaults (e.g., early mortgage repayments).
+    \item \textbf{Credit risk:} Defaults or deterioration of collateral credit quality.
+    \item \textbf{Systemic risk:} Excessive securitization can amplify systemic shocks (e.g., 2007–2009 financial crisis).
+\end{itemize}
+
+
+
+\paragraph{5. Conceptual Summary}
+\[
+\text{Securitization = Financial Intermediation by Market Mechanism}
+\]
+\[
+\text{Capital Providers (Investors)} \longleftrightarrow \text{Borrowers (Collateral Pool)}
+\]
+\[
+\text{Originator sells assets} \Rightarrow \text{SPE issues ABS} \Rightarrow \text{Investors fund the collateral.}
+\]
+
+
+
+\subsection*{LOS 65.b: Parties and Roles in Securitization}
+
+\paragraph{1. Example: Fred Motor Company Securitization}
+\begin{itemize}
+    \item \textbf{Scenario:} Fred Motor Company originates \$1 billion in auto loans (50,000 contracts).
+    \item \textbf{Goal:} Remove these loans from its balance sheet and free up cash for new lending.
+\end{itemize}
+
+\textbf{Structure:}
+\[
+\text{Fred (Originator/Seller)} \Rightarrow \text{Sells \$1bn auto loans} \Rightarrow \text{Auto Loan Trust (SPE)} \Rightarrow \text{Issues ABSs to Investors}
+\]
+
+\textbf{Roles:}
+\begin{itemize}
+    \item \textbf{Seller / Depositor:} Fred Motor Company — originates and sells loans to SPE.
+    \item \textbf{SPE / Issuer (Auto Loan Trust):} Buys loans and issues ABS to investors.
+    \item \textbf{Servicer:} Fred continues servicing loans (collects payments, handles repossessions).
+    \item \textbf{Trustee:} Independent third party ensuring proper cash flow distribution and reporting.
+\end{itemize}
+
+
+
+\paragraph{2. Bankruptcy Remoteness}
+\begin{itemize}
+    \item The SPE is legally independent from the originator.  
+    \item If the originator (Fred) becomes insolvent, ABS investors still have full claim on collateral cash flows.
+    \item This legal separation ensures the ABS structure is \textbf{bankruptcy remote}.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Legal and Contractual Protections}
+\begin{tabular}{|p{5cm}|p{12cm}|}
+\hline
+\textbf{Document} & \textbf{Purpose} \\
+\hline
+\textbf{Purchase Agreement} & Defines terms of sale of collateral from originator to SPE. \\
+\hline
+\textbf{Prospectus / Offering Memorandum} & Outlines terms of ABS issuance, fee structure, and waterfall (cash flow allocation). \\
+\hline
+\textbf{Trust Agreement} & Governs duties of trustee, reporting, and safeguarding of investor interests. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{3. Cash Flow Waterfall}
+\begin{itemize}
+    \item Payments from borrowers → received by servicer → distributed by SPE:
+    \begin{enumerate}
+        \item Servicing and trustee fees.
+        \item Interest payments to ABS investors.
+        \item Principal repayments.
+    \end{enumerate}
+    \item Any losses are absorbed according to tranche hierarchy (senior → mezzanine → junior).
+\end{itemize}
+
+
+
+\paragraph{4. Distinction Between Key Entities}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Roles in a Typical Securitization}
+\begin{tabular}{|l|l|p{9cm}|}
+\hline
+\textbf{Party} & \textbf{Also Known As} & \textbf{Primary Function} \\
+\hline
+Originator & Seller, Depositor & Creates and sells pool of loans to SPE. \\
+\hline
+SPE / SPV & Issuer, Trust & Purchases collateral, issues ABS to investors. \\
+\hline
+Servicer & Administrator & Collects payments, enforces contracts, manages delinquencies. \\
+\hline
+Trustee & Custodian & Ensures proper operation of trust and payment waterfall; provides reporting. \\
+\hline
+Investors & Bondholders & Provide funding; receive periodic principal and interest. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\subsection*{Key Takeaways Summary}
+
+\begin{itemize}
+    \item \textbf{Definition:} Securitization converts illiquid financial assets into tradable ABSs through an SPE.
+    \item \textbf{Benefits to Issuers:}
+    \begin{itemize}
+        \item Free up balance sheet capital.
+        \item Generate fee income.
+        \item Reduce leverage and regulatory capital.
+    \end{itemize}
+    \item \textbf{Benefits to Investors:}
+    \begin{itemize}
+        \item Tailored risk/return profiles (via tranching).  
+        \item Access to diverse collateral.  
+        \item Greater liquidity.
+    \end{itemize}
+    \item \textbf{Benefits to Economy:}
+    \begin{itemize}
+        \item Improved liquidity and efficiency.  
+        \item Broader credit availability and reduced funding costs.
+    \end{itemize}
+    \item \textbf{Risks:} Cash flow uncertainty and credit risk of collateral.
+    \item \textbf{Key Entities:}
+    \[
+    \text{Originator (Seller)} \rightarrow \text{SPE (Issuer)} \rightarrow \text{Investors (ABS Holders)}
+    \]
+    \item \textbf{Bankruptcy Remote:} SPE’s assets and liabilities are isolated from those of the originator.
+\end{itemize}
+
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 7: Formula and Concept Summary}
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline
+\textbf{Concept} & \textbf{Definition / Formula / Note} \\
+\hline
+ABS (Asset-Backed Security) & Security backed by loan or receivable cash flows. \\
+\hline
+SPE / SPV & Separate legal entity that issues ABS; bankruptcy remote. \\
+\hline
+Tranche & Division of ABS into senior, mezzanine, and junior risk classes. \\
+\hline
+Cash Flow Waterfall & Sequential payment: servicing fees → interest → principal → residuals. \\
+\hline
+Originator’s Benefit & Liquidity, reduced capital requirements, fee income. \\
+\hline
+Investor’s Benefit & Tailored risk exposure and improved liquidity. \\
+\hline
+Risks to Investor & Credit risk + prepayment (timing) risk. \\
+\hline
+Documents & Purchase Agreement, Prospectus, Trust Agreement. \\
+\hline
+Bankruptcy Remoteness & SPE assets unaffected by originator default. \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 66.1: Asset-Backed Security (ABS) Instrument and Market Features}
+
+\subsection*{LOS 66.a: Covered Bonds – Characteristics, Risks \& Differences from ABS}
+
+\paragraph{1. Definition}
+\begin{itemize}
+  \item \textbf{Covered Bonds:} Senior debt obligations of banks, backed by a segregated \textbf{cover pool} of assets (usually mortgages) that remain \textbf{on-balance-sheet} of the issuer.  
+  \item No SPE is created; the bondholders have \textbf{dual recourse}:  
+    \begin{enumerate}
+      \item To the \textbf{cover pool}, and  
+      \item To the issuer’s \textbf{unencumbered assets}.
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{2. Structure and Credit Enhancements}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Covered Bond Structure vs. ABS}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Feature} & \textbf{Covered Bond Characteristics} \\
+\hline
+Legal Structure & Issued directly by a bank; cover pool remains on issuer’s balance sheet (no SPE). \\
+\hline
+Investor Recourse & Dual recourse → claims on cover pool + issuer’s other assets. \\
+\hline
+Credit Enhancements & 
+\begin{itemize}
+  \item \textbf{Overcollateralization:} Collateral value > bond value.  
+  \item \textbf{Loan-to-Value (LTV) Limits:} Maximum LTV ratios on mortgages.  
+  \item \textbf{Third-party Monitoring:} Independent supervision of cover pool quality.
+\end{itemize} \\
+\hline
+Capital Treatment & Assets remain on balance sheet → no capital relief (unlike ABS). \\
+\hline
+Collateral Maintenance & Dynamic pool → nonperforming/prepaid loans must be replaced to preserve coverage. \\
+\hline
+Tranching & Usually none – covered bonds are single-class instruments. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Types of Covered Bonds}
+\begin{itemize}
+  \item \textbf{Hard-bullet:} Default occurs immediately upon missed payment → accelerated repayment.
+  \item \textbf{Soft-bullet:} Maturity may be extended (up to 1 year) before default is triggered.
+  \item \textbf{Conditional Pass-Through:} If payments still due at maturity, bond converts to pass-through mode — cash flows are passed through as recovered from collateral.
+\end{itemize}
+
+\paragraph{4. Comparison to Traditional ABS}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Covered Bonds vs. ABS}
+\begin{tabular}{|p{4cm}|p{5cm}|p{7cm}|}
+\hline
+\textbf{Aspect} & \textbf{Covered Bond} & \textbf{Asset-Backed Security (ABS)} \\
+\hline
+Issuer & Bank or financial institution & Special Purpose Entity (SPE) \\
+\hline
+Collateral Ownership & Remains on issuer’s balance sheet & Sold to SPE (bankruptcy remote) \\
+\hline
+Recourse & Dual recourse (cover pool + issuer) & Limited recourse (to SPE assets only) \\
+\hline
+Capital Relief for Bank & No (assets stay on balance sheet) & Yes (loans removed from balance sheet) \\
+\hline
+Collateral Maintenance & Dynamic (replacement of non-performing loans) & Static (pool fixed at issuance) \\
+\hline
+Yield Level & Lower (due to dual recourse and overcollateralization) & Higher (riskier, no recourse to issuer) \\
+\hline
+Tranching & Rare & Common (subordination structure) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection*{LOS 66.b: Credit Enhancement Structures in Securitization}
+
+\paragraph{1. Purpose}
+To mitigate investor exposure to credit losses in the collateral pool.  
+Two broad categories:
+\begin{itemize}
+  \item \textbf{Internal Enhancements:} Built into the ABS structure.  
+  \item \textbf{External Enhancements:} Provided by third-party guarantees (not covered in detail here).
+\end{itemize}
+
+\paragraph{2. Internal Credit Enhancement Methods}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Forms of Internal Credit Enhancement}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+\hline
+\textbf{Type} & \textbf{Mechanism and Example} \\
+\hline
+\textbf{Overcollateralization} &
+Collateral value $>$ face value of ABS.  
+Example: Collateral \$600 m vs. ABS \$500 m → \$100 m excess = 16.7\% buffer.  
+Defaults smaller or equal 16.7\% absorbed without loss to ABS investors. \\
+\hline
+\textbf{Excess Spread} &
+Interest income on collateral $>$ coupon promised to ABS investors.  
+The difference builds up a reserve fund to cover losses. \\
+\hline
+\textbf{Subordination (Credit Tranching)} &
+ABS divided into classes (senior, mezzanine, junior).  
+Losses allocated from bottom to top → junior tranche absorbs first losses.  
+Provides credit protection for senior tranches. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Example: Senior–Subordinated Structure}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Credit Tranching Illustration}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Tranche} & \textbf{Principal (\$ millions)} & \textbf{Loss Absorption Order} \\
+\hline
+A (Senior) & 400 & Protected until losses > \$110 m \\
+B (Subordinated) & 80 & Absorbs losses from \$30 m → \$110 m \\
+C (Junior/Equity) & 30 & First to absorb losses up to \$30 m \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Investor Example:}
+\[
+\text{Tranche B Investor: Principal = \$80 m, Coupon = 4\% + 1.5\% = 5.5\%}
+\]
+\[
+\text{If losses = \$50 m → Tranche C absorbs \$30 m, Tranche B absorbs \$20 m.}
+\]
+\[
+\begin{aligned}
+\text{New Principal} &= \$60\ \text{m},\\
+\text{Coupon Payment} &= \$550{,}000 \times \frac{60}{80} \\
+&= \$412{,}500.
+\end{aligned}
+\]
+
+\paragraph{4. Key Insight}
+\begin{itemize}
+  \item Tranching redistributes credit risk similar to a corporate capital structure (senior → subordinated → equity).  
+  \item Senior tranches may achieve credit ratings higher than the originator due to structural protection.
+\end{itemize}
+
+
+\subsection*{LOS 66.c: Types and Risks of Non-Mortgage ABSs}
+
+\paragraph{1. Collateral Spectrum}
+ABSs can be backed by any cash-flow-producing assets (e.g., credit cards, auto loans, solar loans, royalties, franchise fees).
+
+\paragraph{2. Credit Card ABSs}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Credit Card ABS Features}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Feature} & \textbf{Explanation} \\
+\hline
+Collateral Type & Non-amortizing receivables (credit card balances). \\
+\hline
+Cash Flows & Finance charges, membership/late fees, principal repayments. \\
+\hline
+Interest Rate Type & Fixed or floating (often with a cap). \\
+\hline
+Lockout / Revolving Period & 
+\begin{itemize}
+  \item Investors receive only interest and fees.  
+  \item Principal repayments used to buy new receivables.  
+  \item Maintains pool size and avoids prepayment risk.
+\end{itemize} \\
+\hline
+Amortization Period & After lockout ends, principal flows through to investors. \\
+\hline
+Early Amortization Trigger & Activated to preserve credit quality when defaults rise. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\paragraph{3. Solar ABSs (ESG Linked)}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Characteristics of Solar ABSs}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Feature} & \textbf{Explanation} \\
+\hline
+Collateral Type & Loans to homeowners for solar panel installation. \\
+\hline
+Security & Secured by solar equipment or as junior mortgage on property. \\
+\hline
+Investor Attraction & ESG appeal — supports renewable energy transition. \\
+\hline
+Credit Quality & Typically high (qualified borrowers with energy savings). \\
+\hline
+Credit Enhancements & Overcollateralization, excess spread, subordination. \\
+\hline
+Pre-Funding Period & Allows pool expansion post-issuance for diversification. \\
+\hline
+Key Risk & New asset class — performance not yet tested over full credit cycle. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Amortizing vs. Non-Amortizing Collateral}
+\begin{itemize}
+  \item \textbf{Amortizing:} Principal reduces over time (e.g., auto loans, mortgages).  
+  \item \textbf{Non-amortizing:} Principal repayment unscheduled (e.g., credit cards).
+\end{itemize}
+
+
+\subsection*{LOS 66.d: Collateralized Debt Obligations (CDOs)}
+
+\paragraph{1. Definition and Structure}
+\begin{itemize}
+  \item \textbf{CDO:} Structured security issued by an SPE backed by a pool of debt obligations.  
+  \item Includes:  
+    \begin{itemize}
+      \item \textbf{CBO – Collateralized Bond Obligation:} Corporate / emerging-market bonds.  
+      \item \textbf{CLO – Collateralized Loan Obligation:} Leveraged bank loans.
+    \end{itemize}
+  \item Managed by a \textbf{collateral manager} who actively buys / sells assets to meet return objectives.
+\end{itemize}
+
+\paragraph{2. CLO Types}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 7: Types of CLO Structures}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Type} & \textbf{Description} \\
+\hline
+\textbf{Cash-Flow CLO} & Payments to investors from interest \& principal cash flows of underlying loans. \\
+\hline
+\textbf{Market-Value CLO} & Manager trades collateral to profit from price changes; payments depend on market values. \\
+\hline
+\textbf{Synthetic CLO} & Credit exposure via derivatives (e.g., credit default swaps); SPE does not own collateral directly. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Collateral Quality and Investor Protection}
+\begin{itemize}
+  \item \textbf{Coverage Tests:} Ensure cash flows suffice to meet debt service.  
+  \item \textbf{Overcollateralization Tests:} If breached, cash flows diverted to repay senior tranches.  
+  \item \textbf{Diversification Tests:} Limits exposure to single borrower / industry.  
+  \item \textbf{Rating Constraints:} Caps on low-rated (CCC) assets within portfolio.
+\end{itemize}
+
+\paragraph{4. Comparison of ABS and CDO Cash Flow Mechanics}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 8: ABS vs. CDO Structures}
+\begin{tabular}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Feature} & \textbf{ABS} & \textbf{CDO} \\
+\hline
+Collateral Type & Consumer loans (e.g., mortgages, auto, credit cards) & Corporate / leveraged loans / bonds \\
+\hline
+Collateral Manager & None (static pool) & Active management of portfolio \\
+\hline
+Cash Flow Source & Loan repayments from borrowers & Cash flows or market value changes from managed assets \\
+\hline
+Risk Profile & Linked to borrower defaults and prepayments & Linked to credit spreads \& manager performance \\
+\hline
+Complexity & Moderate & Higher (due to active management and leverage) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection*{Key Concept Summary}
+
+\begin{itemize}
+  \item \textbf{Covered Bonds:} On-balance-sheet debt with dual recourse; dynamic cover pool; low yield.  
+  \item \textbf{Credit Enhancement Methods:} Overcollateralization, Excess Spread, Subordination.  
+  \item \textbf{Non-Mortgage ABSs:}
+    \begin{itemize}
+      \item \textit{Credit Card ABS:} Non-amortizing receivables with lockout period.  
+      \item \textit{Solar ABS:} Amortizing green loans with ESG appeal and pre-funding provision.
+    \end{itemize}
+  \item \textbf{CDOs / CLOs:} SPE-issued securities backed by actively managed debt portfolios; include cash-flow, market-value, and synthetic types.  
+  \item \textbf{Key Risks:} Credit risk, prepayment risk, structural complexity.
+\end{itemize}
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 9: Formula and Concept Recap}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Explanation} \\
+\hline
+Overcollateralization Ratio & $\frac{\text{Collateral Value – ABS Face Value}}{\text{Collateral Value}}$ \\
+\hline
+Excess Spread & Interest Income on Collateral – Interest Payments to Investors \\
+\hline
+Tranching Hierarchy & Senior $\rightarrow$ Mezzanine $\rightarrow$ Junior (Loss Absorption Order) \\
+\hline
+Dual Recourse & Bondholders’ claim on cover pool + unencumbered issuer assets \\
+\hline
+Lockout Period & Interest only; principal reinvested in new receivables \\
+\hline
+Amortization Trigger & Early principal repayment when credit quality deteriorates \\
+\hline
+CLO Tests & Coverage, Overcollateralization, Diversification, Rating Limits \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 67.1: Mortgage-Backed Security (MBS) Instrument and Market Features}
+
+\subsection*{LOS 67.a: Prepayment Risk and Time Tranching in Securitizations}
+
+\paragraph{1. Definition of Prepayment Risk}
+\begin{itemize}
+  \item \textbf{Prepayments:} Principal repayments made by borrowers earlier than scheduled (via refinancing, selling, or prepayment).
+  \item \textbf{Prepayment Risk:} Uncertainty regarding the timing of these principal repayments — causes cash flows to differ from expected.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Components of Prepayment Risk}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Risk Type} & \textbf{Description} \\
+\hline
+\textbf{Contraction Risk} & 
+Risk that prepayments are faster than expected (usually when interest rates fall).  
+\textit{Effects:} Cash received sooner $\Rightarrow$ lower reinvestment rates, smaller price appreciation (negative convexity). \\
+\hline
+\textbf{Extension Risk} & 
+Risk that prepayments are slower than expected (usually when rates rise).  
+\textit{Effects:} Longer duration, lower PV (cash flows discounted longer at higher rate). \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{2. Interest Rate Link and Price Behavior}
+\begin{itemize}
+  \item When rates $\downarrow$ → refinancing $\uparrow$ → faster prepayments → \textbf{contraction risk}.
+  \item When rates $\uparrow$ → refinancing $\downarrow$ → slower prepayments → \textbf{extension risk}.
+  \item \textbf{MBS exhibit negative convexity:} Price rises less when yields fall, but declines more when yields rise.
+\end{itemize}
+
+\paragraph{3. Time Tranching (Reallocation of Prepayment Risk)}
+\begin{itemize}
+  \item Technique to redistribute prepayment risk among multiple bond classes (tranches) with different maturities.
+  \item \textbf{Purpose:} Align prepayment exposure with investor preference.
+  \begin{itemize}
+    \item Short tranches → protect against \textbf{extension risk}.
+    \item Long tranches → protect against \textbf{contraction risk}.
+  \end{itemize}
+  \item Example structure: \textbf{Sequential Pay CMO (see LOS 67.c)} — Tranche 1 paid first, Tranche 2 second, etc.
+\end{itemize}
+
+
+\subsection*{LOS 67.b: Residential Mortgage Loan Characteristics}
+
+\paragraph{1. Collateral and Legal Structure}
+\begin{itemize}
+  \item \textbf{Collateral:} Residential real estate (house, apartment).
+  \item \textbf{First Lien:} Lender has legal claim to property if borrower defaults (foreclosure process).
+\end{itemize}
+
+\paragraph{2. Common Loan Features}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Common Features of Residential Mortgage Loans}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Feature} & \textbf{Description} \\
+\hline
+\textbf{Prepayment Penalty} & 
+Fee for repaying principal early (common in Europe, rare in U.S.); mitigates prepayment risk for lenders. \\
+\hline
+\textbf{Recourse Loan} & 
+Lender can claim both collateral property and other borrower assets (common in Europe). \\
+\hline
+\textbf{Nonrecourse Loan} & 
+Lender limited to collateral claim; borrower can walk away if underwater (common in U.S.). \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Risk Ratios}
+\[
+\text{LTV} = \frac{\text{Loan Amount}}{\text{Appraised Property Value}}, \quad
+\text{DTI} = \frac{\text{Monthly Debt Payments}}{\text{Monthly Pretax Income}}
+\]
+
+\textbf{Example:}
+\[
+\text{Loan} = 300{,}000, \quad \text{Value} = 400{,}000 \Rightarrow LTV = 75\%
+\]
+\[
+\text{PMT} = 1{,}932.9, \quad \text{Monthly Income} = 6{,}667 \Rightarrow DTI = 29\%
+\]
+
+\begin{itemize}
+  \item Lower LTV $\Rightarrow$ higher borrower equity $\Rightarrow$ lower default probability.
+  \item Lower DTI $\Rightarrow$ higher repayment capacity $\Rightarrow$ lower credit risk.
+\end{itemize}
+
+\paragraph{4. Loan Categories}
+\begin{itemize}
+  \item \textbf{Prime Loans:} Low LTV, low DTI, good credit score.
+  \item \textbf{Subprime Loans:} High LTV, high DTI, lower credit quality, higher default probability.
+\end{itemize}
+
+\paragraph{5. Agency vs. Non-Agency RMBS}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Agency vs. Non-Agency RMBS}
+\begin{tabular}{|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Feature} & \textbf{Agency RMBS} & \textbf{Non-Agency RMBS} \\
+\hline
+Issuer & Gov’t or GSE (e.g., Fannie Mae, Freddie Mac) & Private banks or institutions \\
+\hline
+Guarantee & Gov’t or GSE guarantee & No gov’t guarantee \\
+\hline
+Collateral Type & Conforming (meets underwriting standards) & Often nonconforming or subprime \\
+\hline
+Credit Enhancement & Implicit/explicit guarantee & Structural (insurance, tranching, etc.) \\
+\hline
+Example Risk Event & None (low risk) & 2007–2009 subprime crisis losses \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection*{LOS 67.c: Residential MBS Types and Cash Flow Characteristics}
+
+\paragraph{1. Mortgage Pass-Through Securities (MPTS)}
+\begin{itemize}
+  \item Represent claims on cash flows from a pool of mortgages (principal + interest, minus servicing/insurance fees).
+  \item \textbf{Pass-Through Rate (Net Coupon):} Coupon on MBS = WAC – fees.
+  \item Cash flows include scheduled repayments + unscheduled prepayments.
+\end{itemize}
+
+\paragraph{2. Key Metrics}
+\[
+\text{WAM} = \frac{\sum (w_i \times \text{Mortgage Maturity})}{\sum w_i}, \quad 
+\text{WAC} = \frac{\sum (w_i \times \text{Mortgage Rate})}{\sum w_i}
+\]
+where \( w_i = \frac{\text{Outstanding Balance of Loan } i}{\text{Total Balance of Pool}} \).
+
+\paragraph{3. Collateralized Mortgage Obligations (CMOs)}
+\begin{itemize}
+  \item Structured securities backed by RMBS or mortgage pools.
+  \item Redistribute prepayment risk among tranches.
+  \item Expand investor base by matching duration and risk preferences.
+\end{itemize}
+
+\paragraph{4. Example: Sequential Pay Tranches}
+\[
+\text{Tranche A} \rightarrow \text{Principal Paid First}; \quad
+\text{Tranche B} \rightarrow \text{Next in Line}
+\]
+\begin{itemize}
+  \item Tranche A: Lower extension risk.  
+  \item Tranche B: Lower contraction risk.
+\end{itemize}
+
+\paragraph{5. Other CMO Tranche Types}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Common CMO Tranche Types and Features}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Tranche Type} & \textbf{Description / Risk Exposure} \\
+\hline
+\textbf{Z-Tranche (Accrual)} & No interest paid initially; interest accrues to principal. Paid after accrual period ends. Lowest priority. \\
+\hline
+\textbf{Principal-Only (PO)} & Receives only principal. Benefits from faster prepayments (higher returns). \\
+\hline
+\textbf{Interest-Only (IO)} & Receives only interest. Harmed by faster prepayments (fewer coupon payments). \\
+\hline
+\textbf{Floating-Rate / Inverse Floaters} & Coupon linked to reference rate (LIBOR or SOFR). Inverse floaters move opposite to rate changes. \\
+\hline
+\textbf{Residual (Equity) Tranche} & Last in payment priority; absorbs residual risk and cash flows. \\
+\hline
+\textbf{Planned Amortization Class (PAC)} & Receives predictable payments within defined prepayment speed range; supported by support tranche. \\
+\hline
+\textbf{Support Tranche (Companion)} & Absorbs excess or shortfall in prepayments to stabilize PAC payments; higher prepayment risk. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection*{LOS 67.d: Commercial Mortgage-Backed Securities (CMBS)}
+
+\paragraph{1. Definition and Collateral}
+\begin{itemize}
+  \item CMBS backed by commercial mortgages on income-producing real estate:  
+  apartments, offices, shopping centers, hotels, warehouses, etc.
+  \item Collateral often less diversified (few or single large property loans).
+\end{itemize}
+
+\paragraph{2. Key Ratios for Credit Analysis}
+\[
+\text{DSCR} = \frac{\text{Net Operating Income (NOI)}}{\text{Debt Service Payment}}, \quad
+\text{LTV} = \frac{\text{Loan Amount}}{\text{Property Value}}
+\]
+\begin{itemize}
+  \item \textbf{Higher DSCR} → better ability to service debt.  
+  \item \textbf{Lower LTV} → higher equity cushion, lower credit risk.
+\end{itemize}
+
+\paragraph{3. Loan-Level and Structural Call Protection}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: CMBS Call Protection Mechanisms}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Type} & \textbf{Description} \\
+\hline
+\textbf{Prepayment Lockout} & Prohibits prepayment for 2–5 years. \\
+\hline
+\textbf{Prepayment Penalty Points} & Fee (as \%) charged on prepaid principal (e.g., 2 points = 2\%). \\
+\hline
+\textbf{Defeasance} & Borrower replaces loan with government securities producing identical payments — allows sale of property but preserves lender cash flow. \\
+\hline
+\textbf{Structural Call Protection} & Sequential-pay tranching at CMBS level ensures priority-based repayment order. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Balloon Maturity and Balloon Risk}
+\begin{itemize}
+  \item \textbf{Partially amortizing loans:} Large principal balance due at maturity = \textbf{Balloon payment.}
+  \item \textbf{Balloon risk:} Borrower may fail to refinance → term extended (\textbf{extension risk}).  
+  \item Lender may enter “workout period” with modified terms.
+\end{itemize}
+
+\paragraph{5. CMBS vs. RMBS Comparison}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: RMBS vs. CMBS Comparison}
+\begin{tabular}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Feature} & \textbf{RMBS} & \textbf{CMBS} \\
+\hline
+Collateral Type & Residential homes & Commercial income-producing property \\
+\hline
+Borrower Type & Individuals & Real estate investors / companies \\
+\hline
+Cash Flow Source & Mortgage payments from homeowners & Rental income (via tenants) \\
+\hline
+Loan Type & Fully amortizing & Often partially amortizing (balloon maturity) \\
+\hline
+Risk Focus & Borrower credit quality & Property NOI, LTV, DSCR \\
+\hline
+Prepayment Risk & Contraction and extension & Limited via call protection \\
+\hline
+Balloon Risk & Rare & Common (extension form) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection*{Key Concept Summary}
+
+\begin{itemize}
+  \item \textbf{Prepayment Risk:} Timing uncertainty of principal repayments.  
+    \[
+    \text{Contraction Risk (faster prepayment)} \quad \text{vs.} \quad \text{Extension Risk (slower prepayment)}
+    \]
+  \item \textbf{Time Tranching:} Distributes prepayment risk across tranches (short vs. long).
+  \item \textbf{Residential Loans:} Characterized by LTV, DTI, recourse type, prepayment terms.
+  \item \textbf{Agency RMBS:} Gov’t or GSE guaranteed; conforming standards.
+  \item \textbf{Non-Agency RMBS:} Private issue; structural credit enhancements.
+  \item \textbf{MBS Structures:}
+    \begin{itemize}
+      \item \textbf{Pass-Throughs:} Direct flow of principal + interest.
+      \item \textbf{CMOs:} Structured tranches redistributing prepayment risk.
+      \item \textbf{PAC/Support Tranches:} Stabilize payments across prepayment speed ranges.
+    \end{itemize}
+  \item \textbf{CMBS:} Backed by commercial properties; key ratios = DSCR, LTV; risks = call protection, balloon risk.
+\end{itemize}
+
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 7: Formula Recap}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Definition} \\
+\hline
+Loan-to-Value (LTV) & $\displaystyle \frac{\text{Loan Amount}}{\text{Property Value}}$ \\
+\hline
+Debt-to-Income (DTI) & $\displaystyle \frac{\text{Monthly Debt Payments}}{\text{Monthly Gross Income}}$ \\
+\hline
+Debt Service Coverage Ratio (DSCR) & $\displaystyle \frac{\text{Net Operating Income}}{\text{Debt Service Payment}}$ \\
+\hline
+Weighted Average Maturity (WAM) & Weighted avg. of mortgage maturities by balance \\
+\hline
+Weighted Average Coupon (WAC) & Weighted avg. of mortgage rates by balance \\
+\hline
+Pass-Through Rate & WAC – servicing/insurance fees \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\end{document}

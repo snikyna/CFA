@@ -1,0 +1,3226 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx} % for including images and figures
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{adjustbox}  % put in preamble
+\usepackage{array}      % for >{\raggedright\arraybackslash}X
+
+\geometry{margin=1in}
+
+% Define an X column that is ragged-right and allows line breaks
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\title{Portfolio Managament}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{MODULE 20.1: Historical Risk and Return}
+
+\subsection*{Learning Objective}
+\textbf{LOS 20.a:} Describe characteristics of the major asset classes that investors consider in forming portfolios.
+
+\subsection*{1. Overview: The Risk–Return Tradeoff}
+
+\textbf{Concept:}  
+Investors face a fundamental tradeoff between \textbf{expected return} and \textbf{risk (volatility)} across asset classes.
+
+\begin{itemize}
+    \item Higher expected returns are associated with higher risk.
+    \item Lower-risk assets provide more stability but lower long-term returns.
+\end{itemize}
+
+\textbf{Empirical Observation (U.S. Data, 1926–2017):}
+\begin{itemize}
+    \item Small-capitalization stocks had the \textbf{highest average returns} and \textbf{highest standard deviation (risk)}.
+    \item Large-cap stocks had lower average returns and volatility than small-cap stocks.
+    \item Long-term government bonds had moderate risk and return.
+    \item Treasury bills (T-bills) had the \textbf{lowest risk and lowest return}.
+\end{itemize}
+
+\subsection*{2. Comparative Summary of Major Asset Classes}
+
+\begin{center}
+\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Asset Class} & \textbf{Avg. Nominal Return} & \textbf{Risk (Std. Dev.)} & \textbf{Key Characteristics} \\
+\hline
+\textbf{Small-Cap Stocks} & Highest ($\approx$ 12--13\%) & Highest ($\approx$ 30\%) & High growth potential, highly volatile. \\
+\hline
+\textbf{Large-Cap Stocks} & Moderate ($\approx$ 10\%) & Moderate ($\approx$ 20\%) & Broad diversification, lower risk than small-caps. \\
+\hline
+\textbf{Long-Term Gov. Bonds} & Lower ($\approx$ 6\%) & Low–Moderate ($\approx$ 10\%) & Fixed income, sensitive to interest rate changes. \\
+\hline
+\textbf{T-Bills (Short-Term Gov. Securities)} & Lowest ($\approx$ 3\%) & Lowest ($\approx$ 1\%) & Near risk-free, used as a proxy for the risk-free rate. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Verbal explanation:}  
+Across decades of data, small firms offered greater reward potential but at much higher variability. Safe assets like T-bills barely beat inflation but provide security and liquidity.
+
+\subsection*{3. Real vs. Nominal Returns}
+
+\textbf{Definitions:}
+\[
+\text{Real Return} = \text{Nominal Return} - \text{Inflation Rate}
+\]
+
+\textbf{Example:}  
+If the nominal return on large-cap stocks is \(10\%\) and average inflation is \(2.7\%\),  
+\[
+\text{Real Return} = 10\% - 2.7\% = 7.3\%
+\]
+
+\textbf{Historical Evidence (U.S. 1926–2017):}
+\begin{itemize}
+    \item \textbf{T-Bills:} Real return ≈ 0.5\%
+    \item \textbf{Large-cap stocks:} Real return ≈ 7.3\%
+    \item Real returns are more stable than nominal returns because inflation varies significantly year to year.
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Inflation erodes purchasing power.
+    \item Long-term investors must focus on \textbf{real returns} to maintain wealth.
+    \item Nominal volatility partly reflects inflation fluctuations, not just asset performance.
+\end{itemize}
+
+\subsection*{4. Risk Characteristics: Variability and Distribution of Returns}
+
+\textbf{Standard deviation ($\sigma$)} measures the dispersion of returns — the most common risk metric.  
+However, historical data show returns are \textbf{not perfectly normal (Gaussian)}.
+
+\textbf{Two important deviations:}
+\begin{itemize}
+    \item \textbf{Skewness} ($\neq 0$): Measures asymmetry of return distribution.
+    \begin{itemize}
+        \item \textbf{Negative skew:} frequent small gains, few large losses (common in equities).
+        \item \textbf{Positive skew:} frequent small losses, few large gains.
+    \end{itemize}
+    \item \textbf{Kurtosis} ($\neq 3$): Measures “fat tails” or frequency of extreme outcomes.
+    \begin{itemize}
+        \item \textbf{Excess kurtosis $>$ 0:} More extreme outcomes than a normal distribution — greater downside and upside volatility.
+        \item Real-world return distributions often have \textbf{fat tails and negative skew}, indicating higher crash risk.
+    \end{itemize}
+\end{itemize}
+
+\textbf{Verbal Explanation:}  
+While models often assume normally distributed returns, real data show more frequent extreme losses.  
+Thus, relying solely on mean and variance underestimates downside risk.
+
+\subsection*{5. Liquidity as an Additional Investment Characteristic}
+
+\textbf{Definition:}  
+Liquidity refers to how easily and quickly an asset can be sold at its fair market value without significant price discount.
+
+\textbf{Key points:}
+\begin{itemize}
+    \item \textbf{High liquidity:} Assets like large-cap stocks and T-bills can be traded quickly with minimal price impact.
+    \item \textbf{Low liquidity:} Assets like emerging market securities, thinly traded corporate bonds, or private equity can be difficult to sell.
+    \item Liquidity risk is reflected in \textbf{higher required returns} for illiquid assets.
+\end{itemize}
+
+\textbf{Example (verbal):}  
+An investor holding a rare municipal bond might have to sell it at a discount in a hurry, even if its intrinsic value hasn’t changed — this is a liquidity premium.
+
+\textbf{Effect on Expected Return:}
+\[
+E(R_{\text{illiquid}}) = E(R_{\text{liquid}}) + \text{Liquidity Premium}
+\]
+
+\subsection*{6. Key Relationships Summary Table}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Key Relationship or Interpretation} \\
+\hline
+Risk–Return Tradeoff & Higher risk $\Rightarrow$ higher expected return \\
+\hline
+Real Return & Nominal Return $-$ Inflation \\
+\hline
+Negative Skew & Frequent small gains, rare large losses \\
+\hline
+Excess Kurtosis & Fat tails — more extreme events than normal distribution \\
+\hline
+Liquidity & Ease of converting to cash; illiquid assets demand higher returns \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{7. Key Takeaways}
+
+\begin{itemize}
+    \item \textbf{Major asset classes differ in risk and return:}  
+    Small-cap stocks are the riskiest and most rewarding; T-bills are the safest with the lowest return.
+    \item \textbf{Real returns matter more than nominal:} Inflation-adjusted returns better measure long-term purchasing power.
+    \item \textbf{Return distributions are not normal:}  
+    They are typically negatively skewed and have excess kurtosis — more frequent extreme losses.
+    \item \textbf{Liquidity influences returns:}  
+    Illiquid assets require a premium for their trading constraints.
+    \item Overall, investors must consider both quantitative measures (mean, variance) and qualitative factors (liquidity, distribution shape) when constructing portfolios.
+\end{itemize}
+
+\section*{MODULE 20.2: Risk Aversion and Optimal Portfolio Selection}
+
+\subsection*{Learning Objectives}
+\begin{itemize}
+    \item \textbf{LOS 20.b:} Explain risk aversion and its implications for portfolio selection.
+    \item \textbf{LOS 20.c:} Explain the selection of an optimal portfolio, given an investor's utility (risk aversion) and the capital allocation line.
+\end{itemize}
+
+\subsection*{1. Risk Aversion: Definition and Investor Preferences}
+
+\textbf{Concept:}  
+A \textbf{risk-averse investor} prefers less risk to more risk when expected returns are equal.  
+Financial models assume all rational investors are risk averse.
+
+\textbf{Investor Classifications:}
+\begin{center}
+\begin{tabular}{|p{4cm}|p{4cm}|p{7cm}|}
+\hline
+\textbf{Investor Type} & \textbf{Attitude Toward Risk} & \textbf{Behavioral Preference} \\
+\hline
+\textbf{Risk-Averse} & Dislikes risk; prefers certainty. & Chooses lower-risk investment for same return. \\
+\hline
+\textbf{Risk-Neutral} & Indifferent to risk. & Cares only about expected return; no risk preference. \\
+\hline
+\textbf{Risk-Seeking (Risk-Loving)} & Prefers more risk. & Chooses higher-risk investment even if expected return is equal. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Example (Gamble Illustration):}
+\[
+\text{Gamble: } 50\% \text{ chance of } \$100,\; 50\% \text{ chance of } \$0 \Rightarrow E(\text{Payoff}) = \$50
+\]
+\begin{itemize}
+    \item \textbf{Risk-Averse:} Prefers a certain \$50 to the gamble.
+    \item \textbf{Risk-Neutral:} Indifferent between gamble and certain \$50.
+    \item \textbf{Risk-Seeking:} Prefers gamble to certain \$50.
+\end{itemize}
+
+\textbf{Implication:}  
+For the same expected return, risk-averse investors always choose the portfolio with the lower standard deviation (\(\sigma\)).
+
+\subsection*{2. Investor Utility Function and Indifference Curves}
+
+\textbf{Utility Function:}
+\[
+U = E(R) - \frac{1}{2}A\sigma^2
+\]
+where:
+\begin{itemize}
+    \item \(U\) = utility (satisfaction level)
+    \item \(E(R)\) = expected return of portfolio
+    \item \(\sigma^2\) = variance of portfolio return
+    \item \(A\) = coefficient of risk aversion (\(A > 0\) for risk-averse investors)
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item \(E(R)\): provides positive utility (benefit).
+    \item \(\frac{1}{2}A\sigma^2\): risk penalty term; higher for more risk-averse investors.
+\end{itemize}
+
+\textbf{Implications:}
+\begin{itemize}
+    \item Higher \(A\) → investor dislikes risk strongly → steeper indifference curve.
+    \item Lower \(A\) → investor tolerates risk → flatter indifference curve.
+\end{itemize}
+
+\subsubsection*{Indifference Curves (Qualitative Description)}
+\begin{itemize}
+    \item Each curve shows combinations of \(E(R)\) and \(\sigma\) that provide the same utility.
+    \item Curves slope \textbf{upward} for risk-averse investors — more risk requires more return.
+    \item \textbf{Higher curves} represent higher utility levels.
+\end{itemize}
+
+\textbf{Example (Verbal Illustration):}
+\begin{itemize}
+    \item Investor A (highly risk-averse): requires 8\% return for 10\% risk.
+    \item Investor B (less risk-averse): satisfied with 6\% return for same 10\% risk.
+    \item Therefore, A’s indifference curve is steeper.
+\end{itemize}
+
+\subsection*{3. Combining Risk-Free and Risky Assets}
+
+\textbf{Portfolio Composition:}
+A portfolio may consist of:
+\[
+\text{Risk-Free Asset (return } R_f, \sigma = 0) \quad \text{and} \quad \text{Risky Portfolio (return } E(R_R), \sigma_R)
+\]
+
+\textbf{Portfolio Expected Return:}
+\[
+E(R_P) = w_R E(R_R) + (1 - w_R)R_f
+\]
+\textbf{Portfolio Standard Deviation:}
+\[
+\sigma_P = w_R \sigma_R
+\]
+where:
+\begin{itemize}
+    \item \(w_R\) = proportion invested in the risky portfolio
+    \item \((1 - w_R)\) = proportion invested in the risk-free asset
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Increasing \(w_R\) increases both expected return and risk linearly.
+    \item Relationship between \(E(R_P)\) and \(\sigma_P\) is a straight line.
+\end{itemize}
+
+\textbf{Example:}
+If 40\% invested in risky portfolio (\(E(R_R)=10\%, \sigma_R=15\%\)) and 60\% in risk-free asset (\(R_f=3\%\)):
+\[
+E(R_P) = 0.4(10\%) + 0.6(3\%) = 5.8\%, \quad \sigma_P = 0.4(15\%) = 6\%
+\]
+
+\subsection*{4. The Capital Allocation Line (CAL)}
+
+\textbf{Equation of CAL:}
+\[
+E(R_P) = R_f + \left( \frac{E(R_R) - R_f}{\sigma_R} \right)\sigma_P
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item The CAL represents all possible combinations of the risk-free asset and the risky portfolio.
+    \item Its \textbf{slope} is the \textbf{Sharpe Ratio}:
+    \[
+    \text{Sharpe Ratio} = \frac{E(R_R) - R_f}{\sigma_R}
+    \]
+    \item A higher slope implies a better risk–return tradeoff.
+\end{itemize}
+
+\textbf{Economic Meaning:}
+\begin{itemize}
+    \item If investors can borrow/lend at \(R_f\), any desired risk-return point along the CAL can be reached.
+    \item Lending (investing in \(R_f\)): moves left on CAL → lower return, lower risk.
+    \item Borrowing (leveraging): moves right on CAL → higher return, higher risk.
+\end{itemize}
+
+\textbf{Numerical Illustration:}
+Suppose:
+\[
+R_f = 2\%, \quad E(R_R) = 8\%, \quad \sigma_R = 10\%
+\]
+\[
+\text{Slope of CAL} = \frac{8\% - 2\%}{10\%} = 0.6
+\]
+For a portfolio with \(\sigma_P = 5\%\):
+\[
+E(R_P) = 2\% + 0.6(5\%) = 5\%
+\]
+
+\subsection*{5. Two-Fund Separation Theorem}
+
+\textbf{Statement:}  
+All investors, regardless of risk aversion, will:
+\begin{enumerate}
+    \item Hold the same optimal risky portfolio (the “market portfolio”).
+    \item Combine it with the risk-free asset in different proportions.
+\end{enumerate}
+
+\textbf{Implications:}
+\begin{itemize}
+    \item Portfolio selection can be divided into two independent decisions:
+    \begin{enumerate}
+        \item Identify the optimal risky portfolio.
+        \item Allocate between that portfolio and the risk-free asset based on personal risk tolerance.
+    \end{enumerate}
+\end{itemize}
+
+\subsection*{6. Selecting the Optimal Portfolio (Utility Maximization)}
+
+\textbf{Goal:}  
+Find the combination of risky and risk-free assets that maximizes the investor’s expected utility.
+
+\textbf{Optimization Condition:}
+Investor chooses the portfolio where:
+\[
+\text{Slope of Indifference Curve} = \text{Slope of CAL}
+\]
+i.e., the point of tangency between investor’s preferences and market opportunities.
+
+\textbf{Mathematical Derivation:}
+\[
+\max_{w_R} \; U = R_f + w_R(E(R_R) - R_f) - \frac{1}{2}A(w_R\sigma_R)^2
+\]
+First-order condition:
+\[
+\frac{\partial U}{\partial w_R} = 0 \Rightarrow w_R^* = \frac{E(R_R) - R_f}{A\sigma_R^2}
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item \(w_R^*\): optimal proportion of wealth in the risky portfolio.
+    \item As risk aversion (\(A\)) increases → smaller \(w_R^*\).
+    \item As risk premium (\(E(R_R) - R_f\)) increases → larger \(w_R^*\).
+    \item As portfolio risk (\(\sigma_R^2\)) increases → smaller \(w_R^*\).
+\end{itemize}
+
+\textbf{Example:}
+\[
+E(R_R) = 8\%, \quad R_f = 3\%, \quad \sigma_R = 10\%, \quad A = 4
+\]
+\[
+w_R^* = \frac{8 - 3}{4(10^2)} = \frac{5}{400} = 0.0125 \Rightarrow 1.25\%
+\]
+If \(A = 1\):
+\[
+w_R^* = \frac{5}{100} = 0.05 \Rightarrow 5\%
+\]
+\textbf{Interpretation:} The less risk-averse investor (A = 1) takes a higher allocation to the risky asset.
+
+\subsection*{7. Portfolio Choices for Investors with Different Risk Aversions}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{5cm}|}
+\hline
+\textbf{Investor Type} & \textbf{Risk Aversion (A)} & \textbf{Indifference Curve Shape} & \textbf{Portfolio Composition} \\
+\hline
+\textbf{Highly Risk-Averse} & Large & Steep & Mostly risk-free assets, little risky portfolio. \\
+\hline
+\textbf{Moderately Risk-Averse} & Medium & Moderate slope & Balanced allocation between risky and risk-free. \\
+\hline
+\textbf{Less Risk-Averse} & Small & Flat & Mostly risky assets, little risk-free portion. \\
+\hline
+\textbf{Risk-Neutral} & 0 & Horizontal & 100\% risky portfolio (maximizes return). \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{8. Conceptual Summary (Verbal Explanation)}
+
+\begin{itemize}
+    \item Risk aversion determines how much extra return investors require to bear extra risk.
+    \item Utility curves represent investors’ satisfaction level given risk and return.
+    \item Combining a risky portfolio with a risk-free asset yields a straight line (CAL) of possible portfolio outcomes.
+    \item The optimal portfolio is chosen at the tangency between the CAL and the investor’s highest attainable indifference curve.
+    \item All investors hold the same optimal risky portfolio (market portfolio), differing only in how much they mix it with the risk-free asset.
+    \item More risk-averse investors hold more in the risk-free asset; less risk-averse investors hold more of the risky portfolio.
+\end{itemize}
+
+\subsection*{9. Key Takeaways}
+
+\begin{itemize}
+    \item \textbf{Risk Aversion:} Investors prefer less risk for the same return; quantified by the coefficient \(A\).
+    \item \textbf{Utility Maximization:} Optimal portfolio maximizes \(U = E(R) - \frac{1}{2}A\sigma^2\).
+    \item \textbf{Capital Allocation Line (CAL):} Linear relationship between risk and return combining risk-free and risky assets.
+    \item \textbf{Two-Fund Separation:} All investors hold the same risky portfolio and mix it with the risk-free asset differently.
+    \item \textbf{Diversification Benefit:} Risk-free asset allows investors to reach their desired risk level without altering market efficiency.
+\end{itemize}
+
+\section*{MODULE 20.3: Portfolio Standard Deviation}
+
+\subsection*{Learning Objectives}
+\begin{itemize}
+    \item \textbf{LOS 20.d:} Calculate and interpret the mean, variance, and covariance (or correlation) of asset returns based on historical data.
+    \item \textbf{LOS 20.e:} Calculate and interpret portfolio standard deviation.
+\end{itemize}
+
+\subsection*{1. Measures of Risk and Return for Individual Assets}
+
+In finance, the \textbf{variance} and \textbf{standard deviation} of returns are fundamental measures of risk.  
+They quantify how much an investment’s returns deviate from its expected (mean) return.
+
+\subsubsection*{1.1 Mean (Expected) Return}
+\[
+\bar{R} = \frac{1}{T}\sum_{t=1}^{T}R_t
+\]
+where:
+\begin{itemize}
+    \item \(R_t\): return in period \(t\)
+    \item \(T\): number of observed periods
+\end{itemize}
+
+\textbf{Interpretation:}  
+The mean represents the central tendency (average performance) of the investment.
+
+\subsubsection*{1.2 Population and Sample Variance}
+
+\textbf{Population variance:}
+\[
+\sigma^2 = \frac{\sum_{t=1}^{T}(R_t - \mu)^2}{T}
+\]
+\textbf{Sample variance:}
+\[
+s^2 = \frac{\sum_{t=1}^{T}(R_t - \bar{R})^2}{T - 1}
+\]
+
+\textbf{Notes:}
+\begin{itemize}
+    \item In finance, we usually use \textbf{sample variance} because we work with historical samples.
+    \item Standard deviation (\(\sigma\)) is the square root of variance — it is expressed in the same units as returns.
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Higher variance or standard deviation = greater dispersion around the mean = higher risk.
+\end{itemize}
+
+\subsection*{2. Covariance and Correlation Between Two Assets}
+
+\textbf{Covariance} and \textbf{correlation} measure how two assets move together.  
+They are essential for understanding diversification effects in portfolios.
+
+\subsubsection*{2.1 Covariance Formula}
+
+\[
+\text{Cov}_{1,2} = \frac{\sum_{t=1}^{T}(R_{t,1} - \bar{R}_1)(R_{t,2} - \bar{R}_2)}{T - 1}
+\]
+where:
+\begin{itemize}
+    \item \(R_{t,1}, R_{t,2}\): returns on assets 1 and 2 in period \(t\)
+    \item \(\bar{R}_1, \bar{R}_2\): average returns of assets 1 and 2
+    \item \(T\): number of observations
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item \(\text{Cov}_{1,2} > 0\): assets move together (positive relationship).
+    \item \(\text{Cov}_{1,2} < 0\): assets move in opposite directions (negative relationship).
+    \item \(\text{Cov}_{1,2} = 0\): no linear relationship.
+\end{itemize}
+
+\textbf{Units:} Covariance is measured in \emph{returns squared}, making it difficult to compare directly.
+
+\subsubsection*{2.2 Correlation Coefficient}
+
+To standardize covariance, we divide by the product of standard deviations:
+\[
+\rho_{1,2} = \frac{\text{Cov}_{1,2}}{\sigma_1 \sigma_2}
+\]
+
+\textbf{Properties of Correlation:}
+\begin{itemize}
+    \item \(-1 \leq \rho_{1,2} \leq +1\)
+    \item \(\rho = +1\): perfectly positively correlated — assets move exactly together.
+    \item \(\rho = -1\): perfectly negatively correlated — assets move exactly opposite.
+    \item \(\rho = 0\): no linear relationship.
+\end{itemize}
+
+\textbf{Interpretation:}  
+Correlation captures both the direction and strength of co-movement between assets.
+
+\subsubsection*{Example: Calculating Mean, Variance, Covariance, and Correlation}
+
+\textbf{Given:} Returns (\%) over 3 years:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Year} & \textbf{Asset A (\%)} & \textbf{Asset B (\%)} \\
+\hline
+1 & 10 & 12 \\
+2 & 8  & 9  \\
+3 & 6  & 7  \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Step 1: Mean returns}
+\[
+\bar{R}_A = (10 + 8 + 6)/3 = 8\%, \quad \bar{R}_B = (12 + 9 + 7)/3 = 9.33\%
+\]
+
+\textbf{Step 2: Variance of Asset A}
+\[
+s_A^2 = \frac{(10-8)^2 + (8-8)^2 + (6-8)^2}{3 - 1} = \frac{8}{2} = 4 \quad \Rightarrow \sigma_A = 2\%
+\]
+\textbf{Variance of Asset B:}
+\[
+s_B^2 = \frac{(12-9.33)^2 + (9-9.33)^2 + (7-9.33)^2}{2} = 6.66 \quad \Rightarrow \sigma_B = 2.58\%
+\]
+
+\textbf{Step 3: Covariance}
+\[
+\text{Cov}_{A,B} = \frac{(10-8)(12-9.33) + (8-8)(9-9.33) + (6-8)(7-9.33)}{2} = 5.16
+\]
+
+\textbf{Step 4: Correlation}
+\[
+\rho_{A,B} = \frac{5.16}{(2)(2.58)} = 1.00
+\]
+\textbf{Interpretation:} Assets A and B are perfectly positively correlated.
+
+\subsection*{3. Portfolio Variance and Standard Deviation (LOS 20.e)}
+
+A portfolio’s total risk depends on:
+\begin{enumerate}
+    \item The risk of each individual asset (\(\sigma_1, \sigma_2\)),
+    \item The proportion invested in each asset (\(w_1, w_2\)),
+    \item The correlation between asset returns (\(\rho_{1,2}\)).
+\end{enumerate}
+
+\subsubsection*{3.1 Formula for Portfolio Variance (Two Assets)}
+\[
+\sigma_P^2 = w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{1,2}
+\]
+and the \textbf{portfolio standard deviation}:
+\[
+\sigma_P = \sqrt{w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{1,2}}
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item The third term (\(2w_1w_2\sigma_1\sigma_2\rho_{1,2}\)) represents the \textbf{co-movement effect}.
+    \item Portfolio risk decreases as correlation \(\rho_{1,2}\) decreases.
+    \item Diversification benefit: combining less-than-perfectly correlated assets reduces overall portfolio risk.
+\end{itemize}
+
+\subsubsection*{3.2 Special Correlation Cases}
+
+\begin{center}
+\begin{tabular}{|c|p{10cm}|}
+\hline
+\textbf{Correlation Value} & \textbf{Interpretation} \\
+\hline
+\(\rho = +1\) & No diversification benefit; portfolio risk = weighted average of individual risks. \\
+\hline
+\(\rho = 0\) & Partial diversification; risk is lower than weighted average. \\
+\hline
+\(\rho = -1\) & Perfect diversification possible; risk can be eliminated with proper weights. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{3.3 Example: Calculating Portfolio Standard Deviation}
+
+\textbf{Given:}
+\begin{itemize}
+    \item \(w_{\text{stocks}} = 0.3\), \(\sigma_{\text{stocks}} = 20\%\)
+    \item \(w_{\text{bonds}} = 0.7\), \(\sigma_{\text{bonds}} = 12\%\)
+    \item Correlation \(\rho = 0.60\)
+\end{itemize}
+
+\textbf{Step 1: Portfolio Variance}
+\[
+\sigma_P^2 = (0.3)^2(0.20)^2 + (0.7)^2(0.12)^2 + 2(0.3)(0.7)(0.20)(0.12)(0.60)
+\]
+\[
+\sigma_P^2 = 0.0036 + 0.007056 + 0.006048 = 0.016704
+\]
+
+\textbf{Step 2: Portfolio Standard Deviation}
+\[
+\sigma_P = \sqrt{0.016704} = 0.1293 = 12.93\%
+\]
+
+\textbf{Step 3: Perfectly Positively Correlated Case (\(\rho = +1\))}
+\[
+\sigma_P = (0.3)(20\%) + (0.7)(12\%) = 14.4\%
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item When correlation = +1, no diversification benefit → linear combination of risks.
+    \item When correlation < +1, portfolio risk (12.93\%) is less than the weighted average (14.4\%).
+    \item Diversification reduces total risk without reducing expected return.
+\end{itemize}
+
+\subsection*{4. Conceptual Interpretation of Diversification}
+
+\textbf{Why diversification works:}
+\begin{itemize}
+    \item The imperfect correlation between asset returns means their ups and downs offset each other partially.
+    \item As long as \(\rho_{1,2} < +1\), total portfolio risk is reduced below the weighted average of individual risks.
+    \item The lower the correlation, the greater the benefit.
+\end{itemize}
+
+\textbf{Extreme Case:}
+\begin{itemize}
+    \item \(\rho = -1\): portfolio can theoretically achieve zero standard deviation if asset weights are chosen perfectly.
+\end{itemize}
+
+\textbf{General Insight:}  
+Diversification cannot eliminate all risk — only the portion specific to individual assets (unsystematic risk).  
+Systematic market-wide risk remains even in well-diversified portfolios.
+
+\subsection*{5. Summary Table of Key Formulas and Relationships}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Interpretation} \\
+\hline
+Mean Return & $\bar{R} = \frac{1}{T}\sum R_t$ \\
+\hline
+Sample Variance & $s^2 = \frac{\sum (R_t - \bar{R})^2}{T - 1}$ \\
+\hline
+Covariance & $\text{Cov}_{1,2} = \frac{\sum (R_{t,1} - \bar{R}_1)(R_{t,2} - \bar{R}_2)}{T - 1}$ \\
+\hline
+Correlation & $\rho_{1,2} = \frac{\text{Cov}_{1,2}}{\sigma_1 \sigma_2}$ \\
+\hline
+Portfolio Variance & $\sigma_P^2 = w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{1,2}$ \\
+\hline
+Diversification Condition & Lower $\rho_{1,2}$ $\Rightarrow$ Lower $\sigma_P$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{6. Key Takeaways}
+
+\begin{itemize}
+    \item \textbf{Variance and standard deviation} measure the volatility of individual asset returns.
+    \item \textbf{Covariance and correlation} measure how assets move together; correlation is a standardized, bounded measure.
+    \item \textbf{Portfolio risk} depends not only on individual risks but also on how asset returns co-move.
+    \item \textbf{Diversification} reduces portfolio risk when assets are not perfectly correlated (\(\rho < +1\)).
+    \item The benefit of diversification increases as correlation approaches zero or becomes negative.
+\end{itemize}
+
+\section*{MODULE 20.4: The Efficient Frontier}
+
+\subsection*{Learning Objectives}
+\begin{itemize}
+    \item \textbf{LOS 20.f:} Describe the effect on a portfolio's risk of investing in assets that are less than perfectly correlated.
+    \item \textbf{LOS 20.g:} Describe and interpret the minimum-variance and efficient frontiers of risky assets and the global minimum-variance portfolio.
+\end{itemize}
+
+\subsection*{1. Effect of Correlation on Portfolio Risk (LOS 20.f)}
+
+\textbf{Concept:}  
+The correlation (\(\rho_{12}\)) between asset returns determines the degree of diversification benefit in a portfolio.  
+Portfolio risk depends not only on individual asset risks but also on how returns move together.
+
+\subsubsection*{1.1 Portfolio Variance Formula (Two-Asset Case)}
+
+\[
+\sigma_P^2 = w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{12}
+\]
+where:
+\begin{itemize}
+    \item \(w_1, w_2\): portfolio weights (\(w_1 + w_2 = 1\))
+    \item \(\sigma_1, \sigma_2\): individual standard deviations
+    \item \(\rho_{12}\): correlation coefficient between the two asset returns
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item The third term \(2w_1w_2\sigma_1\sigma_2\rho_{12}\) represents the \textbf{interaction effect} — the impact of correlation.
+    \item Portfolio variance is reduced whenever \(\rho_{12} < +1\).
+    \item The lower (or more negative) the correlation, the greater the diversification benefit.
+\end{itemize}
+
+\subsubsection*{1.2 Perfect Positive Correlation (\(\rho_{12} = +1\))}
+
+If two assets move perfectly together:
+\[
+\sigma_P = w_1\sigma_1 + w_2\sigma_2
+\]
+This means portfolio risk is simply the \textbf{weighted average} of individual risks — no diversification benefit.
+
+\textbf{Example:}  
+25\% invested in Asset 1 (\(\sigma_1 = 20\%\)) and 75\% in Asset 2 (\(\sigma_2 = 10\%\)):
+\[
+\sigma_P = 0.25(20\%) + 0.75(10\%) = 12.5\%
+\]
+There is \textbf{no reduction in risk} because returns move perfectly together.
+
+\subsubsection*{1.3 Less Than Perfect Correlation (\(-1 < \rho_{12} < +1\))}
+
+As correlation decreases:
+\[
+\sigma_P < w_1\sigma_1 + w_2\sigma_2
+\]
+→ Portfolio risk falls below the weighted average.
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Correlation of \(+1\): maximum risk (no diversification).
+    \item Correlation of \(0\): moderate diversification; covariance term = 0.
+    \item Correlation of \(-1\): maximum diversification; covariance term becomes negative.
+\end{itemize}
+
+\subsubsection*{1.4 Perfect Negative Correlation (\(\rho_{12} = -1\))}
+
+In this special case, the two assets move in exactly opposite directions.  
+There exists a combination of weights (\(w_1, w_2\)) such that portfolio standard deviation can be reduced to zero:
+\[
+\sigma_P = 0
+\]
+→ A risk-free portfolio can theoretically be constructed, even using risky assets.
+
+\subsubsection*{1.5 Example: Portfolio Risk as Correlation Changes}
+
+\textbf{Given:}
+\[
+\sigma_1 = 25\%, \quad \sigma_2 = 18\%, \quad w_1 = w_2 = 0.5
+\]
+\[
+\sigma_P^2 = 0.5^2(0.25^2) + 0.5^2(0.18^2) + 2(0.5)(0.5)(0.25)(0.18)\rho_{12}
+\]
+
+\textbf{Compute for various correlations:}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Correlation} & \textbf{Portfolio Variance (\(\sigma_P^2\))} & \textbf{Portfolio Std. Dev. (\(\sigma_P\))} \\
+\hline
+\(+1.0\) & \(0.0441\) & \(21.0\%\) \\
+\hline
+\(+0.5\) & \(0.0304\) & \(17.4\%\) \\
+\hline
+\(0.0\) & \(0.0235\) & \(15.3\%\) \\
+\hline
+\(-0.5\) & \(0.0166\) & \(12.9\%\) \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item As correlation decreases, portfolio risk (\(\sigma_P\)) falls.
+    \item When \(\rho_{12} = -0.5\), risk reduction is substantial.
+    \item The lower the correlation, the greater the \textbf{diversification benefit}.
+\end{itemize}
+
+\textbf{Key Insight:}
+\[
+\text{Diversification benefit } \propto (1 - \rho_{12})
+\]
+→ Holding assets with low or negative correlations provides the greatest reduction in overall risk.
+
+\subsection*{2. Minimum-Variance and Efficient Frontiers (LOS 20.g)}
+
+\subsubsection*{2.1 Concept Overview}
+
+When combining two or more risky assets, each possible combination (set of weights) gives a distinct portfolio with:
+\begin{itemize}
+    \item An expected return: \(E(R_P) = w_1E(R_1) + w_2E(R_2)\)
+    \item A risk level (standard deviation): \(\sigma_P = \sqrt{w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{12}}\)
+\end{itemize}
+
+\textbf{Plotting all possible portfolios:}
+\begin{itemize}
+    \item Creates a curve showing the tradeoff between expected return and risk.
+    \item This curve is known as the \textbf{minimum-variance frontier}.
+\end{itemize}
+
+\subsubsection*{2.2 Minimum-Variance Frontier (MVF)}
+
+\textbf{Definition:}  
+The set of all portfolios that provide the \textbf{lowest risk (σ)} for each possible expected return level.
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Every point on this curve represents an optimal portfolio for a given return target.
+    \item Portfolios below the MVF are inefficient — they have unnecessary risk for the same return.
+\end{itemize}
+
+\textbf{Mathematically:}  
+For each target return \(E(R_T)\), minimize portfolio variance:
+\[
+\min_{w_1, w_2} \; \sigma_P^2 \quad \text{subject to } E(R_P) = E(R_T)
+\]
+
+\subsubsection*{2.3 Efficient Frontier (EF)}
+
+\textbf{Definition:}  
+The upper half of the minimum-variance frontier that offers:
+\[
+\text{Highest expected return for a given level of risk.}
+\]
+\textbf{Properties:}
+\begin{itemize}
+    \item Portfolios below the efficient frontier are suboptimal.
+    \item Portfolios above the frontier are unattainable (impossible combinations).
+    \item Rational, risk-averse investors will always choose portfolios on the efficient frontier.
+\end{itemize}
+
+\textbf{Interpretation in Words:}
+\begin{itemize}
+    \item The efficient frontier forms a curve that begins with the least-risk (global minimum-variance) portfolio and bends upward as expected return increases with risk.
+    \item Each investor selects a point on the efficient frontier based on personal risk tolerance.
+\end{itemize}
+
+\subsubsection*{2.4 Global Minimum-Variance Portfolio (GMVP)}
+
+\textbf{Definition:}  
+The single portfolio on the minimum-variance frontier that has the \textbf{lowest possible standard deviation} among all combinations of risky assets.
+
+\textbf{Characteristics:}
+\begin{itemize}
+    \item It lies at the bottom (leftmost point) of the minimum-variance frontier.
+    \item It serves as the foundation of the efficient frontier — all efficient portfolios lie above it.
+\end{itemize}
+
+\textbf{Mathematically:}
+\[
+\frac{d\sigma_P^2}{dw_1} = 0 \quad \Rightarrow \quad w_1^{GMVP} = \frac{\sigma_2^2 - \sigma_{12}}{\sigma_1^2 + \sigma_2^2 - 2\sigma_{12}}
+\]
+where \(\sigma_{12} = \rho_{12}\sigma_1\sigma_2\).
+
+\subsubsection*{2.5 Example: Efficient Frontier Construction (Verbal Explanation)}
+
+\textbf{Step 1:} Start with two risky assets with given expected returns, standard deviations, and correlations.  
+\textbf{Step 2:} Calculate expected return and risk for multiple weight combinations (e.g., 0\%, 25\%, 50\%, 75\%, 100\% in Asset 1).  
+\textbf{Step 3:} Plot each combination — the lower boundary of all points forms the \textbf{minimum-variance frontier}.  
+\textbf{Step 4:} Retain only the upper half (where higher returns accompany higher risks) — that is the \textbf{efficient frontier}.  
+\textbf{Step 5:} Identify the lowest point on this curve — the \textbf{global minimum-variance portfolio (GMVP)}.
+
+\textbf{Intuitive Meaning:}
+\begin{itemize}
+    \item Portfolios on the efficient frontier dominate all portfolios below it.
+    \item Portfolios below the frontier are inefficient because they offer lower returns for the same risk.
+\end{itemize}
+
+\subsection*{3. Diversification and the Shape of the Efficient Frontier}
+
+\textbf{Effect of Correlation:}
+\begin{itemize}
+    \item \(\rho_{12} = +1\): Frontier is a straight line — no diversification.
+    \item \(0 < \rho_{12} < +1\): Frontier becomes concave — some diversification benefit.
+    \item \(\rho_{12} < 0\): Frontier becomes more bowed — strong diversification benefit.
+    \item \(\rho_{12} = -1\): Possible to achieve zero-risk (risk-free) portfolio.
+\end{itemize}
+
+\textbf{Interpretation in Words:}
+\begin{itemize}
+    \item The curve’s “bowing” shape visually reflects the degree of diversification.
+    \item The more negatively correlated the assets, the more the curve bends leftward (lower risk for same return).
+\end{itemize}
+
+\subsection*{4. Conceptual Summary}
+
+\begin{itemize}
+    \item Portfolio risk is not a simple average of individual asset risks — it depends on how returns co-move.
+    \item Correlation less than +1 allows risk reduction through diversification.
+    \item The \textbf{minimum-variance frontier} represents all lowest-risk portfolios for given returns.
+    \item The \textbf{efficient frontier} (upper part) shows portfolios offering the highest return for each risk level.
+    \item The \textbf{global minimum-variance portfolio (GMVP)} is the least-risk combination of risky assets.
+    \item Investors will only select portfolios on the efficient frontier since they dominate all others in risk–return space.
+\end{itemize}
+
+\subsection*{5. Key Takeaways Table}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Concept} & \textbf{Key Insight / Formula} \\
+\hline
+Portfolio Variance & $\sigma_P^2 = w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{12}$ \\
+\hline
+Perfect Positive Correlation ($\rho=+1$) & No diversification; $\sigma_P = w_1\sigma_1 + w_2\sigma_2$ \\
+\hline
+Zero Correlation ($\rho=0$) & Partial diversification; risk reduction. \\
+\hline
+Perfect Negative Correlation ($\rho=-1$) & Complete diversification; possible zero-risk combination. \\
+\hline
+Minimum-Variance Frontier & Set of portfolios with lowest $\sigma$ for each $E(R_P)$. \\
+\hline
+Efficient Frontier & Upper portion of MVF; highest $E(R_P)$ for each $\sigma_P$. \\
+\hline
+Global Minimum-Variance Portfolio & Lowest-risk portfolio among all risky portfolios. \\
+\hline
+Diversification Benefit & Increases as $\rho_{12}$ decreases. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{MODULE 21.1: Systematic Risk and Beta}
+
+\subsection*{Learning Objectives}
+\begin{itemize}
+    \item \textbf{LOS 21.a:} Describe the implications of combining a risk-free asset with a portfolio of risky assets.
+    \item \textbf{LOS 21.b:} Explain the capital allocation line (CAL) and the capital market line (CML).
+    \item \textbf{LOS 21.c:} Explain systematic and nonsystematic risk, including why an investor should not expect additional return for bearing nonsystematic risk.
+    \item \textbf{LOS 21.d:} Explain return-generating models (including the market model) and their uses.
+    \item \textbf{LOS 21.e:} Calculate and interpret beta.
+\end{itemize}
+
+\subsection*{1. Combining a Risk-Free Asset with a Risky Portfolio (LOS 21.a)}
+
+\textbf{Concept:}  
+Adding a risk-free asset (with zero variance and zero correlation with risky assets) to a risky portfolio creates a \textbf{linear relationship} between portfolio risk and return.
+
+\subsubsection*{1.1 Portfolio Equations}
+
+\[
+E(R_P) = w_P E(R_R) + (1 - w_P) R_f
+\]
+\[
+\sigma_P = w_P \sigma_R
+\]
+where:
+\begin{itemize}
+    \item \(E(R_P)\): expected return on the combined portfolio
+    \item \(E(R_R)\): expected return on the risky portfolio
+    \item \(R_f\): risk-free rate
+    \item \(\sigma_P\): standard deviation of portfolio
+    \item \(w_P\): weight invested in the risky portfolio
+\end{itemize}
+
+\textbf{Implications:}
+\begin{itemize}
+    \item As \(w_P\) increases, both risk and expected return rise proportionally.
+    \item The relationship between risk and return is a straight line through \((R_f, 0)\) and \((E(R_R), \sigma_R)\).
+    \item The line is called the \textbf{Capital Allocation Line (CAL)}.
+\end{itemize}
+
+\subsection*{2. Capital Allocation Line (CAL) and Capital Market Line (CML) (LOS 21.b)}
+
+\subsubsection*{2.1 The Capital Allocation Line (CAL)}
+
+\textbf{Equation:}
+\[
+E(R_P) = R_f + \left( \frac{E(R_R) - R_f}{\sigma_R} \right) \sigma_P
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item \(R_f\): y-intercept (return at zero risk).
+    \item Slope = \(\frac{E(R_R) - R_f}{\sigma_R}\) — the \textbf{Sharpe Ratio} of the risky portfolio.
+    \item The higher the slope, the better the risk–return tradeoff.
+\end{itemize}
+
+\textbf{Borrowing and Lending:}
+\begin{itemize}
+    \item If investors can borrow and lend at \(R_f\), they can achieve portfolios beyond the risky portfolio (rightward extension of CAL).
+    \item Lend → invest partly in risk-free asset (low risk, low return).
+    \item Borrow → leverage risky portfolio (high risk, high return).
+\end{itemize}
+
+\subsubsection*{2.2 The Capital Market Line (CML)}
+
+\textbf{Concept:}  
+If all investors have the same expectations (homogeneous expectations) about risk, return, and correlations, they all face the same efficient frontier.  
+They will all hold the same optimal risky portfolio — the \textbf{market portfolio}.
+
+\textbf{CML Equation:}
+\[
+E(R_P) = R_f + \frac{E(R_M) - R_f}{\sigma_M} \sigma_P
+\]
+where:
+\begin{itemize}
+    \item \(E(R_M)\): expected return on the market portfolio
+    \item \(\sigma_M\): standard deviation of the market portfolio
+    \item \(E(R_P), \sigma_P\): expected return and standard deviation of any efficient portfolio
+\end{itemize}
+
+\textbf{Slope of the CML:}
+\[
+\text{Slope} = \frac{E(R_M) - R_f}{\sigma_M} = \text{market Sharpe ratio}
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item All efficient portfolios lie on the CML.
+    \item CML represents the best possible risk–return combinations.
+    \item Individual investors differ only in their allocation between the market portfolio and the risk-free asset (risk preference).
+\end{itemize}
+
+\textbf{Passive vs. Active Strategies:}
+\begin{itemize}
+    \item \textbf{Passive strategy:} Hold the market portfolio and risk-free asset in some proportion (index fund + Treasury bills).
+    \item \textbf{Active strategy:} Deviate from market weights based on perceived mispricing (overweight undervalued assets, underweight overvalued ones).
+\end{itemize}
+
+\subsection*{3. Systematic and Unsystematic Risk (LOS 21.c)}
+
+\subsubsection*{3.1 Risk Components of a Security}
+
+Total risk (\(\sigma^2_{Total}\)) can be decomposed into:
+\[
+\sigma^2_{Total} = \sigma^2_{Systematic} + \sigma^2_{Unsystematic}
+\]
+where:
+\begin{itemize}
+    \item \textbf{Systematic Risk:} Market-related risk that cannot be diversified away (e.g., interest rates, inflation, GDP growth).
+    \item \textbf{Unsystematic Risk:} Firm-specific or idiosyncratic risk (e.g., product recall, management change, strike).
+\end{itemize}
+
+\subsubsection*{3.2 Diversification Effect}
+
+\textbf{Observation:}
+As the number of securities in a portfolio increases, total risk decreases — but only up to a point.  
+Beyond approximately 30–40 securities, further diversification provides little additional risk reduction.
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Risk Type} & \textbf{Description and Compensation} \\
+\hline
+Systematic (Market) Risk & Common to all securities; cannot be eliminated. Investors are compensated for bearing it. \\
+\hline
+Unsystematic (Firm-Specific) Risk & Can be eliminated by diversification; no additional expected return. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Example (Conceptual):}
+\begin{itemize}
+    \item A biotech firm with one drug in trials has high total risk — mostly unsystematic.
+    \item A machine tool manufacturer, exposed to business cycles, has lower total risk but higher systematic risk.
+    \item Capital market theory: only systematic risk is priced → the manufacturer may have higher expected return despite lower total risk.
+\end{itemize}
+
+\subsubsection*{3.3 Key Insight}
+
+\[
+\text{Investors are compensated only for systematic risk.}
+\]
+Unsystematic (diversifiable) risk offers no premium because it can be costlessly diversified away in a broad portfolio.
+
+\subsection*{4. Return Generating Models (LOS 21.d)}
+
+\textbf{Purpose:}  
+To estimate the expected return of a security based on its sensitivity to one or more risk factors.
+
+\subsubsection*{4.1 General Multifactor Model}
+
+\[
+E(R_i) - R_f = \beta_{i1}E(F_1) + \beta_{i2}E(F_2) + \cdots + \beta_{ik}E(F_k)
+\]
+where:
+\begin{itemize}
+    \item \(E(R_i) - R_f\): expected excess return of Asset \(i\)
+    \item \(F_1, F_2, \ldots, F_k\): systematic risk factors (e.g., GDP growth, inflation, firm size)
+    \item \(\beta_{ij}\): sensitivity (factor loading) of Asset \(i\) to factor \(j\)
+\end{itemize}
+
+\textbf{Types of Factors:}
+\begin{itemize}
+    \item \textbf{Macroeconomic:} GDP growth, interest rates, inflation.
+    \item \textbf{Fundamental:} Firm earnings, book-to-market ratio, firm size.
+    \item \textbf{Statistical:} Factors extracted by data analysis (e.g., principal components).
+\end{itemize}
+
+\textbf{Fama–French–Carhart Model:}
+\[
+E(R_i) - R_f = \beta_M E(R_M - R_f) + \beta_{SMB} E(\text{Size}) + \beta_{HML} E(\text{Value}) + \beta_{MOM} E(\text{Momentum})
+\]
+\begin{itemize}
+    \item SMB = Small Minus Big (size effect)
+    \item HML = High Minus Low (value effect)
+    \item MOM = Momentum (Carhart’s addition)
+\end{itemize}
+
+\subsubsection*{4.2 Single-Factor (Market) Model}
+
+\[
+E(R_i) - R_f = \beta_i [E(R_M) - R_f]
+\]
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Market portfolio return is the single systematic factor.
+    \item \(\beta_i\) measures sensitivity to market movements.
+\end{itemize}
+
+\subsubsection*{4.3 Market Model (Regression Form)}
+
+\[
+R_i = \alpha_i + \beta_i R_M + e_i
+\]
+where:
+\begin{itemize}
+    \item \(R_i\): actual return on security \(i\)
+    \item \(R_M\): market return
+    \item \(\alpha_i\): intercept (expected return independent of market)
+    \item \(\beta_i\): slope coefficient (systematic risk measure)
+    \item \(e_i\): residual (firm-specific or unsystematic return)
+\end{itemize}
+
+\textbf{Expected Return:} \(E(R_i) = \alpha_i + \beta_i E(R_M)\)
+
+\textbf{Abnormal Return:} \(e_i = R_i - (\alpha_i + \beta_i R_M)\)
+
+\textbf{Use:}
+\begin{itemize}
+    \item Estimate \(\beta_i\) empirically via regression of past returns.
+    \item Identify security performance relative to the market (alpha).
+\end{itemize}
+
+\subsection*{5. Beta: Definition, Calculation, and Interpretation (LOS 21.e)}
+
+\subsubsection*{5.1 Definition of Beta (\(\beta_i\))}
+
+\[
+\beta_i = \frac{\text{Cov}(R_i, R_M)}{\text{Var}(R_M)}
+\]
+\textbf{Alternative form using correlation:}
+\[
+\beta_i = \rho_{iM} \left( \frac{\sigma_i}{\sigma_M} \right)
+\]
+where:
+\begin{itemize}
+    \item \(\rho_{iM}\): correlation between Asset \(i\) and the market
+    \item \(\sigma_i\): standard deviation of Asset \(i\)
+    \item \(\sigma_M\): standard deviation of market returns
+\end{itemize}
+
+\subsubsection*{5.2 Interpretation of Beta}
+
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Beta Value} & \textbf{Interpretation} \\
+\hline
+\(\beta = 1.0\) & Asset has same systematic risk as the market. \\
+\hline
+\(\beta > 1.0\) & Asset is more volatile; amplifies market movements. \\
+\hline
+\(\beta < 1.0\) & Asset is less volatile; dampens market movements. \\
+\hline
+\(\beta = 0\) & No relation to market movements (e.g., risk-free asset). \\
+\hline
+\(\beta < 0\) & Moves opposite to the market (e.g., gold, hedges). \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{5.3 Example: Calculating Beta}
+
+\textbf{Example 1 (using correlation):}
+\[
+\sigma_M = 20\%, \; \sigma_A = 30\%, \; \rho_{AM} = 0.8
+\]
+\[
+\beta_A = 0.8 \times \frac{30\%}{20\%} = 1.2
+\]
+→ Asset A has 20\% more systematic risk than the market.
+
+\textbf{Example 2 (using covariance):}
+\[
+\text{Cov}(R_A, R_M) = 0.048, \; \text{Var}(R_M) = (0.20)^2 = 0.04
+\]
+\[
+\beta_A = \frac{0.048}{0.04} = 1.20
+\]
+→ Consistent with previous calculation.
+
+\subsubsection*{5.4 Estimating Beta (Empirical Regression)}
+
+Regress excess returns on the asset against excess market returns:
+\[
+(R_i - R_f) = \alpha_i + \beta_i (R_M - R_f) + e_i
+\]
+\textbf{Interpretation:}
+\begin{itemize}
+    \item \(\beta_i\): slope of regression line (systematic risk measure).
+    \item \(\alpha_i\): intercept (abnormal performance, or Jensen’s alpha).
+    \item \(e_i\): residual (unsystematic, random variation).
+\end{itemize}
+
+\textbf{Security Characteristic Line (SCL):}  
+This regression line graphically shows how a security’s returns vary with market returns.  
+Its slope = \(\beta_i\); its scatter (residuals) = unsystematic risk.
+
+\subsection*{6. Conceptual Summary}
+
+\begin{itemize}
+    \item Adding a risk-free asset to risky portfolios forms a straight line of possible combinations (CAL).
+    \item With homogeneous expectations, all investors hold the same market portfolio — leading to the Capital Market Line (CML).
+    \item Portfolio risk divides into:
+        \begin{itemize}
+            \item \textbf{Systematic risk:} cannot be diversified away; priced.
+            \item \textbf{Unsystematic risk:} can be diversified away; not priced.
+        \end{itemize}
+    \item \textbf{Return generating models} estimate expected returns from exposure to systematic factors.
+    \item \textbf{Market model} isolates the portion of return explained by market movements.
+    \item \textbf{Beta} measures an asset’s sensitivity to market risk — only this component is relevant to required returns.
+\end{itemize}
+
+\subsection*{7. Key Formula Summary}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula} \\
+\hline
+Expected Portfolio Return & $E(R_P) = w_P E(R_R) + (1 - w_P) R_f$ \\
+\hline
+Portfolio Std. Dev. (Risk-Free + Risky) & $\sigma_P = w_P \sigma_R$ \\
+\hline
+Capital Market Line & $E(R_P) = R_f + \frac{E(R_M) - R_f}{\sigma_M}\sigma_P$ \\
+\hline
+Total Risk Decomposition & $\sigma^2_{Total} = \sigma^2_{Systematic} + \sigma^2_{Unsystematic}$ \\
+\hline
+Market Model & $R_i = \alpha_i + \beta_i R_M + e_i$ \\
+\hline
+Beta (Covariance Definition) & $\beta_i = \frac{\text{Cov}(R_i, R_M)}{\text{Var}(R_M)}$ \\
+\hline
+Beta (Correlation Form) & $\beta_i = \rho_{iM}\left(\frac{\sigma_i}{\sigma_M}\right)$ \\
+\hline
+Expected Return (Single-Factor) & $E(R_i) - R_f = \beta_i[E(R_M) - R_f]$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{8. Final Insights}
+
+\begin{itemize}
+    \item The \textbf{CML} describes efficient portfolios (market + risk-free asset), while the \textbf{Security Market Line (SML)} later describes individual assets.
+    \item Beta is the essential link between individual asset risk and expected return.
+    \item Diversification eliminates unsystematic risk, leaving only systematic risk to be rewarded.
+    \item In equilibrium, expected returns depend only on exposure to market (systematic) risk — not on total volatility.
+\end{itemize}
+
+\section*{MODULE 21.2: The CAPM and the SML}
+
+\subsection*{Learning Objectives}
+\begin{itemize}
+    \item \textbf{LOS 21.f:} Explain the Capital Asset Pricing Model (CAPM), its assumptions, and the Security Market Line (SML).
+    \item \textbf{LOS 21.g:} Calculate and interpret the expected return of an asset using the CAPM.
+    \item \textbf{LOS 21.h:} Describe and demonstrate applications of the CAPM and the SML (valuation and mispricing analysis).
+    \item \textbf{LOS 21.i:} Calculate and interpret the Sharpe ratio, Treynor ratio, M2 measure, and Jensen’s alpha.
+\end{itemize}
+
+\subsection*{1. The Capital Asset Pricing Model (CAPM)}
+
+\textbf{Core Idea:}  
+Only \textbf{systematic risk} (market-related) is priced in equilibrium.  
+The CAPM links expected return to systematic risk as measured by \(\beta_i\).
+
+\[
+E(R_i) = R_f + \beta_i [E(R_M) - R_f]
+\]
+where:
+\begin{itemize}
+    \item \(E(R_i)\): expected (or required) return on asset \(i\)
+    \item \(R_f\): risk-free rate of return
+    \item \(E(R_M)\): expected return on the market portfolio
+    \item \(\beta_i\): sensitivity of asset \(i\) to market risk
+    \item \([E(R_M) - R_f]\): market risk premium
+\end{itemize}
+
+\subsubsection*{1.1 CAPM Intuition}
+\begin{itemize}
+    \item Investors are only rewarded for bearing risk that cannot be diversified away.
+    \item The greater an asset’s sensitivity (\(\beta_i\)) to market movements, the higher its required return.
+    \item Assets with \(\beta_i = 0\) should earn \(R_f\).
+    \item Assets with \(\beta_i = 1\) should earn the market return \(E(R_M)\).
+    \item Assets with \(\beta_i > 1\) should have higher expected returns than the market.
+\end{itemize}
+
+\subsubsection*{1.2 Example: Expected Return via CAPM}
+\[
+R_f = 2\%, \quad E(R_M) = 8\%, \quad \beta_A = 1.2
+\]
+\[
+E(R_A) = 2\% + 1.2(8\% - 2\%) = 9.2\%
+\]
+→ Stock A’s expected (required) return = 9.2\%, which exceeds the market return because \(\beta_A > 1\).
+
+\subsection*{2. Assumptions of the CAPM}
+
+\begin{enumerate}
+    \item \textbf{Risk Aversion:} Investors require higher expected returns for higher risk.
+    \item \textbf{Utility Maximization:} Investors select portfolios that maximize expected utility based on risk and return.
+    \item \textbf{Frictionless Markets:} No transaction costs, taxes, or restrictions.
+    \item \textbf{Single Period Horizon:} All investors plan for the same single investment period.
+    \item \textbf{Homogeneous Expectations:} All investors have identical expectations about returns, risk, and correlations.
+    \item \textbf{Divisible Assets:} All assets can be divided infinitely.
+    \item \textbf{Competitive Markets:} Investors are price takers; no one can influence market prices.
+\end{enumerate}
+
+\textbf{Result:}  
+Under these assumptions, all investors hold the same optimal risky portfolio — the \textbf{market portfolio}.  
+This leads to the \textbf{Capital Market Line (CML)} for portfolios and the \textbf{Security Market Line (SML)} for individual assets.
+
+\subsection*{3. The Security Market Line (SML)}
+
+\textbf{Equation:}
+\[
+E(R_i) = R_f + \beta_i [E(R_M) - R_f]
+\]
+
+\subsubsection*{3.1 Interpretation}
+\begin{itemize}
+    \item The SML depicts the linear relationship between \textbf{systematic risk} (\(\beta\)) and \textbf{expected return}.
+    \item The slope of the SML = \([E(R_M) - R_f]\), the market risk premium.
+    \item All assets and portfolios (efficient or not) should lie on the SML in equilibrium.
+\end{itemize}
+
+\textbf{Key Points:}
+\begin{itemize}
+    \item Risk-free asset (\(\beta = 0\)) → return = \(R_f\).
+    \item Market portfolio (\(\beta = 1\)) → return = \(E(R_M)\).
+    \item High-\(\beta\) assets (\(\beta > 1\)) → higher expected return.
+    \item Low-\(\beta\) assets (\(\beta < 1\)) → lower expected return.
+\end{itemize}
+
+\subsection*{4. Comparing the CML and the SML}
+
+\begin{center}
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Feature} & \textbf{Capital Market Line (CML)} & \textbf{Security Market Line (SML)} \\
+\hline
+\textbf{Applicable To} & Efficient portfolios only & All individual securities and portfolios \\
+\hline
+\textbf{X-Axis Measure} & Total risk (\(\sigma_P\)) & Systematic risk (\(\beta\)) \\
+\hline
+\textbf{Y-Axis Measure} & Expected return (\(E(R_P)\)) & Expected return (\(E(R_i)\)) \\
+\hline
+\textbf{Slope} & \(\frac{E(R_M) - R_f}{\sigma_M}\) & \(E(R_M) - R_f\) \\
+\hline
+\textbf{Risk Interpretation} & Combines risk-free and market portfolios & Captures beta risk of any asset \\
+\hline
+\textbf{Plot Points} & Efficient portfolios only & All properly priced assets \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Summary Interpretation (Verbal):}
+\begin{itemize}
+    \item The CML shows the best achievable combinations of risk and return using the market portfolio and risk-free asset.
+    \item The SML shows the equilibrium expected return for any asset based on its \(\beta\).
+    \item Individual securities (even inefficient ones) lie on the SML if correctly priced.
+\end{itemize}
+
+\subsection*{5. CAPM Applications: Mispricing and Valuation (LOS 21.h)}
+
+\textbf{Concept:}  
+If a stock’s expected return differs from its CAPM-predicted (required) return, the stock is \textbf{mispriced}.
+
+\[
+\text{Required Return} = R_f + \beta_i [E(R_M) - R_f]
+\]
+\[
+\text{Alpha} = E(R_i) - [R_f + \beta_i(E(R_M) - R_f)]
+\]
+\begin{itemize}
+    \item \(\alpha > 0\): stock is undervalued (plots above SML)
+    \item \(\alpha < 0\): stock is overvalued (plots below SML)
+\end{itemize}
+
+\subsubsection*{Example: Identifying Mispriced Securities}
+
+\textbf{Given:}
+\[
+R_f = 7\%, \quad E(R_M) = 15\%
+\]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Stock} & \textbf{Beta} & \textbf{Expected Return (Forecast)} \\
+\hline
+A & 1.0 & 12.0\% \\
+\hline
+B & 0.8 & 17.5\% \\
+\hline
+C & 1.2 & 16.6\% \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Step 1: Compute Required Return using CAPM}
+\[
+E(R_i) = 7\% + \beta_i(15\% - 7\%) = 7\% + 8\%\beta_i
+\]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Stock} & \textbf{Required Return (CAPM)} & \textbf{Comparison} \\
+\hline
+A & 15.0\% & 12.0\% forecast → \textbf{Overvalued} \\
+\hline
+B & 13.4\% & 17.5\% forecast → \textbf{Undervalued} \\
+\hline
+C & 16.6\% & 16.6\% forecast → \textbf{Fairly Valued} \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Step 2: Trading Strategy}
+\begin{itemize}
+    \item \textbf{Stock A (Overvalued):} Expected return < required → Sell or short.
+    \item \textbf{Stock B (Undervalued):} Expected return > required → Buy.
+    \item \textbf{Stock C (Fairly Valued):} Hold or ignore.
+\end{itemize}
+
+\textbf{Graphical Explanation (Verbal):}
+\begin{itemize}
+    \item Stocks plotting \textbf{above} the SML have positive alpha (undervalued).
+    \item Stocks plotting \textbf{below} the SML have negative alpha (overvalued).
+    \item Stocks \textbf{on} the SML are fairly priced.
+\end{itemize}
+
+\subsection*{6. Risk-Adjusted Performance Measures (LOS 21.i)}
+
+Portfolio performance must be adjusted for risk to fairly evaluate managers’ skill.
+
+\subsubsection*{6.1 Sharpe Ratio (Total Risk-Based Measure)}
+
+\[
+\text{Sharpe Ratio} = \frac{R_P - R_f}{\sigma_P}
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Measures excess return per unit of total risk.
+    \item Higher Sharpe ratio → better risk-adjusted performance.
+    \item Can be used for diversified or concentrated portfolios.
+\end{itemize}
+
+\textbf{Comparison:} The Sharpe ratio equals the \textbf{slope of the Capital Allocation Line (CAL)} for the portfolio.
+
+\subsubsection*{6.2 M-Squared (M\textsuperscript{2}) Measure}
+
+\[
+M^2 = R_f + \left(\frac{R_P - R_f}{\sigma_P}\right)\sigma_M
+\]
+where:
+\begin{itemize}
+    \item \(R_P, \sigma_P\): portfolio return and standard deviation
+    \item \(R_f\): risk-free rate
+    \item \(\sigma_M\): market portfolio risk
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Converts the Sharpe ratio into a percentage measure.
+    \item \(M^2\) represents the return the portfolio would have achieved if it had the same total risk as the market.
+    \item \(M^2_\alpha = M^2 - R_M\) indicates outperformance relative to the market.
+\end{itemize}
+
+\textbf{Example:}
+\[
+R_P = 10\%, \quad \sigma_P = 20\%, \quad R_f = 5\%, \quad R_M = 11\%, \quad \sigma_M = 30\%
+\]
+\[
+\text{Sharpe Ratio} = \frac{10 - 5}{20} = 0.25
+\]
+\[
+M^2 = 0.05 + 0.25(0.30) = 0.125 = 12.5\%
+\]
+→ \(M^2 - R_M = 1.5\%\): Portfolio outperforms the market on a risk-adjusted basis.
+
+\subsubsection*{6.3 Treynor Ratio (Systematic Risk-Based Measure)}
+
+\[
+\text{Treynor Ratio} = \frac{R_P - R_f}{\beta_P}
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Measures excess return per unit of systematic risk.
+    \item Appropriate for well-diversified portfolios (where unsystematic risk ≈ 0).
+    \item Slope of the SML for a portfolio.
+\end{itemize}
+
+\subsubsection*{6.4 Jensen’s Alpha (\(\alpha_J\))}
+
+\[
+\alpha_J = R_P - [R_f + \beta_P(E(R_M) - R_f)]
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Measures actual return above that predicted by CAPM.
+    \item \(\alpha_J > 0\): portfolio outperformed relative to its risk.
+    \item \(\alpha_J < 0\): portfolio underperformed.
+\end{itemize}
+
+\subsection*{7. Choosing the Right Performance Measure}
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Measure} & \textbf{Uses} & \textbf{Risk Basis} \\
+\hline
+Sharpe Ratio & Total performance across all risk sources & Total risk (\(\sigma_P\)) \\
+\hline
+M\textsuperscript{2} & Percentage version of Sharpe ratio & Total risk (\(\sigma_P\)) \\
+\hline
+Treynor Ratio & Diversified portfolio evaluation & Systematic risk (\(\beta_P\)) \\
+\hline
+Jensen's Alpha & CAPM-based active return measure & Systematic risk (\(\beta_P\)) \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Interpretation Guidelines:}
+\begin{itemize}
+    \item Use Sharpe or M\textsuperscript{2} if the portfolio is not well diversified.
+    \item Use Treynor or Jensen’s alpha if the portfolio is well diversified.
+\end{itemize}
+
+\subsection*{8. Conceptual Summary}
+
+\begin{itemize}
+    \item \textbf{CAPM:} Links expected return to systematic (beta) risk only.
+    \item \textbf{SML:} Linear relationship between \(\beta\) and expected return — all properly priced assets lie on it.
+    \item \textbf{Mispricing:} Assets above the SML are undervalued; below it are overvalued.
+    \item \textbf{CML vs. SML:} CML applies to efficient portfolios; SML applies to all securities.
+    \item \textbf{Performance Measures:}
+        \begin{itemize}
+            \item Sharpe / M\textsuperscript{2} → total risk-based (useful for single managers).
+            \item Treynor / Jensen’s Alpha → systematic risk-based (useful for multi-manager diversified funds).
+        \end{itemize}
+\end{itemize}
+
+\section*{MODULE 85.1: Portfolio Management Process}
+
+\subsection*{Learning Objectives}
+\begin{itemize}
+    \item \textbf{LOS 85.a:} Describe the portfolio approach to investing.
+    \item \textbf{LOS 85.b:} Describe the steps in the portfolio management process.
+    \item \textbf{LOS 85.c:} Describe types of investors and their distinctive characteristics and needs.
+    \item \textbf{LOS 85.d:} Describe defined contribution and defined benefit pension plans.
+\end{itemize}
+
+\subsection*{1. The Portfolio Approach to Investing (LOS 85.a)}
+
+\subsubsection*{1.1 Concept of Portfolio Perspective}
+
+\textbf{Definition:}  
+The \textbf{portfolio perspective} evaluates each investment based on its \textit{contribution} to the portfolio’s total risk and return, not in isolation.
+
+\begin{itemize}
+    \item A rational investor focuses on how a new investment affects the overall portfolio’s expected return and risk (standard deviation).
+    \item Holding a single asset (e.g., one stock) is inefficient — it exposes the investor to unnecessary unsystematic (idiosyncratic) risk.
+    \item Diversification reduces total portfolio risk without necessarily lowering expected return.
+\end{itemize}
+
+\textbf{Contrast:}  
+Evaluating assets in isolation ignores diversification benefits — a key mistake avoided by the portfolio approach.
+
+\subsubsection*{1.2 Modern Portfolio Theory (MPT)}
+
+\begin{itemize}
+    \item Originated from \textbf{Harry Markowitz (1950s)} — introduced mathematical modeling of diversification.
+    \item Risk is measured by the \textbf{standard deviation of returns}.
+    \item Portfolio risk depends on:
+    \[
+    \sigma_P = \sqrt{w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{12}}
+    \]
+    \item Unless asset returns are perfectly positively correlated (\(\rho = +1\)), combining them reduces total risk.
+    \item \textbf{Treynor, Sharpe, Lintner, and Mossin (1960s)} extended Markowitz’s model into equilibrium pricing theory — leading to the \textbf{Capital Asset Pricing Model (CAPM)}.
+\end{itemize}
+
+\subsubsection*{1.3 Diversification Ratio}
+
+\[
+\text{Diversification Ratio} = \frac{\text{Risk of equally weighted portfolio}}{\text{Average risk of individual securities}}
+\]
+
+\textbf{Example:}
+\begin{itemize}
+    \item Average individual stock risk = 25\%.
+    \item Equally weighted portfolio risk = 18\%.
+    \item Diversification Ratio \(= 18 / 25 = 0.72\).
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item If ratio = 1 → no diversification benefit.
+    \item If ratio < 1 → portfolio risk reduced through diversification.
+    \item Lower ratio → higher diversification benefit.
+\end{itemize}
+
+\textbf{Limitation:}
+\begin{itemize}
+    \item An equal-weighted portfolio does not necessarily yield the minimum possible portfolio variance.
+    \item Computerized \textbf{optimization models} determine optimal weights that minimize portfolio risk for a given expected return.
+\end{itemize}
+
+\textbf{Important Caveat:}
+\begin{itemize}
+    \item During financial crises, asset correlations tend to increase (\(\rho \uparrow\)), reducing diversification benefits.
+    \item Example: During 2008 global credit contagion, correlations between equities, bonds, and real estate spiked, limiting risk reduction.
+\end{itemize}
+
+\subsection*{2. The Portfolio Management Process (LOS 85.b)}
+
+\textbf{Definition:}  
+A structured process designed to align investment decisions with investor objectives, constraints, and market conditions.
+
+\subsubsection*{The Three Major Steps}
+
+\begin{enumerate}
+    \item \textbf{Planning Step: Establishing the Investor Profile}
+        \begin{itemize}
+            \item Analyze the investor’s:
+            \begin{itemize}
+                \item Risk tolerance (ability and willingness to bear risk)
+                \item Return objectives (required or desired returns)
+                \item Time horizon (short, medium, or long term)
+                \item Liquidity needs (cash flow or spending requirements)
+                \item Tax considerations (jurisdictional effects)
+                \item Legal or regulatory constraints
+                \item Unique circumstances or ethical preferences
+            \end{itemize}
+            \item Result: Draft an \textbf{Investment Policy Statement (IPS)} — a document outlining investment goals, constraints, and benchmarks.
+            \item IPS must specify:
+            \begin{itemize}
+                \item \textbf{Objectives:} Risk tolerance and return requirement.
+                \item \textbf{Constraints:} Time horizon, taxes, liquidity, laws, unique needs.
+                \item \textbf{Benchmark:} Objective reference for performance evaluation (e.g., S\&P 500).
+            \end{itemize}
+            \item Update IPS periodically (at least every few years) or when investor’s situation changes significantly.
+        \end{itemize}
+
+    \item \textbf{Execution Step: Asset Allocation and Security Selection}
+        \begin{itemize}
+            \item Analyze asset classes for risk–return tradeoffs.
+            \item Allocate funds among major asset types (e.g., cash, fixed income, equities, real estate, private equity, hedge funds, commodities).
+            \item Use \textbf{top-down analysis:}
+            \begin{itemize}
+                \item Begin with macroeconomic outlook (GDP, inflation, interest rates).
+                \item Select the most attractive asset classes and regions.
+            \end{itemize}
+            \item Then apply \textbf{bottom-up analysis:}
+            \begin{itemize}
+                \item Identify undervalued securities within chosen asset classes using valuation models.
+            \end{itemize}
+        \end{itemize}
+
+    \item \textbf{Feedback Step: Monitoring and Rebalancing}
+        \begin{itemize}
+            \item Continuously monitor portfolio and market changes.
+            \item Adjust asset allocations to restore target weights as market values fluctuate.
+            \item Rebalance periodically (e.g., quarterly, annually, or threshold-based).
+            \item Evaluate performance relative to the benchmark specified in the IPS.
+            \item Performance attribution may identify sources of under/overperformance (e.g., asset allocation, security selection, timing).
+        \end{itemize}
+\end{enumerate}
+
+\textbf{Summary Table: Steps in the Portfolio Management Process}
+
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{7cm}|}
+\hline
+\textbf{Step} & \textbf{Key Activities} & \textbf{Outputs} \\
+\hline
+Planning & Assess investor objectives and constraints & Investment Policy Statement (IPS) \\
+\hline
+Execution & Asset allocation and security selection & Portfolio construction \\
+\hline
+Feedback & Monitor, rebalance, and evaluate performance & Rebalanced portfolio; performance report \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{3. Types of Investors and Their Characteristics (LOS 85.c)}
+
+\textbf{Investor categories differ in objectives, risk tolerance, liquidity, and horizon.}
+
+\subsubsection*{3.1 Individual Investors}
+\begin{itemize}
+    \item Objectives: Wealth accumulation, retirement savings, education funding, home purchase.
+    \item Constraints: Moderate risk tolerance, liquidity for personal goals, taxable income.
+    \item May use tax-advantaged retirement accounts (e.g., 401(k), IRA).
+    \item Investment horizon typically long term.
+\end{itemize}
+
+\subsubsection*{3.2 Institutional Investors}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{2cm}|p{3cm}|}
+\hline
+\textbf{Investor Type} & \textbf{Objective} & \textbf{Risk Tolerance} & \textbf{Horizon} & \textbf{Liquidity Needs} \\
+\hline
+\textbf{Endowment} & Support specific program (e.g., university) & High & Long & Low (except spending needs) \\
+\hline
+\textbf{Foundation} & Fund research or charitable activities & High & Long & Low \\
+\hline
+\textbf{Bank} & Earn more on loans/investments than deposits & Low & Short to Medium & High (deposit withdrawals) \\
+\hline
+\textbf{Insurance – Life} & Fund long-term life insurance payouts & Moderate to High & Long & Low \\
+\hline
+\textbf{Insurance – P\&C} & Fund short-term claim obligations & Low to Moderate & Short & High \\
+\hline
+\textbf{Investment Company (Mutual Fund)} & Manage pooled investor funds within strategy & Depends on fund type & Variable & High (daily redemptions) \\
+\hline
+\textbf{Sovereign Wealth Fund (SWF)} & Manage national surplus or stabilization fund & Variable (depends on mandate) & Long & Low to Moderate \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Examples:}
+\begin{itemize}
+    \item \textbf{University Endowment:} Harvard or Yale endowment — aims for real growth while funding annual operations.
+    \item \textbf{Foundation:} Gates Foundation — invests to support ongoing grants and research.
+    \item \textbf{Life Insurer:} Prudential — invests in bonds to match long-term liabilities.
+    \item \textbf{Property \& Casualty Insurer:} Allianz — invests conservatively due to frequent claim payouts.
+    \item \textbf{Sovereign Wealth Fund:} Abu Dhabi Investment Authority (aprox \$700B) — invests globally for intergenerational equity.
+\end{itemize}
+
+\subsection*{4. Pension Plan Types (LOS 85.d)}
+
+\subsubsection*{4.1 Defined Contribution (DC) Pension Plan}
+
+\textbf{Definition:}  
+Employer contributes a fixed amount each period into an employee’s retirement account.  
+Employee decides how to invest and bears all investment risk.
+
+\begin{itemize}
+    \item Employer’s obligation ends with contributions.
+    \item Future benefit depends on investment performance.
+    \item Investment decisions made by employee.
+    \item Common example: 401(k) plan.
+\end{itemize}
+
+\textbf{Formula:}
+\[
+\text{Future Benefit} = \text{Contributions} \times (1 + r)^n
+\]
+where \(r\) = portfolio return, \(n\) = number of compounding periods.
+
+\textbf{Implications:}
+\begin{itemize}
+    \item Investment risk → employee.
+    \item Flexibility and portability across employers.
+    \item Employer’s cost predictable and limited.
+\end{itemize}
+
+\subsubsection*{4.2 Defined Benefit (DB) Pension Plan}
+
+\textbf{Definition:}  
+Employer promises to pay a specified benefit amount to retirees, usually based on salary and years of service.
+
+\textbf{Formula Example:}
+\[
+\text{Annual Pension Payment} = (\text{Final Salary}) \times (\text{Benefit \% per Year}) \times (\text{Years of Service})
+\]
+\textbf{Example:}
+\[
+\$100,000 \times 2\% \times 20 = \$40,000 \text{ per year after retirement.}
+\]
+
+\textbf{Implications:}
+\begin{itemize}
+    \item Investment risk → employer (must ensure assets cover future liabilities).
+    \item Contributions vary depending on fund performance.
+    \item Employer manages assets through a pension fund.
+\end{itemize}
+
+\textbf{Comparison of DC vs. DB Plans}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
+\hline
+\textbf{Feature} & \textbf{Defined Contribution (DC)} & \textbf{Defined Benefit (DB)} \\
+\hline
+Promised Benefit & None (depends on investment returns) & Predetermined formula (salary, service years) \\
+\hline
+Investment Decision & Employee & Employer / Plan Manager \\
+\hline
+Investment Risk & Employee bears risk & Employer bears risk \\
+\hline
+Cost Predictability & Predictable for employer & Variable (depends on performance) \\
+\hline
+Portability & High (account can transfer) & Low (usually employer-tied) \\
+\hline
+Example & 401(k) Plan & Traditional Company Pension \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Summary:}
+\begin{itemize}
+    \item DC plans shift risk from employer to employee.
+    \item DB plans require careful actuarial and investment management by the employer.
+\end{itemize}
+
+\subsection*{5. Conceptual Summary}
+
+\begin{itemize}
+    \item The \textbf{portfolio approach} emphasizes total portfolio risk and return, not individual asset risk.
+    \item \textbf{Diversification} reduces risk — effectiveness depends on correlations between asset returns.
+    \item The \textbf{portfolio management process} involves:
+    \begin{enumerate}
+        \item Planning (create IPS)
+        \item Execution (allocate and select)
+        \item Feedback (monitor and rebalance)
+    \end{enumerate}
+    \item \textbf{Investor types} differ in their objectives, horizons, and liquidity needs.
+    \item \textbf{Pension plan distinction:}
+        \begin{itemize}
+            \item DC → employee risk, flexible.
+            \item DB → employer risk, guaranteed benefits.
+        \end{itemize}
+\end{itemize}
+
+\section*{MODULE 85.2: Asset Management and Pooled Investments}
+
+\subsection*{Learning Objectives}
+\begin{itemize}
+    \item \textbf{LOS 85.e:} Describe aspects of the asset management industry.
+    \item \textbf{LOS 85.f:} Describe mutual funds and compare them with other pooled investment products.
+\end{itemize}
+
+\subsection*{1. Overview of the Asset Management Industry (LOS 85.e)}
+
+\subsubsection*{1.1 Definition and Structure}
+
+\textbf{Asset Management Industry:}  
+Comprises firms that manage investments professionally on behalf of clients — both individuals and institutions. These firms are collectively known as the \textbf{buy-side} of the financial market, in contrast to the \textbf{sell-side} (broker-dealers, investment banks).
+
+\textbf{Organizational Forms:}
+\begin{itemize}
+    \item \textbf{Independent firms:} Stand-alone investment managers (e.g., BlackRock, Fidelity).
+    \item \textbf{Divisions of financial conglomerates:} Asset management arms of banks or insurers (e.g., JPMorgan Asset Management, Allianz Global Investors).
+    \item \textbf{Multi-boutique firms:} Holding companies with several specialist managers under one structure, each focusing on specific styles or asset classes.
+\end{itemize}
+
+\subsubsection*{1.2 Management Styles}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
+\hline
+\textbf{Style} & \textbf{Objective} & \textbf{Features} \\
+\hline
+\textbf{Active Management} & Outperform benchmark via manager skill & Uses fundamental, technical, or quantitative analysis. Higher fees. \\
+\hline
+\textbf{Passive Management} & Replicate benchmark performance & Index tracking or smart-beta strategies. Lower fees. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Notes:}
+\begin{itemize}
+    \item Passive management ≈ 20\% of total assets under management (AUM), but a smaller share of total industry revenue due to lower fees.
+    \item \textbf{Smart Beta:} A hybrid between active and passive — tracks an index but emphasizes specific factors (e.g., value, size, momentum).
+\end{itemize}
+
+\subsubsection*{1.3 Traditional vs. Alternative Asset Managers}
+
+\begin{center}
+\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Type} & \textbf{Asset Focus} & \textbf{Typical Characteristics} \\
+\hline
+\textbf{Traditional Managers} & Equities, fixed income, balanced funds & Lower fees, higher liquidity, widely accessible. \\
+\hline
+\textbf{Alternative Managers} & Private equity, hedge funds, real estate, commodities & Higher fees, lower liquidity, higher return potential. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Trend:}  
+Boundaries are blurring — many traditional firms are expanding into alternatives to capture higher margins.
+
+\subsubsection*{1.4 Industry Trends}
+
+\begin{enumerate}
+    \item \textbf{Rise of Passive Investing:}
+        \begin{itemize}
+            \item Driven by low fees and skepticism about active managers’ ability to consistently add alpha in efficient markets.
+            \item Passive index funds and ETFs gaining market share globally.
+        \end{itemize}
+
+    \item \textbf{Data and Technology Expansion:}
+        \begin{itemize}
+            \item Explosion in big data and analytics tools.
+            \item Increased use of AI, machine learning, and third-party data vendors.
+            \item Quicker decision-making and algorithmic strategies.
+        \end{itemize}
+
+    \item \textbf{Emergence of Robo-Advisors:}
+        \begin{itemize}
+            \item Automated portfolio allocation using algorithms.
+            \item Targeted at younger or lower-asset investors.
+            \item Lower cost, standardized asset allocation advice.
+            \item Examples: Betterment, Wealthfront.
+        \end{itemize}
+\end{enumerate}
+
+\textbf{Summary Insight:}
+\begin{itemize}
+    \item Passive strategies are growing rapidly due to low costs and transparency.
+    \item Technology and data are transforming how asset managers analyze markets and interact with clients.
+    \item Industry convergence is reducing the distinction between traditional and alternative managers.
+\end{itemize}
+
+\subsection*{2. Mutual Funds and Pooled Investment Products (LOS 85.f)}
+
+\subsubsection*{2.1 Concept of Pooled Investments}
+
+\textbf{Definition:}  
+A \textbf{pooled investment vehicle} combines capital from multiple investors into one fund, managed by professionals, where each investor owns shares representing proportional ownership of the total pool.
+
+\[
+\text{Net Asset Value (NAV)} = \frac{\text{Total Value of Fund Assets} - \text{Liabilities}}{\text{Number of Shares Outstanding}}
+\]
+
+\textbf{NAV Interpretation:}  
+Represents the per-share market value of the fund; determines buy/sell price for investors.
+
+\subsubsection*{2.2 Open-End vs. Closed-End Mutual Funds}
+
+\begin{center}
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\textbf{Feature} & \textbf{Open-End Fund} & \textbf{Closed-End Fund} \\
+\hline
+\textbf{Share Issuance} & New shares created/redeemed at NAV & Fixed number of shares issued; traded on exchanges \\
+\hline
+\textbf{Pricing} & Always transacts at NAV (end of day) & Market price may differ from NAV (premium/discount) \\
+\hline
+\textbf{Liquidity Source} & Fund company (buys/sells shares) & Secondary market trading \\
+\hline
+\textbf{Management Fees} & Ongoing (usually annual expense ratio) & Similar, but trading involves brokerage costs \\
+\hline
+\textbf{Load Fees} & May have front-end or back-end loads & Typically none; trading fees apply \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Terminology:}
+\begin{itemize}
+    \item \textbf{No-load fund:} No entry or exit fees; only annual management fee.
+    \item \textbf{Load fund:} May charge:
+        \begin{itemize}
+            \item \textbf{Front-end load:} Fee when buying shares.
+            \item \textbf{Back-end load (redemption fee):} Fee when selling shares.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection*{2.3 Types of Mutual Funds}
+
+\begin{enumerate}
+    \item \textbf{Money Market Funds:}
+        \begin{itemize}
+            \item Invest in short-term, high-quality debt (T-bills, commercial paper).
+            \item Aim for stability (NAV ≈ 1.00).
+            \item Provide interest income with minimal price volatility.
+        \end{itemize}
+
+    \item \textbf{Bond Funds:}
+        \begin{itemize}
+            \item Invest in fixed-income securities.
+            \item Differentiated by maturity, issuer type, credit quality, and region:
+            \item Examples: government bond funds, municipal (tax-exempt) funds, high-yield funds, global bond funds.
+        \end{itemize}
+
+    \item \textbf{Stock Funds:}
+        \begin{itemize}
+            \item Invest primarily in equities.
+            \item \textbf{Index Funds:} Passively managed to replicate benchmark performance (e.g., S\&P 500 Index Fund).
+            \item \textbf{Actively Managed Funds:} Select securities to outperform benchmarks; higher fees and turnover.
+            \item Active funds generally incur more taxes due to higher realized capital gains.
+        \end{itemize}
+
+    \item \textbf{Balanced (Hybrid) Funds:}
+        \begin{itemize}
+            \item Combine stocks, bonds, and sometimes cash equivalents.
+            \item Aim for both income and capital appreciation.
+        \end{itemize}
+\end{enumerate}
+
+\subsubsection*{2.4 Comparison: Mutual Funds vs. ETFs vs. Other Pooled Products}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|p{4cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Feature} & \textbf{Open-End Mutual Fund} & \textbf{Closed-End Fund} & \textbf{ETF (Exchange-Traded Fund)} \\
+\hline
+Trading Venue & Fund company (end of day) & Exchange & Exchange (intraday) \\
+\hline
+Transaction Price & NAV only & Market price (premium/discount) & Close to NAV (via arbitrage) \\
+\hline
+Management Style & Active or passive & Active or passive & Mostly passive (index-based) \\
+\hline
+Liquidity & High (daily redemptions) & High (market trading) & High (intraday trading) \\
+\hline
+Capital Gains Liability & Higher (fund must sell assets for redemptions) & Moderate & Lower (in-kind redemption structure) \\
+\hline
+Dividends & Often reinvested automatically & Paid as declared & Usually paid in cash \\
+\hline
+Short Selling / Margin & Not allowed & Allowed & Allowed \\
+\hline
+Investor Costs & Management + load fees & Brokerage costs & Brokerage commissions + bid-ask spread \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Interpretation (Verbal):}
+\begin{itemize}
+    \item ETFs trade intraday like stocks, while open-end funds trade only once daily.
+    \item Closed-end funds can trade at prices different from NAV depending on investor sentiment and liquidity.
+    \item ETFs generally have lower tax liabilities due to in-kind redemptions.
+\end{itemize}
+
+\subsubsection*{2.5 Separately Managed Accounts (SMAs)}
+
+\textbf{Definition:}  
+A professionally managed investment portfolio owned by a single investor, tailored to that investor’s objectives and constraints.
+
+\textbf{Characteristics:}
+\begin{itemize}
+    \item Direct ownership of underlying securities (no fund shares issued).
+    \item Customized strategies and tax optimization.
+    \item Typically for high-net-worth individuals or institutions.
+    \item Fees based on assets under management (AUM).
+\end{itemize}
+
+\subsubsection*{2.6 Hedge Funds}
+
+\textbf{Definition:}  
+Privately organized investment pools with limited investor access and less regulatory oversight than mutual funds.
+
+\textbf{Features:}
+\begin{itemize}
+    \item Restricted to qualified or accredited investors (e.g., net worth or income thresholds).
+    \item Use leverage, derivatives, and short positions.
+    \item Wide range of strategies (long/short equity, global macro, event-driven, arbitrage, etc.).
+    \item Typical fee structure: “2 and 20” — 2\% of AUM + 20\% of profits (incentive fee).
+\end{itemize}
+
+\textbf{Example:}  
+A long/short equity hedge fund may buy undervalued stocks and short overvalued ones to generate absolute returns regardless of market direction.
+
+\subsubsection*{2.7 Private Equity and Venture Capital Funds}
+
+\textbf{Private Equity:}
+\begin{itemize}
+    \item Invests in established firms, often taking them private via leveraged buyouts (LBOs).
+    \item Goal: Restructure company to improve efficiency and cash flows, then exit via resale or IPO within 3–5 years.
+\end{itemize}
+
+\textbf{Venture Capital:}
+\begin{itemize}
+    \item Focuses on financing start-ups and early-stage firms.
+    \item Expects that only a small fraction of investments will succeed, but with very high potential returns.
+    \item Fund managers often take active roles in advising and mentoring management.
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\textbf{Feature} & \textbf{Private Equity} & \textbf{Venture Capital} \\
+\hline
+Target Firms & Mature, undervalued, cash-flow positive & Start-ups, early-stage, high-growth potential \\
+\hline
+Typical Holding Period & 3–7 years & 5–10 years \\
+\hline
+Primary Goal & Operational improvement and exit via sale or IPO & Support innovation and achieve exponential growth \\
+\hline
+Manager Involvement & High (governance and restructuring) & Very high (advisory and mentoring role) \\
+\hline
+Expected Success Rate & Majority of deals successful & Minority succeed, but winners produce high returns \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{3. Key Insights and Comparative Overview}
+
+\subsubsection*{3.1 Asset Management Spectrum}
+
+\begin{center}
+\begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
+\hline
+\textbf{Category} & \textbf{Examples} & \textbf{Risk/Return Profile} \\
+\hline
+Traditional (Public Markets) & Mutual funds, ETFs, SMAs & Moderate risk, high liquidity \\
+\hline
+Alternative (Private Markets) & Hedge funds, Private equity, Venture capital & Higher risk, lower liquidity, higher return potential \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{3.2 Summary of Pooled Investment Characteristics}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+\textbf{Investment Type} & \textbf{Liquidity} & \textbf{Regulation} & \textbf{Minimum Investment} & \textbf{Investor Base} \\
+\hline
+Open-End Mutual Fund & High (daily) & High & Low & General public \\
+\hline
+Closed-End Fund & High (market trading) & High & Low to moderate & Public investors \\
+\hline
+ETF & Very High (intraday) & High & Low & Public investors \\
+\hline
+SMA & Moderate & Moderate & High & Wealthy individuals/institutions \\
+\hline
+Hedge Fund & Low to Moderate & Low & High (≥ \$250k–\$1M) & Accredited investors \\
+\hline
+Private Equity/Venture Capital & Very Low (illiquid) & Low & Very High & Institutional / accredited investors \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{4. Conceptual Summary}
+
+\begin{itemize}
+    \item The \textbf{asset management industry} consists of firms that manage investments for clients, either actively (seeking alpha) or passively (tracking indices).
+    \item \textbf{Active vs. Passive:} Active seeks outperformance via research; passive replicates benchmark returns with lower fees.
+    \item \textbf{Traditional vs. Alternative:} Traditional managers focus on public equities/bonds; alternatives include private equity, hedge funds, and real assets.
+    \item \textbf{Key Trends:}
+        \begin{itemize}
+            \item Growth of passive management.
+            \item Expansion into alternatives.
+            \item Use of technology and robo-advisors.
+        \end{itemize}
+    \item \textbf{Pooled Investments:}
+        \begin{itemize}
+            \item Mutual funds (open/closed) → accessible, diversified.
+            \item ETFs → tradable, tax-efficient, low-cost.
+            \item SMAs → customized, single-investor portfolios.
+            \item Hedge funds, private equity, venture capital → high-risk, high-return, limited access.
+        \end{itemize}
+\end{itemize}
+
+\section*{MODULE 86.1: Portfolio Planning and Construction}
+
+\subsection*{Learning Objectives}
+\begin{itemize}
+    \item \textbf{LOS 86.a:} Explain the reasons for a written Investment Policy Statement (IPS).
+    \item \textbf{LOS 86.b:} Describe the major components of an IPS.
+    \item \textbf{LOS 86.c:} Describe risk and return objectives and how they are developed.
+    \item \textbf{LOS 86.d:} Explain willingness vs. ability to take risk.
+    \item \textbf{LOS 86.e:} Describe investment constraints (liquidity, time horizon, taxes, legal, unique circumstances).
+    \item \textbf{LOS 86.f:} Explain specification of asset classes for asset allocation.
+    \item \textbf{LOS 86.g:} Describe principles of portfolio construction and role of asset allocation.
+    \item \textbf{LOS 86.h:} Describe integration of ESG factors into portfolio planning and construction.
+\end{itemize}
+
+\subsection*{1. Purpose of a Written Investment Policy Statement (IPS) (LOS 86.a)}
+
+\textbf{Definition:}  
+The \textbf{Investment Policy Statement (IPS)} is a formal, written document that outlines an investor’s objectives, constraints, and the policies to guide portfolio management decisions.
+
+\textbf{Key Reasons for a Written IPS:}
+\begin{itemize}
+    \item Serves as a \textbf{contract} between client and manager — clarifying expectations.
+    \item Ensures that portfolio decisions are consistent with client’s \textbf{risk tolerance} and \textbf{return goals}.
+    \item Promotes discipline and reduces emotional decision-making.
+    \item Provides a \textbf{benchmark} for evaluating performance.
+    \item Helps manage long-term relationships through transparency and accountability.
+\end{itemize}
+
+\textbf{Important:}  
+High return goals must align with acceptable risk. Unrealistically low risk with high return is incompatible — the IPS reconciles these expectations.
+
+\subsection*{2. Major Components of the IPS (LOS 86.b)}
+
+A comprehensive IPS should address the following elements:
+
+\begin{enumerate}
+    \item \textbf{Client Description:}  
+          Financial situation, investment objectives, constraints, risk tolerance, time horizon, and other personal factors.
+
+    \item \textbf{Purpose of IPS:}  
+          Defines the scope and intent of the document (e.g., managing family trust or pension fund).
+
+    \item \textbf{Duties and Responsibilities:}  
+          Specifies roles of client, investment manager, custodian, and advisors.
+
+    \item \textbf{Procedures for Review:}  
+          Details frequency of updates, triggers for IPS revision, and communication procedures.
+
+    \item \textbf{Investment Objectives:}  
+          States the \textbf{risk and return objectives} derived from client discussions.
+
+    \item \textbf{Investment Constraints:}  
+          Identifies liquidity needs, time horizon, taxes, legal/regulatory factors, and unique considerations (see Section 5).
+
+    \item \textbf{Investment Guidelines:}  
+          Specifies asset classes permitted, diversification standards, use of derivatives, and leverage policies.
+
+    \item \textbf{Performance Evaluation:}  
+          Defines benchmark(s) and methods for measuring and comparing results.
+
+    \item \textbf{Appendices:}  
+          Include target (strategic) asset allocation, allowable deviations, and rebalancing rules.
+\end{enumerate}
+
+\textbf{Minimum IPS Requirements:}
+\begin{itemize}
+    \item Clear statement of client’s objectives and constraints.
+    \item Investment strategy based on these factors.
+    \item Benchmark for performance evaluation.
+\end{itemize}
+
+\subsection*{3. Risk and Return Objectives (LOS 86.c)}
+
+\subsubsection*{3.1 Risk Objectives}
+
+\textbf{Forms of Risk Objectives:}
+\begin{itemize}
+    \item \textbf{Absolute Risk Objective:} Expressed in absolute terms.
+        \begin{itemize}
+            \item Example: “No decrease in portfolio value during any 12-month period.”
+            \item Example: “Not decrease in value by more than 2\% over any 12-month period.”
+            \item Very conservative → implies near risk-free assets (e.g., T-bills).
+        \end{itemize}
+
+    \item \textbf{Probability-Based Absolute Risk:}
+        \begin{itemize}
+            \item “No greater than 5\% probability of return below –5\% in a year.”
+            \item “No greater than 4\% probability of a \$20,000 loss over a year.”
+        \end{itemize}
+
+    \item \textbf{Relative Risk Objective:}  
+          Related to performance of a benchmark.
+        \begin{itemize}
+            \item Example (strict): “Returns will not be less than 12-month LIBOR in any 12-month period.”
+            \item Example (probabilistic): “No greater than 5\% probability of underperforming MSCI World Index by more than 4\%.”
+        \end{itemize}
+\end{itemize}
+
+\subsubsection*{3.2 Return Objectives}
+
+\textbf{Absolute Return Objectives:}
+\begin{itemize}
+    \item “Achieve 6\% per annum nominal return.”
+    \item “Achieve 3\% real return above inflation.”
+\end{itemize}
+
+\textbf{Relative Return Objectives:}
+\begin{itemize}
+    \item “Exceed S\&P 500 return by 2\% per annum.”
+    \item “Exceed bank deposit rate (cost of funds) by 1.5\%.”
+\end{itemize}
+
+\textbf{Compatibility Rule:}  
+Risk and return objectives must be internally consistent — higher expected return requires higher accepted risk.
+
+\textbf{Non-Investable Benchmarks Warning:}  
+Peer performance objectives (e.g., “top quartile endowment performance”) are not investable — less suitable for IPS benchmarks.
+
+\subsection*{4. Ability vs. Willingness to Take Risk (LOS 86.d)}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Dimension} & \textbf{Key Factors} \\
+\hline
+\textbf{Ability (Capacity)} & Depends on objective financial circumstances. \\
+\hline
+ & • Longer time horizon → higher ability. \\
+ & • Greater wealth vs. liabilities → higher ability. \\
+ & • Stable income or insured risks → higher ability. \\
+ & • Short horizon or high liquidity needs → lower ability. \\
+\hline
+\textbf{Willingness (Psychological)} & Depends on personal attitude and comfort with volatility. \\
+\hline
+ & • Determined via discussion or questionnaires. \\
+ & • Influenced by past experience, beliefs, emotions. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Conflict Resolution:}
+\begin{itemize}
+    \item If \textbf{willingness > ability:} Ability dominates → portfolio risk lowered to protect capital.
+    \item If \textbf{ability > willingness:} Educate investor, but final risk level should respect lower tolerance.
+\end{itemize}
+
+\textbf{Principle:}  
+Construct portfolios using the \textbf{lower} of ability or willingness to bear risk to ensure client comfort and adherence.
+
+\subsection*{5. Investment Constraints (LOS 86.e)}
+
+\textbf{Mnemonic:} RRTTLLU — Risk, Return, Time horizon, Tax, Liquidity, Legal, Unique.  
+
+\subsubsection*{5.1 Liquidity}
+\begin{itemize}
+    \item Ability to convert assets into cash without significant loss.
+    \item Required for expenses such as tuition, healthcare, or living costs.
+    \item Institutional example: P\&C insurers need high liquidity for unpredictable claims.
+    \item Illiquid assets (e.g., hedge funds, private equity) unsuitable for short-term needs.
+\end{itemize}
+
+\subsubsection*{5.2 Time Horizon}
+\begin{itemize}
+    \item Longer horizons allow more risk-taking and less liquidity.
+    \item Short horizons require conservative, liquid investments.
+    \item Example:  
+        - 20-year horizon → equities acceptable.  
+        - 1-year horizon → cash equivalents or short-term bonds.
+\end{itemize}
+
+\subsubsection*{5.3 Tax Considerations}
+\begin{itemize}
+    \item Evaluate after-tax returns; tax rates vary by income and account type.
+    \item High-tax investors may prefer tax-exempt bonds or capital-gains-focused equities.
+    \item Tax-deferred accounts (e.g., retirement plans) should hold high-tax-income assets like bonds.
+    \item Taxable accounts should hold assets generating tax-preferred income (e.g., dividends, long-term capital gains).
+\end{itemize}
+
+\subsubsection*{5.4 Legal and Regulatory Factors}
+\begin{itemize}
+    \item Certain accounts (trusts, pensions, corporations) face investment restrictions.
+    \item Compliance with fiduciary standards is essential.
+    \item Corporate insiders face trading limits on their own firm’s stock.
+\end{itemize}
+
+\subsubsection*{5.5 Unique Circumstances}
+\begin{itemize}
+    \item Ethical or religious screens (e.g., excluding tobacco, weapons, or interest-based securities).
+    \item Employment-related diversification: avoid investments tied to investor’s primary income source.
+    \item Socially responsible or ESG-based exclusions.
+\end{itemize}
+
+\subsection*{6. Specification of Asset Classes (LOS 86.f)}
+
+\textbf{Purpose:}  
+Define the broad categories of assets to be included in the strategic asset allocation.
+
+\textbf{Guiding Principles:}
+\begin{itemize}
+    \item Assets within a class should have \textbf{high internal correlation} (similar performance characteristics).
+    \item Asset classes should have \textbf{low correlation with each other} to provide diversification benefits.
+\end{itemize}
+
+\textbf{Traditional Asset Classes:}
+\begin{itemize}
+    \item Equities, Bonds, Cash, Real Estate.
+\end{itemize}
+
+\textbf{Alternative Asset Classes:}
+\begin{itemize}
+    \item Hedge funds, Private equity, Commodities, Infrastructure, Art, Intellectual property.
+\end{itemize}
+
+\textbf{Subdivisions:}
+\begin{itemize}
+    \item \textbf{Equities:} Domestic vs. Foreign, Large-cap vs. Small-cap, Developed vs. Emerging markets.
+    \item \textbf{Bonds:} Domestic vs. International, Government vs. Corporate, Investment grade vs. High-yield, Short vs. Long maturity.
+\end{itemize}
+
+\textbf{Data Required:}
+\begin{itemize}
+    \item Expected returns, standard deviations, and correlations between asset classes.
+\end{itemize}
+
+\subsection*{7. Portfolio Construction and Asset Allocation (LOS 86.g)}
+
+\textbf{Step 1: Construct Efficient Frontier}
+\begin{itemize}
+    \item Use expected return, risk, and correlation data of asset classes.
+    \item Identify portfolios that minimize risk for each expected return level.
+\end{itemize}
+
+\textbf{Step 2: Select Optimal Portfolio}
+\begin{itemize}
+    \item Combine investor’s risk–return objectives (from IPS) with efficient frontier data.
+    \item Choose the portfolio that maximizes expected utility — this becomes the \textbf{strategic asset allocation}.
+\end{itemize}
+
+\textbf{Active vs. Passive Portfolio Management:}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Strategy Type} & \textbf{Description} \\
+\hline
+\textbf{Passive} & Maintain strategic asset allocation using index-based investments. \\
+\hline
+\textbf{Active} & Deviate from strategic allocation to exploit short-term opportunities. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Active Strategies:}
+\begin{itemize}
+    \item \textbf{Tactical Asset Allocation (TAA):} Temporarily adjust weights across asset classes based on market outlook.
+    \item \textbf{Security Selection:} Over/underweight securities within asset classes.
+\end{itemize}
+
+\textbf{Risk Budgeting:}
+\begin{itemize}
+    \item Assign total portfolio risk across:
+        \begin{enumerate}
+            \item Systematic risk (strategic allocation),
+            \item Tactical risk,
+            \item Security-selection risk.
+        \end{enumerate}
+\end{itemize}
+
+\textbf{Core–Satellite Approach:}
+\begin{itemize}
+    \item \textbf{Core:} Passive index holdings representing most of the portfolio.
+    \item \textbf{Satellite:} Smaller allocations to active strategies.
+    \item Benefits: Minimizes offsetting active bets, reduces excessive trading, improves tax efficiency.
+\end{itemize}
+
+\subsection*{8. ESG Integration into Portfolio Planning (LOS 86.h)}
+
+\textbf{ESG = Environmental, Social, and Governance factors.}  
+ESG integration aligns investment decisions with ethical, sustainability, or governance considerations.
+
+\textbf{ESG Approaches:}
+\begin{enumerate}
+    \item \textbf{Negative Screening:} Exclude industries (e.g., tobacco, fossil fuels, weapons).
+    \item \textbf{Positive Screening:} Include firms with strong ESG practices.
+    \item \textbf{Thematic Investing:} Target ESG themes (e.g., clean energy, gender equality).
+    \item \textbf{Impact Investing:} Seek measurable social/environmental impact alongside returns.
+    \item \textbf{Engagement / Active Ownership:} Use shareholder rights to influence ESG improvements.
+    \item \textbf{ESG Integration:} Systematically include ESG factors throughout security selection and asset allocation.
+\end{enumerate}
+
+\textbf{Key Implementation Considerations:}
+\begin{itemize}
+    \item Constrained investment universe → benchmark must align with ESG exclusions.
+    \item Positive or thematic strategies require customized performance benchmarks.
+    \item ESG may reduce diversification or incur costs but can improve long-term risk management.
+\end{itemize}
+
+\textbf{Example:}
+\begin{itemize}
+    \item Negative screen: Exclude fossil fuel producers.
+    \item Thematic: Invest in renewable energy firms.
+    \item Active ownership: Vote proxies for better corporate governance.
+\end{itemize}
+
+\subsection*{9. Conceptual Summary}
+
+\begin{itemize}
+    \item The \textbf{IPS} anchors portfolio design — defining objectives, constraints, and benchmarks.
+    \item \textbf{Risk and return} objectives must be realistic and aligned with investor tolerance.
+    \item \textbf{Constraints (RRTTLLU)} ensure the portfolio fits practical realities (liquidity, taxes, etc.).
+    \item \textbf{Asset allocation} determines most of the portfolio’s risk and return.
+    \item \textbf{Risk budgeting} allocates total risk among strategic, tactical, and security-selection sources.
+    \item \textbf{ESG integration} customizes portfolios for social and environmental alignment while managing long-term sustainability risks.
+\end{itemize}
+
+\section*{MODULE 87.1: Cognitive Errors vs. Emotional Biases}
+
+\subsection*{Overview}
+Traditional finance assumes that investors are rational, risk-averse, and process all available information efficiently.  
+Behavioral finance, pioneered by \textbf{Kahneman and Tversky}, challenges this assumption by showing that humans display \textbf{systematic biases} in decision-making due to both \textbf{cognitive limitations} and \textbf{emotional influences}.  
+These biases cause deviations from rational behavior and can result in suboptimal financial decisions.
+
+
+
+\subsection*{LOS 87.a: Cognitive Errors vs. Emotional Biases}
+
+\begin{itemize}
+    \item \textbf{Cognitive Errors:}  
+    Result from faulty reasoning, improper information processing, or lack of understanding of probability/statistics.  
+    They are often due to poor logic, misinterpretation, or memory errors.  
+    \textbf{→ Can often be mitigated through education, awareness, or better information.}
+    \item \textbf{Emotional Biases:}  
+    Arise from feelings, impulses, or intuition rather than conscious reasoning.  
+    \textbf{→ Difficult to correct; must often be accommodated rather than eliminated.}
+\end{itemize}
+
+\textbf{Key Difference:}
+\begin{center}
+\begin{tabular}{|p{8cm}|p{8cm}|}
+\hline
+\textbf{Cognitive Errors} & \textbf{Emotional Biases} \\
+\hline
+Errors in information processing or reasoning & Errors due to feelings and emotions \\
+\hline
+Can be reduced by training and awareness & Hard to control; often require behavioral adjustment \\
+\hline
+Example: Anchoring on old data & Example: Loss aversion or overconfidence \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Note:}  
+Many biases contain both cognitive and emotional elements. When both exist, focus on mitigating the cognitive component first — it is more manageable.
+
+
+
+\subsection*{LOS 87.b: Commonly Recognized Behavioral Biases and Their Implications}
+
+Behavioral biases can be grouped into two categories of \textbf{cognitive errors}:
+
+\begin{enumerate}
+    \item \textbf{Belief Perseverance Biases} – irrationally holding on to prior beliefs.  
+    \item \textbf{Information-Processing Biases} – faulty processing or evaluation of new data.
+\end{enumerate}
+
+
+
+\subsection*{1. Belief Perseverance Biases}
+
+\textbf{Definition:}  
+Biases that cause individuals to hold on to prior beliefs or conclusions, even when presented with new evidence.
+
+\textbf{Main Types:}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Bias} & \textbf{Description and Implications} \\
+\hline
+\textbf{Conservatism Bias} & Failure to update beliefs or forecasts when new information arises.  
+Investors overweight prior probabilities and underweight new data.  
+\textbf{Example:} An investor keeps a recession probability at 20\% despite central bank tightening — ignoring updated signals.  
+\textbf{Consequence:} Holding losing positions too long or reacting too slowly to new information. \\
+\hline
+\textbf{Confirmation Bias} & Seeking or interpreting information that confirms existing beliefs while ignoring contradictory data.  
+\textbf{Example:} Reading only positive reviews after buying a car (or stock).  
+\textbf{Consequence:} Overconfidence, poor decision validation, ignoring downside risk.  
+\textbf{Mitigation:} Actively seek disconfirming evidence and opposing viewpoints. \\
+\hline
+\textbf{Representativeness Bias} & Classifying new information based on superficial similarity to existing stereotypes or small samples.  
+Two forms:  
+(i) \textbf{Base-rate neglect} – ignoring actual statistical frequency.  
+(ii) \textbf{Sample-size neglect} – overgeneralizing from small samples.  
+\textbf{Example:} Assuming a fund manager is “skilled” after three strong years without considering randomness.  
+\textbf{Consequence:} Misclassification, trend-chasing, ignoring mean reversion. \\
+\hline
+\textbf{Illusion of Control Bias} & Belief that one can control or influence outcomes that are actually random.  
+Linked to \textbf{overconfidence}, \textbf{illusion of knowledge}, and \textbf{self-attribution}.  
+\textbf{Example:} Overweighting stock of one’s employer because one feels “in control.”  
+\textbf{Consequence:} Underdiversification, excessive trading. \\
+\hline
+\textbf{Hindsight Bias} & Believing after an event that it was predictable all along.  
+Selective memory of past predictions (“I knew it!”).  
+\textbf{Example:} Claiming foresight after a stock rally.  
+\textbf{Consequence:} Overconfidence, abandonment of sound analysis in favor of luck-based reasoning. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Summary Insight:}  
+Belief perseverance biases distort how investors update beliefs — causing underreaction, overconfidence, or inflexible decision-making.
+
+
+
+\subsection*{2. Information-Processing Biases}
+
+\textbf{Definition:}  
+Biases that result from incorrect information processing, weighting, or mental accounting rather than from the persistence of prior beliefs.
+
+\textbf{Main Types:}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Bias} & \textbf{Description and Implications} \\
+\hline
+\textbf{Anchoring and Adjustment Bias} & Basing decisions on an initial value (anchor) and failing to adjust sufficiently when new data emerges.  
+\textbf{Example:} Estimating fair value of a stock relative to its current price instead of its intrinsic value.  
+\textbf{Consequence:} Underreaction to new information; inertia in forecast updates.  
+\textbf{Mitigation:} Re-evaluate data independently of prior anchor. \\
+\hline
+\textbf{Mental Accounting Bias} & Treating money differently depending on its source or purpose.  
+\textbf{Example:} Investing a work bonus in risky stocks (“found money”) while keeping savings ultra-safe.  
+\textbf{Consequence:} Suboptimal total portfolio, inefficient diversification, conflicting sub-portfolios.  
+\textbf{Note:} Investors should adopt a \textbf{total-portfolio perspective}. \\
+\hline
+\textbf{Framing Bias} & Decision outcomes are influenced by the way choices or data are presented (gain vs. loss framing).  
+\textbf{Example:} Prefer “saving 200 lives” (gain frame) vs. avoiding “400 deaths” (loss frame) — though outcomes identical.  
+\textbf{In investments:} Overemphasizing short-term losses over long-term potential.  
+\textbf{Consequence:} Risk aversion in gains, risk-seeking in losses, mis-assessed risk tolerance. \\
+\hline
+\textbf{Availability Bias} & Overweighting information that is recent, easily recalled, or vivid.  
+\textbf{Example:} After a market crash, investors overestimate probability of another crash.  
+\textbf{Consequence:} Poor diversification, overreaction to news, familiarity bias (investing only in known firms).  
+\textbf{Mitigation:} Broaden data sources, rely on statistical evidence. \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\subsection*{3. Cognitive Bias Examples Explained}
+
+\subsubsection*{Conservatism Bias Example}
+\textbf{Scenario:}  
+An analyst keeps forecasting stable growth despite central bank tightening.  
+\textbf{Error:} Fails to adjust recession probability given new conditions → underreaction.
+
+\textbf{Implication:}  
+Investor may hold outdated positions too long, ignoring relevant information.
+
+
+
+\subsubsection*{Confirmation Bias Example}
+\textbf{Scenario:}  
+An investor reads only bullish articles on Tesla after buying it.  
+\textbf{Error:} Selectively processing information to confirm preexisting belief.  
+\textbf{Implication:}  
+Overconfidence, reduced willingness to reconsider investment thesis.
+
+
+
+\subsubsection*{Representativeness Bias Example}
+\textbf{Scenario:}  
+XYZ Corp has long been a “growth” stock. Despite recent stagnation, an analyst still recommends buying because of its “growth” label.  
+\textbf{Error:} Stereotyping based on past category — ignoring changed fundamentals.  
+\textbf{Implication:}  
+Misclassification and failure to recognize structural shift.
+
+
+
+\subsubsection*{Anchoring and Adjustment Example}
+\textbf{Scenario:}  
+A stock once traded at \$100 but is now \$60. Analyst sets price target of \$80 simply “because it used to be 100.”  
+\textbf{Error:} Using past price as anchor rather than intrinsic value.  
+\textbf{Implication:}  
+Slow reaction to new valuation realities; possible overvaluation bias.
+
+
+
+\subsubsection*{Framing Bias Example}
+\textbf{Scenario:}  
+Client A told “Your portfolio gained 10\% this year.” Client B told “You missed 5\% vs. market.” Both have same return, but reactions differ.  
+\textbf{Error:} Perception shifts due to framing of gain/loss.  
+\textbf{Implication:}  
+Emotionally inconsistent risk preferences.
+
+
+
+\subsection*{4. Summary: Classification of Key Cognitive Biases}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Category} & \textbf{Biases Included} \\
+\hline
+\textbf{Belief Perseverance} & Conservatism, Confirmation, Representativeness, Illusion of Control, Hindsight \\
+\hline
+\textbf{Information Processing} & Anchoring and Adjustment, Mental Accounting, Framing, Availability \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\subsection*{5. Implications for Financial Decision-Making}
+
+\textbf{Key Effects of Biases:}
+\begin{itemize}
+    \item Holding losing investments too long (conservatism, confirmation).
+    \item Underdiversification and concentrated portfolios (illusion of control, availability).
+    \item Overtrading and overconfidence (hindsight, illusion of control).
+    \item Misestimation of probabilities or expected returns (representativeness, anchoring).
+    \item Poor portfolio optimization due to segmentation of wealth (mental accounting).
+    \item Inconsistent risk preferences depending on framing (framing bias).
+\end{itemize}
+
+\textbf{Practical Applications:}
+\begin{itemize}
+    \item Advisors must identify client biases and adapt strategy — some can be corrected, others accommodated.
+    \item Educate investors on the effects of anchoring, overconfidence, and framing in decision-making.
+    \item Incorporate behavioral insights into portfolio rebalancing and risk assessment.
+\end{itemize}
+
+
+
+\subsection*{6. CFA-Style Exam Pointers}
+
+\begin{itemize}
+    \item \textbf{Cognitive errors} → can be \textit{mitigated} (education, analysis).  
+    \textbf{Emotional biases} → must often be \textit{accommodated} (behavioral adjustment).
+    \item \textbf{Belief perseverance} = failure to revise view; \textbf{Information-processing} = incorrect data use.
+    \item \textbf{Framing and availability} often appear in client risk-tolerance questions.
+    \item \textbf{Anchoring vs. conservatism:}  
+          – Anchoring = fixating on an initial number.  
+          – Conservatism = under-adjusting to new info.
+    \item \textbf{Representativeness vs. confirmation:}  
+          – Representativeness = stereotyping new data.  
+          – Confirmation = seeking info supporting old belief.
+\end{itemize}
+
+
+
+\subsection*{7. Conceptual Summary Table}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Bias Type} & \textbf{Practical Investment Implications} \\
+\hline
+Conservatism & Fails to adjust portfolio to new data; may miss turning points. \\
+\hline
+Confirmation & Ignores disconfirming info; reinforces wrong forecasts. \\
+\hline
+Representativeness & Misclassifies investments; buys “hot” stocks or managers. \\
+\hline
+Illusion of Control & Overtrading, underdiversification, excessive risk. \\
+\hline
+Hindsight & Overconfidence, poor learning from mistakes. \\
+\hline
+Anchoring & Biased price targets, slow reaction to new events. \\
+\hline
+Mental Accounting & Inefficient asset allocation; suboptimal total return. \\
+\hline
+Framing & Inconsistent risk attitude; misjudged risk tolerance. \\
+\hline
+Availability & Overreaction to recent or vivid events; familiarity bias. \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\subsection*{8. Key Takeaways}
+
+\begin{itemize}
+    \item Behavioral biases distort rational investment decisions.
+    \item Cognitive errors stem from reasoning flaws — \textbf{can be educated away.}
+    \item Emotional biases stem from feelings — \textbf{must be managed or accepted.}
+    \item Advisors must diagnose which bias dominates client behavior.
+    \item Overcoming biases leads to more consistent, long-term investment discipline.
+\end{itemize}
+
+\section*{MODULE 87.2: Emotional Biases and Market Implications}
+
+\subsection*{Overview}
+Traditional finance assumes that investors are rational and markets are efficient.  
+Behavioral finance, however, recognizes that investors exhibit \textbf{emotional biases} — decisions driven by feelings, impulses, and psychological comfort rather than logic or probability.  
+These biases often persist even when investors are aware of them and cannot be corrected through training alone.
+
+
+
+\subsection*{LOS 87.b (continued): Emotional Biases in Decision-Making}
+
+\textbf{Key Idea:}  
+Emotional biases originate from feelings and affective reactions, not cognitive miscalculations.  
+They are difficult to mitigate — often requiring behavioral adaptation or portfolio design rather than education.
+
+\subsubsection*{Summary of Major Emotional Biases}
+
+% Bullet-list version of the behavioral-bias content (compact)
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+  \item \textbf{Loss‑Aversion Bias} — Investors feel greater pain from losses than pleasure from equal gains (``losses loom larger than gains'') and evaluate outcomes relative to a reference point (current wealth or purchase price).
+    \begin{itemize}[noitemsep,topsep=0pt,leftmargin=*]
+      \item \textbf{Example:} Prefer a certain gain (\$5) over a 50–50 chance to gain \$10, but prefer a risky loss over a certain loss.
+      \item \textbf{Consequences:} Selling winners too soon; holding losers too long; taking excessive risk to recover losses; trading too frequently.
+      \item \textbf{Distinction:} Risk aversion (preference for lower variance given equal return) vs.\ loss aversion (asymmetric emotional reaction to losses vs.\ gains).
+    \end{itemize}
+
+  \item \textbf{Overconfidence Bias} — Excessive faith in one’s own judgment or skill.
+    \begin{itemize}[noitemsep,topsep=0pt,leftmargin=*]
+      \item \textbf{Forms:} Illusion of knowledge; self‑attribution (crediting success to skill, blaming failure on external factors).
+      \item \textbf{Consequences:} Underestimating risk, underdiversified portfolios, excessive trading, ignoring contrary evidence.
+      \item \textbf{Mitigation:} Maintain performance records; compare forecasts to outcomes and track forecast accuracy.
+    \end{itemize}
+
+  \item \textbf{Self‑Control Bias} — Preference for immediate gratification over long‑term benefit (hyperbolic discounting).
+    \begin{itemize}[noitemsep,topsep=0pt,leftmargin=*]
+      \item \textbf{Example:} Spending now instead of saving for retirement.
+      \item \textbf{Consequences:} Insufficient retirement savings; overemphasis on short‑term income; risky catch‑up behavior later.
+      \item \textbf{Mitigation:} Automatic savings plans, automatic payroll deductions, pre‑commitment mechanisms.
+    \end{itemize}
+
+  \item \textbf{Status Quo Bias} — Emotional comfort with the current situation leads to resistance to change.
+    \begin{itemize}[noitemsep,topsep=0pt,leftmargin=*]
+      \item \textbf{Example:} Not updating default 401(k) allocations or failing to opt into a better fund.
+      \item \textbf{Consequences:} Portfolios become misaligned with changing goals or risk tolerance; missed opportunities.
+      \item \textbf{Behavioral application:} Automatic enrollment (with opt‑out) increases participation (Thaler \& Sunstein).
+    \end{itemize}
+
+  \item \textbf{Endowment Bias} — Tendency to overvalue an asset simply because one owns it (ownership effect).
+    \begin{itemize}[noitemsep,topsep=0pt,leftmargin=*]
+      \item \textbf{Example:} Holding inherited stock for sentimental reasons.
+      \item \textbf{Consequences:} Emotional attachment leads to underdiversification and holding inappropriate or outdated assets.
+      \item \textbf{Test question:} ``Would I buy this asset today with new money?'' — helps detect the bias.
+    \end{itemize}
+
+  \item \textbf{Regret‑Aversion Bias} — Avoiding decisions to reduce potential future regret; stronger regret for actions (commission) than for inaction (omission).
+    \begin{itemize}[noitemsep,topsep=0pt,leftmargin=*]
+      \item \textbf{Example:} Not buying a promising stock to avoid feeling foolish if it declines.
+      \item \textbf{Consequences:} Excessive conservatism, missed opportunities, herding behavior (to share blame).
+      \item \textbf{Mitigation:} Pre‑commitment, rules‑based investing, or documented decision rules to reduce emotional paralysis.
+    \end{itemize}
+\end{itemize}
+
+
+
+\subsection*{Behavioral Bias Comparison Table}
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Bias} & \textbf{Core Emotion} & \textbf{Typical Investor Behavior} \\
+\hline
+Loss Aversion & Fear of loss & Hold losers; sell winners too early \\
+\hline
+Overconfidence & Pride, ego & Overtrade; underdiversify; ignore risk \\
+\hline
+Self-Control & Impatience & Under-save; short-term focus \\
+\hline
+Status Quo & Comfort & Resist portfolio changes \\
+\hline
+Endowment & Attachment & Overvalue owned assets \\
+\hline
+Regret Aversion & Fear of mistake & Follow herd; avoid action \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Exam Tip:}  
+If bias stems from emotional attachment, fear, or self-image → classify as \textit{emotional}.  
+If it stems from faulty reasoning or data interpretation → classify as \textit{cognitive}.
+
+
+
+\subsection*{LOS 87.c: Behavioral Biases and Market Characteristics}
+
+\textbf{Key Idea:}  
+Investor biases can aggregate into market-wide phenomena — explaining anomalies and inefficiencies that traditional finance struggles to justify.
+
+\subsubsection*{1. Market Bubbles and Crashes}
+\begin{itemize}
+    \item \textbf{Overconfidence:} Investors overestimate skill and underweight risk, leading to overtrading and inflated valuations.  
+          – During bull markets, good results reinforce confidence (self-attribution).  
+    \item \textbf{Confirmation Bias:} Investors ignore signals that prices are too high; dismiss warnings as noise.  
+    \item \textbf{Anchoring:} Investors treat recent high prices as “normal,” refusing to revise valuations downward.  
+    \item \textbf{Regret Aversion:} Fear of missing out keeps investors in markets even when they believe prices are excessive.  
+    \item \textbf{Outcome:} Excess demand inflates bubbles; when sentiment reverses, sharp corrections follow.  
+\end{itemize}
+
+\textbf{Example:}  
+Dot-com bubble (late 1990s) — investors extrapolated short-term growth, ignored valuations, and herded into tech stocks.
+
+\textbf{Behavioral Explanation:}  
+Market participants as a group exhibit \textbf{collective cognitive dissonance} — refusing to accept contradictory evidence until forced by large losses.
+
+
+
+\subsubsection*{2. The Value vs. Growth Anomaly}
+\begin{itemize}
+    \item Traditional models found that \textbf{value stocks} (low P/E, high book-to-market) outperform \textbf{growth stocks}.  
+    \item \textbf{Fama-French (1992):} Explained excess returns by additional risk factors (size, value).  
+    \item \textbf{Behavioral View:}  
+        – Investors overpay for ``glamour’’ growth stocks due to \textbf{representativeness} and the \textbf{halo effect}.  
+        – They underreact to positive information about unpopular (value) stocks.  
+    \item \textbf{Halo Effect:} Extending one positive attribute (e.g., rapid growth) into unjustified general optimism about quality and future performance.  
+\end{itemize}
+
+\textbf{Implication:}  
+Behavioral mispricing persists until fundamentals reassert, generating excess value-stock returns.
+
+
+
+\subsubsection*{3. Home Bias and Familiarity Effects}
+\begin{itemize}
+    \item \textbf{Home Bias:} Investors overweight domestic or regional securities despite the diversification benefits of global investing.  
+    \item \textbf{Reasons:}
+        \begin{itemize}
+            \item Emotional comfort and familiarity.  
+            \item Illusion of information advantage (“I know these firms better”).  
+            \item Preference for proximity and cultural similarity.  
+        \end{itemize}
+    \item \textbf{Consequences:}
+        \begin{itemize}
+            \item Reduced diversification.  
+            \item Underexposure to international opportunities.  
+        \end{itemize}
+\end{itemize}
+
+\textbf{Behavioral Drivers:} Familiarity bias (availability) and overconfidence in local knowledge.
+
+
+
+\subsection*{4. Behavioral Finance and Market Inefficiency}
+
+\textbf{Traditional View:}  
+Anomalies are due to model misspecification or random chance.
+
+\textbf{Behavioral View:}  
+Anomalies reflect predictable patterns of human bias and emotion, especially:
+\begin{itemize}
+    \item Overreaction (overconfidence, representativeness).  
+    \item Underreaction (conservatism, anchoring).  
+    \item Excessive volatility (herding, loss aversion).  
+    \item Momentum and reversal patterns (due to delayed or emotional adjustments).  
+\end{itemize}
+
+\textbf{Limitations:}  
+Behavioral finance explains tendencies, not precise market equilibria.  
+Biases help interpret deviations but not always forecast them.
+
+
+
+\subsection*{5. Summary of Behavioral Market Effects}
+
+\begin{center}
+\begin{tabular}{|l|p{9cm}|}
+\hline
+\textbf{Bias / Emotion} & \textbf{Market-Level Effect} \\
+\hline
+Overconfidence & Overtrading, bubbles, excess volatility. \\
+\hline
+Confirmation & Ignoring negative news; persistent overvaluation. \\
+\hline
+Anchoring & Slow adjustment to fundamentals after shocks. \\
+\hline
+Regret Aversion & Herding; delayed exits from bubbles. \\
+\hline
+Representativeness / Halo & Overpricing of growth stocks; value premium. \\
+\hline
+Home / Familiarity & Underdiversification; regional concentration. \\
+\hline
+Loss Aversion & Selling winners too early; holding losers too long. \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\subsection*{6. Conceptual Summary}
+
+\begin{itemize}
+    \item \textbf{Emotional biases} are rooted in feelings — difficult to eliminate.  
+    \item They lead to predictable investor errors (holding losers, underdiversifying, herding).  
+    \item When biases aggregate across many participants, markets display anomalies such as bubbles, crashes, and the value premium.  
+    \item Recognizing these behavioral patterns improves both portfolio management and client advisory quality.  
+\end{itemize}
+
+\section*{MODULE 88.1: Introduction to Risk Management}
+
+\subsection*{LOS 88.a: Defining Risk Management}
+
+\begin{itemize}
+    \item \textbf{Risk management} is the process of:
+    \begin{enumerate}
+        \item Identifying the organization's \textbf{risk tolerance}.
+        \item Identifying and measuring the \textbf{risks faced}.
+        \item Modifying and monitoring these risks over time.
+    \end{enumerate}
+
+    \item The goal is not to eliminate risk but to achieve the \textbf{optimal bundle of risks} consistent with the organization’s objectives and capacity.
+    \item \textbf{Rationale:} 
+    \begin{itemize}
+        \item Risk cannot and should not be completely avoided — returns above the risk-free rate require accepting risk.
+        \item Management controls the amount and types of risk, not actual realized returns.
+    \end{itemize}
+
+    \item \textbf{In essence:}
+    \[
+    \text{Risk Management} = \text{Identify} + \text{Measure} + \text{Modify} + \text{Monitor}
+    \]
+    while aligning all exposures with the firm’s risk tolerance.
+\end{itemize}
+
+
+
+\subsection*{LOS 88.b: Features of a Risk Management Framework}
+
+\begin{itemize}
+    \item A comprehensive framework must include:
+    \begin{enumerate}
+        \item \textbf{Risk Governance:} Senior management oversight and policy setting.
+        \item \textbf{Risk Tolerance Determination:} Define acceptable total exposure.
+        \item \textbf{Risk Identification \& Measurement:} Map all existing risks.
+        \item \textbf{Risk Management \& Mitigation:} Adjust exposures toward the optimal mix.
+        \item \textbf{Risk Monitoring:} Continuous tracking and reporting.
+        \item \textbf{Communication:} Ensure cross-departmental awareness.
+        \item \textbf{Strategic Risk Analysis:} Link risk outcomes to business objectives.
+    \end{enumerate}
+
+    \item \textbf{Key Objective:} Align organizational risk exposures with its strategic goals and stakeholder interests.
+\end{itemize}
+
+
+
+\subsection*{LOS 88.c: Risk Governance and Effective Oversight}
+
+\begin{itemize}
+    \item \textbf{Risk Governance:} Senior management’s responsibility for:
+    \begin{itemize}
+        \item Determining firmwide \textbf{risk tolerance}.
+        \item Designing the \textbf{risk management structure}.
+        \item Overseeing execution and compliance.
+    \end{itemize}
+
+    \item \textbf{Objective:} Manage risk to support the firm’s strategic objectives — pursue efficient risks, limit excessive ones, avoid those outside tolerance.
+
+    \item \textbf{Implementation:}
+    \begin{itemize}
+        \item Create a \textbf{Risk Management Committee} to integrate firmwide perspectives.
+        \item Provide clear reporting lines and independent risk oversight.
+    \end{itemize}
+\end{itemize}
+
+
+
+\subsection*{LOS 88.d: Risk Tolerance}
+
+\begin{itemize}
+    \item \textbf{Definition:} The total amount and types of risk an organization is willing and able to accept.
+    \item \textbf{Factors Influencing Risk Tolerance:}
+    \begin{enumerate}
+        \item Firm’s expertise in its business lines.
+        \item Financial strength and ability to absorb losses.
+        \item Regulatory environment and external constraints.
+        \item Management’s ability to respond to negative events.
+    \end{enumerate}
+    \item The objective is to \textbf{match risk exposure with capacity and goals}.
+\end{itemize}
+
+
+
+\subsection*{LOS 88.e: Risk Budgeting}
+
+\begin{itemize}
+    \item \textbf{Definition:} Allocation of total acceptable risk (the ``risk budget’’) across business units, asset classes, or risk factors.
+    \item \textbf{Purpose:} Achieve maximum expected return for a given total risk level.
+
+    \item \textbf{Approaches:}
+    \begin{itemize}
+        \item \textbf{Single-measure basis:} e.g., total portfolio variance, beta, duration, or VaR.
+        \item \textbf{Asset-class basis:} e.g., domestic equity, bonds, international equity, etc.
+        \item \textbf{Risk-factor basis:} e.g., interest rate, FX, equity market, and credit risks.
+    \end{itemize}
+
+    \item \textbf{Goal:} Combine these exposures to fit within the organization’s risk tolerance.
+\end{itemize}
+
+
+
+\subsection*{LOS 88.f: Financial vs. Non-Financial Risks}
+
+\begin{center}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{Risk Type} & \textbf{Definition and Examples} \\
+\hline
+\textbf{Financial Risks} & Arise from exposure to financial markets. \\
+\hline
+Credit Risk & Counterparty fails to fulfill contractual obligations. \\
+\hline
+Liquidity Risk & Loss from inability to sell assets quickly at fair value. \\
+\hline
+Market Risk & Loss due to changes in market prices or rates (stocks, commodities, FX, interest rates). \\
+\hline
+\textbf{Non-Financial Risks} & Arise from operations or external environment. \\
+\hline
+Operational Risk & Loss from human error, system failure, or fraud (includes \textit{cyber risk}). \\
+\hline
+Solvency Risk & Organization cannot continue operations due to lack of cash. \\
+\hline
+Regulatory Risk & Unfavorable change in regulation increases costs or limits activities. \\
+\hline
+Government/Political Risk & Policy or tax changes impose costs outside the regulatory framework. \\
+\hline
+Legal Risk & Exposure to litigation or contractual uncertainty. \\
+\hline
+Model Risk & Analytical or valuation models are incorrect. \\
+\hline
+Tail Risk & Extreme outcomes more probable than predicted by normal models. \\
+\hline
+Accounting Risk & Accounting choices or estimates are judged incorrect. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Special cases for individuals:}
+\begin{itemize}
+    \item \textbf{Mortality risk:} Death before providing for dependents (mitigated by life insurance).  
+    \item \textbf{Longevity risk:} Living longer than assets last (mitigated by annuities).  
+    \item \textbf{Health-care risk:} Managed with health insurance.
+\end{itemize}
+
+\textbf{Interaction of Risks:}
+\begin{itemize}
+    \item Risks are interrelated, not additive.  
+    \item Example: Market decline $\Rightarrow$ counterparty defaults $\Rightarrow$ legal disputes $\Rightarrow$ liquidity strain $\Rightarrow$ solvency risk.
+    \item During crises, correlations among risks increase — amplifying total exposure.
+\end{itemize}
+
+
+
+\subsection*{LOS 88.g: Measuring and Modifying Risk Exposures}
+
+\subsubsection*{(1) Common Measures of Risk}
+\begin{center}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{Measure} & \textbf{Description / Use} \\
+\hline
+Standard Deviation & Measures total volatility (stand-alone risk). Inadequate for non-normal distributions (fat tails). \\
+\hline
+Beta & Measures systematic (market) risk for equities within diversified portfolios. \\
+\hline
+Duration & Measures price sensitivity of bonds to interest-rate changes. \\
+\hline
+\textbf{Option Greeks} & Sensitivities for derivative positions: \\
+\hline
+Delta & Change in derivative value per unit change in underlying price. \\
+\hline
+Gamma & Change in delta per unit change in underlying price. \\
+\hline
+Vega & Change in derivative value per unit change in volatility. \\
+\hline
+Rho & Change in derivative value per unit change in risk-free rate. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{(2) Tail Risk Metrics}
+\begin{itemize}
+    \item \textbf{Value at Risk (VaR):} Minimum expected loss over a time horizon at a given probability level.  
+    Example: One-month 5\% VaR of \$1 million → 5\% chance of losing at least \$1 million in one month.
+    \item \textbf{Conditional VaR (CVaR):} Expected loss \emph{given} the loss exceeds VaR (average of the tail losses).  
+    Useful complement to VaR, similar to “loss given default’’.
+\end{itemize}
+
+\textbf{Limitations:}  
+VaR is sensitive to model assumptions and distributions — it does not give the maximum possible loss.
+
+
+
+\subsubsection*{(3) Subjective and Market-Based Risk Assessment}
+\begin{itemize}
+    \item \textbf{Stress Testing:} Examine effect of extreme but plausible shocks in one variable (e.g., interest-rate spike).  
+    \item \textbf{Scenario Analysis:} Multi-variable ``what-if’’ testing — combined macro and market changes (e.g., rate hike + oil shock + FX move).  
+    \item \textbf{Market-Implied Risk:} Use option prices, insurance premiums, or credit spreads to infer the market’s aggregate perception of risk.
+    \item \textbf{Operational / Political Risks:} Often require subjective estimates when quantitative data are unavailable.
+\end{itemize}
+
+
+
+\subsubsection*{(4) Modifying Risk Exposures}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Method} & \textbf{Description and Example} \\
+\hline
+\textbf{Avoidance} & Do not engage in the activity.  
+Example: Do not invest in high-political-risk country. \\
+\hline
+\textbf{Prevention / Reduction} & Implement controls to reduce probability or impact.  
+Example: Cybersecurity measures to prevent data breaches. \\
+\hline
+\textbf{Retention (Self-Insurance)} & Accept the risk internally; may create reserves for potential losses.  
+Example: Firm keeps exposure to routine operational losses. \\
+\hline
+\textbf{Transfer} & Shift risk to another party through contracts.  
+Example: Buy insurance, surety bonds, or fidelity bonds.  
+– \textit{Insurance:} Pay premium to transfer risk of fire, theft, etc.  
+– \textit{Surety bond:} Pays if third party fails contractual obligation.  
+– \textit{Fidelity bond:} Covers employee theft or fraud. \\
+\hline
+\textbf{Shifting (via Derivatives)} & Alter distribution of outcomes through derivative instruments.  
+Examples:  
+– Buy put options (establish floor value).  
+– Sell calls (reduce upside, collect premium).  
+– Use swaps or forwards to hedge FX or interest-rate risk. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Choosing Among Methods:}
+\begin{itemize}
+    \item Always weigh \textbf{costs vs. benefits}.  
+    \item Combine tools — e.g., diversify, insure, and hedge simultaneously.  
+    \item Aim for a final risk profile that matches the organization’s risk tolerance and strategic objectives.
+\end{itemize}
+
+
+
+\subsection*{Key Takeaways}
+
+\begin{itemize}
+    \item \textbf{Goal:} Not to eliminate risk, but to manage it efficiently.
+    \item \textbf{Framework:} Governance → Measurement → Modification → Monitoring.
+    \item \textbf{Effective Risk Governance:} Aligns all risk decisions with corporate strategy.
+    \item \textbf{Risk Budgeting:} Distributes risk to maximize expected return per unit of accepted risk.
+    \item \textbf{Risk Interactions:} Must be analyzed jointly — crises often reveal hidden correlations.
+    \item \textbf{Modification Tools:} Avoid, prevent, retain, transfer, or shift — depending on cost-benefit trade-off.
+\end{itemize}
+
+
+\end{document}

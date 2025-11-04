@@ -1,0 +1,4956 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx} % for including images and figures
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{adjustbox}  % put in preamble
+
+
+\geometry{margin=1in}
+
+\title{Equity Investment}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Module 41.1: Markets, Assets, and Intermediaries}
+
+\subsection*{LOS 41.a: Main Functions of the Financial System}
+
+\begin{itemize}
+    \item \textbf{1. Facilitate saving, borrowing, raising capital, risk management, and trading.}
+    \begin{itemize}
+        \item Allows entities (individuals, firms, governments) to:
+        \begin{itemize}
+            \item Save for future consumption (e.g., retirement accounts, deposits).
+            \item Borrow for consumption or investment (e.g., mortgages, bonds).
+            \item Issue equity to raise capital (e.g., IPOs, private placements).
+            \item Manage risks via hedging instruments (e.g., forwards, options).
+            \item Exchange assets or currencies.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{2. Determine the equilibrium return (interest rate).}
+    \begin{itemize}
+        \item Balances total \textit{savings supply} and total \textit{borrowing demand}.
+        \item Low interest rate $\Rightarrow$ encourages borrowing, discourages saving.
+        \item High interest rate $\Rightarrow$ encourages saving, discourages borrowing.
+        \item Different rates exist for varying levels of \textit{risk, liquidity, and maturity}.
+    \end{itemize}
+
+    \item \textbf{3. Allocate capital to its most efficient uses.}
+    \begin{itemize}
+        \item Investors allocate funds to projects with the best \textit{risk–return trade-off}.
+        \item Efficient allocation requires:
+        \begin{itemize}
+            \item Liquid markets,
+            \item Low transaction costs,
+            \item Transparent information,
+            \item Strong regulation and contract enforcement.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+\begin{table}[H!]
+\centering
+\caption*{Exhibit 1: Functions of the Financial System}
+\begin{tabular}{|l|p{4cm}|p{4cm}|}
+\hline
+\textbf{Function} & \textbf{Mechanism} & \textbf{Example} \\
+\hline
+Saving & Provide vehicles for deferred consumption & Pension funds, CDs, bonds \\
+\hline
+Borrowing & Transfer funds to those needing capital & Bank loans, corporate bonds \\
+\hline
+Issuing equity & Raise funds via ownership dilution & IPO by Apple Inc. \\
+\hline
+Risk management & Hedge risks via derivatives & Forward to hedge FX exposure \\
+\hline
+Exchanging assets & Trade goods/currencies efficiently & FX market (EUR/USD) \\
+\hline
+Utilizing information & Profit from mispricing via info & Value investing (undervalued stocks) \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 41.b: Classifications of Assets and Markets}
+
+\begin{itemize}
+    \item \textbf{Asset Types:}
+    \begin{itemize}
+        \item \textbf{Financial assets:} stocks, bonds, derivatives, currencies.
+        \item \textbf{Real assets:} real estate, equipment, commodities.
+    \end{itemize}
+
+    \item \textbf{Security Classifications:}
+    \begin{itemize}
+        \item \textbf{Debt:} fixed claim (interest + principal repayment).
+        \item \textbf{Equity:} ownership interest with residual claim.
+        \item \textbf{Public vs. Private:} 
+        \begin{itemize}
+            \item Public — traded on exchanges, regulated.
+            \item Private — not publicly traded, illiquid.
+        \end{itemize}
+        \item \textbf{Derivative contracts:} value derived from underlying (e.g., oil futures, stock options).
+    \end{itemize}
+
+    \item \textbf{Market Classifications:}
+    \begin{itemize}
+        \item \textbf{Spot Market:} immediate delivery.
+        \item \textbf{Forward/Futures Market:} future delivery.
+        \item \textbf{Primary Market:} new issue sale (IPO).
+        \item \textbf{Secondary Market:} resale among investors.
+        \item \textbf{Money Market:} short-term debt ($\leq$ 1 year).
+        \item \textbf{Capital Market:} long-term debt and equity.
+        \item \textbf{Alternative Market:} hedge funds, commodities, real estate, art, etc.
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Market and Asset Classification}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Market Type} & \textbf{Instruments} & \textbf{Example} \\
+\hline
+Money Market & Short-term debt ($\leq$ 1 year) & T-bills, commercial paper \\
+\hline
+Capital Market & Long-term debt and equity & Bonds, stocks \\
+\hline
+Primary Market & New issue & IPO of a company \\
+\hline
+Secondary Market & Trading existing issues & NYSE, NASDAQ \\
+\hline
+Spot Market & Immediate exchange & FX spot trade \\
+\hline
+Forward/Futures & Future settlement & Crude oil futures \\
+\hline
+Alternative & Non-traditional assets & Hedge funds, real estate \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 41.c: Types of Assets and Their Characteristics}
+
+\paragraph{1. Securities}
+\begin{itemize}
+    \item \textbf{Fixed-Income (Debt):} promise to repay borrowed funds.
+    \begin{itemize}
+        \item \textit{Short-term:} $\leq$ 1 year (T-bills, commercial paper).
+        \item \textit{Intermediate:} 1–10 years (notes).
+        \item \textit{Long-term:} $>$ 10 years (bonds).
+        \item \textit{Convertible debt:} can be converted into equity shares.
+    \end{itemize}
+    \item \textbf{Equity:} ownership interest in a firm.
+    \begin{itemize}
+        \item \textit{Common stock:} residual claim, variable dividends.
+        \item \textit{Preferred stock:} fixed dividend, priority over common stock.
+        \item \textit{Warrants:} right to purchase equity at set price before expiry.
+    \end{itemize}
+    \item \textbf{Pooled Investment Vehicles:}
+    \begin{itemize}
+        \item \textit{Mutual funds:} open- or closed-end funds.
+        \item \textit{ETFs / ETNs:} exchange-traded; track index or portfolio.
+        \item \textit{ABS (Asset-Backed Securities):} claims on asset pool (e.g., mortgages).
+        \item \textit{Hedge funds:} limited partnerships using complex strategies and leverage.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Currencies}
+\begin{itemize}
+    \item Issued by central banks.
+    \item \textbf{Reserve currencies:} USD, EUR, GBP, JPY, CHF.
+    \item Traded in \textbf{spot markets} for immediate delivery.
+\end{itemize}
+
+\paragraph{3. Contracts}
+\begin{itemize}
+    \item \textbf{Forwards:} private agreement to trade in the future at a fixed price.
+    \item \textbf{Futures:} standardized forward traded on exchange.
+    \item \textbf{Swaps:} exchange of cash flows (interest, currency, equity returns).
+    \item \textbf{Options:} right (not obligation) to buy (call) or sell (put).
+    \item \textbf{Insurance:} pays cash upon adverse event.
+    \item \textbf{Credit Default Swaps (CDS):} pay if issuer defaults.
+\end{itemize}
+
+\paragraph{4. Commodities}
+\begin{itemize}
+    \item Include metals, energy, agricultural products.
+    \item Trade via spot, futures, and forwards.
+\end{itemize}
+
+\paragraph{5. Real Assets}
+\begin{itemize}
+    \item Real estate, machinery, infrastructure.
+    \item \textbf{Direct ownership:} illiquid, high management cost.
+    \item \textbf{Indirect ownership:} via REITs, MLPs, listed firms.
+\end{itemize}
+
+\bigskip
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Summary of Major Asset Classes}
+\begin{tabular}{|l|p{5.5cm}|p{5.5cm}|}
+\hline
+\textbf{Category} & \textbf{Example Instruments} & \textbf{Key Characteristics} \\
+\hline
+Fixed-Income & Bonds, notes, commercial paper & Pays fixed interest; defined maturity \\
+\hline
+Equity & Common, preferred shares, warrants & Ownership interest; dividends optional \\
+\hline
+Derivatives & Forwards, futures, options, swaps & Value derived from underlying asset \\
+\hline
+Currencies & USD, EUR, JPY, GBP & Medium of exchange; traded spot/futures \\
+\hline
+Commodities & Gold, oil, wheat & Tangible goods; used for hedging/speculation \\
+\hline
+Real Assets & Real estate, equipment, infrastructure & Physical; provides income/diversification \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 41.d: Financial Intermediaries and Their Services}
+
+\paragraph{1. Brokers, Dealers, and Exchanges}
+\begin{itemize}
+    \item \textbf{Brokers:} match buyers and sellers (earn commission).
+    \item \textbf{Block brokers:} handle large trades discreetly to avoid price impact.
+    \item \textbf{Investment banks:} underwrite securities, advise on M\&A.
+    \item \textbf{Exchanges:} provide trading venues, regulate members.
+    \item \textbf{ATS / ECN / MTF:} alternative electronic trading systems (no regulation role).
+    \item \textbf{Dark pools:} ATSs that conceal orders.
+    \item \textbf{Dealers:} trade from own inventory, earn bid–ask spread.
+    \item \textbf{Primary dealers:} transact with central banks in government securities.
+\end{itemize}
+
+\paragraph{2. Securitizers}
+\begin{itemize}
+    \item Pool financial assets (e.g., mortgages) $\Rightarrow$ issue securities backed by pool.
+    \item May use SPVs/SPEs to isolate assets from parent firm.
+    \item Create tranches (senior vs. junior) with different risk-return levels.
+    \item Benefits:
+    \begin{itemize}
+        \item Increased liquidity,
+        \item Lower funding cost,
+        \item Diversification.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Depository Institutions}
+\begin{itemize}
+    \item Examples: banks, savings \& loans, credit unions.
+    \item Accept deposits $\Rightarrow$ make loans.
+    \item Earn spread between deposit and lending rates.
+    \item Provide diversification, transaction services, credit analysis.
+    \item Other lenders: payday lenders, factoring companies.
+\end{itemize}
+
+\paragraph{4. Insurance Companies}
+\begin{itemize}
+    \item Collect premiums to provide risk coverage.
+    \item Diversify across policyholders $\Rightarrow$ predictable losses.
+    \item Manage:
+    \begin{itemize}
+        \item \textbf{Moral hazard:} insured takes more risk.
+        \item \textbf{Adverse selection:} high-risk buyers dominate.
+        \item \textbf{Fraud:} deliberate loss to claim benefit.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{5. Arbitrageurs}
+\begin{itemize}
+    \item Profit from price discrepancies across markets.
+    \item Provide liquidity, ensure price efficiency.
+    \item \textit{Pure arbitrage} is riskless; \textit{risk arbitrage} involves correlated instruments.
+    \item \textbf{Replication:} creating equivalent positions using different assets.
+\end{itemize}
+
+\paragraph{6. Clearinghouses and Custodians}
+\begin{itemize}
+    \item \textbf{Clearinghouses:} 
+    \begin{itemize}
+        \item Act between buyers/sellers,
+        \item Provide escrow, settlement, margin control,
+        \item Reduce counterparty risk.
+    \end{itemize}
+    \item \textbf{Custodians:}
+    \begin{itemize}
+        \item Hold and safeguard client securities,
+        \item Prevent fraud or loss from intermediary failure.
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Summary of Financial Intermediaries}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Intermediary Type} & \textbf{Primary Function} & \textbf{Example} \\
+\hline
+Broker & Match buyers and sellers & E\&Trade, Charles Schwab \\
+\hline
+Dealer & Trade from own account & Goldman Sachs, JPMorgan dealer desk \\
+\hline
+Exchange & Trading venue, regulation & NYSE, NASDAQ \\
+\hline
+Securitizer & Pool assets, issue ABS & Fannie Mae, Freddie Mac \\
+\hline
+Depository Institution & Accept deposits, make loans & Bank of America \\
+\hline
+Insurance Company & Risk pooling & Allianz, AXA \\
+\hline
+Arbitrageur & Exploit price inefficiencies & Quant hedge funds \\
+\hline
+Clearinghouse & Ensure trade settlement & CME Clearing, Euroclear \\
+\hline
+Custodian & Safekeeping of assets & State Street, BNY Mellon \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 41.2: Positions and Leverage}
+
+\subsection*{LOS 41.e: Compare Positions an Investor Can Take in an Asset}
+
+\paragraph{1. Long and Short Positions}
+\begin{itemize}
+    \item \textbf{Long position:}
+    \begin{itemize}
+        \item Investor \textbf{owns} the asset or has the right/obligation to \textbf{buy}.
+        \item Profits when asset price \textbf{increases}.
+        \item Examples:
+        \begin{itemize}
+            \item Buying a stock outright.
+            \item Buying a call option (right to buy).
+            \item Entering a long forward/futures position.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Short position:}
+    \begin{itemize}
+        \item Investor \textbf{borrows and sells} the asset, intending to buy it back later at a lower price.
+        \item Obliged to \textbf{return (cover)} the borrowed asset.
+        \item Profits when asset price \textbf{falls}.
+        \item The party obliged to deliver an asset under a contract (e.g., forward seller) is also \textbf{short}.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Hedging via Short Positions}
+\begin{itemize}
+    \item \textbf{Purpose:} Reduce risk exposure from existing long position.
+    \item \textbf{Mechanism:} Take a short position in a correlated asset.
+    \item \textbf{Example:}
+    \begin{itemize}
+        \item A wheat farmer with a long position in the crop takes a short futures position in wheat.
+        \item If wheat prices fall, the gain on the short futures offsets the loss on the crop.
+    \end{itemize}
+    \item \textbf{Rule of thumb:} “Do in the futures market what you must do in the future.”
+\end{itemize}
+
+\paragraph{3. Long and Short in Options and Swaps}
+\begin{itemize}
+    \item \textbf{Options:}
+    \begin{itemize}
+        \item Long call $\Rightarrow$ benefit if underlying \textbf{price rises}.
+        \item Short call $\Rightarrow$ loss if underlying price rises.
+        \item Long put $\Rightarrow$ benefit if underlying \textbf{price falls}.
+        \item Short put $\Rightarrow$ loss if underlying price falls.
+    \end{itemize}
+    \item \textbf{Swaps:}
+    \begin{itemize}
+        \item Each party is both long and short.
+        \item The side that benefits when the quoted rate increases is considered \textbf{long}.
+    \end{itemize}
+    \item \textbf{Currency Contracts:}
+    \begin{itemize}
+        \item Long one currency and short another.
+        \item Example: Long EUR/USD futures $\Rightarrow$ long euro, short dollar.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Summary of Long and Short Positions}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Instrument} & \textbf{Long Position} & \textbf{Short Position} & \textbf{Profit When...} \\
+\hline
+Stock & Buy shares & Borrow and sell shares & Long: price rises \\
+\hline
+Forward/Future & Obligation to buy later & Obligation to sell later & Short: price falls \\
+\hline
+Call Option & Right to buy & Obligation to sell if exercised & Long: price rises \\
+\hline
+Put Option & Right to sell & Obligation to buy if exercised & Long: price falls \\
+\hline
+Swap & Receive floating rate & Pay floating rate (receive fixed) & Long: quoted rate rises \\
+\hline
+Currency Future & Buy foreign currency & Sell foreign currency & Long: foreign currency appreciates \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\bigskip
+
+\subsection*{Short Sales and Positions}
+
+\paragraph{1. Mechanics of a Short Sale}
+\begin{itemize}
+    \item \textbf{Steps:}
+    \begin{enumerate}
+        \item Borrow security and sell it on the market.
+        \item Deposit sale proceeds and margin collateral with broker.
+        \item Repurchase (cover) later and return security to lender.
+    \end{enumerate}
+    \item \textbf{Goal:} Profit from \textbf{price decline}.
+    \item \textbf{Covering the short:} Repurchasing the borrowed asset to close position.
+\end{itemize}
+
+\paragraph{2. Obligations and Costs}
+\begin{itemize}
+    \item Must pay lender any \textbf{dividends or interest} the lender would have received.
+    \item Deposit the \textbf{proceeds as collateral}.
+    \item Broker may pay a \textbf{short rebate rate} on these funds:
+    \begin{itemize}
+        \item Typically $\approx$ overnight interest rate $-$ 0.1\%.
+        \item May be negative for hard-to-borrow securities.
+    \end{itemize}
+    \item Broker earns the difference between market rate and short rebate.
+\end{itemize}
+
+\paragraph{3. Margin Requirements in Short Sales}
+\begin{itemize}
+    \item Short seller must also deposit \textbf{initial margin} (cash or riskless securities).
+    \item If asset price rises $\Rightarrow$ equity decreases.
+    \item If equity $\downarrow$ below maintenance margin $\Rightarrow$ \textbf{margin call}.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Summary of Short Sale Mechanics}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Component} & \textbf{Description} \\
+\hline
+Borrowed asset & Security borrowed from another investor via broker \\
+\hline
+Sale proceeds & Held by broker as collateral \\
+\hline
+Payments-in-lieu & Dividends/interest paid to original owner \\
+\hline
+Short rebate rate & Interest rebate paid on collateral (may be negative) \\
+\hline
+Margin requirement & Additional collateral to protect broker \\
+\hline
+Covering the short & Buying back security to close short position \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 41.f: Leverage, Margin, and Margin Call Calculations}
+
+\paragraph{1. Leverage and Margin Concepts}
+\begin{itemize}
+    \item \textbf{Leverage:} Use of borrowed funds to magnify returns.
+    \item \textbf{Buying on margin:} Investor borrows from broker to purchase securities.
+    \item \textbf{Margin loan:} Borrowed funds; interest paid at \textbf{call money rate}.
+    \item \textbf{Equity:} Investor’s own funds in position.
+    \item \textbf{Initial margin requirement:} Minimum equity at purchase.
+    \item \textbf{Maintenance margin:} Minimum equity percentage to maintain position.
+\end{itemize}
+
+\paragraph{2. Key Formulas}
+
+\[
+\text{Leverage Ratio (LR)} = \frac{\text{Value of Asset}}{\text{Value of Equity}} = \frac{1}{\text{Margin Requirement}}
+\]
+
+\[
+\text{Return on Equity (ROE)} = \frac{\text{Gain or Loss on Position}}{\text{Initial Equity}}
+\]
+
+\[
+\text{Equity} = \text{Value of Asset} - \text{Loan Value}
+\]
+
+\[
+\text{Margin \%} = \frac{\text{Equity}}{\text{Value of Asset}}
+\]
+
+\[
+\text{Margin Call Price} = P_0 \times \frac{1 - \text{Initial Margin}}{1 - \text{Maintenance Margin}}
+\]
+
+\bigskip
+
+\paragraph{3. Example: Margin Transaction}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Shares purchased: 1,000 at \$100 each.
+    \item Initial margin = 40\%.
+    \item Interest on margin loan = 4\%.
+    \item Dividends = \$2/share.
+    \item Commission = \$0.05/share (both purchase and sale).
+    \item End of year stock price = \$110.
+\end{itemize}
+
+\textbf{Step 1: Compute leverage ratio.}
+\[
+\text{Leverage Ratio} = \frac{1}{0.40} = 2.5
+\]
+
+\textbf{Step 2: Compute initial equity.}
+\[
+\text{Total cost} = 1{,}000 \times 100 = 100{,}000
+\]
+\[
+\text{Investor equity} = 0.40 \times 100{,}000 = 40{,}000
+\]
+\[
+\text{Commissions} = 1{,}000 \times 0.05 = 50
+\]
+\[
+\text{Total initial outflow} = 40{,}050
+\]
+
+\textbf{Step 3: Compute ending inflow.}
+\[
+\text{Stock value} = 1{,}000 \times 110 = 110{,}000
+\]
+\[
+\text{Dividends} = 1{,}000 \times 2 = 2{,}000
+\]
+\[
+\text{Interest} = 60{,}000 \times 0.04 = 2{,}400
+\]
+\[
+\text{Sale commission} = 50
+\]
+\[
+\text{Net inflow} = 110{,}000 + 2{,}000 - 60{,}000 - 2{,}400 - 50 = 49{,}550
+\]
+
+\textbf{Step 4: Compute Return on Equity.}
+\[
+\text{ROE} = \frac{49{,}550 - 40{,}050}{40{,}050} = 23.72\%
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Asset total return = \(10\% + 2\% = 12\%\)
+    \item Expected with 2.5× leverage: \(12\% \times 2.5 = 30\%\)
+    \item Actual ROE lower (23.72\%) due to interest and commissions.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Margin Transaction Summary}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Item} & \textbf{Amount (\$)} \\
+\hline
+Initial Investment (Equity + Commission) & 40,050 \\
+\hline
+Borrowed Funds & 60,000 \\
+\hline
+End-of-Year Stock Value & 110,000 \\
+\hline
+Dividends Received & 2,000 \\
+\hline
+Loan Interest & -2,400 \\
+\hline
+Commissions (buy + sell) & -100 \\
+\hline
+Net Inflow at Year-End & 49,550 \\
+\hline
+Gain on Equity & 9,500 \\
+\hline
+Return on Equity (ROE) & 23.72\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\paragraph{4. Example: Margin Call Price}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Purchase price = \$40 per share.
+    \item Initial margin = 50\%.
+    \item Maintenance margin = 25\%.
+\end{itemize}
+
+\textbf{Formula:}
+\[
+P_{\text{margin call}} = P_0 \times \frac{1 - \text{Initial Margin}}{1 - \text{Maintenance Margin}}
+\]
+
+\[
+P_{\text{margin call}} = 40 \times \frac{1 - 0.50}{1 - 0.25} = 40 \times \frac{0.5}{0.75} = 26.67
+\]
+
+\textbf{Interpretation:}
+\begin{itemize}
+    \item Margin call is triggered if price drops \textbf{below \$26.67}.
+    \item Investor must deposit cash or additional securities to restore margin.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Key Margin Formulas Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Formula / Description} \\
+\hline
+Leverage Ratio & \( = \frac{1}{\text{Initial Margin Requirement}} \) \\
+\hline
+Equity & \( = \text{Asset Value} - \text{Loan Value} \) \\
+\hline
+Margin \% & \( = \frac{\text{Equity}}{\text{Asset Value}} \) \\
+\hline
+Margin Call Price & \( = P_0 \times \frac{1 - M_i}{1 - M_m} \) \\
+\hline
+Return on Equity (ROE) & \( = \frac{\text{Gain on Investment}}{\text{Initial Equity}} \) \\
+\hline
+Effect of Leverage & Amplifies both gains and losses \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Module 41.3: Order Execution and Validity}
+
+\subsection*{LOS 41.g: Compare Execution, Validity, and Clearing Instructions}
+
+\paragraph{1. Order Instructions Overview}
+Every trade order contains:
+\begin{itemize}
+    \item \textbf{Execution Instructions} — how to trade (e.g., market or limit).
+    \item \textbf{Validity Instructions} — when the order is valid for execution.
+    \item \textbf{Clearing Instructions} — how settlement and delivery occur.
+\end{itemize}
+
+\paragraph{2. Execution Instructions}
+\begin{itemize}
+    \item \textbf{Market Order:}
+    \begin{itemize}
+        \item Execute immediately at best available price.
+        \item \textbf{Pros:} Immediate execution.
+        \item \textbf{Cons:} Uncertain execution price — possible unfavorable fills.
+        \item \textbf{Example:} Urgent purchase based on private information.
+    \end{itemize}
+    \item \textbf{Limit Order:}
+    \begin{itemize}
+        \item Sets a maximum (buy) or minimum (sell) execution price.
+        \item \textbf{Pros:} Control over price.
+        \item \textbf{Cons:} May not execute if price not reached.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Types of Limit Orders (Relative to Market)}
+\begin{itemize}
+    \item \textbf{Marketable / Aggressive:} 
+    \begin{itemize}
+        \item Buy limit above best ask or sell limit below best bid.
+        \item Executes immediately (fully or partially).
+    \end{itemize}
+    \item \textbf{Inside the Market:} Between best bid and best ask — sets new quotes.
+    \item \textbf{At the Market:} Buy at best bid or sell at best ask — may not fill.
+    \item \textbf{Behind the Market:} Away from current market — waits for movement.
+    \item \textbf{Far from Market:} Unlikely to execute soon.
+\end{itemize}
+
+\paragraph{4. Additional Execution Specifications}
+\begin{itemize}
+    \item \textbf{All-or-Nothing (AON):} Only executed if full size can be filled.
+    \item \textbf{Minimum Fill:} Execute only if at least a specified quantity is available.
+    \item \textbf{Hidden Orders:} Size hidden from market (broker-only visibility).
+    \item \textbf{Iceberg Orders:} Partial display size visible; rest hidden.
+    \item \textbf{Purpose:} Conceal large trades to avoid price impact and gauge liquidity.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Execution Instructions Summary}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Order Type} & \textbf{Execution Condition} & \textbf{Advantage} & \textbf{Disadvantage} \\
+\hline
+Market & Immediate at best price & Fast, certain execution & Price uncertainty \\
+\hline
+Limit & At specific price or better & Price control & No execution guarantee \\
+\hline
+AON & Only full order filled & Avoids partials & May never execute \\
+\hline
+Hidden/Iceberg & Partially or fully hidden & Conceals strategy & May reduce liquidity \\
+\hline
+Aggressive Limit & Crosses spread & Immediate execution & Higher cost \\
+\hline
+Passive Limit & Behind market & Price improvement & Execution delay \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\paragraph{5. Validity Instructions}
+\begin{itemize}
+    \item \textbf{Day Order:} Expires if unfilled by end of day.
+    \item \textbf{Good-till-Canceled (GTC):} Stays active until executed or canceled.
+    \item \textbf{Immediate-or-Cancel (IOC) / Fill-or-Kill (FOK):} Execute immediately or cancel.
+    \item \textbf{Good-on-Close (GOC):} Executed only at market close.
+    \item \textbf{Good-on-Open (GOO):} Executed only at market open.
+    \item \textbf{Stop Orders:} Triggered once stop price reached.
+    \begin{itemize}
+        \item \textbf{Stop-Sell:} Protects long positions; triggers sell if price falls.
+        \item \textbf{Stop-Buy:} Protects short positions; triggers buy if price rises.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Validity Instruction Types}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Order Type} & \textbf{When Active} & \textbf{Purpose} \\
+\hline
+Day Order & During current session & Common default \\
+\hline
+GTC & Until manually canceled & Long-term position entry \\
+\hline
+IOC / FOK & Immediate execution only & Rapid liquidity demand \\
+\hline
+GOC / MOC & At market close & Used by mutual funds \\
+\hline
+Stop-Sell & Below current market & Limit downside on longs \\
+\hline
+Stop-Buy & Above current market & Limit losses on shorts \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Example: Stop Order Use}
+\begin{itemize}
+    \item Investor buys stock at \$40.
+    \item Places \textbf{stop-sell order at \$36} (10\% below current).
+    \item Order converts to market order if price $\leq 36$.
+    \item Prevents further losses but may execute below stop price if price gaps down.
+\end{itemize}
+
+\bigskip
+
+\paragraph{6. Clearing Instructions}
+\begin{itemize}
+    \item Specify how trade is settled and which entities handle delivery/payment.
+    \item \textbf{Retail:} Cleared by the investor’s broker.
+    \item \textbf{Institutional:} Settled by custodian or prime broker.
+    \item Important to distinguish:
+    \begin{itemize}
+        \item \textbf{Long Sale:} Selling owned securities.
+        \item \textbf{Short Sale:} Broker must locate borrowable shares.
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 41.h: Compare Market and Limit Orders}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Market vs. Limit Orders Comparison}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Characteristic} & \textbf{Market Order} & \textbf{Limit Order} \\
+\hline
+Execution Speed & Immediate & Conditional (price-based) \\
+\hline
+Price Certainty & Low & High \\
+\hline
+Execution Certainty & High & Low \\
+\hline
+Typical Use & Urgent information-based trades & Price-sensitive trades \\
+\hline
+Risk & Adverse price execution & Missed opportunity \\
+\hline
+Example & Buy immediately at market & Buy if price ≤ \$50 \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 41.i: Primary vs. Secondary Markets}
+
+\paragraph{1. Primary Market}
+\begin{itemize}
+    \item \textbf{Definition:} Market for new security issuance.
+    \item \textbf{Types of Issues:}
+    \begin{itemize}
+        \item \textbf{IPO (Initial Public Offering):} First-time public issue.
+        \item \textbf{Seasoned Offering (Secondary Issue):} New shares by existing public firm.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Offering Methods}
+\begin{itemize}
+    \item \textbf{Underwritten Offering:} Investment bank buys entire issue at fixed price.
+    \item \textbf{Best Efforts Offering:} Bank sells issue without guarantee.
+    \item \textbf{Book Building:} Collecting indications of interest from investors to set price.
+    \item \textbf{Hot Issue:} Oversubscribed IPO expected to trade above offer price.
+    \item \textbf{Conflict of Interest:}
+    \begin{itemize}
+        \item Issuer wants high price; underwriter prefers low price for successful sale.
+        \item Results in \textbf{underpricing} of IPOs.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Alternative Primary Market Mechanisms}
+\begin{itemize}
+    \item \textbf{Private Placement:} Sale directly to qualified investors.
+    \item \textbf{Shelf Registration:} Pre-registered issuance spread over time.
+    \item \textbf{Dividend Reinvestment Plan (DRIP):} Dividends reinvested into new shares.
+    \item \textbf{Rights Offering:} Existing shareholders buy new shares at discount.
+\end{itemize}
+
+\paragraph{4. Secondary Market}
+\begin{itemize}
+    \item \textbf{Definition:} Trading of existing securities between investors.
+    \item \textbf{Purpose:} Provide liquidity and price discovery.
+    \item \textbf{Importance:}
+    \begin{itemize}
+        \item Enhances primary market efficiency.
+        \item Lowers firms’ cost of capital.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Primary vs. Secondary Markets}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Feature} & \textbf{Primary Market} & \textbf{Secondary Market} \\
+\hline
+Participants & Issuers and investors & Investors only \\
+\hline
+Purpose & Raise new capital & Provide liquidity \\
+\hline
+Example & IPO, rights issue & NYSE trade between investors \\
+\hline
+Price Set By & Issuer and underwriter & Supply and demand \\
+\hline
+Importance & Funds to firms & Price/value info \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 41.j: Market Structures – Trading Mechanisms}
+
+\paragraph{1. Types of Market Structures}
+\begin{itemize}
+    \item \textbf{Call Market:} Trading occurs at specific times at single clearing price.
+    \item \textbf{Continuous Market:} Trading occurs continuously whenever market is open.
+\end{itemize}
+
+\paragraph{2. Three Main Market Types}
+\begin{itemize}
+    \item \textbf{Quote-Driven Market (Dealer Market):}
+    \begin{itemize}
+        \item Investors trade with dealers who quote bid–ask prices.
+        \item Also known as \textit{price-driven or OTC markets}.
+        \item Example: Bond markets, FX markets.
+    \end{itemize}
+    \item \textbf{Order-Driven Market:}
+    \begin{itemize}
+        \item Orders matched by trading rules (exchanges, electronic systems).
+        \item \textbf{Order Matching Rules:}
+        \begin{itemize}
+            \item Price priority: highest bid, lowest ask first.
+            \item Time priority: earliest order at same price executes first.
+        \end{itemize}
+        \item \textbf{Trade Pricing Rules:}
+        \begin{itemize}
+            \item Uniform pricing (all trades at one price).
+            \item Discriminatory pricing (based on limit price).
+        \end{itemize}
+        \item Example: NYSE, NASDAQ order book.
+    \end{itemize}
+    \item \textbf{Brokered Market:}
+    \begin{itemize}
+        \item Brokers find counterparties for unique/illiquid assets.
+        \item Example: Real estate, artwork, large block trades.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Comparison of Market Structures}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Type} & \textbf{Who Trades With Whom} & \textbf{Price Discovery} & \textbf{Examples} \\
+\hline
+Quote-Driven & Investor $\leftrightarrow$ Dealer & Dealer quotes & Bonds, FX \\
+\hline
+Order-Driven & Investor $\leftrightarrow$ Investor & Matching rules & Stock exchanges \\
+\hline
+Brokered & Investor $\leftrightarrow$ Investor (via broker) & Negotiation & Real estate, large blocks \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Market Transparency}
+\begin{itemize}
+    \item \textbf{Pre-trade transparency:} Quotes/order info available.
+    \item \textbf{Post-trade transparency:} Prices and volumes disclosed after trade.
+    \item \textbf{Implications:}
+    \begin{itemize}
+        \item High transparency $\Rightarrow$ better price discovery, lower costs.
+        \item Dealers prefer opacity (information advantage).
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 41.k: Characteristics of a Well-Functioning Financial System}
+
+\paragraph{1. Key Characteristics}
+\begin{itemize}
+    \item \textbf{Complete Markets:} All needs for saving, borrowing, risk management met.
+    \item \textbf{Operational Efficiency:} Low transaction costs.
+    \item \textbf{Informational Efficiency:} Prices reflect all available information.
+    \item \textbf{Allocational Efficiency:} Capital flows to most productive uses.
+\end{itemize}
+
+\paragraph{2. Key Intermediary Roles}
+\begin{itemize}
+    \item Provide trading venues (exchanges, ATS).
+    \item Supply liquidity.
+    \item Securitize assets.
+    \item Manage depositories, clearinghouses, banks, insurance, advisory services.
+\end{itemize}
+
+\paragraph{3. Benefits}
+\begin{itemize}
+    \item Lowers cost of capital.
+    \item Improves investment opportunities.
+    \item Facilitates capital formation and risk sharing.
+    \item Promotes economic growth.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Types of Market Efficiency}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Efficiency Type} & \textbf{Definition} \\
+\hline
+Operational Efficiency & Low transaction and information costs \\
+\hline
+Informational Efficiency & Prices reflect all known information \\
+\hline
+Allocational Efficiency & Capital directed to best uses \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 41.l: Objectives of Market Regulation}
+
+\paragraph{1. Problems Without Regulation}
+\begin{itemize}
+    \item Fraud, theft, insider trading.
+    \item Costly information.
+    \item Default risk.
+    \item Loss of investor confidence.
+\end{itemize}
+
+\paragraph{2. Objectives of Regulation}
+\begin{itemize}
+    \item Protect unsophisticated investors.
+    \item Ensure competency and performance transparency (e.g., CFA Program, GIPS).
+    \item Prevent insider exploitation.
+    \item Require standardized financial reporting (IASB/IFRS).
+    \item Impose capital adequacy for long-term obligations (banks, insurers).
+\end{itemize}
+
+\paragraph{3. Types of Regulators}
+\begin{itemize}
+    \item \textbf{Government Regulators:} Public authorities enforcing laws.
+    \item \textbf{Self-Regulating Organizations (SROs):} Industry bodies overseeing members (e.g., exchanges, clearinghouses).
+\end{itemize}
+
+\paragraph{4. Outcomes of Effective Regulation}
+\begin{itemize}
+    \item Maintains market liquidity.
+    \item Reduces risk of fraud/default.
+    \item Encourages participation and capital formation.
+    \item Supports economic growth.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 7: Market Regulation – Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Regulatory Goal} & \textbf{Purpose} \\
+\hline
+Fraud/Insider Protection & Preserve market trust \\
+\hline
+Performance Standards & Ensure fair evaluation of managers \\
+\hline
+Transparency Rules & Lower info costs and improve pricing \\
+\hline
+Capital Requirements & Ensure solvency and stability \\
+\hline
+SRO Oversight & Maintain discipline and compliance \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\section*{Module 42.1: Index Weighting Methods}
+
+\subsection*{LOS 42.a: Describe a Security Market Index}
+
+\begin{itemize}
+    \item \textbf{Definition:}  
+    A \textit{security market index} measures the performance of an asset class, market, or segment.
+    \item \textbf{Constituent securities:} Individual assets included in the index.
+    \item \textbf{Index value:} Numeric representation computed from market prices of constituents.
+    \item \textbf{Index return:} Percentage change in index value over a period.
+    \[
+        R_t = \frac{I_t - I_{t-1}}{I_{t-1}}
+    \]
+    \item \textbf{Purpose:} Benchmark performance, create investment products (ETFs, futures), and represent markets.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Key Features of a Market Index}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Feature} & \textbf{Description} \\
+\hline
+Asset class coverage & Equities, bonds, commodities, REITs, etc. \\
+\hline
+Constituent count & Broad (S\&P 500) vs. narrow (DJIA 30) \\
+\hline
+Calculation & Weighted average of constituent prices or values \\
+\hline
+Usage & Benchmark, performance tracking, portfolio construction \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 42.b: Calculate and Interpret Index Value, Price Return, and Total Return}
+
+\paragraph{1. Types of Index Returns}
+\begin{itemize}
+    \item \textbf{Price Index:} Uses only prices of constituents.  
+        \(\Rightarrow\) Measures capital gains only.
+        \[
+            R_P = \frac{P_t - P_{t-1}}{P_{t-1}}
+        \]
+    \item \textbf{Return Index (Total Return):} Includes price change + income (dividends, coupons).  
+        \(\Rightarrow\) Measures total wealth change.
+        \[
+            R_T = \frac{(P_t + D_t) - P_{t-1}}{P_{t-1}}
+        \]
+\end{itemize}
+
+\paragraph{2. Linking Returns over Multiple Periods}
+\[
+R_{\text{period}} = (1 + R_1)(1 + R_2)\cdots(1 + R_n) - 1
+\]
+\textbf{Example:}
+\[
+R_P = (1.005)(1.0104) - 1 = 0.0155 = 1.55\%
+\]
+If starting index \(I_0 = 100\):
+\[
+I_2 = 100 \times 1.0155 = 101.55
+\]
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Comparison – Price Return vs. Total Return}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Aspect} & \textbf{Price Index} & \textbf{Return Index} \\
+\hline
+Includes dividends/interest? & No & Yes \\
+\hline
+Reflects capital gain only? & Yes & No (includes income) \\
+\hline
+Example & S\&P 500 Price Index & S\&P 500 Total Return Index \\
+\hline
+Use & Market performance & Investor total return tracking \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 42.c: Choices and Issues in Index Construction and Management}
+
+\paragraph{1. Key Decisions by Index Providers}
+\begin{itemize}
+    \item Define the \textbf{target market}: broad (e.g., global equities) or narrow (e.g., U.S. small-cap value).
+    \item Determine \textbf{constituent selection}: objective rule-based or discretionary.
+    \item Choose \textbf{weighting scheme}: price, equal, market cap, float-adjusted, or fundamental.
+    \item Set \textbf{rebalancing frequency}: to realign weights to methodology.
+    \item Set \textbf{re-examination schedule}: to revise constituents and structure.
+\end{itemize}
+
+\paragraph{2. Selection Criteria}
+\begin{itemize}
+    \item \textbf{Objective:} Size, liquidity, sector, style, or geographic region.
+    \item \textbf{Subjective:} Committee review (e.g., S\&P Index Committee).
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 42.d: Compare Weighting Methods Used in Index Construction}
+
+\paragraph{1. Price-Weighted Index (PWI)}
+\begin{itemize}
+    \item \textbf{Formula:}
+    \[
+        I = \frac{\sum P_i}{d}
+    \]
+    where \(d\) = divisor (adjusted for splits and changes).  
+    \item \textbf{Examples:} DJIA (30 U.S. stocks), Nikkei 225.
+    \item \textbf{Characteristics:}
+    \begin{itemize}
+        \item Simple to compute.
+        \item High-priced stocks dominate weight.
+        \item Sensitive to splits/dividends.
+    \end{itemize}
+    \item \textbf{Matching portfolio:} Equal number of shares of each stock.
+\end{itemize}
+
+\paragraph{Example 1: Price-Weighted Index Return}
+\[
+I_{Dec31} = \frac{10 + 20 + 60}{3} = 30
+\]
+\[
+I_{Jan31} = \frac{20 + 15 + 40}{3} = 25
+\]
+\[
+R = \frac{25 - 30}{30} = -16.67\%
+\]
+
+\paragraph{Example 2: Adjusting for a Stock Split}
+\[
+I_{Day1} = \frac{10 + 20 + 90}{3} = 40
+\]
+Stock C splits 2-for-1 $\Rightarrow$ new price = 45.
+\[
+\frac{10 + 20 + 45}{d} = 40 \Rightarrow d = 1.875
+\]
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Price-Weighted Index Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Advantage} & Simple computation \\
+\hline
+\textbf{Disadvantages} & Overweights high-price stocks; distorted by splits \\
+\hline
+\textbf{Replication} & Equal number of shares per stock \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\paragraph{2. Equal-Weighted Index (EWI)}
+\begin{itemize}
+    \item \textbf{Formula:}
+    \[
+        R_{EWI} = \frac{1}{N} \sum_{i=1}^{N} R_i
+    \]
+    \item \textbf{Characteristics:}
+    \begin{itemize}
+        \item Equal dollar weight per constituent.
+        \item Requires frequent rebalancing → high transaction costs.
+        \item Overweights smaller-cap firms; underweights large-caps.
+    \end{itemize}
+    \item \textbf{Examples:} Value Line Composite Average, FT Ordinary Share Index.
+\end{itemize}
+
+\paragraph{Example 3: Equal-Weighted Index Calculation}
+If three stocks have returns of 4\%, 2\%, and −1\%:
+\[
+R_{EWI} = \frac{4 + 2 - 1}{3} = 1.67\%
+\]
+If starting index = 131:
+\[
+I_1 = 131 \times (1 + 0.0167) = 133.19
+\]
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Equal-Weighted Index Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Advantage} & Simple, unbiased by price or size \\
+\hline
+\textbf{Disadvantages} & Requires rebalancing, higher costs \\
+\hline
+\textbf{Bias} & Toward smaller-cap, high-volatility stocks \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\paragraph{3. Market-Capitalization-Weighted Index (MCWI)}
+\begin{itemize}
+    \item \textbf{Formula:}
+    \[
+        w_i = \frac{P_i Q_i}{\sum P_i Q_i}
+    \quad \text{and} \quad
+        I = \frac{\sum P_i Q_i}{\sum P_i^0 Q_i^0} \times I_0
+    \]
+    \item \textbf{Characteristics:}
+    \begin{itemize}
+        \item Reflects aggregate investor wealth.
+        \item Automatically adjusts for splits/dividends.
+        \item No need for rebalancing unless constituents change.
+    \end{itemize}
+    \item \textbf{Disadvantage:} Overweights overvalued, underweights undervalued stocks.
+    \item \textbf{Example:} S\&P 500.
+\end{itemize}
+
+\paragraph{Example 4: Market-Cap Index Calculation}
+\[
+\text{Base total MV} = \$80\,\text{million}; \quad \text{End MV} = \$95\,\text{million}
+\]
+\[
+I = \frac{95}{80} \times 100 = 118.75
+\Rightarrow R = 18.75\%
+\]
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Market-Cap-Weighted Index Summary}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Advantage} & Represents total market wealth; low turnover \\
+\hline
+\textbf{Disadvantage} & Momentum bias; overweights expensive stocks \\
+\hline
+\textbf{Example} & S\&P 500, MSCI World \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\paragraph{4. Float-Adjusted Market-Cap-Weighted Index (FAMCI)}
+\begin{itemize}
+    \item Adjusts \(Q_i\) to include only publicly tradable (float) shares.  
+    Excludes shares held by insiders, governments, or cross-holdings.
+    \item \textbf{Free Float:} Excludes shares restricted from foreign ownership.
+    \item \textbf{Effect:} Reduces weight of firms with large controlling shareholders.
+    \item \textbf{Used by:} MSCI indices, FTSE indices.
+\end{itemize}
+
+\paragraph{5. Fundamental-Weighted Index (FWI)}
+\begin{itemize}
+    \item \textbf{Weights:} Based on firm fundamentals (e.g., earnings, book value, cash flow, dividends).
+    \item \textbf{Advantages:}
+    \begin{itemize}
+        \item Reduces price bias; avoids overweighting overvalued stocks.
+        \item Implicit \textit{value tilt} — overweights high book-to-market, high earnings-yield firms.
+    \end{itemize}
+    \item \textbf{Disadvantages:}
+    \begin{itemize}
+        \item Requires accounting data updates.
+        \item Higher rebalancing cost.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Comparison of Weighting Methods}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Method} & \textbf{Basis of Weight} & \textbf{Main Implication} \\
+\hline
+Price-Weighted & Stock price & High-priced stocks dominate \\
+\hline
+Equal-Weighted & Equal dollar per stock & Small-cap bias, frequent rebalancing \\
+\hline
+Market-Cap-Weighted & Market value (price × shares) & Reflects market wealth; momentum bias \\
+\hline
+Float-Adjusted MCW & Publicly tradable market cap & Excludes non-tradable shares \\
+\hline
+Fundamental-Weighted & Fundamentals (earnings, book value) & Value bias; avoids price distortion \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 42.e: Calculate and Analyze Index Value and Return by Weighting Method}
+
+\paragraph{1. Price-Weighted Index Example}
+\begin{itemize}
+    \item Initial prices: \(10, 20, 60\) → Index = \((10 + 20 + 60)/3 = 30\)
+    \item Next month: \(20, 15, 40\) → Index = 25
+    \[
+    R = \frac{25 - 30}{30} = -16.67\%
+    \]
+\end{itemize}
+
+\paragraph{2. Adjusting Divisor for Split}
+\[
+(10 + 20 + 45) / d = 40 \Rightarrow d = 1.875
+\]
+Maintains index continuity after Stock C split.
+
+\paragraph{3. Price vs. Market-Cap Weight Example}
+\begin{itemize}
+    \item Three firms:
+
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Firm} & \textbf{Price (\$)} & \textbf{Shares} \\
+\hline
+A & 100 & 100{,}000 \\
+B & 10 & 1{,}000{,}000 \\
+C & 1 & 20{,}000{,}000 \\
+\hline
+\end{tabular}
+
+\item \textbf{Base market capitalization:}
+\[
+(100\times100{,}000)+(10\times1{,}000{,}000)+(1\times20{,}000{,}000)=\$40\,000\,000
+\]
+\item \textbf{If A doubles to 200:}  
+Price-Weighted Index $\uparrow$ 33 points; MCW Index $\uparrow$ less.
+\item \textbf{If C doubles to 2:}  
+Price-Weighted Index barely moves (0.33 pt); MCW Index moves strongly.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 7: Price- vs. Market-Cap Weight Sensitivity}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Stock Change} & \textbf{Effect on Price-Weighted Index} & \textbf{Effect on MC-Weighted Index} \\
+\hline
+High-price stock doubles & Large impact & Small impact if small-cap \\
+\hline
+Low-price stock doubles & Minimal impact & Large impact if large-cap \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Equal-Weighted Index Example}
+\begin{itemize}
+    \item Three stocks initially equal-weighted; initial index = 131.
+    \item Returns = 5\%, −2\%, 8\% → Average = (5 − 2 + 8)/3 = 3.67\%.
+    \[
+    I_1 = 131 \times (1.0367) = 135.8
+    \]
+    \item Rebalancing ensures equal dollar weight each period.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 8: Index Return Calculation Summary}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Method} & \textbf{Computation} & \textbf{Driver of Change} \\
+\hline
+Price-Weighted & Avg. of prices / adjusted divisor & Price of high-priced stocks \\
+\hline
+Equal-Weighted & Average of individual returns & Average of all stocks equally \\
+\hline
+Market-Cap-Weighted & Total market value / base value & Market value of large firms \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+\textbf{Summary Insight:}
+\begin{itemize}
+    \item \textbf{Price-weighted:} Impact $\propto$ stock price.
+    \item \textbf{Equal-weighted:} Impact $\propto$ average return.
+    \item \textbf{Market-cap-weighted:} Impact $\propto$ firm size.
+    \item \textbf{Fundamental-weighted:} Impact $\propto$ accounting fundamentals.
+\end{itemize}
+
+
+\section*{Module 42.2: Uses and Types of Indexes}
+
+\subsection*{LOS 42.f: Rebalancing and Reconstitution of an Index}
+
+\paragraph{1. Rebalancing}
+\begin{itemize}
+    \item \textbf{Definition:} Process of adjusting the \textbf{weights of index constituents} to target weights after price movements.
+    \item \textbf{Purpose:} Maintain index consistency with its weighting methodology.
+    \item \textbf{Frequency:} Typically quarterly or semiannual.
+    \item \textbf{Affects:} Especially relevant for \textbf{equal-weighted indexes}, where weights drift as prices change.
+    \item \textbf{Mechanics:}
+    \begin{itemize}
+        \item Price-weighted and market-cap-weighted indexes adjust automatically via price changes.
+        \item Equal-weighted indexes require \textbf{manual rebalancing}.
+    \end{itemize}
+    \item \textbf{Example:}
+    \begin{itemize}
+        \item If one stock doubles in price while others remain constant, it gains excess weight in the index.
+        \item Rebalancing restores equal weight among constituents.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Rebalancing Overview}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Index Type} & \textbf{Rebalancing Need} & \textbf{Reason} \\
+\hline
+Price-weighted & Rare & Prices adjust weights automatically \\
+\hline
+Market-cap-weighted & Rare & Market value adjusts automatically \\
+\hline
+Equal-weighted & Frequent & Price changes distort equal weights \\
+\hline
+Fundamental-weighted & Periodic & Rebased on updated fundamentals \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{2. Reconstitution}
+\begin{itemize}
+    \item \textbf{Definition:} Process of \textbf{adding or deleting} securities in the index.
+    \item \textbf{Purpose:} Ensure index reflects the intended market segment.
+    \item \textbf{Triggers:}
+    \begin{itemize}
+        \item Corporate actions: mergers, bankruptcies, delistings.
+        \item Firms no longer meeting index criteria.
+    \end{itemize}
+    \item \textbf{Effect on Prices:}
+    \begin{itemize}
+        \item \textbf{Additions:} Price often rises (index funds buy to match benchmark).
+        \item \textbf{Deletions:} Price often falls (funds sell).
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Rebalancing vs. Reconstitution}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Aspect} & \textbf{Rebalancing} & \textbf{Reconstitution} \\
+\hline
+Definition & Adjust weights & Add/delete constituents \\
+\hline
+Goal & Maintain target weights & Maintain representative universe \\
+\hline
+Frequency & Quarterly / periodic & Annual or as needed \\
+\hline
+Example & Equal-weighted index reset & Replace delisted stock \\
+\hline
+Impact & Transaction costs & Price impacts on added/removed securities \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 42.g: Uses of Security Market Indexes}
+
+\paragraph{1. Reflection of Market Sentiment}
+\begin{itemize}
+    \item Index return represents \textbf{aggregate investor confidence}.
+    \item Example: DJIA (30 U.S. stocks) tracks large-cap sentiment but not the entire market.
+\end{itemize}
+
+\paragraph{2. Benchmark for Performance Evaluation}
+\begin{itemize}
+    \item Active managers are compared to consistent benchmarks.
+    \item \textbf{Style match required:}
+    \begin{itemize}
+        \item Value managers $\rightarrow$ value index.
+        \item Growth managers $\rightarrow$ growth index.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Measure of Market Return and Risk}
+\begin{itemize}
+    \item Historical index returns used to estimate:
+    \[
+    E(R_i), \ \sigma_i, \ \rho_{ij}
+    \]
+    \item Used for \textbf{asset allocation} decisions among asset classes.
+\end{itemize}
+
+\paragraph{4. Measure of Beta and Risk-Adjusted Return}
+\begin{itemize}
+    \item In CAPM:
+    \[
+        E(R_i) = R_f + \beta_i [E(R_m) - R_f]
+    \]
+    \item Index serves as proxy for market portfolio ($R_m$).
+    \item Used for estimating beta, expected return, and Jensen’s alpha.
+\end{itemize}
+
+\paragraph{5. Model Portfolio for Passive Investing}
+\begin{itemize}
+    \item \textbf{Index funds:} Replicate benchmark index performance.
+    \item \textbf{Forms:} Mutual funds, ETFs, and separately managed accounts.
+    \item \textbf{Advantages:} Low cost, transparency, and diversification.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Summary – Uses of Market Indexes}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Use} & \textbf{Description / Example} \\
+\hline
+Market Sentiment & Gauge investor confidence (e.g., DJIA, S\&P 500) \\
+\hline
+Benchmark & Evaluate manager skill vs. comparable index \\
+\hline
+Asset Allocation & Estimate expected return and risk of asset class \\
+\hline
+CAPM Input & Proxy for market portfolio for $\beta$ estimation \\
+\hline
+Passive Investment & Replication via index funds or ETFs \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 42.h: Types of Equity Indexes}
+
+\paragraph{1. Broad Market Index}
+\begin{itemize}
+    \item Represents overall market performance.
+    \item Covers large proportion (usually $>90\%$) of total market capitalization.
+    \item \textbf{Example:} Wilshire 5000 Index (over 6,000 U.S. stocks).
+\end{itemize}
+
+\paragraph{2. Multi-Market Index}
+\begin{itemize}
+    \item Combines indexes from several countries.
+    \item Used for regional or global comparisons.
+    \item \textbf{Examples:}
+    \begin{itemize}
+        \item MSCI World Index (developed markets).
+        \item MSCI Emerging Markets Index.
+        \item Latin America Index.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Multi-Market Index with Fundamental Weighting}
+\begin{itemize}
+    \item Country weights based on \textbf{economic fundamentals} (e.g., GDP) instead of market cap.
+    \item \textbf{Purpose:} Avoid overweighting countries with previously inflated equity markets.
+\end{itemize}
+
+\paragraph{4. Sector Index}
+\begin{itemize}
+    \item Measures performance of industry sectors (health care, financials, technology).
+    \item Used for \textbf{cyclical analysis} and sector rotation strategies.
+    \item Can be national or global (e.g., MSCI Global Financials Index).
+\end{itemize}
+
+\paragraph{5. Style Index}
+\begin{itemize}
+    \item Captures market \textbf{capitalization segment} and \textbf{investment style} (value/growth).
+    \item \textbf{Common classifications:}
+    \begin{itemize}
+        \item Large-cap, mid-cap, small-cap.
+        \item Value (high book-to-market, high dividend yield).
+        \item Growth (high P/E, low dividend yield).
+    \end{itemize}
+    \item \textbf{Example:} Russell 1000 Value Index, Russell 2000 Growth Index.
+    \item \textbf{Note:} Higher turnover due to migration between categories.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Equity Index Classification Summary}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Index Type} & \textbf{Basis} & \textbf{Example} \\
+\hline
+Broad Market & Total market coverage & Wilshire 5000, Russell 3000 \\
+\hline
+Multi-Market & Several national indexes & MSCI World, FTSE All-World \\
+\hline
+Fundamentally Weighted & Economic factor (GDP) & GDP-weighted Global Index \\
+\hline
+Sector & Industry/sector & MSCI Healthcare, S\&P Financials \\
+\hline
+Style & Market cap + style & Russell 2000 Growth/Value \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 42.i: Compare Types of Security Market Indexes}
+
+\begin{itemize}
+    \item \textbf{Equity Indexes:} Usually market-cap or float-adjusted.
+    \item \textbf{Fixed-Income Indexes:} Segment by maturity, credit, issuer, or geography.
+    \item \textbf{Commodity Indexes:} Based on futures prices, not spot.
+    \item \textbf{Real Estate Indexes:} Based on property values or REITs.
+    \item \textbf{Hedge Fund Indexes:} Equal-weighted fund performance averages.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Comparative Summary – Global Index Types}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Category} & \textbf{Weighting Scheme} & \textbf{Typical Adjustment} \\
+\hline
+Equity & Market-cap or float-adjusted & Adjust for free float \\
+\hline
+Fixed-Income & Market value of bonds & Exclude illiquid issues \\
+\hline
+Commodity & Futures-based & Adjust for roll yield and weights \\
+\hline
+Real Estate & Market value / REITs & Use appraisal or transaction prices \\
+\hline
+Hedge Funds & Equal-weighted returns & Self-reporting biases \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 42.j: Types of Fixed-Income Indexes}
+
+\paragraph{1. Characteristics}
+\begin{itemize}
+    \item Huge variety: government, corporate, municipal, mortgage-backed, high-yield, etc.
+    \item \textbf{Index Segmentation:}
+    \begin{itemize}
+        \item By \textbf{sector:} Government, corporate, sovereign.
+        \item By \textbf{maturity:} Short-, intermediate-, long-term.
+        \item By \textbf{rating:} Investment-grade vs. high-yield.
+        \item By \textbf{region:} Domestic vs. global bonds.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Challenges in Construction}
+\begin{itemize}
+    \item \textbf{Large universe:} Thousands of issues, frequent maturities and redemptions.
+    \item \textbf{Illiquidity:} Many bonds trade infrequently, requiring dealer quotes or estimation.
+    \item \textbf{High turnover:} Bonds mature; constant rebalancing needed.
+    \item \textbf{Replication difficulty:} High transaction costs and data intensity.
+\end{itemize}
+
+\paragraph{3. Examples}
+\begin{itemize}
+    \item Bloomberg Barclays Global Aggregate Bond Index.
+    \item ICE BofA U.S. Corporate Bond Index.
+    \item JP Morgan Emerging Market Bond Index (EMBI).
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Fixed-Income Index Construction Issues}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Issue} & \textbf{Explanation} \\
+\hline
+Vast universe & Many issuers and instruments \\
+\hline
+Infrequent trading & Prices estimated from dealer quotes \\
+\hline
+High turnover & Maturity and replacement frequent \\
+\hline
+Replication cost & Expensive to track due to illiquidity \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 42.k: Indexes Representing Alternative Investments}
+
+\paragraph{1. Commodity Indexes}
+\begin{itemize}
+    \item \textbf{Based on:} Prices of futures contracts (not spot commodities).
+    \item \textbf{Major examples:}
+    \begin{itemize}
+        \item S\&P GSCI (formerly Goldman Sachs Commodity Index).
+        \item Thomson Reuters/CoreCommodity CRB Index.
+    \end{itemize}
+    \item \textbf{Weighting Methods:}
+    \begin{itemize}
+        \item Equal-weighted, production-weighted, or fixed-weighted.
+        \item Index exposures differ significantly across sectors.
+    \end{itemize}
+    \item \textbf{Return components:}
+    \[
+    R_{futures} = R_{rf} + R_{price} + R_{roll}
+    \]
+\end{itemize}
+
+\paragraph{2. Real Estate Indexes}
+\begin{itemize}
+    \item \textbf{Based on:}  
+    \begin{itemize}
+        \item Property appraisals (subjective).  
+        \item Repeat sales (historical transactions).  
+        \item REIT performance (market-based, liquid).  
+    \end{itemize}
+    \item \textbf{Example:} FTSE NAREIT Index (REIT-based real estate performance).
+    \item \textbf{Advantage:} REIT indexes offer daily pricing and liquidity.
+\end{itemize}
+
+\paragraph{3. Hedge Fund Indexes}
+\begin{itemize}
+    \item \textbf{Construction:} Equal-weighted average of self-reported hedge fund returns.
+    \item \textbf{Issues:}
+    \begin{itemize}
+        \item \textbf{Selection bias:} Only successful funds report results.
+        \item \textbf{Survivorship bias:} Poor performers drop out, inflating returns.
+        \item \textbf{Lack of standardization:} Funds report to different providers.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 7: Comparison – Alternative Investment Indexes}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Asset Class} & \textbf{Index Type} & \textbf{Key Considerations} \\
+\hline
+Commodities & Futures-based (e.g., S\&P GSCI) & Weighting scheme, roll yield \\
+\hline
+Real Estate & REIT or appraisal-based & Liquidity, valuation method \\
+\hline
+Hedge Funds & Equal-weighted fund returns & Reporting bias, survivorship bias \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+\textbf{Summary Insight:}
+\begin{itemize}
+    \item Indexes represent various asset classes for benchmarking, analysis, and investment.
+    \item Each index type faces unique construction and replication challenges.
+    \item Alternative investment indexes improve diversification but have data biases and methodological inconsistencies.
+\end{itemize}
+
+
+\section*{Module 43.1: Market Efficiency}
+
+\subsection*{LOS 43.a: Market Efficiency and Related Concepts}
+
+\paragraph{Definition:}
+\begin{itemize}
+    \item A market is \textbf{informationally efficient} if prices \textbf{fully, quickly, and rationally reflect all available information.}
+    \item Prices are \textbf{unbiased estimates} of intrinsic value—deviations are random.
+    \item Intuitive restatement: “You can’t consistently beat the market.”
+\end{itemize}
+
+\paragraph{Implications:}
+\begin{itemize}
+    \item In an efficient market:
+    \begin{itemize}
+        \item Expected return = equilibrium risk-adjusted return.
+        \item Active strategies cannot systematically outperform passive index strategies.
+    \end{itemize}
+    \item Passive strategy (index investing) preferred due to lower cost and minimal transaction friction.
+\end{itemize}
+
+\paragraph{Measurement of Efficiency:}
+\begin{itemize}
+    \item \textbf{Adjustment speed:} Time for prices to reflect new information.
+    \item Highly efficient markets (e.g., FX markets): lag ≈ seconds.
+    \item Inefficient markets: price adjustment lag permits abnormal profits.
+\end{itemize}
+
+\paragraph{Price Reactions:}
+\begin{itemize}
+    \item Only \textbf{unexpected} (new) information affects price.
+    \item Expected information has no price effect.
+    \item Example: If earnings +45\% vs. expected +20\% → price increases; if +45\% vs. expected +70\% → price falls.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Key Concept—Information and Price Response}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Type of Information} & \textbf{Price Impact} \\
+\hline
+Expected (well-anticipated) & No effect on price \\
+\hline
+Unexpected positive & Price rises \\
+\hline
+Unexpected negative & Price falls \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 43.b: Market Value vs. Intrinsic Value}
+
+\paragraph{Definitions:}
+\begin{itemize}
+    \item \textbf{Market value:} Current market price.
+    \item \textbf{Intrinsic (fundamental) value:} Rational investor’s estimated true value, based on full knowledge of asset’s characteristics (cash flows, risk, maturity, liquidity).
+\end{itemize}
+
+\paragraph{Relationship:}
+\begin{itemize}
+    \item In efficient markets $\Rightarrow$ Market value ≈ Intrinsic value.
+    \item In inefficient markets $\Rightarrow$ Mispricing occurs, allowing \textbf{active managers} to exploit price-value gaps.
+\end{itemize}
+
+\paragraph{Notes:}
+\begin{itemize}
+    \item Intrinsic value estimates vary among investors due to model differences.
+    \item More complex assets → harder to estimate intrinsic value.
+    \item Intrinsic values constantly change as new information arrives.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Market vs. Intrinsic Value}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Concept} & \textbf{Description} \\
+\hline
+Market Value & Current observable trading price \\
+\hline
+Intrinsic Value & Estimated true worth based on fundamentals \\
+\hline
+Efficient Market & Market value ≈ Intrinsic value \\
+\hline
+Inefficient Market & Temporary divergence → opportunity \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 43.c: Factors Affecting Market Efficiency}
+
+\paragraph{1. Number of Market Participants}
+\begin{itemize}
+    \item More participants (analysts, traders, investors) $\Rightarrow$ greater efficiency.
+    \item Restricted foreign access or low participation $\Rightarrow$ inefficiency.
+\end{itemize}
+
+\paragraph{2. Availability of Information}
+\begin{itemize}
+    \item More publicly available, low-cost information $\Rightarrow$ higher efficiency.
+    \item Developed markets (e.g., NYSE) more efficient than emerging markets.
+    \item Regulations (e.g., SEC Reg FD) promote equal information access.
+\end{itemize}
+
+\paragraph{3. Impediments to Trading (Arbitrage)}
+\begin{itemize}
+    \item Arbitrage aligns prices across markets.
+    \item \textbf{High transaction costs} or \textbf{restricted short-selling} reduce efficiency.
+\end{itemize}
+
+\paragraph{4. Transaction and Information Costs}
+\begin{itemize}
+    \item Market is efficient if, \textbf{after costs}, no abnormal risk-adjusted profits exist.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Determinants of Market Efficiency}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Factor} & \textbf{Effect on Efficiency} \\
+\hline
+Number of Participants & ↑ Participants → ↑ Efficiency \\
+\hline
+Information Availability & ↑ Information → ↑ Efficiency \\
+\hline
+Trading Impediments & ↑ Impediments → ↓ Efficiency \\
+\hline
+Transaction Costs & ↑ Costs → ↓ Efficiency \\
+\hline
+Short-Selling Restrictions & ↓ Efficiency (overvaluation persists) \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 43.d: Forms of Market Efficiency}
+
+\paragraph{Eugene Fama’s Three Forms of the EMH:}
+\begin{enumerate}
+    \item \textbf{Weak-Form Efficiency:}
+    \begin{itemize}
+        \item Prices reflect all past \textbf{market data} (price, volume).
+        \item Technical analysis cannot consistently generate abnormal returns.
+    \end{itemize}
+    \item \textbf{Semi-Strong-Form Efficiency:}
+    \begin{itemize}
+        \item Prices reflect all \textbf{public information} (market + nonmarket).
+        \item Fundamental analysis cannot consistently generate abnormal returns.
+    \end{itemize}
+    \item \textbf{Strong-Form Efficiency:}
+    \begin{itemize}
+        \item Prices reflect \textbf{all information}, public and private (insider).
+        \item No investor (even insiders) can earn abnormal returns.
+        \item Unrealistic due to insider trading laws.
+    \end{itemize}
+\end{enumerate}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Forms of the Efficient Market Hypothesis}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Form} & \textbf{Information Set} & \textbf{Strategy Impact} & \textbf{Efficiency Implication} \\
+\hline
+Weak & Past price and volume data & Technical analysis useless & Common in developed markets \\
+\hline
+Semi-Strong & All public information & Fundamental analysis useless & Generally supported \\
+\hline
+Strong & All public + private information & No one can beat market & Unrealistic in practice \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 43.e: Implications for Analysis and Portfolio Management}
+
+\paragraph{Testing Efficiency:}
+\begin{itemize}
+    \item Abnormal return = Actual return – Expected return (from CAPM or multi-factor model).
+    \[
+    \text{Abnormal return} = R_i - [R_f + \beta_i (R_m - R_f)]
+    \]
+\end{itemize}
+
+\paragraph{1. Technical Analysis}
+\begin{itemize}
+    \item Uses historical prices/volume.
+    \item Ineffective under weak-form efficiency.
+    \item Some success in emerging markets due to less efficiency.
+\end{itemize}
+
+\paragraph{2. Fundamental Analysis}
+\begin{itemize}
+    \item Uses financial statement and economic data.
+    \item Ineffective under semi-strong efficiency (public info already priced in).
+    \item Still useful:
+    \begin{itemize}
+        \item To improve efficiency through price discovery.
+        \item For highly skilled analysts.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Event Studies}
+\begin{itemize}
+    \item Tests price reaction to public events (e.g., earnings announcements).
+    \item Efficient markets: No abnormal pre/post-announcement returns.
+\end{itemize}
+
+\paragraph{4. Active vs. Passive Management}
+\begin{itemize}
+    \item Semi-strong efficiency → Passive (index) investing preferred.
+    \item Role of active manager:
+    \begin{itemize}
+        \item Define risk-return objectives.
+        \item Optimize diversification, asset allocation, and tax strategy.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Market Efficiency and Analytical Value}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Form} & \textbf{Useful Strategy} & \textbf{Useless Strategy} \\
+\hline
+Weak & Fundamental / Active mgmt & Technical analysis \\
+\hline
+Semi-Strong & Index investing, asset allocation & Fundamental analysis \\
+\hline
+Strong & None (no abnormal returns possible) & All active management \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 43.f: Market Anomalies}
+
+\paragraph{Definition:}
+\begin{itemize}
+    \item A \textbf{market anomaly} is a pattern in returns that contradicts EMH.
+    \item May arise from \textbf{data mining, mispricing, or behavioral bias}.
+\end{itemize}
+
+\paragraph{Avoiding Data-Snooping Bias:}
+\begin{itemize}
+    \item Confirm anomalies with large, independent samples and across time.
+    \item Check if relationship has valid \textbf{economic rationale}.
+\end{itemize}
+
+\subsubsection*{A. Time-Series Anomalies}
+\begin{itemize}
+    \item \textbf{Calendar Effects:}
+    \begin{itemize}
+        \item January effect: Small-cap stocks outperform early January (due to tax-loss selling and window dressing).
+        \item Other effects (month-end, day-of-week, holiday) mostly disappeared after discovery.
+    \end{itemize}
+    \item \textbf{Overreaction / Momentum:}
+    \begin{itemize}
+        \item Loser stocks outperform winners in subsequent years (overreaction).
+        \item Short-term momentum: high past returns continue briefly.
+        \item Both contradict weak-form efficiency.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{B. Cross-Sectional Anomalies}
+\begin{itemize}
+    \item \textbf{Size Effect:} Small-cap stocks historically outperform large-caps (disappeared in later data).
+    \item \textbf{Value Effect:} Value stocks (low P/E, low P/B, high dividend yield) outperform growth stocks.
+        \begin{itemize}
+            \item Violates semi-strong efficiency.
+            \item May reflect higher (unmeasured) risk.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection*{C. Other Anomalies}
+\begin{itemize}
+    \item \textbf{Closed-End Fund Discounts:} Funds trade below NAV — partially explained by fees/taxes.
+    \item \textbf{Earnings Announcements:} Post-announcement drift suggests delayed reaction to information.
+    \item \textbf{IPOs:} Underpriced initially; underperform long-term due to investor overreaction.
+    \item \textbf{Economic Fundamentals:} Returns correlated with dividend yield, volatility, interest rates—expected in efficient markets.
+\end{itemize}
+
+\paragraph{Investor Implications:}
+\begin{itemize}
+    \item Most anomalies disappear once discovered or are too small to profit after costs.
+    \item Many are statistical artifacts or compensation for unobserved risk.
+    \item \textbf{Conclusion:} Markets are largely efficient; anomaly-based strategies unreliable.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Common Market Anomalies and Possible Causes}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Anomaly} & \textbf{Observed Pattern} & \textbf{Possible Explanation} \\
+\hline
+January Effect & Small-cap returns spike in Jan & Tax-loss selling, window dressing \\
+\hline
+Overreaction & Losers outperform winners later & Investor overreaction to news \\
+\hline
+Momentum & Winners keep outperforming short term & Herding, delayed reaction \\
+\hline
+Size Effect & Small > large & Risk premium, vanished post-discovery \\
+\hline
+Value Effect & Value > growth & Risk premium or inefficiency \\
+\hline
+Earnings Drift & Post-announcement drift & Delayed info incorporation \\
+\hline
+Closed-End Discount & NAV > market price & Illiquidity, taxes, sentiment \\
+\hline
+IPO Effect & Short-term rise, long-term fall & Overreaction, mispricing \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 43.g: Behavioral Finance and Market Anomalies}
+
+\paragraph{Definition:}
+\begin{itemize}
+    \item Behavioral finance studies how psychological biases affect investor decisions and market outcomes.
+    \item Investors are not always rational, utility-maximizing agents.
+\end{itemize}
+
+\paragraph{Key Behavioral Biases:}
+\begin{itemize}
+    \item \textbf{Loss Aversion:} Investors dislike losses more than they like equivalent gains.
+    \item \textbf{Overconfidence:} Investors overestimate their skill in interpreting data and identifying mispricings.
+    \item \textbf{Herding:} Investors mimic others instead of relying on independent analysis.
+    \item \textbf{Information Cascade:} Investors follow actions of perceived informed traders, potentially accelerating information incorporation.
+\end{itemize}
+
+\paragraph{Implications:}
+\begin{itemize}
+    \item Behavioral biases can cause temporary deviations from intrinsic value.
+    \item However, markets can remain \textbf{efficient on average} if irrational actions offset.
+    \item Semi-strong efficiency can still hold even if individuals act irrationally.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 7: Behavioral Biases and Market Impact}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Bias} & \textbf{Description} & \textbf{Market Effect} \\
+\hline
+Loss Aversion & Dislike for losses stronger than for gains & Excess risk aversion, underreaction \\
+\hline
+Overconfidence & Overestimation of forecasting skill & Overtrading, mispricing \\
+\hline
+Herding & Following others' trades blindly & Asset bubbles, volatility \\
+\hline
+Information Cascade & Mimicking informed investors & Faster or distorted price reaction \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\paragraph{Conclusion:}
+\begin{itemize}
+    \item Behavioral finance provides psychological explanations for anomalies.
+    \item Even if individuals are irrational, overall market efficiency can still hold.
+    \item Prices may deviate temporarily but generally revert to reflect fundamentals.
+\end{itemize}
+
+
+\section*{Module 44.1: Types of Equity Investments}
+
+\subsection*{LOS 44.a: Characteristics of Types of Equity Securities}
+
+\paragraph{1. Common Shares (Common Stock)}
+\begin{itemize}
+    \item Represent \textbf{ownership interest} in the firm and residual claim on assets.
+    \item \textbf{Residual claim:} Paid after debtholders and preferred shareholders upon liquidation.
+    \item \textbf{Control rights:}
+    \begin{itemize}
+        \item Vote for \textbf{board of directors}, mergers, auditor selection.
+        \item Can vote in person or by \textbf{proxy} (appoint another person to vote).
+    \end{itemize}
+    \item \textbf{Dividend policy:} 
+    \begin{itemize}
+        \item Not contractually required; at discretion of firm.
+        \item Dividends may vary or be omitted.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Voting Systems}
+\begin{itemize}
+    \item \textbf{Statutory Voting:}
+    \begin{itemize}
+        \item Each share = one vote per director position.
+        \item Example: 100 shares × 3 directors = 100 votes per election.
+        \item Favours majority shareholders.
+    \end{itemize}
+    \item \textbf{Cumulative Voting:}
+    \begin{itemize}
+        \item Total votes = shares × number of directors.
+        \item Votes can be allocated freely (e.g., all to one candidate).
+        \item Enables \textbf{minority representation}.
+        \item Example: 100 shares × 3 directors = 300 votes total; may allocate all 300 to one director.
+        \item A 30\% shareholder can elect ≈3 of 10 directors.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Comparison – Statutory vs. Cumulative Voting}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Feature} & \textbf{Statutory Voting} & \textbf{Cumulative Voting} \\
+\hline
+Votes per share & 1 per director & Shares × directors \\
+\hline
+Allocation flexibility & Fixed per position & Flexible across candidates \\
+\hline
+Minority protection & Weak & Stronger \\
+\hline
+Favours & Majority holders & Minority holders \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\paragraph{3. Preference (Preferred) Shares}
+\begin{itemize}
+    \item Hybrid security with features of both debt and equity.
+    \item \textbf{Debt-like:} Fixed periodic payments (dividends), no voting rights.
+    \item \textbf{Equity-like:} Perpetual maturity, dividends not a contractual obligation.
+    \item Can be \textbf{callable}, \textbf{putable}, \textbf{convertible}, \textbf{participating}, or \textbf{non-participating}.
+\end{itemize}
+
+\paragraph{4. Types of Preference Shares}
+\begin{itemize}
+    \item \textbf{Cumulative Preferred:}
+    \begin{itemize}
+        \item Missed dividends accumulate and must be paid before common dividends.
+    \end{itemize}
+    \item \textbf{Non-Cumulative Preferred:}
+    \begin{itemize}
+        \item Missed dividends do not accumulate.
+        \item Common dividends cannot be paid until current preferred dividend is paid.
+    \end{itemize}
+    \item \textbf{Participating Preferred:}
+    \begin{itemize}
+        \item Receive additional dividends if profits exceed a threshold.
+        \item Receive more than par value in liquidation.
+    \end{itemize}
+    \item \textbf{Non-Participating Preferred:}
+    \begin{itemize}
+        \item Fixed dividend only; par value claim in liquidation.
+    \end{itemize}
+    \item \textbf{Convertible Preferred:}
+    \begin{itemize}
+        \item Can be converted into common shares at a fixed ratio.
+        \item Offers fixed income + potential upside if stock price rises.
+        \item Example: Convertible ratio = 1 preferred → 5 common shares.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{5. Example: Preferred Dividend Calculation}
+\[
+\text{Annual Dividend} = \text{Par Value} \times \text{Dividend Rate}
+\]
+Example: \$80 par, 10\% dividend rate $\Rightarrow$ \$8 annual dividend.
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Comparison – Types of Preference Shares}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Type} & \textbf{Dividend Treatment} & \textbf{Special Feature} \\
+\hline
+Cumulative & Arrears accumulate & Priority over common \\
+\hline
+Non-Cumulative & Missed dividends lost & Paid before common \\
+\hline
+Participating & Extra dividends if profits high & Share in upside \\
+\hline
+Non-Participating & Fixed dividend only & No participation in profits \\
+\hline
+Convertible & Fixed + conversion option & Equity upside potential \\
+\hline
+Callable & Firm can repurchase shares & Flexibility for issuer \\
+\hline
+Putable & Investor can sell back & Downside protection \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{6. Risk and Return Characteristics}
+\begin{itemize}
+    \item Preferred shares are \textbf{less risky} than common shares:
+    \begin{itemize}
+        \item Fixed dividend.
+        \item Priority in dividends and liquidation.
+    \end{itemize}
+    \item Convertible preferred shares provide \textbf{upside participation}.
+    \item Common shares provide \textbf{highest potential return} but also highest risk.
+\end{itemize}
+
+\paragraph{7. Application:}
+\begin{itemize}
+    \item Convertible and participating preferred shares are common in venture capital and private equity financing.
+    \item Used to compensate investors for higher business risk.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 44.b: Differences in Voting Rights and Ownership Characteristics Among Equity Classes}
+
+\paragraph{1. Multiple Share Classes}
+\begin{itemize}
+    \item Firms may issue multiple classes of common stock (e.g., Class A, Class B).
+    \item Differences include:
+    \begin{itemize}
+        \item \textbf{Voting power:} Some classes have superior voting rights.
+        \item \textbf{Dividend rights:} Different payout ratios.
+        \item \textbf{Liquidation priority:} One class may have senior claim.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Example:}
+\begin{itemize}
+    \item Class A: 1 vote per share.
+    \item Class B: 10 votes per share.
+    \item Founders retain control with smaller ownership.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Dual-Class Share Structures}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Class} & \textbf{Voting Rights} & \textbf{Notes} \\
+\hline
+Class A & 1 vote per share & Common retail class \\
+\hline
+Class B & 10 votes per share & Held by founders/insiders \\
+\hline
+Class C & No vote & Issued to raise capital without diluting control \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Disclosure:}
+\begin{itemize}
+    \item Information on share classes and voting rights found in regulatory filings (e.g., SEC in the U.S.).
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 44.c: Comparison of Public and Private Equity Securities}
+
+\paragraph{1. Public Equity Characteristics}
+\begin{itemize}
+    \item Traded on organized exchanges or OTC markets.
+    \item \textbf{Advantages:}
+    \begin{itemize}
+        \item High liquidity and price transparency.
+        \item Regulated disclosure requirements.
+        \item Broad investor base.
+    \end{itemize}
+    \item \textbf{Disadvantages:}
+    \begin{itemize}
+        \item Public scrutiny and pressure for short-term results.
+        \item Higher reporting costs and governance obligations.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Private Equity Characteristics}
+\begin{itemize}
+    \item Issued through private placements to institutional or accredited investors.
+    \item \textbf{Advantages:}
+    \begin{itemize}
+        \item Lower regulatory and reporting costs.
+        \item Long-term focus without market pressure.
+        \item Potentially higher returns upon exit (IPO or sale).
+    \end{itemize}
+    \item \textbf{Disadvantages:}
+    \begin{itemize}
+        \item Illiquid—no secondary trading market.
+        \item Valuation negotiated, not market-determined.
+        \item Limited disclosure; weaker corporate governance.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Comparison – Public vs. Private Equity}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Aspect} & \textbf{Public Equity} & \textbf{Private Equity} \\
+\hline
+Liquidity & High & Low (no public market) \\
+\hline
+Valuation & Market-determined & Negotiated \\
+\hline
+Disclosure & Extensive (regulatory) & Limited (private) \\
+\hline
+Reporting Costs & High & Low \\
+\hline
+Governance & Strong (public oversight) & Potentially weak \\
+\hline
+Time Horizon & Short- to medium-term & Long-term \\
+\hline
+Expected Return & Moderate & Potentially higher (with risk) \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\paragraph{3. Main Types of Private Equity Investments}
+
+\subsubsection*{A. Venture Capital (VC)}
+\begin{itemize}
+    \item Funding early-stage or growth-stage firms.
+    \item \textbf{Stages:}
+    \begin{itemize}
+        \item \textbf{Seed/start-up:} Idea or prototype funding.
+        \item \textbf{Early-stage:} Product development, initial revenue.
+        \item \textbf{Mezzanine:} Expansion financing prior to IPO.
+    \end{itemize}
+    \item \textbf{Investors:} Angel investors, VC funds, wealthy individuals.
+    \item \textbf{Features:}
+    \begin{itemize}
+        \item High risk, illiquid, long-term horizon (3–10 years).
+        \item Returns realized via IPO or acquisition (exit event).
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{B. Leveraged Buyout (LBO)}
+\begin{itemize}
+    \item Purchase of an entire firm using \textbf{debt financing}.
+    \item \textbf{Types:}
+    \begin{itemize}
+        \item \textbf{Management Buyout (MBO):} Existing management acquires the firm.
+        \item \textbf{Management Buy-in (MBI):} External management takes control.
+    \end{itemize}
+    \item \textbf{Typical Targets:}
+    \begin{itemize}
+        \item Firms with stable cash flows (to service debt).
+        \item Firms with undervalued or sellable assets.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{C. Private Investment in Public Equity (PIPE)}
+\begin{itemize}
+    \item Public firm sells shares privately to institutional investors for quick capital.
+    \item Usually at a \textbf{discount to market price}.
+    \item \textbf{Used by:}
+    \begin{itemize}
+        \item Firms in financial distress.
+        \item Firms seeking strategic investors or bridge financing.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Types of Private Equity Investments}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Type} & \textbf{Purpose} & \textbf{Key Characteristics} \\
+\hline
+Venture Capital & Fund early growth firms & High risk, illiquid, staged financing \\
+\hline
+LBO / MBO & Acquire firm using leverage & Stable cash flow targets, debt-financed \\
+\hline
+PIPE & Inject capital into public firm privately & Discounted share issue, rapid capital access \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\paragraph{4. Example: Venture Capital Stages and Cash Flow}
+\[
+\text{Timeline: Seed (0–1 yr)} \rightarrow \text{Early Stage (1–3 yrs)} \rightarrow \text{Mezzanine (3–5 yrs)} \rightarrow \text{Exit (IPO or Sale, 5–10 yrs)}
+\]
+
+\begin{itemize}
+    \item \textbf{Cash Flow Profile:} Negative at start, large positive return at exit.
+    \item \textbf{Exit Multiples:} 5×–10× initial investment if successful.
+\end{itemize}
+
+\bigskip
+
+\paragraph{Summary Insight:}
+\begin{itemize}
+    \item Equity securities differ by claim priority, risk, return, and control.
+    \item Preferred shares offer fixed income-like features; common shares offer ownership and voting rights.
+    \item Private equity emphasizes long-term value creation and liquidity trade-offs.
+\end{itemize}
+
+
+\section*{Module 44.2: Foreign Equities and Equity Risk}
+
+\subsection*{LOS 44.d: Methods for Investing in Non-Domestic Equity Securities}
+
+\paragraph{1. Market Integration and Capital Flow}
+\begin{itemize}
+    \item When capital flows freely across borders, markets are said to be \textbf{integrated}.
+    \item Global integration has increased due to technology and communication advances.
+    \item Some countries still restrict foreign ownership to:
+    \begin{itemize}
+        \item Prevent foreign control of domestic firms.
+        \item Reduce volatility of capital inflows and outflows.
+    \end{itemize}
+    \item Removal of capital barriers $\Rightarrow$ improved market performance and efficiency.
+\end{itemize}
+
+\paragraph{2. Firm Perspective on Foreign Listing}
+\begin{itemize}
+    \item \textbf{Benefits:}
+    \begin{itemize}
+        \item Increased visibility and liquidity of shares.
+        \item Enhanced transparency due to stricter disclosure.
+        \item Access to a broader investor base and lower cost of capital.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Direct Investing}
+\begin{itemize}
+    \item Purchasing foreign company shares directly on foreign exchanges.
+    \item \textbf{Challenges:}
+    \begin{itemize}
+        \item Currency risk (investment denominated in foreign currency).
+        \item Market illiquidity.
+        \item Less stringent reporting standards.
+        \item Regulatory and procedural differences.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{4. Indirect Investing via Depository Receipts (DRs)}
+\begin{itemize}
+    \item \textbf{Depository Receipts (DRs):} Certificates representing ownership of foreign shares.
+    \item Issued by a bank which holds the underlying foreign shares.
+    \item Traded in local currency on foreign exchanges.
+    \item Value influenced by:
+    \begin{itemize}
+        \item Exchange rate fluctuations.
+        \item Firm fundamentals and market factors.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{5. Types of Depository Receipts}
+\begin{itemize}
+    \item \textbf{Sponsored DR:} 
+    \begin{itemize}
+        \item Firm involved in issuance.
+        \item Greater disclosure requirements.
+        \item Investors retain voting rights.
+    \end{itemize}
+    \item \textbf{Unsponsored DR:}
+    \begin{itemize}
+        \item Issued independently by bank.
+        \item Voting rights retained by bank.
+        \item Lower disclosure requirements.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Comparison – Sponsored vs. Unsponsored DRs}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Feature} & \textbf{Sponsored DR} & \textbf{Unsponsored DR} \\
+\hline
+Issuer involvement & Yes & No \\
+\hline
+Voting rights & Investor & Depository bank \\
+\hline
+Disclosure standards & High (regulatory) & Low \\
+\hline
+Investor protection & Stronger & Weaker \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{6. Global Depository Receipts (GDRs)}
+\begin{itemize}
+    \item Issued outside both the home country and the U.S.
+    \item Typically listed in London or Luxembourg exchanges.
+    \item Denominated in U.S. dollars; accessible to institutional investors.
+    \item \textbf{Benefits:}
+    \begin{itemize}
+        \item Avoids national capital restrictions.
+        \item Improves access to foreign capital markets.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{7. American Depository Receipts (ADRs)}
+\begin{itemize}
+    \item Denominated in U.S. dollars and traded on U.S. exchanges.
+    \item The underlying security traded in the home market is the \textbf{American Depository Share (ADS)}.
+    \item May be used to raise capital or acquire U.S. firms.
+    \item Must comply with SEC regulations.
+\end{itemize}
+
+\paragraph{8. Types of ADRs}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Types of ADRs and Key Characteristics}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Type} & \textbf{Listed/Unlisted} & \textbf{Capital Raising?} & \textbf{Disclosure Level} \\
+\hline
+Level I & OTC (unlisted) & No & Minimal (not SEC-registered) \\
+\hline
+Level II & U.S. exchange & No & Full SEC reporting \\
+\hline
+Level III & U.S. exchange & Yes (new shares) & Full SEC registration and prospectus \\
+\hline
+Rule 144A / Reg S & Private placement & Yes (institutional only) & Exempt from public filing \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\paragraph{9. Other Structures}
+\begin{itemize}
+    \item \textbf{Global Registered Shares (GRS):} 
+    \begin{itemize}
+        \item Same share traded in multiple currencies across exchanges.
+        \item Equal rights for all holders globally.
+    \end{itemize}
+    \item \textbf{Basket of Listed Depository Receipts (BLDR):}
+    \begin{itemize}
+        \item Exchange-traded fund (ETF) composed of several DRs.
+        \item Trades like a common stock.
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 44.e: Risk and Return Characteristics of Equity Securities}
+
+\paragraph{1. Components of Return}
+\[
+R_{eq} = \text{Price Change} + \text{Dividends} + \text{Currency Gain/Loss}
+\]
+\begin{itemize}
+    \item For foreign equity, exchange rate movements affect returns.
+    \item Example: A Japanese investor in euro stocks benefits if EUR appreciates vs. JPY.
+\end{itemize}
+
+\paragraph{2. Long-Term Return Illustration}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Real Growth of \$1 (1900–2016, U.S.)}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Investment Type} & \textbf{Terminal Wealth (\$)} \\
+\hline
+Equities (with reinvested dividends) & 1,402 \\
+\hline
+Equities (price-only) & 11.9 \\
+\hline
+Bonds & 9.8 \\
+\hline
+Bills & 2.6 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Risk Hierarchy}
+\begin{itemize}
+    \item \textbf{Preferred stock} less risky than common stock due to:
+    \begin{itemize}
+        \item Fixed dividends.
+        \item Priority in liquidation.
+    \end{itemize}
+    \item \textbf{Common stock} riskier due to variable dividends and residual claim.
+\end{itemize}
+
+\paragraph{4. Option Features and Risk}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Option Features and Relative Risk}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Feature} & \textbf{Effect on Risk} & \textbf{Dividend Yield} \\
+\hline
+Putable shares & ↓ Risk (downside protection) & Lower yield \\
+\hline
+Callable shares & ↑ Risk (upside capped) & Higher yield \\
+\hline
+Cumulative preferred & ↓ Risk (dividend arrears paid) & Lower yield \\
+\hline
+Non-cumulative preferred & ↑ Risk & Higher yield \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 44.f: Role of Equity Securities in Company Financing}
+
+\paragraph{Equity Financing Uses:}
+\begin{itemize}
+    \item Funding for long-term assets, expansion, and R\&D.
+    \item Provides a non-repayable capital base (unlike debt).
+    \item Enables use of shares as:
+    \begin{itemize}
+        \item Acquisition currency.
+        \item Employee incentive compensation (stock options, RSUs).
+    \end{itemize}
+    \item Publicly traded equity enhances:
+    \begin{itemize}
+        \item Liquidity.
+        \item Access to capital markets.
+        \item Compliance with regulatory capital adequacy ratios.
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 44.g: Market Value vs. Book Value of Equity}
+
+\paragraph{1. Book Value of Equity (Accounting Value)}
+\[
+\text{Book Value} = \text{Total Assets} - \text{Total Liabilities}
+\]
+\begin{itemize}
+    \item Represents cumulative historical capital invested and retained.
+    \item Increases with positive net income and retained earnings.
+\end{itemize}
+
+\paragraph{2. Market Value of Equity}
+\[
+\text{Market Value} = \text{Share Price} \times \text{Number of Outstanding Shares}
+\]
+\begin{itemize}
+    \item Reflects investor expectations about firm’s future performance, risk, and growth.
+    \item Generally $\neq$ book value (market anticipates future cash flows).
+\end{itemize}
+
+\paragraph{3. Relationship}
+\begin{itemize}
+    \item Management aims to increase book value to support higher market value.
+    \item However, book value ignores investor expectations, intangibles, and growth potential.
+\end{itemize}
+
+\paragraph{4. Key Ratio: Price-to-Book (P/B) or Market-to-Book}
+\[
+P/B = \frac{\text{Market Value of Equity}}{\text{Book Value of Equity}}
+\]
+\begin{itemize}
+    \item High $P/B$ → growth stock (optimistic expectations).
+    \item Low $P/B$ → value stock (potential undervaluation).
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Market Value vs. Book Value Comparison}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Concept} & \textbf{Definition} & \textbf{Key Driver} \\
+\hline
+Book Value & Historical equity on balance sheet & Retained earnings \\
+\hline
+Market Value & Current share market capitalization & Expected future performance \\
+\hline
+Price-to-Book Ratio & Market / Book & Investor sentiment and growth outlook \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 44.h: Cost of Equity, Return on Equity, and Required Return}
+
+\paragraph{1. Accounting Return on Equity (ROE)}
+\[
+ROE = \frac{\text{Net Income available to Common}}{\text{Average Book Value of Common Equity}}
+\]
+Alternative (single-period):
+\[
+ROE = \frac{\text{Net Income}}{\text{Beginning Book Value of Equity}}
+\]
+
+\paragraph{2. Interpretation}
+\begin{itemize}
+    \item Higher ROE indicates efficient use of shareholders’ capital.
+    \item Must evaluate cause:
+    \begin{itemize}
+        \item Rising ROE due to lower equity base (share buybacks) is not necessarily positive.
+        \item Excessive leverage can inflate ROE but raise financial risk.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Example: ROE and Value Metrics}
+\[
+\text{Market Value} = P \times \text{Shares Outstanding}
+\]
+\[
+\text{Book Value per Share} = \frac{\text{Book Value of Equity}}{\text{Shares Outstanding}}
+\]
+\[
+\text{Price-to-Book Ratio} = \frac{P}{\text{Book Value per Share}}
+\]
+\begin{itemize}
+    \item Example: Share price = \$16.80, shares = 3,710,000 $\Rightarrow$ Market Value = \$62,328,000.
+\end{itemize}
+
+\paragraph{4. Cost of Equity (Investor Perspective)}
+\begin{itemize}
+    \item The firm’s cost of equity = investor’s required rate of return.
+    \item Estimated using:
+    \[
+    k_e = R_f + \beta (R_m - R_f) \quad \text{(CAPM)}
+    \]
+    or via Dividend Discount Model:
+    \[
+    k_e = \frac{D_1}{P_0} + g
+    \]
+    \item Higher cost of equity $\Rightarrow$ higher required return; lowers intrinsic value.
+\end{itemize}
+
+\paragraph{5. Relationship Summary}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Relationship Between ROE, Cost of Equity, and Required Return}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Measure} & \textbf{Definition} & \textbf{Interpretation} \\
+\hline
+ROE (Accounting) & Net Income / Avg. Book Equity & Measures profitability based on accounting data \\
+\hline
+Cost of Equity & Required return by investors & Opportunity cost of capital \\
+\hline
+Required Return & Minimum return acceptable to investors & Determines share valuation \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\paragraph{6. Analytical Insight}
+\begin{itemize}
+    \item If $ROE > k_e$: firm adds value; management creating shareholder wealth.
+    \item If $ROE < k_e$: firm destroying value; poor capital allocation.
+    \item $ROE$ volatility indicates riskiness of earnings stream.
+\end{itemize}
+
+\paragraph{7. Connection with DuPont Decomposition}
+\[
+ROE = \text{Net Profit Margin} \times \text{Asset Turnover} \times \text{Equity Multiplier}
+\]
+\begin{itemize}
+    \item Helps identify drivers of performance: profitability, efficiency, or leverage.
+\end{itemize}
+
+\bigskip
+
+\paragraph{Summary Insight:}
+\begin{itemize}
+    \item Foreign equity exposure adds diversification and currency risk.
+    \item Equity securities vary by control rights, dividend priority, and option features.
+    \item Market value reflects expectations; book value reflects history.
+    \item ROE vs. cost of equity comparison indicates value creation.
+\end{itemize}
+
+\section*{Module 45.1: Company Research Reports}
+
+\subsection*{LOS 45.a: Elements of a Thorough Company Research Report}
+
+\paragraph{Definition:}
+\begin{itemize}
+    \item A \textbf{company research report} presents an analyst’s \textbf{valuation} and \textbf{investment recommendation} (Buy/Hold/Sell) based on:
+    \begin{itemize}
+        \item Projected earnings, cash flows, and financial condition.
+        \item Market position, competitive dynamics, and risk assessment.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Purpose:}
+\begin{itemize}
+    \item To provide investors with an informed opinion on the intrinsic value and investment potential of a firm.
+    \item Reports can be:
+    \begin{itemize}
+        \item \textbf{Initial (Initiating Coverage):} Comprehensive, in-depth analysis.
+        \item \textbf{Follow-up Reports:} Updates or revisions to prior analyses.
+        \item \textbf{Internal Reports:} Often less detailed, sometimes verbal.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{1. Structure of an Initial Research Report}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Components of an Initial (Full) Research Report}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+\hline
+\textbf{Section} & \textbf{Description / Contents} \\
+\hline
+\textbf{Front Matter} & Basic metadata: company name, ticker, analyst name, recommendation (Buy/Hold/Sell), target price range, report date, disclaimers, and legal disclosures. \\
+\hline
+\textbf{Investment Thesis \& Rationale} & Summary of valuation conclusion and justification — why the stock is attractive or unattractive; include catalysts and valuation drivers. \\
+\hline
+\textbf{Company Description} & Business model overview, strategy, revenue sources, geographic segments, management team, and ownership structure. \\
+\hline
+\textbf{Industry Overview \& Competitive Positioning} & Market size, growth drivers, profitability trends, peer comparison, Porter’s Five Forces, and SWOT analysis. \\
+\hline
+\textbf{Financial Analysis \& Modeling} & Historical and projected income statement, balance sheet, and cash flows; key performance ratios (margin, ROE, ROIC, leverage, liquidity); scenario/sensitivity analysis. \\
+\hline
+\textbf{Valuation Section} & Intrinsic (DCF) and/or relative valuation (multiples such as P/E, EV/EBITDA, P/B); compare to target price and peer medians. \\
+\hline
+\textbf{ESG Factors} & Environmental, social, and governance risk/opportunity assessment; sustainability metrics and governance quality. \\
+\hline
+\textbf{Risks (Upside \& Downside)} & Key catalysts that could alter valuation: regulatory, operational, macroeconomic, or competitive factors. Quantify sensitivity to key assumptions. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Example: Summary Table in a Professional Equity Report}
+\[
+\begin{array}{|l|l|}
+\hline
+\textbf{Company:} & ABC Corporation \\
+\textbf{Sector:} & Consumer Staples \\
+\textbf{Recommendation:} & \textbf{BUY} (Target Price: \$125, Upside: +20\%) \\
+\textbf{Investment Horizon:} & 12 months \\
+\hline
+\textbf{Key Drivers:} & Volume growth in Asia, product premiumization, efficiency gains \\
+\textbf{Key Risks:} & FX volatility, raw material inflation, competitive pricing \\
+\hline
+\end{array}
+\]
+
+\paragraph{2. Structure of a Follow-Up (Update) Report}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Components of a Subsequent / Update Report}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+\hline
+\textbf{Section} & \textbf{Description / Focus} \\
+\hline
+\textbf{Front Matter} & Updated recommendation, price targets, and disclosure updates. \\
+\hline
+\textbf{Revised Recommendation \& Rationale} & Reasons for any change (e.g., from Buy → Hold due to valuation or earnings). \\
+\hline
+\textbf{New Information Analysis} & Variance analysis: expected vs. actual results (revenues, margins, earnings). Discuss earnings call insights. \\
+\hline
+\textbf{Updated Valuation} & Incorporate revised forecasts and adjusted assumptions (e.g., WACC, growth rate). \\
+\hline
+\textbf{Revised Risk Assessment} & New risk events since last report: regulatory updates, macroeconomic shifts, management changes. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Legal and Compliance Requirements}
+\begin{itemize}
+    \item Disclosure of:
+    \begin{itemize}
+        \item Conflicts of interest (analyst holdings, firm banking relationships).
+        \item Data sources and methodology.
+        \item Regulatory statements per jurisdiction (e.g., FINRA, FCA, ESMA).
+    \end{itemize}
+\end{itemize}
+
+\paragraph{4. Example Summary: Report Timeline}
+\begin{itemize}
+    \item \textbf{Initiating coverage:} Comprehensive—includes valuation model, full industry analysis.
+    \item \textbf{Quarterly updates:} Focused—summarizes performance vs. expectations.
+    \item \textbf{Event-driven updates:} Triggered by M\&A, regulatory changes, or earnings announcements.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 45.b: Determining a Company’s Business Model}
+
+\paragraph{1. Definition and Purpose}
+\begin{itemize}
+    \item A company’s \textbf{business model} describes how it creates value — i.e., how it earns revenue, generates profit, and manages costs.
+    \item Understanding the business model is fundamental for:
+    \begin{itemize}
+        \item Projecting financial performance.
+        \item Estimating intrinsic value.
+        \item Identifying competitive advantages and risks.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Core Components of a Business Model}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Key Components of a Business Model}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Component} & \textbf{Description / Analytical Focus} \\
+\hline
+Products \& Services & What the firm sells; key revenue sources, diversification level. \\
+\hline
+Customers & Who buys the product; customer concentration, bargaining power, switching costs. \\
+\hline
+Sales Channels & How the firm reaches customers (e.g., retail, online, distributors). \\
+\hline
+Pricing \& Payment Terms & Revenue model (subscription, volume-based, freemium); pricing power and credit terms. \\
+\hline
+Suppliers \& Key Relationships & Supply chain strength, input specialization, supplier concentration and power. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Analyst Approach}
+\begin{itemize}
+    \item Identify deviations from industry-standard business models.
+    \item Evaluate:
+    \begin{itemize}
+        \item Barriers to entry and switching costs.
+        \item Economies of scale and network effects.
+        \item Integration (vertical/horizontal).
+    \end{itemize}
+\end{itemize}
+
+\paragraph{4. Sources of Information}
+\begin{itemize}
+    \item Analysts use four major information categories:
+    \begin{enumerate}
+        \item \textbf{Company-Provided Information:} Annual/quarterly filings, investor presentations, press releases, IR communication, website.
+        \item \textbf{Public Third-Party Sources:} Industry reports, government data, media coverage, social media insights.
+        \item \textbf{Proprietary Third-Party Data:} Subscription databases (e.g., Bloomberg, Refinitiv, FactSet).
+        \item \textbf{Proprietary Primary Research:} Surveys, expert interviews, channel checks, market studies.
+    \end{enumerate}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Information Source Matrix for Business Model Analysis}
+\begin{tabular}{|p{5.5cm}|p{5.5cm}|p{5.5cm}|}
+\hline
+\textbf{Source Type} & \textbf{Examples} & \textbf{Purpose} \\
+\hline
+Company Data & 10-K, Investor Decks, Calls & Quantitative details; management intent \\
+\hline
+Public Third-Party & Government, Media, Social Platforms & Industry positioning, sentiment, regulatory context \\
+\hline
+Proprietary Third-Party & Bloomberg, FactSet, IBES & Financial metrics, comparables, forecasts \\
+\hline
+Primary Research & Surveys, Channel Checks, Expert Panels & Validation of sales dynamics, demand patterns \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. Example Analysis: Business Model Comparison}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Illustrative Business Model Examples}
+\begin{tabular}{|p{5.5cm}|p{5.5cm}|p{5.5cm}|}
+\hline
+\textbf{Company Type} & \textbf{Revenue Model} & \textbf{Key Analytical Focus} \\
+\hline
+Software-as-a-Service (SaaS) & Subscription-based recurring revenue & Churn rates, customer lifetime value, scalability \\
+\hline
+Retail / E-commerce & Product sales (margin-based) & Inventory turnover, price competition, logistics cost \\
+\hline
+Manufacturing & Unit sales, contract production & Input costs, capacity utilization, supplier risk \\
+\hline
+Financial Services & Interest income, fees, spreads & Asset quality, leverage, regulatory compliance \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{6. Analytical Considerations}
+\begin{itemize}
+    \item Assess \textbf{customer and supplier bargaining power} (Porter’s Five Forces).
+    \item Examine whether firm’s business model deviates strategically from peers.
+    \item Link business model structure directly to revenue and cost drivers used in valuation.
+\end{itemize}
+
+\bigskip
+
+\paragraph{Summary Insight:}
+\begin{itemize}
+    \item A thorough research report integrates qualitative (business model, industry analysis) and quantitative (valuation, financial modeling) perspectives.
+    \item Understanding the business model allows accurate forecasting of earnings, margins, and capital needs.
+    \item The best reports clearly link business strategy → financial forecasts → valuation recommendation.
+\end{itemize}
+
+\section*{Module 45.1: Company Research Reports}
+
+\subsection*{LOS 45.a: Elements of a Thorough Company Research Report}
+
+\paragraph{Definition:}
+\begin{itemize}
+    \item A \textbf{company research report} presents an analyst’s \textbf{valuation} and \textbf{investment recommendation} (Buy/Hold/Sell) based on:
+    \begin{itemize}
+        \item Projected earnings, cash flows, and financial condition.
+        \item Market position, competitive dynamics, and risk assessment.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Purpose:}
+\begin{itemize}
+    \item To provide investors with an informed opinion on the intrinsic value and investment potential of a firm.
+    \item Reports can be:
+    \begin{itemize}
+        \item \textbf{Initial (Initiating Coverage):} Comprehensive, in-depth analysis.
+        \item \textbf{Follow-up Reports:} Updates or revisions to prior analyses.
+        \item \textbf{Internal Reports:} Often less detailed, sometimes verbal.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{1. Structure of an Initial Research Report}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Components of an Initial (Full) Research Report}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+\hline
+\textbf{Section} & \textbf{Description / Contents} \\
+\hline
+\textbf{Front Matter} & Basic metadata: company name, ticker, analyst name, recommendation (Buy/Hold/Sell), target price range, report date, disclaimers, and legal disclosures. \\
+\hline
+\textbf{Investment Thesis \& Rationale} & Summary of valuation conclusion and justification — why the stock is attractive or unattractive; include catalysts and valuation drivers. \\
+\hline
+\textbf{Company Description} & Business model overview, strategy, revenue sources, geographic segments, management team, and ownership structure. \\
+\hline
+\textbf{Industry Overview \& Competitive Positioning} & Market size, growth drivers, profitability trends, peer comparison, Porter’s Five Forces, and SWOT analysis. \\
+\hline
+\textbf{Financial Analysis \& Modeling} & Historical and projected income statement, balance sheet, and cash flows; key performance ratios (margin, ROE, ROIC, leverage, liquidity); scenario/sensitivity analysis. \\
+\hline
+\textbf{Valuation Section} & Intrinsic (DCF) and/or relative valuation (multiples such as P/E, EV/EBITDA, P/B); compare to target price and peer medians. \\
+\hline
+\textbf{ESG Factors} & Environmental, social, and governance risk/opportunity assessment; sustainability metrics and governance quality. \\
+\hline
+\textbf{Risks (Upside \& Downside)} & Key catalysts that could alter valuation: regulatory, operational, macroeconomic, or competitive factors. Quantify sensitivity to key assumptions. \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption*{Example: Summary Table in a Professional Equity Report}
+\small
+\begin{tabularx}{0.8\textwidth}{@{} l X @{}}
+\toprule
+\textbf{Company:} & ABC Corporation \\
+\textbf{Sector:} & Consumer Staples \\
+\textbf{Recommendation:} & \textbf{BUY} (Target Price: \$125; Upside: +20\%) \\
+\textbf{Investment Horizon:} & 12 months \\
+\midrule
+\textbf{Key Drivers:} & Volume growth in Asia; product premiumization; efficiency gains \\
+\textbf{Key Risks:} & FX volatility; raw material inflation; competitive pricing \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{2. Structure of a Follow-Up (Update) Report}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Components of a Subsequent / Update Report}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+\hline
+\textbf{Section} & \textbf{Description / Focus} \\
+\hline
+\textbf{Front Matter} & Updated recommendation, price targets, and disclosure updates. \\
+\hline
+\textbf{Revised Recommendation \& Rationale} & Reasons for any change (e.g., from Buy → Hold due to valuation or earnings). \\
+\hline
+\textbf{New Information Analysis} & Variance analysis: expected vs. actual results (revenues, margins, earnings). Discuss earnings call insights. \\
+\hline
+\textbf{Updated Valuation} & Incorporate revised forecasts and adjusted assumptions (e.g., WACC, growth rate). \\
+\hline
+\textbf{Revised Risk Assessment} & New risk events since last report: regulatory updates, macroeconomic shifts, management changes. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Legal and Compliance Requirements}
+\begin{itemize}
+    \item Disclosure of:
+    \begin{itemize}
+        \item Conflicts of interest (analyst holdings, firm banking relationships).
+        \item Data sources and methodology.
+        \item Regulatory statements per jurisdiction (e.g., FINRA, FCA, ESMA).
+    \end{itemize}
+\end{itemize}
+
+\paragraph{4. Example Summary: Report Timeline}
+\begin{itemize}
+    \item \textbf{Initiating coverage:} Comprehensive—includes valuation model, full industry analysis.
+    \item \textbf{Quarterly updates:} Focused—summarizes performance vs. expectations.
+    \item \textbf{Event-driven updates:} Triggered by M\&A, regulatory changes, or earnings announcements.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 45.b: Determining a Company’s Business Model}
+
+\paragraph{1. Definition and Purpose}
+\begin{itemize}
+    \item A company’s \textbf{business model} describes how it creates value — i.e., how it earns revenue, generates profit, and manages costs.
+    \item Understanding the business model is fundamental for:
+    \begin{itemize}
+        \item Projecting financial performance.
+        \item Estimating intrinsic value.
+        \item Identifying competitive advantages and risks.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Core Components of a Business Model}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Key Components of a Business Model}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Component} & \textbf{Description / Analytical Focus} \\
+\hline
+Products \& Services & What the firm sells; key revenue sources, diversification level. \\
+\hline
+Customers & Who buys the product; customer concentration, bargaining power, switching costs. \\
+\hline
+Sales Channels & How the firm reaches customers (e.g., retail, online, distributors). \\
+\hline
+Pricing \& Payment Terms & Revenue model (subscription, volume-based, freemium); pricing power and credit terms. \\
+\hline
+Suppliers \& Key Relationships & Supply chain strength, input specialization, supplier concentration and power. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Analyst Approach}
+\begin{itemize}
+    \item Identify deviations from industry-standard business models.
+    \item Evaluate:
+    \begin{itemize}
+        \item Barriers to entry and switching costs.
+        \item Economies of scale and network effects.
+        \item Integration (vertical/horizontal).
+    \end{itemize}
+\end{itemize}
+
+\paragraph{4. Sources of Information}
+\begin{itemize}
+    \item Analysts use four major information categories:
+    \begin{enumerate}
+        \item \textbf{Company-Provided Information:} Annual/quarterly filings, investor presentations, press releases, IR communication, website.
+        \item \textbf{Public Third-Party Sources:} Industry reports, government data, media coverage, social media insights.
+        \item \textbf{Proprietary Third-Party Data:} Subscription databases (e.g., Bloomberg, Refinitiv, FactSet).
+        \item \textbf{Proprietary Primary Research:} Surveys, expert interviews, channel checks, market studies.
+    \end{enumerate}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Information Source Matrix for Business Model Analysis}
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Source Type} & \textbf{Examples} & \textbf{Purpose} \\
+\hline
+Company Data & 10-K, Investor Decks, Calls & Quantitative details; management intent \\
+\hline
+Public Third-Party & Government, Media, Social Platforms & Industry positioning, sentiment, regulatory context \\
+\hline
+Proprietary Third-Party & Bloomberg, FactSet, IBES & Financial metrics, comparables, forecasts \\
+\hline
+Primary Research & Surveys, Channel Checks, Expert Panels & Validation of sales dynamics, demand patterns \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. Example Analysis: Business Model Comparison}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Illustrative Business Model Examples}
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Company Type} & \textbf{Revenue Model} & \textbf{Key Analytical Focus} \\
+\hline
+Software-as-a-Service (SaaS) & Subscription-based recurring revenue & Churn rates, customer lifetime value, scalability \\
+\hline
+Retail / E-commerce & Product sales (margin-based) & Inventory turnover, price competition, logistics cost \\
+\hline
+Manufacturing & Unit sales, contract production & Input costs, capacity utilization, supplier risk \\
+\hline
+Financial Services & Interest income, fees, spreads & Asset quality, leverage, regulatory compliance \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{6. Analytical Considerations}
+\begin{itemize}
+    \item Assess \textbf{customer and supplier bargaining power} (Porter’s Five Forces).
+    \item Examine whether firm’s business model deviates strategically from peers.
+    \item Link business model structure directly to revenue and cost drivers used in valuation.
+\end{itemize}
+
+\bigskip
+
+\paragraph{Summary Insight:}
+\begin{itemize}
+    \item A thorough research report integrates qualitative (business model, industry analysis) and quantitative (valuation, financial modeling) perspectives.
+    \item Understanding the business model allows accurate forecasting of earnings, margins, and capital needs.
+    \item The best reports clearly link business strategy → financial forecasts → valuation recommendation.
+\end{itemize}
+
+\section*{Module 46.1: Industry Analysis}
+
+\subsection*{LOS 46.a: Purpose and Steps of Industry and Competitive Analysis}
+
+\paragraph{1. Definition and Objective}
+\begin{itemize}
+    \item \textbf{Industry and competitive analysis} is a macro-level evaluation of what drives:
+    \begin{itemize}
+        \item Industry size, profitability, and market share.
+        \item Competitive dynamics and company positioning within the industry.
+    \end{itemize}
+    \item Objective: Identify the \textbf{industry’s base rate of profitability} and assess how structural and competitive forces affect long-term returns.
+\end{itemize}
+
+\paragraph{2. Importance}
+\begin{itemize}
+    \item Industry factors determine long-run profitability; firm-specific factors explain relative out/underperformance.
+    \item Helps improve financial forecasts and identify attractive or overlooked investments.
+    \item Useful for:
+    \begin{itemize}
+        \item Sector allocation in portfolios.
+        \item Reducing company-specific risk via diversified industry exposure.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Steps in Industry and Competitive Analysis}
+\begin{enumerate}
+    \item \textbf{Define the Industry:}
+    \begin{itemize}
+        \item Identify key characteristics — product type, geographic scope, or production process.
+        \item Use standard classification systems (GICS, ICB, TRBC).
+        \item Handle diversified firms carefully.
+    \end{itemize}
+    \item \textbf{Survey the Industry:}
+    \begin{itemize}
+        \item Assess size, growth rate, profitability trends, and market share evolution.
+    \end{itemize}
+    \item \textbf{Analyze Industry Structure (Porter’s Five Forces):}
+    \begin{itemize}
+        \item Rivalry among existing competitors.
+        \item Threat of new entrants.
+        \item Threat of substitutes.
+        \item Bargaining power of buyers.
+        \item Bargaining power of suppliers.
+    \end{itemize}
+    \item \textbf{Examine External Factors (PESTLE Framework):}
+    \begin{itemize}
+        \item Political, Economic, Social, Technological, Legal, Environmental factors.
+    \end{itemize}
+    \item \textbf{Evaluate Company Strategies:}
+    \begin{itemize}
+        \item Assess competitive advantages and business models relative to peers.
+        \item Identify cost leadership, differentiation, or niche positioning.
+    \end{itemize}
+\end{enumerate}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Frameworks for Industry and Competitive Analysis}
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Framework} & \textbf{Purpose} & \textbf{Example Insight} \\
+\hline
+Porter’s Five Forces & Structure and competition intensity & High entry barriers $\Rightarrow$ sustainable profits \\
+\hline
+PESTLE & Macro external environment & Regulation or technology shaping demand \\
+\hline
+SWOT & Company-level advantage & Leverage internal strengths against industry trends \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 46.b: Industry Classification Methods and Comparison}
+
+\paragraph{1. Overview}
+\begin{itemize}
+    \item Industry classification helps compare companies, assess trends, and value sectors.
+    \item Traditional systems (government-based) were production-oriented and local.
+    \item Modern commercial systems (GICS, ICB, TRBC) are \textbf{global and market-oriented.}
+\end{itemize}
+
+\paragraph{2. Commercial Classification Systems}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Major Global Classification Systems}
+\begin{tabular}{|p{2cm}|p{3cm}|p{7cm}|p{3cm}|}
+\hline
+\textbf{System} & \textbf{Developer} & \textbf{Hierarchy (Top → Bottom)} & \textbf{Coverage} \\
+\hline
+GICS & S\&P / MSCI & Sector → Industry Group → Industry → Subindustry & Public firms \\
+\hline
+ICB & FTSE Russell & Industry → Supersector → Sector → Subsector & Public firms \\
+\hline
+TRBC & Refinitiv & Economic Sector → Business Sector → Industry Group → Industry → Activity & Public \& private entities \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Common Top-Level Sectors (Across GICS, ICB, TRBC)}
+\begin{multicols}{2}
+\begin{itemize}
+    \item Energy
+    \item Financials
+    \item Basic Materials
+    \item Information Technology
+    \item Industrials
+    \item Telecommunications
+    \item Consumer Discretionary (Cyclicals)
+    \item Consumer Staples (Noncyclicals)
+    \item Utilities
+    \item Real Estate
+    \item Health Care
+\end{itemize}
+\end{multicols}
+
+\paragraph{4. Classification Rules}
+\begin{itemize}
+    \item A firm with one business line → classified in that line.
+    \item Multi-segment firms → classify by business line contributing:
+    \begin{itemize}
+        \item More than 60\% of total revenue.
+        \item If none exceeds 60\%, use the one above 50\% of revenue, profit, or assets.
+        \item If none applies → judgmental classification or “conglomerate.”
+    \end{itemize}
+\end{itemize}
+
+\paragraph{5. Limitations of Classification Systems}
+\begin{itemize}
+    \item \textbf{Inappropriate groupings:} Categories too broad (e.g., “software” covers diverse firms).
+    \item \textbf{Diversified firms:} One classification may misrepresent operations (e.g., Amazon in “retail” despite large cloud business).
+    \item \textbf{Geographical variations:} Some sectors (e.g., healthcare) are regionally restricted.
+    \item \textbf{Grouping changes over time:} Updates may distort comparability and create survivorship bias.
+\end{itemize}
+
+\paragraph{6. Alternative Grouping Approaches}
+\begin{enumerate}
+    \item \textbf{By Geography:} Classify by headquarter location or primary exchange (e.g., Toyota = Japanese firm despite U.S. revenues).
+    \item \textbf{By Business Cycle Sensitivity:}
+    \begin{itemize}
+        \item \textbf{Defensive:} Demand stable across cycles (utilities, consumer staples, healthcare).
+        \item \textbf{Cyclical:} Earnings tied to economic activity (industrials, energy, discretionary).
+    \end{itemize}
+    \item \textbf{By Financial Characteristics:} 
+    \begin{itemize}
+        \item Size (market cap), valuation (P/E), profitability (ROE), or growth rate.
+        \item Example: “Large-cap growth” vs. “small-cap value.”
+    \end{itemize}
+    \item \textbf{By Statistical Correlation:} 
+    \begin{itemize}
+        \item Cluster analysis groups firms with historically correlated returns.
+        \item Resulting clusters show lower correlation across groups.
+    \end{itemize}
+    \item \textbf{By ESG Attributes:} 
+    \begin{itemize}
+        \item Group by sustainability or governance quality (e.g., carbon footprint, diversity).
+    \end{itemize}
+\end{enumerate}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Comparison – Cyclical vs. Defensive Industries}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Feature} & \textbf{Cyclical Industry} & \textbf{Defensive Industry} \\
+\hline
+Demand & Sensitive to economic cycles & Stable across cycles \\
+\hline
+Earnings Volatility & High & Low \\
+\hline
+Operating Leverage & High & Low \\
+\hline
+Examples & Energy, Autos, Industrials & Utilities, Healthcare, Staples \\
+\hline
+Investor Appeal & Growth during expansion & Stability during recession \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 46.c: Determining Industry Size, Growth, Profitability, and Market Share}
+
+\paragraph{1. Industry Size}
+\begin{itemize}
+    \item \textbf{Definition:} Total annual sales of the industry’s products.
+    \item May differ from total company revenues if firms operate across multiple industries.
+    \item Estimation issues:
+    \begin{itemize}
+        \item Private companies and unlisted entities may lack data.
+        \item Use alternative sources (government, trade associations, market studies).
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Industry Growth Characteristics}
+\begin{itemize}
+    \item Measured via annual growth rates or compound annual growth rate (CAGR).
+    \item \textbf{Types:}
+    \begin{itemize}
+        \item \textbf{Growth Industry:} High expansion potential, often driven by new technology. Example: renewable energy, AI.
+        \item \textbf{Mature Industry:} Stable demand, aligned with GDP growth. Example: utilities, construction.
+        \item \textbf{Declining Industry:} Falling demand due to substitution or saturation. Example: print media.
+    \end{itemize}
+    \item Analysts should evaluate:
+    \begin{itemize}
+        \item Persistence of growth.
+        \item Technological disruption.
+        \item Business cycle sensitivity.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. Style Box Framework}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Industry Style Box — Growth vs. Cyclicality}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Type} & \textbf{Business Cycle Sensitivity} & \textbf{Example} \\
+\hline
+Defensive Growth & Low sensitivity + high growth & Biotechnology \\
+\hline
+Defensive Mature & Low sensitivity + low growth & Utilities \\
+\hline
+Cyclical Growth & High sensitivity + high growth & Digital Advertising, Tech Hardware \\
+\hline
+Cyclical Mature & High sensitivity + low growth & Oil Production, Steel Manufacturing \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Industry Profitability}
+\begin{itemize}
+    \item Profitability measured ideally via \textbf{Return on Invested Capital (ROIC)}:
+    \[
+    ROIC = \frac{\text{Net Operating Profit After Tax (NOPAT)}}{\text{Invested Capital}}
+    \]
+    \item Indicates whether firms earn above cost of capital.
+    \item If unavailable (e.g., private firms), use proxy metrics like ROE, EBIT margin, or government/market data.
+    \item Analyze trends: increasing, stable, or declining profitability.
+\end{itemize}
+
+\paragraph{5. Market Share and Concentration}
+\begin{itemize}
+    \item \textbf{Market Share:}
+    \[
+    \text{Market Share} = \frac{\text{Company Revenue}}{\text{Industry Size}}
+    \]
+    \item Market share trends reflect product acceptance and brand competitiveness.
+    \item Acquisitions may distort organic share changes.
+\end{itemize}
+
+\paragraph{6. Industry Concentration (Herfindahl–Hirschman Index, HHI)}
+\[
+HHI = \sum_{i=1}^{n} s_i^2
+\]
+where $s_i$ = market share (\%) of each firm.
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Interpretation of HHI Values}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{HHI Range} & \textbf{Interpretation} \\
+\hline
+$<$ 1{,}500 & Low concentration (competitive market) \\
+\hline
+1{,}500–2{,}500 & Moderate concentration \\
+\hline
+$>$ 2{,}500 & High concentration (oligopolistic market) \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Example: HHI Calculation}
+\[
+\text{Market Shares: } 35\%, 25\%, 20\%, 10\%, 10\% \Rightarrow HHI = 35^2 + 25^2 + 20^2 + 10^2 + 10^2 = 2{,}450
+\]
+\begin{itemize}
+    \item Indicates \textbf{moderate concentration}.
+    \item Higher HHI $\Rightarrow$ lower competition, greater pricing power, higher margins.
+\end{itemize}
+
+\paragraph{7. Interpretation Summary}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Industry Metrics Summary}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Dimension} & \textbf{High Value Interpretation} & \textbf{Low Value Interpretation} \\
+\hline
+Industry Growth & Expanding demand, innovation & Saturation, declining relevance \\
+\hline
+ROIC & Value creation above WACC & Value destruction, inefficiency \\
+\hline
+Market Share Trend & Gaining customer acceptance & Losing competitiveness \\
+\hline
+HHI & Concentrated, higher pricing power & Competitive, low pricing power \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\paragraph{Summary Insight:}
+\begin{itemize}
+    \item Industry analysis links macro factors to firm performance.
+    \item Analysts should integrate:
+    \begin{itemize}
+        \item Structural forces (Five Forces),
+        \item External environment (PESTLE),
+        \item Financial measures (growth, profitability, concentration).
+    \end{itemize}
+    \item The goal: Identify industries with sustainable economic profit potential and companies best positioned within them.
+\end{itemize}
+
+\section*{Module 46.2: Industry Structure and Competitive Positioning}
+
+\subsection*{LOS 46.d: Analyzing Industry Structure and External Influences (Porter’s Five Forces \& PESTLE Frameworks)}
+
+\paragraph{1. Purpose of Structural Analysis}
+\begin{itemize}
+    \item Industry structure analysis explains how competitive forces determine long-run profitability.
+    \item Developed by \textbf{Michael Porter}, the framework identifies \textbf{five forces} that shape competition.
+    \item Strong forces $\Rightarrow$ lower profitability and potential zero economic profit.
+\end{itemize}
+
+\paragraph{2. Porter’s Five Forces Overview}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Porter’s Five Forces Framework}
+\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Force} & \textbf{Key Factors Increasing Strength} & \textbf{Impact on Industry Profitability} \\
+\hline
+1. Rivalry Among Existing Competitors & Many equally sized firms, slow growth, high fixed costs, undifferentiated products, costly exit & Intense price competition, reduced margins \\
+\hline
+2. Threat of New Entrants & Low barriers to entry, low capital needs, easy access to distribution, weak brand loyalty & New competition erodes prices and profits \\
+\hline
+3. Threat of Substitutes & Many close substitutes, low switching cost, high price elasticity of demand & Price ceiling imposed, reduced pricing power \\
+\hline
+4. Bargaining Power of Buyers & Few large buyers, high price sensitivity, standardized products, easy comparison shopping & Buyers can force price cuts or better quality \\
+\hline
+5. Bargaining Power of Suppliers & Few suppliers, scarce inputs, lack of substitutes, supplier integration risk & Higher input costs, margin pressure \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Factors Affecting Competition}
+\begin{itemize}
+    \item \textbf{Barriers to Entry:} Higher barriers reduce competition (e.g., oil refining).
+    \item \textbf{Market Concentration:} Few large players $\Rightarrow$ less rivalry; fragmentation $\Rightarrow$ high rivalry.
+    \item \textbf{Capacity Utilization:} Unused capacity $\Rightarrow$ price wars (e.g., auto industry).
+    \item \textbf{Market Stability:} Customer loyalty stabilizes profits.
+    \item \textbf{Customer Price Sensitivity:} High sensitivity $\Rightarrow$ greater competition.
+    \item \textbf{Industry Maturity:} Mature industries = slowing growth, stronger rivalry.
+\end{itemize}
+
+\paragraph{4. Example – Porter’s Five Forces Analysis: U.S. Retail Sector}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Example—Porter’s Analysis for U.S. Retail Industry}
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Force} & \textbf{Assessment} & \textbf{Explanation / Example} \\
+\hline
+Threat of New Entrants & Very High & Easy e-commerce entry, low regulatory barriers, 40,000+ new retailers formed monthly \\
+\hline
+Threat of Substitutes & Low & Limited substitutes for physical goods; services (travel, dining) not direct replacements \\
+\hline
+Power of Buyers & Moderate & Fragmented consumers, but easy price comparison online $\Rightarrow$ high price sensitivity \\
+\hline
+Power of Suppliers & Low to Moderate & Many suppliers, but brand owners (e.g., luxury goods) hold leverage \\
+\hline
+Rivalry Among Competitors & High & Thousands of similar retailers; price promotions common \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. PESTLE Framework for External Influences}
+\begin{itemize}
+    \item Complements Porter’s model by analyzing macro factors outside the industry’s direct control.
+    \item PESTLE = \textbf{Political, Economic, Social, Technological, Legal, Environmental}.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: PESTLE Analysis – Key Elements and Illustrations}
+\begin{tabular}{|l|p{4cm}|p{6cm}|}
+\hline
+\textbf{Factor} & \textbf{Description} & \textbf{Example / Industry Impact} \\
+\hline
+Political & Government actions, taxation, regulation, subsidies & Energy (fuel taxes, carbon regulation), healthcare (public funding), defense (military budgets) \\
+\hline
+Economic & GDP growth, inflation, interest rates, credit, productivity & Cyclical sectors sensitive to GDP and rates; credit constraints limit consumer spending \\
+\hline
+Social & Demographics, lifestyle, consumer behavior, ethics & Demand for sustainable goods, social media trends, labor attitudes \\
+\hline
+Technological & Innovation pace, automation, disruptive technology & Digitalization, e-commerce, renewable energy, AI, 3D printing \\
+\hline
+Legal & Legislation, labor laws, antitrust, intellectual property & Tobacco restrictions, cannabis legalization, ESG disclosure laws \\
+\hline
+Environmental & Climate policy, resource scarcity, emissions standards & Transition to green energy, carbon taxes, sustainable packaging \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{6. Example – Sectoral Political Sensitivity}
+\begin{itemize}
+    \item \textbf{Energy:} Conflicts between low energy prices and emission-reduction goals; OPEC price coordination.
+    \item \textbf{Healthcare:} Government = largest purchaser; may impose price caps or rationing.
+    \item \textbf{Defense:} Governments as sole buyers; budgets depend on geopolitical risk and fiscal priorities.
+\end{itemize}
+
+\paragraph{7. Example – Technological Disruption}
+\begin{itemize}
+    \item \textbf{Sustaining Innovation:} Incremental improvements (e.g., higher-efficiency engines).
+    \item \textbf{Disruptive Innovation:} Fundamental change creating new markets (e.g., film → digital photography).
+    \item Firms must adapt or risk obsolescence.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 46.e: Evaluating Competitive Strategy and Position}
+
+\paragraph{1. Overview}
+\begin{itemize}
+    \item Every firm follows a \textbf{competitive strategy}, intentional or unintentional.
+    \item Effective strategies produce sustained \textbf{economic profits (ROIC $>$ WACC)}.
+    \item Strategies are evaluated based on:
+    \begin{itemize}
+        \item Responsiveness to competitive forces.
+        \item Adaptation to external (PESTLE) factors.
+        \item Execution capability.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{2. Porter’s Three Generic Competitive Strategies}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Porter’s Generic Strategies}
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Strategy} & \textbf{Characteristics} & \textbf{Requirements / Examples} \\
+\hline
+\textbf{Cost Leadership} & 
+Lowest production cost, lowest price; large-scale operations. Used to protect or gain market share. &
+Efficient operations, economies of scale, strict cost control (e.g., Walmart, Ryanair). \\
+\hline
+\textbf{Differentiation} & 
+Unique product features, quality, or brand image; price premium sustainable if justified by value. &
+Strong marketing, innovation, brand loyalty (e.g., Apple, BMW, LVMH). \\
+\hline
+\textbf{Focus (Niche)} & 
+Target specific segment or geography, combining cost or differentiation advantage within niche. &
+Specialization, deep market understanding (e.g., Ferrari, Rolex, boutique consultancies). \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Strategy Effectiveness Criteria}
+\begin{itemize}
+    \item Internal consistency and alignment with company resources.
+    \item Responsiveness to Porter’s five forces and PESTLE influences.
+    \item Execution capability: management quality, incentives, and innovation.
+\end{itemize}
+
+\paragraph{4. Intentional vs. Unintentional Strategies}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Comparison of Strategic Approaches}
+\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
+\hline
+\textbf{Type} & \textbf{Description} & \textbf{Examples / Implications} \\
+\hline
+Intentional Strategy & Deliberately planned, iterative (plan → execute → refine). & Most large firms (e.g., Toyota’s Kaizen process). \\
+\hline
+Unintentional Strategy & Emergent, unstructured, reactive. Sometimes yields innovation. & Pharma startups discovering drugs serendipitously. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. Strategic Risks}
+\begin{itemize}
+    \item Being “stuck in the middle” — failure to commit to one primary strategy (cost vs. differentiation).
+    \item Inability to sustain cost advantage or premium perception.
+    \item External shocks (technological, legal) invalidating strategy.
+\end{itemize}
+
+\paragraph{6. Analytical Application – Evaluating a Firm’s Competitive Position}
+\begin{itemize}
+    \item Combine:
+    \begin{itemize}
+        \item \textbf{Internal metrics:} ROIC, margins, cost efficiency.
+        \item \textbf{Industry metrics:} Five Forces assessment.
+        \item \textbf{External metrics:} PESTLE exposure.
+    \end{itemize}
+    \item Determine if firm’s strategy is defensive (protect profits) or offensive (expand market share).
+\end{itemize}
+
+\bigskip
+
+\subsection*{Key Takeaways Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: LOS 46.d–46.e Summary Overview}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{Topic} & \textbf{Core Insights} \\
+\hline
+\textbf{Porter’s Five Forces} & Threat of entrants, substitutes, buyers, suppliers, and competitive rivalry determine long-term industry profitability. \\
+\hline
+\textbf{PESTLE Analysis} & Macro factors (Political, Economic, Social, Technological, Legal, Environmental) influence industry trends and risk. \\
+\hline
+\textbf{Cost Leadership Strategy} & Achieve lowest production cost; success depends on scale, efficiency, and cost discipline. \\
+\hline
+\textbf{Differentiation Strategy} & Provide unique products with sustainable premium pricing justified by perceived value. \\
+\hline
+\textbf{Focus Strategy} & Target a specific niche market—combine elements of cost leadership or differentiation. \\
+\hline
+\textbf{Strategic Evaluation} & Effective strategy = responsive to Five Forces, resilient to PESTLE, well-executed internally. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Overall Insight:}
+\begin{itemize}
+    \item Structural analysis (Porter) identifies internal industry pressures.
+    \item Environmental analysis (PESTLE) captures external macro pressures.
+    \item Strategic positioning (cost, differentiation, focus) determines firm performance relative to peers.
+\end{itemize}
+
+
+\section*{Module 47.1: Forecasting in Company Analysis}
+
+\subsection*{LOS 47.a: Principles and Approaches to Forecasting Financial Results}
+
+\paragraph{1. Purpose of Forecasting}
+\begin{itemize}
+    \item Financial forecasts are central to \textbf{valuation} and \textbf{investment recommendations}.
+    \item External forecasts focus on key metrics (revenue, EPS).
+    \item Internal forecasts are more detailed and long-term.
+\end{itemize}
+
+\paragraph{2. Forecast Objects}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Key Forecast Objects}
+\begin{tabular}{|p{3cm}|p{5.5cm}|p{5.5cm}|}
+\hline
+\textbf{Category} & \textbf{Description} & \textbf{Example / Notes} \\
+\hline
+Financial items with clear drivers & Forecasted via measurable variables & Retail revenue = number of stores × sales/store \\
+\hline
+Items without clear drivers & Forecast directly using management inputs or prior data & “Other expenses” forecasted using past growth trend \\
+\hline
+Summary measures & Aggregated outcomes (EPS, FCF) & Fast but less transparent \\
+\hline
+Ad hoc items & Unusual events, contingencies & Lawsuits, regulatory changes, one-time windfalls \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{3. Forecasting Principles}
+\begin{itemize}
+    \item Use information that is \textbf{recurring, frequent, and reliable}.
+    \item Avoid unnecessary complexity — more detailed models do not always improve accuracy.
+    \item Focus on material line items.
+\end{itemize}
+
+\paragraph{4. Forecasting Approaches}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Forecasting Approaches Overview}
+\begin{tabular}{|l|p{5cm}|p{6cm}|}
+\hline
+\textbf{Approach} & \textbf{Concept} & \textbf{Best Used For / Limitations} \\
+\hline
+Historical Results & Extrapolate from past trends & Mature, noncyclical firms; less useful for cyclical or transforming firms \\
+\hline
+Base Rate Convergence & Forecast converges to long-run average (industry or GDP growth) & Established industries with stable structure; not suitable for cyclical or disruptive sectors \\
+\hline
+Management Guidance & Use company-provided forecasts or ranges & Useful if management has strong forecasting record; must check for bias \\
+\hline
+Analyst Discretion & Model-driven or judgmental projections & Suitable for unique, cyclical, or transitioning firms \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{5. Forecast Horizon}
+\begin{itemize}
+    \item Depends on:
+    \begin{itemize}
+        \item Investor time horizon.
+        \item Industry cyclicality.
+        \item Duration of strategic changes.
+    \end{itemize}
+    \item For cyclical firms: include at least one full business cycle.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 47.b: Forecasting Company Revenues}
+
+\paragraph{1. Top-Down Approach}
+\begin{itemize}
+    \item Begins with macroeconomic variables (GDP growth, inflation, market size).
+    \item Often relates \textbf{company sales to nominal GDP}.
+    \[
+    \text{Revenue Growth} = g_{\text{GDP}} \times (1 + \text{Premium/Discount})
+    \]
+    \item Example: GDP growth = 5\%, firm grows 20\% faster $\Rightarrow$ 5\% × 1.20 = 6\% forecasted sales growth.
+    \item Alternative: Revenue = Market Share × Industry Sales
+\end{itemize}
+
+\paragraph{Example (Market Share Forecast):}
+\[
+\begin{aligned}
+\text{Current Industry Sales} &= 100 \text{m GBP}, \quad \text{Firm Share} = 12\% \Rightarrow 12\text{m GBP} \\
+\text{Next Year Industry Sales} &= 104 \text{m GBP}, \quad \text{Expected Share} = 13\% \\
+\Rightarrow \text{Forecast Revenue} &= 0.13 \times 104 = 13.52 \text{m GBP (↑12.7\%)}
+\end{aligned}
+\]
+
+\paragraph{2. Bottom-Up Approach}
+\begin{itemize}
+    \item Start from company or segment level.
+    \item Key revenue drivers:
+    \begin{enumerate}
+        \item \textbf{Price × Quantity (P×Q)} forecasts.
+        \item \textbf{Product line / segment analysis.}
+        \item \textbf{Capacity-based:} forecast sales per store/factory + new capacity.
+        \item \textbf{Yield-based:} e.g., banks → revenue = interest spread × balance sheet exposure.
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{3. Combined Approach}
+\begin{itemize}
+    \item Integrate top-down and bottom-up for cross-validation.
+    \item Example: GDP-based forecast vs. company capacity forecast — identify inconsistencies.
+\end{itemize}
+
+\paragraph{4. Recurring vs. Nonrecurring Revenue Items}
+\begin{itemize}
+    \item Exclude one-time or unusual items from recurring forecasts.
+    \item \textbf{Nonrecurring items disclosed by management:} e.g., large one-off orders.
+    \item \textbf{Undisclosed nonrecurring items:} Analyst identifies via context (e.g., temporary COVID-19 spike in e-commerce).
+\end{itemize}
+
+\paragraph{5. Forecasting Risks and Scenarios}
+\begin{itemize}
+    \item Key risks: competition, inflation, technology, business cycle.
+    \item Use \textbf{scenario analysis} to test forecast sensitivity.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 47.c: Forecasting Operating Expenses and Working Capital}
+
+\paragraph{1. Cost of Sales (COGS) and Gross Margins}
+\[
+\text{Forecast COGS} = (1 - \text{Gross Margin}) \times \text{Forecast Revenue}
+\]
+\begin{itemize}
+    \item Examine trends in \textbf{input prices} and \textbf{output prices}.
+    \item Analyze gross margin vs. competitors for reasonableness.
+    \item Consider hedging policies on input costs (e.g., oil hedges for airlines).
+\end{itemize}
+
+\paragraph{Example: Price and Cost Effect on Gross Margin}
+\[
+\text{Initial: } \frac{\text{COGS}}{\text{Sales}} = 25\%, \quad \text{Input Costs Double}, \quad \text{Price ↑ 25\%}
+\]
+\[
+\Rightarrow \text{New COGS/Sales} = 40\%, \ \text{Gross Margin ↓ from 75\% to 60\%}
+\]
+Even if gross profit in absolute terms remains constant, margin compresses.
+
+\paragraph{2. SG\&A Expenses}
+\begin{itemize}
+    \item Include fixed (R\&D, HQ costs) and variable (sales commissions, logistics) components.
+    \item Model as:
+    \[
+    \text{SG\&A}_{t+1} = \text{SG\&A}_t \times (1 + g_{\text{inflation}} + g_{\text{volume}})
+    \]
+    \item Segment reporting often limited — analysts use average operating margin by segment.
+\end{itemize}
+
+\paragraph{3. Working Capital Forecasting}
+\begin{itemize}
+    \item Working capital = A/R + Inventory – A/P.
+    \item Use activity ratios to project components:
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Working Capital Forecasting Ratios}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Item} & \textbf{Ratio} & \textbf{Forecast Formula} \\
+\hline
+Accounts Receivable & DSO = 365 / Receivables Turnover & A/R = DSO × (Revenue / 365) \\
+\hline
+Inventory & DOH = 365 / Inventory Turnover & Inventory = DOH × (COGS / 365) \\
+\hline
+Accounts Payable & DPO = 365 / Payables Turnover & A/P = DPO × (COGS / 365) \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Analytical Insight}
+\begin{itemize}
+    \item A longer cash conversion cycle $\Rightarrow$ more external financing required.
+    \item Changes in DSO, DOH, and DPO indicate operational efficiency trends.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 47.d: Forecasting Capital Investments and Capital Structure}
+
+\paragraph{1. Capital Investments}
+\begin{itemize}
+    \item Derived from:
+    \begin{itemize}
+        \item \textbf{Cash Flow Statement:} CapEx acquisitions/disposals.
+        \item \textbf{Income Statement:} Depreciation \& Amortization (D\&A).
+    \end{itemize}
+    \item Separate into:
+    \begin{itemize}
+        \item \textbf{Maintenance CapEx:} Sustain operations — linked to depreciation, inflation-adjusted.
+        \item \textbf{Growth CapEx:} Supports expansion; based on strategic plans or capacity goals.
+    \end{itemize}
+    \item \textbf{Depreciation Forecast:}
+    \[
+    \text{Depreciation} = \frac{\text{Net PPE}}{\text{Useful Life of Assets}}
+    \]
+\end{itemize}
+
+\paragraph{2. Capital Structure Forecast}
+\begin{itemize}
+    \item Assess based on \textbf{leverage ratios:}
+    \[
+    \text{Debt-to-Assets}, \quad \text{Debt-to-Equity}, \quad \text{Interest Coverage}
+    \]
+    \item Incorporate:
+    \begin{itemize}
+        \item Debt required for CapEx plans.
+        \item Management’s target leverage or debt covenant limits.
+    \end{itemize}
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Capital Forecasting Summary}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Item} & \textbf{Primary Source} & \textbf{Forecast Driver} \\
+\hline
+Maintenance CapEx & Historical D\&A, inflation rate & Replacement cost of assets \\
+\hline
+Growth CapEx & Strategic plan, capacity expansion & Revenue growth assumptions \\
+\hline
+Capital Structure & Balance sheet, debt covenants & Target leverage, financing needs \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 47.e: Scenario Analysis in Forecasting}
+
+\paragraph{1. Definition and Purpose}
+\begin{itemize}
+    \item Scenario analysis tests sensitivity of forecasts to alternative assumptions.
+    \item Goal: Estimate a \textbf{range of potential outcomes} instead of a single point estimate.
+\end{itemize}
+
+\paragraph{2. Types of Scenarios}
+\begin{itemize}
+    \item \textbf{Base Case:} Expected macro and company assumptions.
+    \item \textbf{Upside Case:} Strong economy, rising margins, favorable competition.
+    \item \textbf{Downside Case:} Recession, cost increases, product failure.
+\end{itemize}
+
+\paragraph{3. Example – EPS Sensitivity Table}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 5: Scenario Analysis Example}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Scenario} & \textbf{Revenue Growth} & \textbf{Operating Margin} & \textbf{Forecast EPS} \\
+\hline
+Base Case & +5\% & 15\% & €2.50 \\
+\hline
+Upside Case & +8\% & 17\% & €3.10 \\
+\hline
+Downside Case & 0\% & 12\% & €1.85 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{4. Application}
+\begin{itemize}
+    \item Helps evaluate risk-adjusted valuation.
+    \item Identifies key value drivers (revenues, margins, leverage).
+    \item Often combined with sensitivity analysis and Monte Carlo simulations.
+\end{itemize}
+
+\bigskip
+
+\subsection*{Key Takeaways Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 6: Module 47.1 Summary Overview}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{Learning Objective} & \textbf{Key Insights} \\
+\hline
+LOS 47.a & Forecasting requires balancing simplicity, data quality, and key drivers. Use historical, base rate, management, or discretionary methods. \\
+\hline
+LOS 47.b & Revenue forecasts may be top-down (macro-based) or bottom-up (micro-based). Combine both for consistency checks. Exclude nonrecurring items. \\
+\hline
+LOS 47.c & Forecast COGS, SG\&A, and working capital using ratios and driver relationships. Gross margin and DSO/DOH/DPO are central. \\
+\hline
+LOS 47.d & CapEx divided into maintenance vs. growth. Capital structure forecasts rely on leverage ratios and target policies. \\
+\hline
+LOS 47.e & Scenario analysis produces a range of forecasts, revealing sensitivity to macro or firm-specific assumptions. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Overall Insight:}
+\begin{itemize}
+    \item Sound forecasting integrates macro context, firm-level drivers, and management guidance.
+    \item Analysts should maintain transparency, consistency, and robustness across assumptions.
+    \item Scenario analysis ensures realistic valuation under multiple economic conditions.
+\end{itemize}
+
+
+\section*{Module 48.1: Dividends, Splits, and Repurchases}
+
+\subsection*{LOS 48.a: Determining Overvaluation or Undervaluation}
+
+\paragraph{1. Concept of Intrinsic Value}
+\begin{itemize}
+    \item \textbf{Intrinsic (Fundamental) Value:} Rational value based on all known characteristics of a security.
+    \item \textbf{Market Price:} Observed trading price reflecting current supply and demand.
+    \item Comparison of both determines if a stock is:
+    \[
+    \text{Market Price} \gtrless \text{Intrinsic Value} \Rightarrow \text{Overvalued / Undervalued / Fairly Valued.}
+    \]
+\end{itemize}
+
+\paragraph{2. Decision Criteria}
+\begin{itemize}
+    \item The larger the \textbf{percentage deviation} between price and intrinsic value → greater conviction to act.
+    \item The higher the analyst’s \textbf{confidence in model and inputs} → greater willingness to trade.
+    \item The \textbf{sensitivity of the model} to inputs must be checked (e.g., small growth change may change valuation outcome).
+    \item Market prices are generally reliable; mispricing requires a plausible rationale.
+    \item The investor must believe \textbf{price convergence} toward intrinsic value will occur within investment horizon.
+\end{itemize}
+
+\paragraph{3. Example:}
+\[
+\begin{aligned}
+\text{Intrinsic Value (DCF)} &= \$60 \\
+\text{Market Price} &= \$48 \\
+\Rightarrow\quad \text{Undervalued by } \frac{60-48}{48} &= 25\%
+\end{aligned}
+\]
+If analyst confidence is high and a catalyst is expected, \textbf{a buy recommendation} is justified.
+
+\bigskip
+
+\subsection*{LOS 48.b: Major Categories of Equity Valuation Models}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Categories of Equity Valuation Models}
+\small
+\begin{tabularx}{\textwidth}{@{} p{2.6cm} p{3.6cm} >{\RaggedRight\arraybackslash}X @{}}
+\toprule
+\textbf{Model Type} & \textbf{Concept} & \textbf{Example / Key Inputs} \\
+\midrule
+\textbf{Discounted Cash Flow (DCF)} &
+Intrinsic value = PV of expected future cash flows to equity holders &
+\makecell[tl]{Dividend Discount Model (DDM):\\[4pt] \(V_0 = \dfrac{D_1}{r - g}\)\\[4pt]
+Free Cash Flow to Equity (FCFE): PV of cash available 
+\\ after reinvestment and debt service} \\
+\addlinespace
+\textbf{Multiplier / Market Multiple Models} &
+Compare firm valuation ratios to peers or market benchmarks &
+\makecell[tl]{\textbf{Type 1:} Price multiples: P/E, P/S, P/B, P/CF\\
+\textbf{Type 2:} Enterprise multiples: EV/EBITDA, EV/Sales} \\
+\addlinespace
+\textbf{Asset-Based Models} &
+Intrinsic value = Fair Value of Assets $-$ Liabilities $-$ Preferred Equity &
+Useful for asset-heavy firms; adjust book values to market (e.g., real estate, financials) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{2. Key Notes}
+\begin{itemize}
+    \item Analysts often use \textbf{multiple models} to derive a valuation range.
+    \item DCF models emphasize long-term fundamentals.
+    \item Multiple models rely on \textbf{market comparables}.
+    \item Asset-based models less relevant for firms with large intangibles (tech, pharma).
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 48.c: Types of Dividends, Splits, and Repurchases}
+
+\paragraph{1. Cash Dividends}
+\begin{itemize}
+    \item \textbf{Regular Dividends:} Paid periodically (e.g., quarterly). Signal stability.
+    \item \textbf{Special (Extra) Dividends:} One-time distributions due to exceptional profits.
+    \item Common in cyclical industries (e.g., autos, mining).
+\end{itemize}
+
+\paragraph{Example:}
+If firm earns unusually high profit from commodity boom, may pay special dividend while maintaining normal payout ratio in future.
+
+\paragraph{2. Stock Dividends}
+\begin{itemize}
+    \item Paid in the form of additional shares rather than cash.
+    \item Increases number of shares outstanding, reduces per-share price proportionally.
+    \item Total equity and shareholder wealth remain unchanged.
+    \[
+    \text{Example: } 20\% \text{ stock dividend} \Rightarrow 100 \text{ shares} \to 120 \text{ shares.}
+    \]
+\end{itemize}
+
+\paragraph{3. Stock Splits}
+\begin{itemize}
+    \item Each share is split into multiple shares.
+    \item Price adjusts downward to maintain total value.
+    \[
+    \text{Example: } 3{:}1 \text{ split, } P_{\text{before}} = \$90 \Rightarrow P_{\text{after}} = \$30.
+    \]
+    \item Used to improve trading liquidity or make shares more affordable.
+\end{itemize}
+
+\paragraph{4. Reverse Stock Splits}
+\begin{itemize}
+    \item Reduces number of shares; price increases proportionally.
+    \[
+    \text{Example: } 1{:}5 \text{ reverse split, } 100 \text{ shares at } \$2 \Rightarrow 20 \text{ shares at } \$10.
+    \]
+    \item Often done to avoid delisting or improve stock image.
+\end{itemize}
+
+\paragraph{5. Share Repurchases (Buybacks)}
+\begin{itemize}
+    \item Company repurchases its own shares from the market.
+    \item \textbf{Motives:}
+    \begin{itemize}
+        \item Alternative to dividends (tax-efficient if capital gains taxed less than dividends).
+        \item Support share price or offset dilution (e.g., from employee stock options).
+        \item Signal undervaluation.
+    \end{itemize}
+    \item Reduces shares outstanding $\Rightarrow$ increases EPS and ROE mechanically.
+\end{itemize}
+
+\paragraph{6. Comparison Summary}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Summary of Dividend and Repurchase Types}
+\begin{tabular}{|l|p{4cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Type} & \textbf{Mechanics} & \textbf{Effect on Share Price / Equity} & \textbf{Example / Note} \\
+\hline
+Regular Dividend & Periodic cash payment & Stock price drops by approx. dividend amount on ex-date & Quarterly payout (e.g., Coca-Cola) \\
+\hline
+Special Dividend & One-time cash payout & Temporary price increase; no ongoing commitment & Cyclical firms in good years \\
+\hline
+Stock Dividend & Additional shares & Price per share decreases, total equity unchanged & 20\% stock dividend \\
+\hline
+Stock Split & More shares at lower price & No wealth change; improves liquidity & 3-for-1 split (Apple, 2020) \\
+\hline
+Reverse Split & Fewer shares at higher price & No wealth change; often cosmetic & 1-for-5 to avoid delisting \\
+\hline
+Share Repurchase & Company buys back shares & EPS and ROE increase; equity reduced & Often substitutes for dividend \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{LOS 48.d: Dividend Payment Chronology}
+
+\paragraph{1. Key Dates and Process}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Dividend Payment Timeline}
+\begin{tabular}{|l|p{4cm}|p{7cm}|}
+\hline
+\textbf{Date} & \textbf{Definition} & \textbf{Notes / Example} \\
+\hline
+\textbf{Declaration Date} & Board approves dividend, announces amount and schedule & Creates legal obligation to pay; e.g., “\$1.00 per share declared on June 1.” \\
+\hline
+\textbf{Ex-Dividend Date} & First day new buyers \textit{do not} receive the dividend & Usually 1–2 business days before record date; stock price drops by ≈ dividend amount. \\
+\hline
+\textbf{Record Date} & Company determines which shareholders receive dividend & Only holders of record as of this date receive payment. \\
+\hline
+\textbf{Payment Date} & Dividend is actually paid (cash or transfer) & Typically weeks after record date. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{2. Example: Dividend Timeline}
+\[
+\begin{aligned}
+\text{Declaration Date} &= \text{June 1, 2025} \\
+\text{Ex-Dividend Date} &= \text{June 14, 2025} \\
+\text{Record Date} &= \text{June 16, 2025} \\
+\text{Payment Date} &= \text{July 1, 2025}
+\end{aligned}
+\]
+
+\paragraph{3. Ex-Dividend Price Adjustment Example}
+\[
+\text{Stock Price Before Ex-Date} = \$25, \quad \text{Dividend} = \$1.00
+\]
+\[
+\Rightarrow \text{Price After Ex-Date} \approx 25 - 1 = \$24
+\]
+\begin{itemize}
+    \item Buyer before ex-date receives share + dividend.
+    \item Buyer on/after ex-date receives only share.
+\end{itemize}
+
+\bigskip
+
+\subsection*{Key Takeaways Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Module 48.1 Summary Overview}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Core Insights} \\
+\hline
+LOS 48.a & Compare intrinsic vs. market value to determine over/undervaluation. Confidence in model and convergence expectation essential. \\
+\hline
+LOS 48.b & Major valuation models: DCF (DDM, FCFE), Multiplier (P/E, EV/EBITDA), and Asset-based. Each has unique use cases. \\
+\hline
+LOS 48.c & Firms distribute profits via dividends (cash/stock), splits, or repurchases. Economic wealth unaffected by splits/dividends, but signaling and tax effects matter. \\
+\hline
+LOS 48.d & Dividend chronology: Declaration → Ex-Date → Record → Payment. Ex-date price drop ≈ dividend amount. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Overall Insight:}
+\begin{itemize}
+    \item \textbf{Valuation} aligns intrinsic and market prices to identify mispricing.
+    \item \textbf{Dividends and buybacks} are both methods of cash distribution, differing in taxation, flexibility, and signaling.
+    \item Understanding \textbf{timing and type of distributions} is essential for forecasting shareholder returns and price behavior.
+\end{itemize}
+
+\section*{Module 48.2: Dividend Discount Models}
+
+\subsection*{LOS 48.e: Rationale for Present Value Models (DDM \& FCFE)}
+
+\paragraph{1. Conceptual Basis}
+\begin{itemize}
+    \item The \textbf{intrinsic value} of a stock equals the present value (PV) of future cash flows to shareholders.
+    \item PV models assume investors are rational and value equity as the discounted stream of dividends or free cash flows to equity (FCFE).
+\end{itemize}
+
+\paragraph{2. Dividend Discount Model (DDM)}
+\begin{itemize}
+    \item The DDM expresses stock value as:
+    \[
+    V_0 = \sum_{t=1}^{\infty} \frac{D_t}{(1+k_e)^t}
+    \]
+    where \( D_t \) = dividend in period \( t \), and \( k_e \) = required return on equity.
+    \item Applicable to firms that pay regular, predictable dividends.
+\end{itemize}
+
+\paragraph{3. Free Cash Flow to Equity (FCFE) Model}
+\begin{itemize}
+    \item FCFE represents the cash available to shareholders after operating, investing, and financing needs:
+    \[
+    \text{FCFE} = \text{NI} + \text{Depreciation} - \Delta WC - FCInv - \text{Debt Repayments} + \text{New Debt Issuance}
+    \]
+    or
+    \[
+    \text{FCFE} = \text{CFO} - FCInv + \text{Net Borrowing}
+    \]
+    \item FCFE models are particularly useful for firms:
+    \begin{itemize}
+        \item That do not pay dividends.
+        \item Where dividends are not reflective of earning capacity.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{4. Required Return Estimation (CAPM)}
+\[
+k_e = R_f + \beta_i [E(R_m) - R_f]
+\]
+\begin{itemize}
+    \item \( R_f \): risk-free rate (e.g., government bond).
+    \item \( \beta_i \): stock’s systematic risk.
+    \item \( E(R_m) - R_f \): market risk premium.
+\end{itemize}
+
+\paragraph{Alternative Approach:}
+\begin{itemize}
+    \item If firm debt is publicly traded: \( k_e = \text{Bond Yield} + \text{Equity Risk Premium} \)
+    \item If not: add a larger premium to government yield.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 48.g: Valuation of Preferred Stock}
+
+\paragraph{1. Characteristics}
+\begin{itemize}
+    \item Fixed dividend, perpetual duration, non-callable and non-convertible (in this context).
+    \item Essentially a perpetuity with fixed cash flow.
+\end{itemize}
+
+\paragraph{2. Formula}
+\[
+V_p = \frac{D_p}{k_p}
+\]
+
+\paragraph{Example: Preferred Stock Valuation}
+\[
+D_p = \$5, \quad k_p = 8\%
+\]
+\[
+V_p = \frac{5}{0.08} = \$62.50
+\]
+
+\paragraph{Interpretation:}
+\begin{itemize}
+    \item Value equals the present value of perpetual dividends discounted at required return.
+    \item Equivalent to DDM with zero growth (\( g = 0 \)).
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 48.h: Constant and Multistage Growth Dividend Discount Models}
+
+\paragraph{1. Constant Growth (Gordon Growth) Model}
+\begin{itemize}
+    \item Assumes dividends grow perpetually at constant rate \( g_c \).
+    \item Formula:
+    \[
+    V_0 = \frac{D_1}{k_e - g_c}
+    \]
+    \item Assumptions:
+    \begin{enumerate}
+        \item Dividends are relevant measure of shareholder wealth.
+        \item Growth rate \( g_c \) and required return \( k_e \) remain constant.
+        \item \( k_e > g_c \).
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{Example: Constant Growth Valuation}
+\[
+D_0 = 1.50, \quad g_c = 8\%, \quad k_e = 12\%
+\]
+\[
+D_1 = D_0 (1 + g_c) = 1.62
+\]
+\[
+V_0 = \frac{1.62}{0.12 - 0.08} = \$40.50
+\]
+
+\paragraph{2. Decomposition of Value due to Growth}
+\[
+V_{\text{no growth}} = \frac{D}{k_e} = \frac{1.50}{0.12} = 12.50
+\]
+\[
+V_{\text{growth}} = 40.50 - 12.50 = 28.00
+\]
+→ Growth accounts for \(\approx 69\%\) of intrinsic value.
+
+\paragraph{3. Sensitivity Insight}
+\begin{itemize}
+    \item As \((k_e - g_c)\) narrows, \(V_0\) increases sharply.
+    \item Small changes in \(g_c\) or \(k_e\) cause large valuation shifts.
+\end{itemize}
+
+\paragraph{4. Estimating Dividend Growth Rate}
+\begin{enumerate}
+    \item Historical average dividend growth.
+    \item Median industry dividend growth.
+    \item \textbf{Sustainable Growth Rate:}
+    \[
+    g = (1 - \text{Payout Ratio}) \times ROE
+    \]
+    or
+    \[
+    g = \text{Retention Rate} \times ROE
+    \]
+\end{enumerate}
+
+\paragraph{Example: Sustainable Growth}
+\[
+\text{Payout} = 25\%, \quad ROE = 21\%
+\Rightarrow g = (1 - 0.25)(0.21) = 15.75\%
+\]
+\textbf{Note:} Long-term growth usually limited to single digits; check realism.
+
+\bigskip
+
+\subsection*{LOS 48.h (continued): Firms with No Current Dividends}
+
+\paragraph{1. Approach}
+\begin{itemize}
+    \item Estimate when dividends will start.
+    \item Use constant growth model to value dividends starting from that year, then discount back.
+\end{itemize}
+
+\paragraph{Example: No Current Dividend}
+\[
+E_4 = 1.64, \quad \text{Payout} = 50\%, \quad g = 5\%, \quad k_e = 10\%
+\]
+\[
+D_4 = 0.5 \times 1.64 = 0.82
+\]
+\[
+V_3 = \frac{D_4}{k_e - g} = \frac{0.82}{0.10 - 0.05} = 16.40
+\]
+\[
+V_0 = \frac{16.40}{(1.10)^3} = 12.32
+\]
+
+\paragraph{Interpretation:}
+Stock value today equals PV of future dividends beginning in Year 4.
+
+\bigskip
+
+\subsection*{LOS 48.h (continued): Multistage Dividend Discount Model}
+
+\paragraph{1. Rationale}
+\begin{itemize}
+    \item Firms often experience a temporary high-growth phase before stabilizing.
+    \item The multistage model incorporates both phases:
+    \[
+    V_0 = \sum_{t=1}^{n} \frac{D_t}{(1+k_e)^t} + \frac{P_n}{(1+k_e)^n}
+    \]
+    where
+    \[
+    P_n = \frac{D_{n+1}}{k_e - g_c}
+    \]
+\end{itemize}
+
+\paragraph{2. Example: Two-Stage Growth}
+\[
+D_0 = 1.00, \quad g^* = 15\% \text{ for 2 years}, \quad g_c = 5\%, \quad k_e = 11\%
+\]
+
+\[
+D_1 = 1.00(1.15) = 1.15, \quad D_2 = 1.15(1.15) = 1.32
+\]
+\[
+P_1 = \frac{D_2}{k_e - g_c} = \frac{1.32}{0.11 - 0.05} = 22.00
+\]
+\[
+V_0 = \frac{D_1 + P_1}{(1.11)} = \frac{1.15 + 22.00}{1.11} = 20.86
+\]
+\[
+V_0 = 20.86 \text{ (approx.)}
+\]
+
+\paragraph{3. Key Steps for Multistage Model}
+\begin{enumerate}
+    \item Determine discount rate \( k_e \).
+    \item Estimate dividend growth rate during high-growth period \( g^* \).
+    \item Project dividends during high-growth phase.
+    \item Estimate stable growth rate \( g_c \) after transition.
+    \item Compute terminal value \( P_n = D_{n+1}/(k_e - g_c) \).
+    \item Discount all cash flows to present value.
+\end{enumerate}
+
+\paragraph{4. Common Mistakes}
+\begin{itemize}
+    \item Forgetting to discount the terminal value \( P_n \) correctly.
+    \item Using wrong time index (e.g., discounting over too many periods).
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 48.i: Applicability of Constant vs. Multistage Models}
+
+\paragraph{1. Constant Growth (Gordon) Model Appropriate for:}
+\begin{itemize}
+    \item Mature, stable, non-cyclical firms with predictable dividend policies.
+    \item Examples: Utilities, consumer staples.
+\end{itemize}
+
+\paragraph{2. Multistage Growth Model Appropriate for:}
+\begin{itemize}
+    \item Firms with temporary high or low growth transitioning to stability.
+    \item Firms in cyclical or rapidly evolving industries.
+    \item Can include 2- or 3-stage variants:
+    \begin{itemize}
+        \item \textbf{Stage 1:} High growth.
+        \item \textbf{Stage 2:} Transition (moderating growth).
+        \item \textbf{Stage 3:} Constant, stable growth.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{3. When to Use FCFE Models Instead}
+\begin{itemize}
+    \item When dividends are non-existent or unpredictable.
+    \item When payout policy does not reflect earnings capacity.
+    \item FCFE model applies if earnings and reinvestment assumptions are available.
+\end{itemize}
+
+\bigskip
+
+\subsection*{Key Takeaways Summary}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Module 48.2 Summary Overview}
+\begin{tabular}{|l|p{11cm}|}
+\hline
+\textbf{LOS} & \textbf{Core Insights} \\
+\hline
+48.e & PV models (DDM, FCFE) value equity by discounting future cash flows to shareholders. FCFE reflects potential dividends. \\
+\hline
+48.g & Preferred stock = fixed dividend perpetuity: \(V_p = D_p / k_p\). \\
+\hline
+48.h & Gordon Growth Model: \(V_0 = D_1 / (k_e - g_c)\). Use for stable, dividend-paying firms. Growth and discount rate differences highly sensitive. \\
+\hline
+48.h (2-stage) & Multistage DDM combines finite high-growth and infinite stable-growth phases. Requires accurate growth transition assumptions. \\
+\hline
+48.i & Constant-growth model fits mature firms; multistage fits firms in transition; FCFE models suit non-dividend-paying firms. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Overall Insight:}
+\begin{itemize}
+    \item Dividend and FCFE models both rest on the time value of money principle.
+    \item Choice of model depends on dividend policy, growth stage, and data availability.
+    \item Key valuation drivers: \(k_e\), \(g\), payout ratio, and ROE.
+\end{itemize}
+
+\section*{Module 48.3: Relative Valuation Measures}
+
+\subsection*{LOS 48.j: Rationale for Using Price Multiples}
+
+\paragraph{1. Motivation for Price Multiples}
+\begin{itemize}
+    \item Because DDMs are highly sensitive to input assumptions, analysts often use \textbf{price multiples} as simpler, market-based valuation tools.
+    \item A \textbf{price multiple} compares a company’s market price to a financial metric (earnings, sales, book value, cash flow).
+\end{itemize}
+
+\paragraph{2. Common Multiples}
+\begin{itemize}
+    \item Price-to-Earnings (P/E)
+    \item Price-to-Sales (P/S)
+    \item Price-to-Book Value (P/B)
+    \item Price-to-Cash Flow (P/CF)
+\end{itemize}
+
+\paragraph{3. Advantages}
+\begin{itemize}
+    \item Easily calculated and widely published.
+    \item Useful for \textbf{time-series (historical)} and \textbf{cross-sectional (peer)} comparison.
+    \item Empirical evidence: low multiples often predict higher future returns.
+\end{itemize}
+
+\paragraph{4. Drawbacks}
+\begin{itemize}
+    \item Historical (“trailing”) data may not reflect future performance.
+    \item Forecast (“forward”) data may vary by analyst and cause inconsistency.
+    \item Requires consistency across firms in metric definitions.
+\end{itemize}
+
+\paragraph{5. Types of Multiple-Based Valuation}
+\begin{itemize}
+    \item \textbf{Multiples Based on Comparables (Market-Based):}
+    \begin{itemize}
+        \item Compare firm’s multiples to peers or industry average.
+        \item Reflects “law of one price”: similar assets should trade at similar multiples.
+    \end{itemize}
+    \item \textbf{Multiples Based on Fundamentals:}
+    \begin{itemize}
+        \item Derived from valuation models (e.g., DDM, FCFE) → \textbf{justified} multiples.
+        \item Reflect what multiples \textit{should be} based on fundamentals ($D_1$, $E_1$, $k$, $g$).
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 48.k: Calculation and Interpretation of Price Multiples}
+
+\paragraph{1. Common Price Multiples and Formulas}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 1: Key Price Multiples}
+\begin{tabular}{|l|l|p{7cm}|}
+\hline
+\textbf{Multiple} & \textbf{Formula} & \textbf{Interpretation} \\
+\hline
+P/E & $P / \text{EPS}$ & Indicates how much investors pay per \$1 of earnings. \\
+\hline
+P/S & $P / (\text{Sales per share})$ & Useful when earnings are negative; less affected by accounting policies. \\
+\hline
+P/B & $P / (\text{Book value per share})$ & Indicates market valuation relative to accounting book value; $>1$ implies future profitability. \\
+\hline
+P/CF & $P / (\text{Cash flow per share})$ & Cash-based measure less prone to earnings manipulation. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{2. Fundamental (Justified) P/E from Gordon Growth Model}
+\[
+\begin{aligned}
+V_0 &= \frac{D_1}{k - g} \\
+\Rightarrow \frac{P_0}{E_1} &= \frac{D_1 / E_1}{k - g} = \frac{\text{Payout Ratio}}{k - g}
+\]
+\]
+
+\paragraph{Example:}
+\[
+\text{Payout Ratio} = 30\%, \quad k = 13\%, \quad g = 6\%
+\]
+\[
+\text{Justified P/E} = \frac{0.3}{0.13 - 0.06} = 4.3
+\]
+\textbf{Interpretation:}
+\begin{itemize}
+    \item If actual P/E = 8 → Overvalued (market > justified value).
+    \item If actual P/E = 2 → Undervalued (market < justified value).
+\end{itemize}
+
+\paragraph{3. P/E Sensitivity:}
+\begin{itemize}
+    \item Increases with higher payout ratio or higher growth.
+    \item Decreases with higher required return $k$.
+    \item \textbf{Dividend Displacement of Earnings:} Higher payout $\Rightarrow$ lower retention $\Rightarrow$ lower sustainable growth.
+\end{itemize}
+
+\paragraph{Example: Holt Industries}
+\begin{itemize}
+    \item Higher payout and higher growth → higher P/E justified.
+    \item Higher leverage → higher risk → higher $k$ → lower P/E justified.
+\end{itemize}
+
+\bigskip
+
+\paragraph{4. Multiples Based on Comparables (Comps)}
+\begin{itemize}
+    \item \textbf{Law of One Price:} Similar assets should trade at similar multiples.
+    \item \textbf{Benchmarks:}
+    \begin{itemize}
+        \item Historical average (time-series).
+        \item Industry or peer group (cross-sectional).
+    \end{itemize}
+    \item Must ensure comparability:
+    \begin{itemize}
+        \item Similar size, leverage, growth, accounting policies.
+        \item Cyclicality: use P/S instead of P/E when earnings fluctuate.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Example: Renee’s Bakery}
+\begin{itemize}
+    \item P/E higher, but P/S, P/B, P/CF lower than peers.
+    \item Suggests potential undervaluation.
+    \item Downward trend in multiples → possible undervaluation vs. own history.
+\end{itemize}
+
+\paragraph{Example Table:}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 2: Example Multiples Comparison (Renee’s Bakery vs. Industry)}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Ratio} & \textbf{Renee’s Bakery} & \textbf{Industry Avg.} \\
+\hline
+P/E & 15 & 12 \\
+P/CF & 5 & 7 \\
+P/S & 1.0 & 1.5 \\
+P/B & 1.2 & 1.6 \\
+\hline
+\end{tabular}
+\end{table}
+\textbf{Interpretation:}  
+Lower multiples except P/E → potentially undervalued; check if earnings depressed.
+
+\bigskip
+
+\subsection*{LOS 48.l: Enterprise Value (EV) Multiples}
+
+\paragraph{1. Concept}
+\[
+EV = \text{Market Value of Equity} + \text{Market Value of Debt} + \text{Preferred Equity} - \text{Cash}
+\]
+\begin{itemize}
+    \item Represents total firm value, not just equity value.
+    \item Adjusts for differences in capital structure.
+    \item Used to compare firms regardless of leverage.
+\end{itemize}
+
+\paragraph{2. Common Ratios}
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 3: Common EV Multiples}
+\begin{tabular}{|l|l|p{7cm}|}
+\hline
+\textbf{Multiple} & \textbf{Formula} & \textbf{Use / Advantage} \\
+\hline
+EV/EBITDA & $\frac{EV}{EBITDA}$ & Most common; ignores capital structure, tax, and non-cash items. \\
+\hline
+EV/EBIT & $\frac{EV}{EBIT}$ & Compares total firm value to operating earnings. \\
+\hline
+EV/Sales & $\frac{EV}{Sales}$ & Useful for early-stage or negative-earnings firms. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Example: EV/EBITDA}
+\[
+\text{Equity Value} = 40 \times 200,000 = 8,000,000
+\]
+\[
+\text{Debt} = 600,000 + 1,200,000 = 1,800,000, \quad \text{Cash} = 250,000
+\]
+\[
+EV = 8,000,000 + 1,800,000 - 250,000 = 9,550,000
+\]
+\[
+\text{EBITDA} = 1,000,000 \Rightarrow \text{EV/EBITDA} = 9.55
+\]
+\textbf{Interpretation:}
+\begin{itemize}
+    \item If industry average = 11 → undervalued.
+    \item If industry average = 8 → overvalued.
+\end{itemize}
+
+\paragraph{3. Notes:}
+\begin{itemize}
+    \item Market value of debt may need estimation (use bond market data or book values).
+    \item Use EV multiples when:
+    \begin{itemize}
+        \item Comparing firms with different leverage.
+        \item Earnings are negative (P/E not meaningful).
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 48.m: Asset-Based Valuation Models}
+
+\paragraph{1. Concept}
+\[
+V_{Equity} = V_{Assets} - V_{Liabilities}
+\]
+\begin{itemize}
+    \item Based on market (fair) value of assets and liabilities.
+    \item Reflects “floor” or liquidation value.
+\end{itemize}
+
+\paragraph{2. When Appropriate}
+\begin{itemize}
+    \item Firms with primarily tangible, short-term, or marketable assets.
+    \item Financial institutions, real estate, or natural resource firms.
+    \item Liquidation or distressed valuations.
+\end{itemize}
+
+\paragraph{3. Example: Williams Optical}
+\[
+\text{Assets (adjusted)} = 10{,}000 + 20{,}000 + 50{,}000 + 120{,}000(1.20) = 224{,}000
+\]
+\[
+\text{Liabilities} = 5{,}000 + 30{,}000 + 45{,}000 = 80{,}000
+\]
+\[
+\text{Equity Value} = 224{,}000 - 80{,}000 = 144{,}000
+\]
+\[
+\text{Shares} = 2{,}000 \Rightarrow \text{Per Share Value} = 72
+\]
+
+\paragraph{4. Limitations}
+\begin{itemize}
+    \item Market values of assets/liabilities may be hard to obtain.
+    \item Intangibles (brand, customer base) not captured.
+    \item Inflation and accounting conventions distort book values.
+\end{itemize}
+
+\bigskip
+
+\subsection*{LOS 48.f: Advantages and Disadvantages of Valuation Models}
+
+\begin{table}[h!]
+\centering
+\caption*{Exhibit 4: Comparative Overview of Valuation Models}
+\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
+\hline
+\textbf{Model Type} & \textbf{Advantages} & \textbf{Disadvantages} \\
+\hline
+\textbf{Discounted Cash Flow (DCF)} &
+- Based on fundamental PV theory. \newline
+- Widely accepted and theoretically sound. &
+- Requires subjective input estimates. \newline
+- Highly sensitive to small input changes. \\
+\hline
+\textbf{Price Multiples (Comparables)} &
+- Empirical support for return prediction. \newline
+- Easy to compute, available, intuitive. \newline
+- Allows time-series and peer comparison. &
+- May mix firms of different growth/risk. \newline
+- Affected by accounting differences. \newline
+- Cyclical distortions possible. \newline
+- Negative denominators invalid (e.g., negative EPS). \\
+\hline
+\textbf{Price Multiples (Fundamentals)} &
+- Grounded in valuation models. \newline
+- Highlights relation to payout, growth, and return. &
+- Extremely sensitive to $(k - g)$ inputs. \\
+\hline
+\textbf{EV Multiples} &
+- Independent of capital structure. \newline
+- Useful when earnings are negative. &
+- Requires market value of debt (often estimated). \newline
+- EBITDA may include non-cash items. \\
+\hline
+\textbf{Asset-Based Models} &
+- Provide floor values. \newline
+- Reliable for tangible-asset firms or liquidation. &
+- Hard to estimate market values. \newline
+- Poor for intangible-heavy firms. \newline
+- Misleading under inflation. \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
+
+\subsection*{Key Takeaways Summary}
+
+\begin{itemize}
+    \item \textbf{Price Multiples} provide quick, market-based assessments of relative valuation.
+    \item \textbf{Fundamental Multiples} (e.g., justified P/E) link valuation directly to growth, payout, and required return.
+    \item \textbf{Enterprise Value Multiples} adjust for leverage and are robust when earnings are negative.
+    \item \textbf{Asset-Based Models} give conservative, floor-level estimates.
+    \item Always apply multiple methods and test sensitivity across scenarios.
+\end{itemize}
+
+
+\end{document}
